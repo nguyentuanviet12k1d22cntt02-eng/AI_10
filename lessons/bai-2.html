@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bài 2 · Viết prompt theo RCAF — Lớp học AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito:wght@700;800;900;1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/slide-deck.css">
+  <link rel="stylesheet" href="../css/mascot.css">
+</head>
+<body data-course-lesson="2">
+  <header class="topbar">
+    <a class="topbar-logo" href="../index.html"><span class="logo-mark" aria-hidden="true"><span class="book-icon"></span></span>Lớp học AI</a>
+    <div class="topbar-center">Bài 2 · Viết prompt theo RCAF</div>
+    <div class="topbar-actions">
+      <button class="mascot-toggle" data-mascot-toggle type="button" aria-label="Tạm dừng cáo" title="Tạm dừng cáo" hidden>Ⅱ</button>
+      <a class="topbar-back" href="../index.html#lo-trinh">← Lộ trình</a>
+    </div>
+  </header>
+
+  <main class="deck" id="deck" aria-label="Bài 2">
+    <section class="slide slide-cover" data-slide="1">
+      <div class="slide-inner cover-inner">
+        <div class="cover-left">
+          <div class="cover-kicker">
+            <span class="pill pill-green">Bài 2</span>
+            <span class="lesson-sticker" aria-hidden="true"></span>
+          </div>
+          <h1 class="cover-title">Viết prompt<br><em>theo RCAF</em></h1>
+          <p class="cover-desc">Dùng bốn thành phần để mô tả rõ bài toán và nhận kết quả sát với mục đích sử dụng.</p>
+        </div>
+        <div class="toc-card">
+          <div class="toc-card-head">
+            <span class="toc-icon icon-blue" aria-hidden="true"><span class="book-icon"></span></span>
+            <div><strong>Nội dung chính</strong><p>5 slide</p></div>
+          </div>
+          <ul class="toc-list">
+            <li><button type="button" class="toc-link" data-content-art="brief" data-go-to="2"><span class="toc-num">1</span>Vì sao prompt cần rõ ràng?</button></li>
+            <li><button type="button" class="toc-link" data-content-art="context" data-go-to="3"><span class="toc-num">2</span>Bốn thành phần của RCAF</button></li>
+            <li><button type="button" class="toc-link" data-content-art="task" data-go-to="4"><span class="toc-num">3</span>Cùng chủ đề, hai cách viết prompt</button></li>
+            <li><button type="button" class="toc-link" data-content-art="practice" data-go-to="5"><span class="toc-num">4</span>Viết thử rồi tinh chỉnh · Bài tập</button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-concept" data-slide="2">
+      <div class="slide-inner">
+        <div class="slide-label label-blue">Khái niệm</div>
+        <h2 class="slide-title">Vì sao prompt cần rõ ràng?</h2>
+        <p class="slide-desc">Khi đề bài quá ngắn hoặc chung chung, AI phải tự đoán mục đích, đối tượng và cách trình bày. Kết quả dễ lan man và mất thêm lượt chỉnh sửa.</p>
+        <div class="feature-grid lesson-feature-grid">
+          <article class="feature-card fc-blue" data-content-art="brief">
+            <h3>Vai trò và ngữ cảnh</h3>
+            <p>Cho AI biết nên trả lời từ góc nhìn nào và bạn đang gặp tình huống gì.</p>
+          </article>
+          <article class="feature-card fc-pink" data-content-art="output">
+            <h3>Nhiệm vụ và đầu ra</h3>
+            <p>Nêu công việc cần làm và cấu trúc bạn muốn nhận để dễ sử dụng kết quả.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-conclusion" data-slide="3">
+      <div class="slide-inner">
+        <div class="slide-label label-pink">Cấu trúc</div>
+        <h2 class="slide-title">Bốn thành phần của RCAF</h2>
+        <p class="slide-desc">Bạn có thể viết bốn thành phần trong cùng một đoạn hoặc tách thành các dòng.</p>
+        <div class="feature-grid lesson-feature-grid">
+          <article class="feature-card fc-blue" data-content-art="role">
+            <h3>R · Role · Vai trò</h3>
+            <p>Giao vai trò cụ thể. Chuyên gia marketing và nhà sáng tạo YouTube có thể chọn cách mở bài khác nhau cho cùng một chủ đề.</p>
+          </article>
+          <article class="feature-card fc-pink" data-content-art="context">
+            <h3>C · Context · Ngữ cảnh</h3>
+            <p>Nêu tình huống, người đọc và thông tin nền. Ví dụ, bài đăng giới thiệu giống chó cho khách hàng Việt Nam.</p>
+          </article>
+          <article class="feature-card fc-lavender" data-content-art="task">
+            <h3>A · Action · Nhiệm vụ</h3>
+            <p>Dùng động từ rõ ràng như viết bài đăng, lập kế hoạch, tóm tắt, viết mã hoặc so sánh.</p>
+          </article>
+          <article class="feature-card fc-green" data-content-art="format">
+            <h3>F · Format · Đầu ra</h3>
+            <p>Nêu độ dài, bảng hay danh sách, hashtag hoặc yêu cầu về giọng văn và emoji.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-concept" data-slide="4">
+      <div class="slide-inner">
+        <div class="slide-label label-lavender">Ví dụ</div>
+        <h2 class="slide-title">Cùng chủ đề, hai cách viết prompt</h2>
+        <p class="slide-desc">So sánh xem phiên bản thứ hai đã bổ sung thông tin nào để AI trả lời đúng việc hơn.</p>
+        <div class="vs-layout">
+          <div class="vs-card vs-left"><div class="vs-card-head" data-content-art="chat"><strong>Prompt ngắn</strong></div><p>“Viết giúp tôi bài đăng Facebook về con chó.”</p><p class="slide-desc">AI phải tự đoán giống chó, mục đích và đối tượng đọc.</p></div>
+          <div class="vs-divider"><span class="vs-badge">VS</span></div>
+          <div class="vs-card vs-right"><div class="vs-card-head" data-content-art="output"><strong>Prompt theo RCAF</strong></div><p>“Đóng vai trò là chuyên gia marketing. Tôi muốn quảng cáo giống chó mướp Nhật Bản cho khách hàng Việt Nam. Hãy viết bài đăng Facebook khoảng 500 ký tự, kèm hashtag phù hợp và không dùng emoji.”</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-conclusion" data-slide="5">
+      <div class="slide-inner">
+        <div class="slide-label label-green">Thực hành</div>
+        <h2 class="slide-title">Viết thử rồi tinh chỉnh</h2>
+        <p class="slide-desc">Chạy hai prompt ở slide trước. So sánh mức độ phù hợp, sau đó đổi sản phẩm hoặc đối tượng trong prompt mẫu.</p>
+        <div class="practice-prompts">
+          <div class="prompt-card">
+            <div class="prompt-top"><span>Prompt luyện RCAF</span><button type="button" class="copy-btn" data-copy="prompt-1">Sao chép</button></div>
+            <p id="prompt-1">Bạn là chuyên gia marketing cho cửa hàng cây cảnh. Tôi muốn giới thiệu sen đá cho nhân viên văn phòng mới tập trồng cây. Hãy viết bài đăng Facebook dưới 500 ký tự, nêu một lợi ích và một mẹo chăm sóc, kèm 3 hashtag và không dùng emoji.</p>
+            <p class="copy-status" role="status"></p>
+          </div>
+        </div>
+        <p class="slide-note">Nếu câu trả lời còn lệch, thêm ngữ cảnh hoặc chỉnh đầu ra. Dùng các thành phần cần thiết cho bài toán, đặc biệt là vai trò và định dạng khi chúng ảnh hưởng đến kết quả.</p>
+        <section class="practice-exercises" aria-labelledby="practice-exercises-title">
+          <h3 class="practice-exercises-title" id="practice-exercises-title">Bài tập và đáp án Word</h3>
+          <p class="slide-desc">8 bài tập theo nội dung đã học. Mở từng nhóm để xem đề và tải đáp án mẫu.</p>
+          <div class="exercise-report">
+            <h4>Cách nộp báo cáo Word</h4>
+            <ol>
+              <li>Tạo một file .docx cho mỗi bài tập. Ghi họ tên, lớp và mã bài ở đầu file.</li>
+              <li>Chia báo cáo thành ba mục: Yêu cầu bài tập, Các bước thực hiện, Kết quả và đối chiếu. Đánh số theo từng yêu cầu; chèn prompt, ảnh minh chứng hoặc liên kết nguồn khi đề bài cần.</li>
+              <li>Đặt tên file <code>HoTen_B2-BT01.docx</code> (thay mã theo bài đang nộp). Mở đáp án mẫu để tham khảo cách trình bày.</li>
+            </ol>
+          </div>
+          <details class="slide-exercises">
+            <summary><span class="exercise-summary-icon" aria-hidden="true"><span class="book-icon"></span></span><span class="exercise-summary-text">Vì sao prompt cần rõ ràng?<span class="exercise-summary-count">2 bài tập · Đáp án Word</span></span></summary>
+            <div class="exercise-body">
+              <div class="exercise-grid">
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B2-BT01</span> Viết email xác nhận lịch nhận hàng</h4>
+                <p>Nhà cung cấp An Phát giao 12 hộp giấy A4 lúc 09:30 thứ Tư tại kho tầng 1. Cần họ xác nhận trước 16:00 thứ Ba.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Viết một prompt mơ hồ và một prompt có đủ chi tiết.</li>
+                    <li>So sánh hai kết quả theo các chi tiết cần dùng.</li>
+                    <li>Đưa bản email hoàn chỉnh đủ dữ kiện.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp hai prompt, hai kết quả, nhận xét và email cuối.</p>
+                <a class="exercise-download" href="../assets/answers/bai-2/dap-an-mau-bai-2-bt-01.docx" download aria-label="Tải đáp án mẫu B2-BT01 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B2-BT02</span> Viết prompt tóm tắt tiến độ cho quản lý</h4>
+                <p>Ghi chú tuần: đã hoàn thành 8/10 yêu cầu. Hai yêu cầu còn chờ quyền truy cập. Ngọc làm việc với IT trước 11:00 thứ Hai.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Viết lại prompt “Tóm tắt cái này” thành một yêu cầu rõ về người đọc và cấu trúc.</li>
+                    <li>Tạo bản tóm tắt theo đúng ba mục.</li>
+                    <li>Chỉ ra một chi tiết không được suy đoán.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp ghi chú nguồn, prompt, bản tóm tắt và lưu ý.</p>
+                <a class="exercise-download" href="../assets/answers/bai-2/dap-an-mau-bai-2-bt-02.docx" download aria-label="Tải đáp án mẫu B2-BT02 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              </div>
+            </div>
+          </details>
+          <details class="slide-exercises">
+            <summary><span class="exercise-summary-icon" aria-hidden="true"><span class="book-icon"></span></span><span class="exercise-summary-text">Bốn thành phần của RCAF<span class="exercise-summary-count">2 bài tập · Đáp án Word</span></span></summary>
+            <div class="exercise-body">
+              <div class="exercise-grid">
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B2-BT03</span> Dùng RCAF để lập biên bản giao việc</h4>
+                <p>Họp bàn giao: Duy gửi danh sách thiết bị trước 10:00 thứ Ba; Mai đối soát trước 15:00 thứ Tư. Chưa chốt hạn báo cáo tổng.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Viết prompt có đủ Role, Context, Action, Format.</li>
+                    <li>Tạo bảng ba dòng từ ghi chú.</li>
+                    <li>Đánh dấu rõ dữ liệu chưa có.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp prompt RCAF, bảng việc và ghi chú mục chưa chốt.</p>
+                <a class="exercise-download" href="../assets/answers/bai-2/dap-an-mau-bai-2-bt-03.docx" download aria-label="Tải đáp án mẫu B2-BT03 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B2-BT04</span> Dùng RCAF để kiểm chênh lệch trong Excel</h4>
+                <p>Cột B là tồn sổ, cột C là tồn thực tế. Hàng 2 là 20 và 18; hàng 3 là 10 và 10; hàng 4 là 8 và trống. Chênh lệch = thực tế − sổ; nếu thiếu dữ liệu, trả “Thiếu số liệu”.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Viết prompt RCAF nêu quy tắc và ô cần nhập.</li>
+                    <li>Đưa công thức D2 và áp dụng cho ba hàng.</li>
+                    <li>Ghi và giải thích kết quả từng hàng.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp prompt RCAF, công thức và kết quả D2:D4.</p>
+                <a class="exercise-download" href="../assets/answers/bai-2/dap-an-mau-bai-2-bt-04.docx" download aria-label="Tải đáp án mẫu B2-BT04 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              </div>
+            </div>
+          </details>
+          <details class="slide-exercises">
+            <summary><span class="exercise-summary-icon" aria-hidden="true"><span class="book-icon"></span></span><span class="exercise-summary-text">Cùng chủ đề, hai cách viết prompt<span class="exercise-summary-count">2 bài tập · Đáp án Word</span></span></summary>
+            <div class="exercise-body">
+              <div class="exercise-grid">
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B2-BT05</span> So hai prompt thông báo giao trễ</h4>
+                <p>Đơn DH-018 giao ngày 18/07 thay vì 16/07 vì cần kiểm tra đóng gói. Chưa biết giờ giao. Khách hàng cần được thông báo và có thể xác nhận lịch mới.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Tạo một prompt ngắn và một prompt RCAF, dùng cùng tình huống.</li>
+                    <li>So sánh hai kết quả theo dữ kiện và hành động của người nhận.</li>
+                    <li>Viết email cuối và giữ đúng giới hạn dữ liệu.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp hai prompt, hai bản nháp, nhận xét và email cuối.</p>
+                <a class="exercise-download" href="../assets/answers/bai-2/dap-an-mau-bai-2-bt-05.docx" download aria-label="Tải đáp án mẫu B2-BT05 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B2-BT06</span> Điều chỉnh cùng một thông tin cho hai người đọc</h4>
+                <p>Báo cáo tuần thiếu số liệu kho, dự kiến bổ sung trước 14:00 thứ Năm. Bản đầy đủ sẽ gửi sau khi đối chiếu. Cần thông báo quản lý và nhắc nhóm Kho.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Viết hai prompt, mỗi prompt xác định một người đọc và mục đích.</li>
+                    <li>Tạo hai đoạn ngắn, đúng hạn và đúng giọng.</li>
+                    <li>Chỉ ra một điểm chung và một điểm khác.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp hai prompt, hai bản thông báo và nhận xét.</p>
+                <a class="exercise-download" href="../assets/answers/bai-2/dap-an-mau-bai-2-bt-06.docx" download aria-label="Tải đáp án mẫu B2-BT06 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              </div>
+            </div>
+          </details>
+          <details class="slide-exercises">
+            <summary><span class="exercise-summary-icon" aria-hidden="true"><span class="book-icon"></span></span><span class="exercise-summary-text">Viết thử rồi tinh chỉnh<span class="exercise-summary-count">2 bài tập · Đáp án Word</span></span></summary>
+            <div class="exercise-body">
+              <div class="exercise-grid">
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B2-BT07</span> Tinh chỉnh prompt tạo checklist lưu hồ sơ</h4>
+                <p>Quy trình gồm: kiểm tên file theo <code>YYYYMMDD_MaHoSo</code>; lưu vào thư mục chung; gửi link cho trưởng nhóm. Không gửi file đính kèm.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Tạo bản nháp và chỉ ra một điểm thiếu cần sửa.</li>
+                    <li>Viết prompt chỉnh sửa nêu rõ thứ tự và giới hạn.</li>
+                    <li>Trình bày checklist cuối và nêu thay đổi chính.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp prompt đầu, điểm thiếu, prompt sửa và checklist cuối.</p>
+                <a class="exercise-download" href="../assets/answers/bai-2/dap-an-mau-bai-2-bt-07.docx" download aria-label="Tải đáp án mẫu B2-BT07 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B2-BT08</span> Tinh chỉnh prompt trích yêu cầu hỗ trợ IT</h4>
+                <p>Ba tin nhắn: Lan báo máy in tầng 2 kẹt giấy; Dũng không mở được file họp; Vy hỏi đổi mật khẩu. Chỉ Lan báo cần xử lý hôm nay.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Viết prompt ban đầu để trích ba yêu cầu.</li>
+                    <li>Viết prompt chỉnh có cột Hạn và quy tắc cho dữ liệu thiếu.</li>
+                    <li>Trình bày kết quả cuối với cả ba dòng.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp prompt trước và sau, lỗi đã thấy và bảng cuối.</p>
+                <a class="exercise-download" href="../assets/answers/bai-2/dap-an-mau-bai-2-bt-08.docx" download aria-label="Tải đáp án mẫu B2-BT08 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              </div>
+            </div>
+          </details>
+        </section>
+        <div class="lesson-links"><a class="topbar-back" href="bai-1.html">← Bài 1</a><a class="topbar-back" href="bai-3.html">Bài 3 →</a></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="mascot-layer" data-fox-mascot hidden><div class="mascot-fox"></div></div>
+
+  <nav class="slide-nav" aria-label="Điều hướng slide">
+    <button class="nav-btn" id="btn-prev" aria-label="Slide trước" disabled>←</button>
+    <div class="nav-center">
+      <div class="dot-track" id="dot-track" role="tablist" aria-label="Chọn slide"></div>
+      <span class="slide-counter"><span id="cur">1</span> / <span id="total">5</span></span>
+    </div>
+    <button class="nav-btn" id="btn-next" aria-label="Slide tiếp theo">→</button>
+  </nav>
+  <script src="../js/slide-deck.js" defer></script>
+  <script type="module" src="../js/mascot.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+node_modules/
+
+# Office temporary lock files
+~$*
+*.tmp
+*.temp
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/

@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bài 1 — Lớp học AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito:wght@700;800;900;1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/slide-deck.css">
+  <link rel="stylesheet" href="../css/mascot.css">
+</head>
+<body data-course-lesson="1">
+
+  <!-- ═══ TOP BAR ═══ -->
+  <header class="topbar">
+    <a class="topbar-logo" href="../index.html">
+      <span class="logo-mark"><span class="book-icon"></span></span>
+      Lớp học AI
+    </a>
+    <div class="topbar-center">
+      <span class="topbar-lesson">Bài 1 · Gemini, ChatGPT &amp; Claude AI</span>
+    </div>
+    <div class="topbar-actions">
+      <button class="mascot-toggle" data-mascot-toggle type="button" aria-label="Tạm dừng cáo" title="Tạm dừng cáo" hidden>Ⅱ</button>
+      <a class="topbar-back" href="../index.html">← Trang chủ</a>
+    </div>
+  </header>
+
+  <!-- ═══ SLIDE DECK ═══ -->
+  <div class="deck" id="deck" role="region" aria-label="Bài học dạng slide">
+
+    <!-- ─── SLIDE 1: TRANG BÌA ─── -->
+    <div class="slide slide-cover" data-slide="1">
+      <div class="cover-bg-deco" aria-hidden="true">
+        <span class="deco-circle deco-c1"></span>
+        <span class="deco-circle deco-c2"></span>
+        <span class="deco-circle deco-c3"></span>
+      </div>
+      <div class="slide-inner cover-inner">
+        <div class="cover-left">
+          <div class="cover-kicker">
+            <span class="pill pill-green"><span class="dot-green-live"></span> Bài học đầu tiên</span>
+            <span class="lesson-sticker" aria-hidden="true"></span>
+          </div>
+          <h1 class="cover-title">Gemini là gì?<br><em>So sánh &amp; Lịch sử</em></h1>
+          <p class="cover-desc">Khám phá Gemini — mô hình AI đa phương tiện của Google — và tìm hiểu điểm khác biệt so với ChatGPT và Claude AI.</p>
+          <div class="cover-facts">
+            <div class="fact-chip chip-blue"><span>3</span> Chủ đề</div>
+            <div class="fact-chip chip-pink"><span>~30</span> Phút</div>
+            <div class="fact-chip chip-lavender"><span>Cơ bản</span> Mức độ</div>
+          </div>
+          <!-- AI Logos row on cover -->
+          <div class="cover-logos">
+            <div class="cover-logo-item">
+              <img src="../assets/logos/gemini.png" alt="Gemini">
+              <span>Gemini</span>
+            </div>
+            <span class="logo-sep">+</span>
+            <div class="cover-logo-item">
+              <img src="../assets/logos/chatgpt.png" alt="ChatGPT">
+              <span>ChatGPT</span>
+            </div>
+            <span class="logo-sep">+</span>
+            <div class="cover-logo-item">
+              <img src="../assets/logos/claude.png" alt="Claude AI">
+              <span>Claude AI</span>
+            </div>
+          </div>
+        </div>
+        <div class="cover-right">
+          <div class="toc-card">
+            <div class="toc-card-head">
+              <img src="../assets/logos/gemini.png" alt="" class="toc-logo" aria-hidden="true">
+              <div><strong>Nội dung bài 1</strong><p>9 slide · 3 chủ đề</p></div>
+            </div>
+            <ul class="toc-list" role="list">
+              <li data-content-art="chat"><span class="toc-num">01</span> Gemini là gì &amp; khác gì AI khác</li>
+              <li data-content-art="lens"><span class="toc-num">02</span> Gemini vs Google Search</li>
+              <li data-content-art="chat"><span class="toc-num">03</span> Gemini vs ChatGPT</li>
+              <li data-content-art="chat"><span class="toc-num">04</span> Gemini vs Claude AI</li>
+              <li data-content-art="report"><span class="toc-num">05</span> Lịch sử phát triển Gemini</li>
+              <li data-content-art="format"><span class="toc-num">06</span> Lợi thế hệ sinh thái Google</li>
+              <li data-content-art="report"><span class="toc-num">07</span> So sánh tổng quan 3 AI lớn</li>
+              <li data-content-art="summary"><span class="toc-num">08</span> Kết luận &amp; Lời khuyên</li>
+              <li><button type="button" class="toc-link" data-content-art="practice" data-go-to="9"><span class="toc-num">09</span>Thực hành và bài tập</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── SLIDE 2: GEMINI LÀ GÌ ─── -->
+    <div class="slide slide-concept" data-slide="2">
+      <div class="slide-inner">
+        <div class="slide-label label-blue">CHỦ ĐỀ 1 · 04:04</div>
+        <div class="slide-title-row">
+          <img src="../assets/logos/gemini.png" alt="Gemini" class="slide-logo">
+          <h2 class="slide-title">Gemini là gì?</h2>
+        </div>
+        <p class="slide-desc">Gemini là <strong>mô hình AI đa phương tiện (multimodal)</strong> của Google. Khác với các AI chỉ xử lý văn bản, Gemini có thể làm được tất cả những điều sau:</p>
+        <div class="feature-grid">
+          <div class="feature-card fc-pink">
+            <span class="fc-emoji">🖼️</span>
+            <strong>Tạo hình ảnh</strong>
+            <p>Sinh ảnh từ mô tả văn bản</p>
+          </div>
+          <div class="feature-card fc-blue">
+            <span class="fc-emoji">🎬</span>
+            <strong>Tạo video</strong>
+            <p>Dựng video từ ý tưởng</p>
+          </div>
+          <div class="feature-card fc-lavender">
+            <span class="fc-emoji">🎵</span>
+            <strong>Tạo âm thanh / nhạc</strong>
+            <p>Sáng tác và xử lý âm thanh</p>
+          </div>
+          <div class="feature-card fc-green">
+            <span class="fc-emoji">📊</span>
+            <strong>Tạo slide</strong>
+            <p>Thuyết trình chuyên nghiệp</p>
+          </div>
+          <div class="feature-card fc-pink">
+            <span class="fc-emoji">💻</span>
+            <strong>Viết code</strong>
+            <p>Lập trình đa ngôn ngữ</p>
+          </div>
+          <div class="feature-card fc-blue">
+            <span class="fc-emoji">🔬</span>
+            <strong>Nghiên cứu chuyên sâu</strong>
+            <p>Tổng hợp thông tin từ nhiều nguồn</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── SLIDE 3: GEMINI VS GOOGLE SEARCH ─── -->
+    <div class="slide slide-compare" data-slide="3">
+      <div class="slide-inner">
+        <div class="slide-label label-blue">CHỦ ĐỀ 1 · So sánh 1/3</div>
+        <h2 class="slide-title">
+          <img src="../assets/logos/gemini.png" alt="Gemini" class="title-logo">
+          Gemini <span class="vs-word">vs</span>
+          <img src="../assets/logos/google.png" alt="Google" class="title-logo title-logo-google">
+          Google Search
+        </h2>
+        <div class="vs-layout">
+          <div class="vs-card vs-left">
+            <div class="vs-card-head">
+              <div class="vs-logo-wrap logo-wrap-muted">
+                <img src="../assets/logos/google.png" alt="Google Search" class="vs-real-logo vs-google-logo">
+              </div>
+              <div>
+                <strong>Google Search</strong>
+                <p class="vs-sub">Công cụ tìm kiếm truyền thống</p>
+              </div>
+            </div>
+            <ul class="vs-points">
+              <li>🔍 Phục vụ thói quen tìm kiếm thông tin <strong>truyền thống</strong></li>
+              <li>🗄️ Nắm giữ <strong>kho dữ liệu khổng lồ</strong> của Internet</li>
+              <li>📄 Trả về danh sách links để người dùng tự đọc</li>
+              <li>⚡ Nhanh, quen thuộc, phổ biến toàn cầu</li>
+            </ul>
+            <span class="vs-verdict verdict-muted">Tìm kiếm thông tin</span>
+          </div>
+          <div class="vs-divider"><span class="vs-badge">VS</span></div>
+          <div class="vs-card vs-right">
+            <div class="vs-card-head">
+              <div class="vs-logo-wrap logo-wrap-blue">
+                <img src="../assets/logos/gemini.png" alt="Gemini" class="vs-real-logo">
+              </div>
+              <div>
+                <strong>Gemini</strong>
+                <p class="vs-sub">AI đa phương tiện của Google</p>
+              </div>
+            </div>
+            <ul class="vs-points">
+              <li>🤖 Không chỉ tìm mà còn <strong>xử lý &amp; tổng hợp</strong> thông tin</li>
+              <li>✨ Thực hiện các <strong>tác vụ sáng tạo</strong> trực tiếp</li>
+              <li>🔗 Tích hợp vào <strong>AI Mode / AI Overview</strong> của Google</li>
+              <li>💬 Trả lời ngay, không cần đọc nhiều trang web</li>
+            </ul>
+            <span class="vs-verdict verdict-green">Tạo &amp; xử lý thông tin</span>
+          </div>
+        </div>
+        <div class="slide-note">
+          <span class="note-icon">💡</span>
+          Gemini được tích hợp trực tiếp vào giao diện tìm kiếm Google — chúng bổ sung cho nhau thay vì cạnh tranh.
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── SLIDE 4: GEMINI VS CHATGPT ─── -->
+    <div class="slide slide-compare" data-slide="4">
+      <div class="slide-inner">
+        <div class="slide-label label-pink">CHỦ ĐỀ 1 · So sánh 2/3</div>
+        <h2 class="slide-title">
+          <img src="../assets/logos/gemini.png" alt="Gemini" class="title-logo">
+          Gemini <span class="vs-word">vs</span>
+          <img src="../assets/logos/chatgpt.png" alt="ChatGPT" class="title-logo">
+          ChatGPT
+        </h2>
+        <div class="vs-layout">
+          <div class="vs-card vs-left">
+            <div class="vs-card-head">
+              <div class="vs-logo-wrap logo-wrap-pink">
+                <img src="../assets/logos/chatgpt.png" alt="ChatGPT" class="vs-real-logo">
+              </div>
+              <div>
+                <strong>ChatGPT (OpenAI)</strong>
+                <p class="vs-sub">Thương hiệu AI số 1 toàn cầu</p>
+              </div>
+            </div>
+            <ul class="vs-points">
+              <li>🏆 Thương hiệu AI <strong>số 1 được nhận diện</strong> toàn cầu</li>
+              <li>👥 Lượng người dùng cực kỳ <strong>đông đảo</strong></li>
+              <li>✍️ Văn phong <strong>tự nhiên</strong>, phù hợp viết email, học tiếng Anh</li>
+              <li>🛒 Nhiều plugin và tích hợp bên thứ 3</li>
+            </ul>
+            <span class="vs-verdict verdict-muted">Phổ thông &amp; văn phong</span>
+          </div>
+          <div class="vs-divider"><span class="vs-badge">VS</span></div>
+          <div class="vs-card vs-right">
+            <div class="vs-card-head">
+              <div class="vs-logo-wrap logo-wrap-blue">
+                <img src="../assets/logos/gemini.png" alt="Gemini" class="vs-real-logo">
+              </div>
+              <div>
+                <strong>Gemini</strong>
+                <p class="vs-sub">AI đa phương tiện của Google</p>
+              </div>
+            </div>
+            <ul class="vs-points">
+              <li>🔗 Tích hợp sẵn vào <strong>Gmail, Drive, YouTube</strong>…</li>
+              <li>💰 Gói cước <strong>dẻo / rẻ hơn</strong> đáng kể</li>
+              <li>🎨 Hỗ trợ <strong>đa phương tiện</strong> (ảnh, video, nhạc, slide)</li>
+              <li>🌐 AI Mode trực tiếp trong Google Search</li>
+            </ul>
+            <span class="vs-verdict verdict-green">Hệ sinh thái &amp; đa phương tiện</span>
+          </div>
+        </div>
+        <div class="slide-note">
+          <span class="note-icon">💡</span>
+          Nếu bạn đang dùng Gmail và Google Drive hàng ngày → Gemini là lựa chọn tự nhiên nhất.
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── SLIDE 5: GEMINI VS CLAUDE ─── -->
+    <div class="slide slide-compare" data-slide="5">
+      <div class="slide-inner">
+        <div class="slide-label label-lavender">CHỦ ĐỀ 1 · So sánh 3/3</div>
+        <h2 class="slide-title">
+          <img src="../assets/logos/gemini.png" alt="Gemini" class="title-logo">
+          Gemini <span class="vs-word">vs</span>
+          <img src="../assets/logos/claude.png" alt="Claude AI" class="title-logo">
+          Claude AI
+        </h2>
+        <div class="vs-layout">
+          <div class="vs-card vs-left">
+            <div class="vs-card-head">
+              <div class="vs-logo-wrap logo-wrap-lavender">
+                <img src="../assets/logos/claude.png" alt="Claude AI" class="vs-real-logo">
+              </div>
+              <div>
+                <strong>Claude AI (Anthropic)</strong>
+                <p class="vs-sub">Chuyên gia lập trình</p>
+              </div>
+            </div>
+            <ul class="vs-points">
+              <li>💻 Tập trung vào <strong>lập trình (coding)</strong> — đứng đầu thị trường</li>
+              <li>🧠 Phong cách <strong>"nói ít hiểu nhiều"</strong> — xử lý logic tốt</li>
+              <li>📄 Rất giỏi phân tích tài liệu dài</li>
+              <li>❌ <em>Không hỗ trợ tạo ảnh / video trực tiếp</em></li>
+            </ul>
+            <span class="vs-verdict verdict-muted">Chuyên sâu về coding</span>
+          </div>
+          <div class="vs-divider"><span class="vs-badge">VS</span></div>
+          <div class="vs-card vs-right">
+            <div class="vs-card-head">
+              <div class="vs-logo-wrap logo-wrap-blue">
+                <img src="../assets/logos/gemini.png" alt="Gemini" class="vs-real-logo">
+              </div>
+              <div>
+                <strong>Gemini</strong>
+                <p class="vs-sub">AI đa phương tiện của Google</p>
+              </div>
+            </div>
+            <ul class="vs-points">
+              <li>🌐 Bao phủ <strong>toàn bộ</strong> tính năng đa phương tiện</li>
+              <li>🖼️ Tạo ảnh, video, âm thanh <strong>trực tiếp</strong></li>
+              <li>📊 Làm slide, tóm tắt YouTube, nghiên cứu</li>
+              <li>✅ Không chỉ một mảng — làm được <strong>nhiều thứ</strong></li>
+            </ul>
+            <span class="vs-verdict verdict-green">Toàn diện &amp; đa năng</span>
+          </div>
+        </div>
+        <div class="slide-note">
+          <span class="note-icon">💡</span>
+          Cần viết code phức tạp? Dùng Claude. Cần tạo slide hay tóm tắt video YouTube? Dùng Gemini.
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── SLIDE 6: LỊCH SỬ GEMINI ─── -->
+    <div class="slide slide-timeline" data-slide="6">
+      <div class="slide-inner">
+        <div class="slide-label label-blue">CHỦ ĐỀ 2 · 06:35</div>
+        <div class="slide-title-row">
+          <img src="../assets/logos/gemini.png" alt="Gemini" class="slide-logo">
+          <h2 class="slide-title">Lịch sử phát triển của Gemini</h2>
+        </div>
+        <p class="slide-desc">Từ chatbot bị chê đến AI hàng đầu — hành trình bứt phá chỉ trong 2 năm.</p>
+        <div class="timeline-row">
+          <div class="tl-item">
+            <div class="tl-dot dot-muted"></div>
+            <div class="tl-year year-muted">Cuối 2022</div>
+            <div class="tl-card card-muted">
+              <div class="tl-emoji">💥</div>
+              <strong>ChatGPT gây sốt</strong>
+              <div class="tl-logo-row">
+                <img src="../assets/logos/chatgpt.png" alt="ChatGPT" class="tl-logo">
+                <span>OpenAI ra mắt ChatGPT</span>
+              </div>
+              <p>Tạo ra làn sóng AI toàn cầu. Google bắt đầu chịu áp lực lớn từ thị trường.</p>
+            </div>
+          </div>
+          <div class="tl-arrow" aria-hidden="true">→</div>
+          <div class="tl-item">
+            <div class="tl-dot dot-blue"></div>
+            <div class="tl-year year-blue">2023</div>
+            <div class="tl-card card-blue">
+              <div class="tl-emoji">🐦</div>
+              <strong>Chatbot Bard ra đời</strong>
+              <div class="tl-logo-row">
+                <img src="../assets/logos/google.png" alt="Google" class="tl-logo tl-logo-google">
+                <span>Phiên bản đầu của Google AI</span>
+              </div>
+              <p>Chưa thực sự thông minh và chưa thu hút được nhiều người dùng.</p>
+            </div>
+          </div>
+          <div class="tl-arrow" aria-hidden="true">→</div>
+          <div class="tl-item">
+            <div class="tl-dot dot-green"></div>
+            <div class="tl-year year-green">2024 trở đi</div>
+            <div class="tl-card card-green">
+              <div class="tl-emoji">🚀</div>
+              <strong>Bard → Gemini: Bứt phá</strong>
+              <div class="tl-logo-row">
+                <img src="../assets/logos/gemini.png" alt="Gemini" class="tl-logo">
+                <span>Đổi tên &amp; nâng cấp toàn diện</span>
+              </div>
+              <p>Google đầu tư rất lớn — Bard được nâng cấp, đổi tên thành <strong>Gemini</strong> và trở nên thông minh hơn rõ rệt.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── SLIDE 7: HỆ SINH THÁI GOOGLE ─── -->
+    <div class="slide slide-ecosystem" data-slide="7">
+      <div class="slide-inner">
+        <div class="slide-label label-blue">CHỦ ĐỀ 2 · Lợi thế</div>
+        <div class="slide-title-row">
+          <img src="../assets/logos/gemini.png" alt="Gemini" class="slide-logo">
+          <h2 class="slide-title">Lợi thế từ hệ sinh thái Google</h2>
+        </div>
+        <div class="eco-grid">
+          <div class="eco-card">
+            <div class="eco-logo-row">
+              <img src="../assets/logos/google.png" alt="Google" class="eco-logo eco-logo-google">
+            </div>
+            <h3>🔗 Tích hợp sâu rộng</h3>
+            <p>Gemini được nhúng trực tiếp vào toàn bộ dịch vụ Google quen thuộc.</p>
+            <div class="eco-chips">
+              <span class="eco-chip">Gmail</span>
+              <span class="eco-chip">YouTube</span>
+              <span class="eco-chip">Google Drive</span>
+              <span class="eco-chip">Google Photos</span>
+              <span class="eco-chip">Google Search</span>
+            </div>
+          </div>
+          <div class="eco-card">
+            <div class="eco-logo-row">
+              <img src="../assets/logos/gemini.png" alt="Gemini" class="eco-logo">
+            </div>
+            <h3>💰 Chi phí rất cạnh tranh</h3>
+            <p>Mức giá dịch vụ và token của Google rất mềm — chỉ xếp sau công cụ từ Trung Quốc.</p>
+            <div class="eco-highlight">
+              Mua gói AI / Google One = có thêm <strong>dung lượng Drive</strong> + dùng AI nâng cao
+            </div>
+          </div>
+          <div class="eco-card">
+            <div class="eco-logo-row">
+              <img src="../assets/logos/notebooklm.png" alt="NotebookLM" class="eco-logo">
+            </div>
+            <h3>🛠️ Hệ sinh thái công cụ phong phú</h3>
+            <div class="tool-table">
+              <div class="tool-row"><span class="tool-name">gemini.google.com</span><span class="tool-use">Chat &amp; tác vụ hàng ngày</span></div>
+              <div class="tool-row"><span class="tool-name">NotebookLM</span><span class="tool-use">Nghiên cứu &amp; đọc tài liệu</span></div>
+              <div class="tool-row"><span class="tool-name">AI Studio</span><span class="tool-use">Dành cho lập trình viên</span></div>
+              <div class="tool-row"><span class="tool-name">Google Flow</span><span class="tool-use">Dựng video hàng loạt</span></div>
+              <div class="tool-row"><span class="tool-name">Antigravity IDE</span><span class="tool-use">Viết code với AI</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── SLIDE 8: BẢNG SO SÁNH 3 AI ─── -->
+    <div class="slide slide-table" data-slide="8">
+      <div class="slide-inner">
+        <div class="slide-label label-green">CHỦ ĐỀ 3 · 13:12</div>
+        <h2 class="slide-title">So sánh tổng quan 3 AI lớn</h2>
+        <div class="big-table-wrap">
+          <table class="big-table" aria-label="So sánh ChatGPT, Claude AI và Gemini">
+            <thead>
+              <tr>
+                <th>Tiêu chí</th>
+                <th>
+                  <div class="th-logo-cell">
+                    <img src="../assets/logos/chatgpt.png" alt="ChatGPT" class="th-logo">
+                    ChatGPT
+                  </div>
+                </th>
+                <th>
+                  <div class="th-logo-cell">
+                    <img src="../assets/logos/claude.png" alt="Claude AI" class="th-logo">
+                    Claude AI
+                  </div>
+                </th>
+                <th class="th-gem">
+                  <div class="th-logo-cell">
+                    <img src="../assets/logos/gemini.png" alt="Gemini" class="th-logo">
+                    Gemini
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-label">Điểm mạnh</td>
+                <td>Thương hiệu số 1, văn phong tự nhiên</td>
+                <td>Logic &amp; coding đứng đầu</td>
+                <td class="td-gem">Đa phương tiện toàn diện</td>
+              </tr>
+              <tr>
+                <td class="td-label">Phù hợp</td>
+                <td>Email, học tiếng Anh, nhu cầu phổ thông</td>
+                <td>Lập trình nâng cao, phân tích logic</td>
+                <td class="td-gem">Google ecosystem, slide, YouTube, video</td>
+              </tr>
+              <tr>
+                <td class="td-label">Tạo ảnh/video</td>
+                <td>✓ DALL-E tích hợp</td>
+                <td>✗ Không hỗ trợ</td>
+                <td class="td-gem">✓ Tính năng mạnh</td>
+              </tr>
+              <tr>
+                <td class="td-label">Chi phí</td>
+                <td>Trung bình</td>
+                <td>Trung bình – cao</td>
+                <td class="td-gem">Rất cạnh tranh</td>
+              </tr>
+              <tr>
+                <td class="td-label">Hệ sinh thái</td>
+                <td>Microsoft 365 (Copilot)</td>
+                <td>Hạn chế</td>
+                <td class="td-gem">Gmail, Drive, YouTube, Photos…</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── SLIDE 9: KẾT LUẬN + THỰC HÀNH ─── -->
+    <div class="slide slide-conclusion" data-slide="9">
+      <div class="slide-inner conclusion-inner">
+        <div class="slide-label label-green">CHỦ ĐỀ 3 · Kết luận &amp; Thực hành</div>
+        <h2 class="slide-title">Kết luận &amp; Thực hành</h2>
+
+        <div class="conclusion-grid">
+          <div class="conclusion-block">
+            <div class="concl-head">
+              <span class="concl-num">1</span>
+              <strong>Không có AI nào tốt nhất tuyệt đối</strong>
+            </div>
+            <p>Các mô hình AI liên tục cập nhật — phiên bản sau thường vượt trội hơn phiên bản trước. Không tồn tại một công cụ hoàn hảo cho mọi bài toán.</p>
+          </div>
+          <div class="conclusion-block">
+            <div class="concl-head">
+              <span class="concl-num">2</span>
+              <strong>Nên phối hợp linh hoạt</strong>
+            </div>
+            <p>Kết hợp nhiều công cụ tùy mục đích thay vì chỉ trung thành với một AI duy nhất.</p>
+            <div class="rec-row">
+              <div class="rec-chip chip-pink">
+                <img src="../assets/logos/chatgpt.png" alt="ChatGPT" class="rec-logo">
+                ChatGPT — email, văn phong
+              </div>
+              <div class="rec-chip chip-lavender">
+                <img src="../assets/logos/claude.png" alt="Claude" class="rec-logo">
+                Claude — coding nâng cao
+              </div>
+              <div class="rec-chip chip-blue">
+                <img src="../assets/logos/gemini.png" alt="Gemini" class="rec-logo">
+                Gemini — Google, slide, video
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="practice-box">
+          <div class="practice-box-head">
+            <span class="pill pill-pink">🎯 Thực hành ngay</span>
+          </div>
+          <div class="practice-prompts">
+            <div class="prompt-card">
+              <div class="prompt-top">
+                <span class="prompt-top-label">
+                  <img src="../assets/logos/gemini.png" alt="" class="prompt-top-logo" aria-hidden="true">
+                  Prompt 1 — So sánh AI
+                </span>
+                <button class="copy-btn" data-copy="p1">Sao chép</button>
+              </div>
+              <p id="p1">Hãy so sánh Gemini, ChatGPT và Claude AI theo 3 tiêu chí: điểm mạnh nổi bật, trường hợp sử dụng tốt nhất và chi phí. Trình bày bằng bảng tiếng Việt, ngắn gọn.</p>
+              <p class="copy-status" role="status"></p>
+            </div>
+            <div class="prompt-card">
+              <div class="prompt-top">
+                <span class="prompt-top-label">
+                  <img src="../assets/logos/gemini.png" alt="" class="prompt-top-logo" aria-hidden="true">
+                  Prompt 2 — Khai thác Gemini
+                </span>
+                <button class="copy-btn" data-copy="p2">Sao chép</button>
+              </div>
+              <p id="p2">Tôi đang dùng Gmail và Google Drive hàng ngày. Hãy gợi ý 5 cách tôi có thể dùng Gemini để tiết kiệm thời gian trong công việc, kèm ví dụ cụ thể cho từng cách.</p>
+              <p class="copy-status" role="status"></p>
+            </div>
+          </div>
+        </div>
+
+        <section class="practice-exercises" aria-labelledby="practice-exercises-title">
+          <h3 class="practice-exercises-title" id="practice-exercises-title">Bài tập và đáp án Word</h3>
+          <p class="slide-desc">16 bài tập theo nội dung đã học. Mở từng nhóm để xem đề và tải đáp án mẫu.</p>
+          <div class="exercise-report">
+            <h4>Cách nộp báo cáo Word</h4>
+            <ol>
+              <li>Tạo một file .docx cho mỗi bài tập. Ghi họ tên, lớp và mã bài ở đầu file.</li>
+              <li>Chia báo cáo thành ba mục: Yêu cầu bài tập, Các bước thực hiện, Kết quả và đối chiếu. Đánh số theo từng yêu cầu; chèn prompt, ảnh minh chứng hoặc liên kết nguồn khi đề bài cần.</li>
+              <li>Đặt tên file <code>HoTen_B1-BT01.docx</code> (thay mã theo bài đang nộp). Mở đáp án mẫu để tham khảo cách trình bày.</li>
+            </ol>
+          </div>
+          <details class="slide-exercises">
+            <summary><span class="exercise-summary-icon" aria-hidden="true"><span class="book-icon"></span></span><span class="exercise-summary-text">Gemini là gì?<span class="exercise-summary-count">2 bài tập · Đáp án Word</span></span></summary>
+            <div class="exercise-body">
+              <div class="exercise-grid">
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B1-BT01</span> Soạn email chốt số liệu tháng</h4>
+                <p>Phòng vận hành chốt báo cáo tháng 6. Lan phụ trách doanh thu, Minh phụ trách chi phí. Hai người cần gửi số liệu qua email trước 15:00 ngày 03/07.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Dùng Gemini soạn email có tiêu đề, người nhận và hạn cụ thể.</li>
+                    <li>Nêu rõ việc của Lan và Minh, cách gửi số liệu.</li>
+                    <li>Viết lời kết lịch sự và chỉ ra một điểm đã kiểm tra.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp email hoàn chỉnh và điểm đã kiểm trước khi gửi.</p>
+                <a class="exercise-download" href="../assets/answers/bai-1/dap-an-mau-bai-1-bt-01.docx" download aria-label="Tải đáp án mẫu B1-BT01 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B1-BT02</span> Biến ghi chú họp thành danh sách việc</h4>
+                <p>Ghi chú họp: Trang cập nhật file tồn kho trước 10:00 thứ Ba; Quân kiểm tra chênh lệch trước 16:00 thứ Tư; chưa chốt người gửi báo cáo cuối.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Dùng Gemini trích các việc theo mẫu Việc – Người – Hạn.</li>
+                    <li>Đánh dấu đúng dữ liệu chưa chốt.</li>
+                    <li>Đề xuất một câu hỏi để chốt đầu việc còn thiếu.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp ghi chú gốc, prompt, bảng giao việc và câu hỏi còn mở.</p>
+                <a class="exercise-download" href="../assets/answers/bai-1/dap-an-mau-bai-1-bt-02.docx" download aria-label="Tải đáp án mẫu B1-BT02 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              </div>
+            </div>
+          </details>
+          <details class="slide-exercises">
+            <summary><span class="exercise-summary-icon" aria-hidden="true"><span class="book-icon"></span></span><span class="exercise-summary-text">Gemini vs Google Search<span class="exercise-summary-count">2 bài tập · Đáp án Word</span></span></summary>
+            <div class="exercise-body">
+              <div class="exercise-grid">
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B1-BT03</span> Tìm hướng dẫn lọc đơn hàng trong Excel</h4>
+                <p>Bảng đơn hàng có cột Trạng thái. Bạn cần giữ các dòng “Chưa giao” hiển thị để kiểm tra và tìm một hướng dẫn đáng tin cậy để gửi đồng nghiệp.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Dùng Google Search tìm hướng dẫn chính thức và lưu tên, liên kết.</li>
+                    <li>Dùng Gemini chuyển hướng dẫn thành các thao tác áp dụng cho cột Trạng thái.</li>
+                    <li>Nêu một điều đã kiểm lại trên nguồn và cách bỏ lọc.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp liên kết Microsoft, thao tác lọc và kiểm tra sau khi bỏ lọc.</p>
+                <a class="exercise-download" href="../assets/answers/bai-1/dap-an-mau-bai-1-bt-03.docx" download aria-label="Tải đáp án mẫu B1-BT03 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B1-BT04</span> Tra cách tạo danh sách trạng thái trong Excel</h4>
+                <p>Bạn có bảng bàn giao. Cột Trạng thái chỉ cần ba lựa chọn: Mới, Đang làm, Hoàn tất. Hãy dùng Google Search và Gemini để viết hướng dẫn cho nhân viên mới.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Dùng Search tìm và dẫn nguồn chính thức về danh sách thả xuống.</li>
+                    <li>Soạn ba thao tác cho bảng bàn giao, có đủ ba giá trị đúng đề.</li>
+                    <li>Ghi cách kiểm kết quả và vai trò của Search, Gemini.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp liên kết hướng dẫn, thao tác cài đặt và kết quả mở thử danh sách.</p>
+                <a class="exercise-download" href="../assets/answers/bai-1/dap-an-mau-bai-1-bt-04.docx" download aria-label="Tải đáp án mẫu B1-BT04 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              </div>
+            </div>
+          </details>
+          <details class="slide-exercises">
+            <summary><span class="exercise-summary-icon" aria-hidden="true"><span class="book-icon"></span></span><span class="exercise-summary-text">Gemini vs ChatGPT<span class="exercise-summary-count">2 bài tập · Đáp án Word</span></span></summary>
+            <div class="exercise-body">
+              <div class="exercise-grid">
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B1-BT05</span> So sánh hai email đổi lịch họp</h4>
+                <p>Họp dự án chuyển từ 09:00 thứ Ba sang 14:00 thứ Tư, cùng phòng 302. Nhân viên cần xác nhận tham dự trước 17:00 thứ Ba.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Đưa cùng một prompt vào ChatGPT và Gemini.</li>
+                    <li>So hai kết quả theo độ đủ dữ kiện và độ rõ của yêu cầu xác nhận.</li>
+                    <li>Viết phiên bản email cuối để gửi.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp prompt chung, hai bản email, nhận xét và bản cuối.</p>
+                <a class="exercise-download" href="../assets/answers/bai-1/dap-an-mau-bai-1-bt-05.docx" download aria-label="Tải đáp án mẫu B1-BT05 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B1-BT06</span> So sánh cách lập bảng theo dõi việc sau họp</h4>
+                <p>Biên bản có hai dòng: Hà gửi file báo giá lúc 11:00 thứ Hai; Nam rà ngân sách lúc 15:00 thứ Ba. Yêu cầu lập bảng để dán vào Word.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Yêu cầu ChatGPT và Gemini trả cùng một bảng ba cột.</li>
+                    <li>So sánh hai bản dựa vào đủ việc, đúng hạn và dễ dán vào Word.</li>
+                    <li>Trình bày bảng cuối với hai dòng chính xác.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp prompt chung, kết quả hai công cụ và bảng việc cuối.</p>
+                <a class="exercise-download" href="../assets/answers/bai-1/dap-an-mau-bai-1-bt-06.docx" download aria-label="Tải đáp án mẫu B1-BT06 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              </div>
+            </div>
+          </details>
+          <details class="slide-exercises">
+            <summary><span class="exercise-summary-icon" aria-hidden="true"><span class="book-icon"></span></span><span class="exercise-summary-text">Gemini vs Claude AI<span class="exercise-summary-count">2 bài tập · Đáp án Word</span></span></summary>
+            <div class="exercise-body">
+              <div class="exercise-grid">
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B1-BT07</span> Kiểm thử công thức theo dõi hồ sơ</h4>
+                <p>Trong Excel, B2 là trạng thái, C2 là hạn. Quy tắc: trạng thái “Xong” hiện “Đã xong”; hạn trống hiện “Thiếu hạn”; hạn trước 10/07/2026 hiện “Quá hạn”; còn lại hiện “Trong hạn”.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Nhờ Claude và Gemini đề xuất công thức theo đúng thứ tự quy tắc.</li>
+                    <li>Kiểm thử bốn tình huống, gồm cả đúng ngày mốc.</li>
+                    <li>Nêu tiêu chí chọn công thức sau khi so hai đầu ra.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp hai công thức, bốn ca thử và lý do chọn.</p>
+                <a class="exercise-download" href="../assets/answers/bai-1/dap-an-mau-bai-1-bt-07.docx" download aria-label="Tải đáp án mẫu B1-BT07 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B1-BT08</span> Chọn bản hướng dẫn bàn giao hồ sơ</h4>
+                <p>Quy trình nội bộ: đặt tên <code>YYYYMMDD_TenHoSo</code>, lưu vào Drive nhóm, gửi liên kết cho trưởng nhóm. Nhân viên mới cần một hướng dẫn đọc trong một phút.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Dùng cùng một prompt cho Claude và Gemini.</li>
+                    <li>So sánh theo đúng thứ tự, đúng ví dụ và dễ làm theo.</li>
+                    <li>Viết hướng dẫn cuối để dán vào sổ tay.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp hai bản hướng dẫn, nhận xét và bản cuối.</p>
+                <a class="exercise-download" href="../assets/answers/bai-1/dap-an-mau-bai-1-bt-08.docx" download aria-label="Tải đáp án mẫu B1-BT08 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              </div>
+            </div>
+          </details>
+          <details class="slide-exercises">
+            <summary><span class="exercise-summary-icon" aria-hidden="true"><span class="book-icon"></span></span><span class="exercise-summary-text">Lịch sử phát triển của Gemini<span class="exercise-summary-count">2 bài tập · Đáp án Word</span></span></summary>
+            <div class="exercise-body">
+              <div class="exercise-grid">
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B1-BT09</span> Viết mốc Gemini cho bản tin onboarding</h4>
+                <p>Phòng nhân sự cần hai mốc về Gemini để đưa vào bản tin onboarding: công bố Gemini 1.0 và Bard đổi tên thành Gemini.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Tìm hai thông báo gốc và ghi ngày công bố.</li>
+                    <li>Viết đoạn bản tin tối đa hai câu và giữ hai sự kiện riêng biệt.</li>
+                    <li>Đính kèm hai nguồn tương ứng và nêu một lỗi cần tránh.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp hai liên kết nguồn, bảng mốc và đoạn bản tin.</p>
+                <a class="exercise-download" href="../assets/answers/bai-1/dap-an-mau-bai-1-bt-09.docx" download aria-label="Tải đáp án mẫu B1-BT09 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B1-BT10</span> Sửa câu sai trong tài liệu đào tạo</h4>
+                <p>Bản nháp viết: “Bard đổi tên thành Gemini ngày 06/12/2023”. Bạn cần gửi lại cho người biên tập một câu sửa có nguồn.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Khoanh nội dung cần kiểm chứng và mở hai thông báo Google.</li>
+                    <li>Viết câu đã sửa, giữ nguyên thông tin đúng.</li>
+                    <li>Soạn ghi chú ngắn cho người biên tập, kèm nguồn gốc.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp câu cũ, câu sửa và hai liên kết gốc.</p>
+                <a class="exercise-download" href="../assets/answers/bai-1/dap-an-mau-bai-1-bt-10.docx" download aria-label="Tải đáp án mẫu B1-BT10 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              </div>
+            </div>
+          </details>
+          <details class="slide-exercises">
+            <summary><span class="exercise-summary-icon" aria-hidden="true"><span class="book-icon"></span></span><span class="exercise-summary-text">Lợi thế từ hệ sinh thái Google<span class="exercise-summary-count">2 bài tập · Đáp án Word</span></span></summary>
+            <div class="exercise-body">
+              <div class="exercise-grid">
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B1-BT11</span> Tổ chức buổi rà soát báo cáo tuần</h4>
+                <p>Cả nhóm rà báo cáo lúc 10:00 thứ Sáu trong 30 phút. Cần bản nháp lời mời, nơi ghi biên bản và nơi cập nhật đầu việc trong Google Workspace.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Giao mỗi đầu ra cho một ứng dụng phù hợp.</li>
+                    <li>Viết lời mời có giờ, thời lượng và mục tiêu.</li>
+                    <li>Lập khung biên bản và bảng việc để tiếp tục sau họp.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp lời mời, khung biên bản và khung bảng việc.</p>
+                <a class="exercise-download" href="../assets/answers/bai-1/dap-an-mau-bai-1-bt-11.docx" download aria-label="Tải đáp án mẫu B1-BT11 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B1-BT12</span> Chuẩn bị gửi biên bản và bảng việc</h4>
+                <p>Sau buổi họp, Linh cần gửi liên kết biên bản Google Docs cho người dự họp; đầu việc mới là Tú cập nhật chi phí trước 16:00 thứ Năm.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Chọn nơi lưu biên bản, bảng việc và kênh gửi.</li>
+                    <li>Viết một dòng đầu việc với người và hạn.</li>
+                    <li>Soạn email có vị trí chèn link và nêu bước kiểm quyền.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp dòng bàn giao, email mẫu và cách kiểm quyền.</p>
+                <a class="exercise-download" href="../assets/answers/bai-1/dap-an-mau-bai-1-bt-12.docx" download aria-label="Tải đáp án mẫu B1-BT12 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              </div>
+            </div>
+          </details>
+          <details class="slide-exercises">
+            <summary><span class="exercise-summary-icon" aria-hidden="true"><span class="book-icon"></span></span><span class="exercise-summary-text">So sánh tổng quan 3 AI lớn<span class="exercise-summary-count">2 bài tập · Đáp án Word</span></span></summary>
+            <div class="exercise-body">
+              <div class="exercise-grid">
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B1-BT13</span> Chấm bản tóm tắt báo cáo tuần</h4>
+                <p>Ghi chú: đã xử lý 18/20 phiếu; 2 phiếu chờ xác nhận từ Kho; Hà theo dõi trước 16:00 thứ Sáu. So bản tóm tắt của Gemini, ChatGPT và Claude.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Dùng cùng dữ liệu và prompt trên các công cụ có thể truy cập.</li>
+                    <li>Chấm một điểm mỗi nhóm dữ kiện, tối đa 3 điểm.</li>
+                    <li>Viết bản cuối theo đúng ba dòng.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp prompt, điểm từng công cụ và bản tóm tắt cuối.</p>
+                <a class="exercise-download" href="../assets/answers/bai-1/dap-an-mau-bai-1-bt-13.docx" download aria-label="Tải đáp án mẫu B1-BT13 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B1-BT14</span> Chọn công cụ theo nhiệm vụ văn phòng</h4>
+                <p>Bạn cần tra hướng dẫn Word có nguồn, soạn thư nhắc nộp báo cáo và đối chiếu số liệu trong hai file nội bộ chưa được phép tải lên.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Chọn công cụ hoặc cách làm cho từng nhiệm vụ.</li>
+                    <li>Nêu lý do phù hợp cho cả ba lựa chọn.</li>
+                    <li>Viết một prompt soạn thư dùng dữ liệu giả.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp bảng chọn công cụ và prompt soạn thư.</p>
+                <a class="exercise-download" href="../assets/answers/bai-1/dap-an-mau-bai-1-bt-14.docx" download aria-label="Tải đáp án mẫu B1-BT14 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              </div>
+            </div>
+          </details>
+          <details class="slide-exercises">
+            <summary><span class="exercise-summary-icon" aria-hidden="true"><span class="book-icon"></span></span><span class="exercise-summary-text">Kết luận &amp; Thực hành<span class="exercise-summary-count">2 bài tập · Đáp án Word</span></span></summary>
+            <div class="exercise-body">
+              <div class="exercise-grid">
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B1-BT15</span> Nhắc hồ sơ còn thiếu và tính tiến độ</h4>
+                <p>Nhóm có 12 hồ sơ, đã nhận 9. Ba hồ sơ còn thiếu cần được nộp trước 16:00 thứ Sáu. Quản lý muốn một email nhắc và một tỷ lệ hoàn thành.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Viết prompt yêu cầu hai đầu ra riêng biệt.</li>
+                    <li>Đưa email có số lượng còn thiếu và đúng hạn.</li>
+                    <li>Ghi công thức Excel và kết quả đã kiểm.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp prompt, email, công thức và tỷ lệ kiểm được.</p>
+                <a class="exercise-download" href="../assets/answers/bai-1/dap-an-mau-bai-1-bt-15.docx" download aria-label="Tải đáp án mẫu B1-BT15 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              <article class="exercise-card">
+                <h4><span class="exercise-code">B1-BT16</span> Soạn bản tin nội bộ về lịch bảo trì</h4>
+                <p>Máy in khu A bảo trì 13:00–15:00 thứ Sáu. Trong thời gian này nhân viên dùng máy in khu B. Sau 15:00 cần chờ thông báo xác nhận trước khi dùng lại khu A.</p>
+                <div class="exercise-requirements">
+                  <h5>Yêu cầu</h5>
+                  <ol>
+                    <li>Nhờ AI soạn bản tin có thời gian, khu vực và phương án thay thế.</li>
+                    <li>Sửa câu có thể gây hiểu nhầm về giờ dùng lại.</li>
+                    <li>Ghi lại một điểm chỉnh sửa và lý do.</li>
+                  </ol>
+                </div>
+                <p><strong>Báo cáo Word</strong> Nộp bản nháp, thông báo cuối và ghi chú sửa.</p>
+                <a class="exercise-download" href="../assets/answers/bai-1/dap-an-mau-bai-1-bt-16.docx" download aria-label="Tải đáp án mẫu B1-BT16 (Word)">Tải đáp án mẫu <span aria-hidden="true">↓</span><span class="exercise-format">DOCX</span></a>
+              </article>
+              </div>
+            </div>
+          </details>
+        </section>
+        <div class="lesson-links">
+          <a class="topbar-back" href="../index.html#lo-trinh">← Lộ trình</a>
+          <a class="topbar-back" href="bai-2.html">Bài 2 →</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /deck -->
+
+  <!-- ═══ NAVIGATION BAR ═══ -->
+  <div class="mascot-layer" data-fox-mascot hidden><div class="mascot-fox"></div></div>
+
+  <nav class="slide-nav" aria-label="Điều hướng slide">
+    <button class="nav-btn" id="btn-prev" aria-label="Slide trước" disabled>
+      <span class="nav-arrow">←</span>
+    </button>
+    <div class="nav-center">
+      <div class="dot-track" id="dot-track" role="tablist" aria-label="Chọn slide"></div>
+      <span class="slide-counter"><span id="cur">1</span> / <span id="total">9</span></span>
+    </div>
+    <button class="nav-btn" id="btn-next" aria-label="Slide tiếp theo">
+      <span class="nav-arrow">→</span>
+    </button>
+  </nav>
+
+  <script src="../js/slide-deck.js" defer></script>
+  <script type="module" src="../js/mascot.js"></script>
+</body>
+</html>

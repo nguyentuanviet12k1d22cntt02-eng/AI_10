@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf6f0">
+  <meta name="description"
+    content="Học cách dùng ChatGPT, Gemini và NotebookLM qua những bài thực hành tiếng Việt dành cho người mới.">
+  <title>Lớp học AI — Học AI qua thực hành</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito:wght@700;800;900;1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/mascot.css">
+  <script src="js/main.js" defer></script>
+  <script type="module" src="js/mascot.js"></script>
+</head>
+
+<body id="trang-chu">
+  <a class="skip-link" href="#noi-dung">Đến nội dung</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#trang-chu" aria-label="Lớp học AI, trang chủ">
+        <span class="brand-mark" aria-hidden="true"><span class="book-icon"></span></span>
+        Lớp học AI
+      </a>
+      <nav class="header-nav" aria-label="Điều hướng chính">
+        <a class="home-link" href="#trang-chu" aria-current="page">Trang chủ</a>
+        <a href="#lo-trinh">Lộ trình</a>
+        <a href="#thuc-hanh">Thực hành</a>
+      </nav>
+      <a class="button button-small button-primary header-action" href="#lo-trinh">Bắt đầu học</a>
+    </div>
+  </header>
+
+  <main id="noi-dung">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-layout">
+        <div class="hero-content">
+          <p class="pill hero-kicker"><span aria-hidden="true"></span> Dành cho người mới bắt đầu</p>
+          <h1 id="hero-title">Học AI từng bước,<br><span>thực hành</span><br>ngay hôm nay.</h1>
+          <p class="hero-description">Làm quen với ChatGPT, Gemini và NotebookLM qua những bài tập tiếng Việt cho học
+            tập và công việc.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="lessons/bai-1.html">Bắt đầu học
+              <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#lo-trinh">Xem lộ trình</a>
+          </div>
+          <dl class="hero-facts">
+            <div>
+              <dt>Bài học</dt>
+              <dd>5</dd>
+            </div>
+            <div>
+              <dt>Bài thực hành</dt>
+              <dd>44</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="progress-card">
+          <div class="progress-intro">
+            <span class="tile tile-blue" aria-hidden="true"><span class="play-icon">▸</span></span>
+            <div>
+              <h2>Lộ trình học AI</h2>
+              <p>Từ làm quen với AI đến nghiên cứu chuyên sâu</p>
+            </div>
+          </div>
+          <div class="progress-label"><label for="course-progress">Bài đã mở</label><span id="progress-count">0 / 5</span></div>
+          <progress id="course-progress" max="5" value="0"></progress>
+          <a class="button button-primary progress-action" id="progress-action" href="lessons/bai-1.html">Mở bài đầu tiên</a>
+          <span class="progress-decoration decoration-target" aria-hidden="true"><span
+              class="target-icon"></span></span>
+          <span class="progress-decoration decoration-star" aria-hidden="true">★</span>
+          <span class="progress-decoration decoration-book" aria-hidden="true"><span class="book-icon"></span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="courses" id="lo-trinh" aria-labelledby="courses-title">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="pill pill-blue">Lộ trình học</p>
+          <h2 id="courses-title">Giáo trình học AI</h2>
+          <p>Học theo thứ tự hoặc chọn bài phù hợp với việc bạn đang làm.</p>
+        </div>
+
+        <div class="course-grid">
+          <article class="course-card course-gemini">
+            <div class="course-top">
+              <span class="course-icon" aria-hidden="true"><span class="spark"></span></span>
+              <span class="course-topic">Bài 1</span>
+            </div>
+            <h3>Gemini và các công cụ AI</h3>
+            <p>So sánh Gemini, Google Search, ChatGPT và Claude AI, rồi tìm hiểu hệ sinh thái Google.</p>
+            <a class="course-button" href="lessons/bai-1.html" data-course-lesson="1" aria-label="Học Bài 1: Gemini và các công cụ AI">Học Bài 1 <span class="arrow" aria-hidden="true">↗</span></a>
+          </article>
+          <article class="course-card course-chatgpt">
+            <div class="course-top">
+              <span class="course-icon" aria-hidden="true"><span class="chat-icon"></span></span>
+              <span class="course-topic">Bài 2</span>
+            </div>
+            <h3>Viết prompt theo RCAF</h3>
+            <p>Làm rõ vai trò, ngữ cảnh, nhiệm vụ và định dạng đầu ra.</p>
+            <a class="course-button" href="lessons/bai-2.html" data-course-lesson="2" aria-label="Học Bài 2: Viết prompt theo RCAF">Học Bài 2 <span class="arrow" aria-hidden="true">↗</span></a>
+          </article>
+          <article class="course-card course-notebook">
+            <div class="course-top">
+              <span class="course-icon" aria-hidden="true"><span class="target-icon"></span></span>
+              <span class="course-topic">Bài 3</span>
+            </div>
+            <h3>Tìm kiếm bằng Google Lens</h3>
+            <p>Khoanh vùng hình ảnh, sao chép văn bản và dịch nhanh trong Chrome.</p>
+            <a class="course-button" href="lessons/bai-3.html" data-course-lesson="3" aria-label="Học Bài 3: Tìm kiếm bằng Google Lens">Học Bài 3 <span class="arrow" aria-hidden="true">↗</span></a>
+          </article>
+          <article class="course-card course-practice">
+            <div class="course-top">
+              <span class="course-icon" aria-hidden="true"><span class="play-icon">▸</span></span>
+              <span class="course-topic">Bài 4</span>
+            </div>
+            <h3>Tóm tắt YouTube với Gemini</h3>
+            <p>Rút ý chính, đặt câu hỏi và đối chiếu câu trả lời với video gốc.</p>
+            <a class="course-button" href="lessons/bai-4.html" data-course-lesson="4" aria-label="Học Bài 4: Tóm tắt YouTube với Gemini">Học Bài 4 <span class="arrow" aria-hidden="true">↗</span></a>
+          </article>
+          <article class="course-card course-gemini">
+            <div class="course-top">
+              <span class="course-icon" aria-hidden="true"><span class="book-icon"></span></span>
+              <span class="course-topic">Bài 5</span>
+            </div>
+            <h3>Lập báo cáo với Deep Research</h3>
+            <p>Duyệt kế hoạch, chọn nguồn và kiểm tra trích dẫn trong báo cáo.</p>
+            <a class="course-button" href="lessons/bai-5.html" data-course-lesson="5" aria-label="Học Bài 5: Lập báo cáo với Deep Research">Học Bài 5 <span class="arrow" aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+
+        <details class="extra-exercises">
+          <summary>Bài tập bổ sung</summary>
+          <div class="extra-exercise-links">
+            <button class="course-button" type="button" data-lesson="chatgpt" aria-haspopup="dialog">Viết email với ChatGPT ↗</button>
+            <button class="course-button" type="button" data-lesson="gemini" aria-haspopup="dialog">Lập kế hoạch với Gemini ↗</button>
+            <button class="course-button" type="button" data-lesson="notebook" aria-haspopup="dialog">Ôn tập với NotebookLM ↗</button>
+            <a class="course-button" href="#thuc-hanh">Thử một prompt ↗</a>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="practice-section" id="thuc-hanh" aria-labelledby="practice-title">
+      <div class="shell practice">
+        <div class="practice-intro">
+          <p class="pill pill-pink">Thực hành nhanh</p>
+          <h2 id="practice-title">Thử prompt đầu tiên</h2>
+          <p>Dán prompt mẫu vào ChatGPT hoặc Gemini, rồi đổi số phút mỗi ngày để xem lịch học thay đổi thế nào.</p>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-toolbar"><span>Prompt mẫu</span><button class="copy-button" type="button"
+              data-copy="starter-prompt">Sao chép</button></div>
+          <p id="starter-prompt">Tôi mới học AI và có 20 phút mỗi ngày. Hãy lập kế hoạch học trong 3 ngày. Với mỗi ngày,
+            cho tôi một mục tiêu, một bài thực hành và một cách tự kiểm tra kết quả.</p>
+          <p class="copy-status" role="status"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <a class="wordmark" href="#trang-chu"><span class="brand-mark" aria-hidden="true"><span
+            class="book-icon"></span></span>Lớp học AI</a>
+      <a class="back-to-top" href="#trang-chu">Về đầu trang <span class="arrow" aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <dialog class="lesson-dialog" aria-labelledby="lesson-title">
+    <div class="lesson-content">
+      <div class="lesson-heading">
+        <p class="eyebrow" id="lesson-tool"></p>
+        <form method="dialog"><button class="close-button" aria-label="Đóng bài mẫu" autofocus>×</button></form>
+      </div>
+      <h2 id="lesson-title"></h2>
+      <p id="lesson-description"></p>
+      <ol id="lesson-steps"></ol>
+      <div class="prompt-card">
+        <div class="prompt-toolbar"><span>Prompt mẫu</span><button class="copy-button" type="button"
+            data-copy="lesson-prompt">Sao chép</button></div>
+        <p id="lesson-prompt"></p>
+        <p class="copy-status" role="status"></p>
+      </div>
+    </div>
+  </dialog>
+  <div class="mascot-layer" data-fox-mascot hidden><div class="mascot-fox"></div></div>
+  <button class="mascot-toggle mascot-toggle-floating" data-mascot-toggle type="button" aria-label="Tạm dừng cáo" title="Tạm dừng cáo" hidden>Ⅱ</button>
+</body>
+
+</html>
