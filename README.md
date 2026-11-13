@@ -39,3 +39,4 @@ AI_10/
 - HTML5 / CSS3 thuần (Zero inline code, CSS Custom Properties)
 - JavaScript ES6+ (Modular, không phụ thuộc thư viện ngoài)
 - Google Fonts (Inter, Nunito)
+
