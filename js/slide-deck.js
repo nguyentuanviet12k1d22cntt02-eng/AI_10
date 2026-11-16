@@ -145,15 +145,17 @@
 
   // ── Copy-to-clipboard ─────────────────────────────
   document.querySelectorAll('[data-copy]').forEach((btn) => {
+    const origText = btn.textContent.trim() || 'Sao chép';
     btn.addEventListener('click', async () => {
       const target = document.getElementById(btn.dataset.copy);
-      const status = btn.closest('.prompt-card').querySelector('.copy-status');
+      const card = btn.closest('.prompt-card');
+      const status = card ? card.querySelector('.copy-status') : null;
       try {
         await navigator.clipboard.writeText(target.textContent.trim());
         btn.textContent = '✓ Đã sao chép';
         if (status) status.textContent = 'Dán vào công cụ AI bạn đang dùng.';
         setTimeout(() => {
-          btn.textContent = 'Sao chép';
+          btn.textContent = origText;
           if (status) status.textContent = '';
         }, 3000);
       } catch {

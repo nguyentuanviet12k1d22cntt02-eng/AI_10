@@ -2075,6 +2075,45 @@ body {
   margin: 0 16px 16px;
 }
 
+/* Chuỗi Prompt Đa Bước Tuần Tự (Multi-Step Prompt Sequence) */
+.step-prompt-item {
+  background: white;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-top: 10px;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.step-prompt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1.5px dashed #cbd5e1;
+}
+.step-badge {
+  font-size: 11.5px;
+  font-weight: 850;
+  padding: 3px 9px;
+  border-radius: 6px;
+  border: 1.5px solid var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.step-badge.step-1 { background: #dbeafe; color: #1e40af; }
+.step-badge.step-2 { background: #fef3c7; color: #92400e; }
+.step-badge.step-3 { background: #dcfce7; color: #166534; }
+.step-prompt-item .prompt-text {
+  font-size: 12.5px;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--ink);
+}
+
 /* ============================================================
    PROMPT LOCK SYSTEM (Ổ KHÓA BẢO VỆ PROMPT MẪU)
    ============================================================ */
