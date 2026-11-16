@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bài 9 · Công Thức Câu Lệnh Kết Hợp 3 Yếu Tố — Lớp học AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito:wght@700;800;900;1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/slide-deck.css">
+</head>
+<body data-course-lesson="9">
+
+  <!-- ═══ TOPBAR STUDIO ═══ -->
+  <header class="topbar">
+    <a class="topbar-logo" href="../index.html" aria-label="Về trang chủ Lớp học AI">
+      <span class="logo-mark" aria-hidden="true"><span class="book-icon"></span></span>
+      Lớp học AI
+    </a>
+    <div class="topbar-center">
+      <span class="studio-rec-pill"><span class="rec-dot"></span> BÀI HỌC CHUẨN</span>
+      <span class="topbar-lesson" style="margin-left: 10px;">Bài 9 · Câu Lệnh Kết Hợp 3 Yếu Tố</span>
+    </div>
+    <a class="topbar-back" href="../index.html">← Trang chủ</a>
+  </header>
+
+  <!-- ═══ SLIDE DECK WORKSPACE ═══ -->
+  <main class="deck" id="deck" aria-label="Bài 9">
+
+    <!-- ─── SLIDE 1: TRANG BÌA ─── -->
+    <section class="slide slide-cover" data-slide="1" aria-label="Slide 1: Trang bìa">
+      <div class="slide-inner cover-inner">
+        <div class="cover-left">
+          <div class="cover-kicker">
+            <span class="studio-rec-pill"><span class="rec-dot"></span> GIÁO TRÌNH CHUẨN</span>
+            <span class="cover-kicker-label">Chương 4 · Kỹ Năng Viết Câu Lệnh Chuẩn</span>
+          </div>
+          <h1 class="cover-title">Công thức câu lệnh<br><em>Kết hợp 3 yếu tố</em></h1>
+          <p class="cover-desc">Nâng cấp câu lệnh lên đẳng cấp chuyên gia với yếu tố thứ 3: <strong>NHIỆM VỤ + NGỮ CẢNH + THAM CHIẾU</strong>. Khống chế hoàn toàn ảo giác AI bằng căn cứ pháp lý và tiêu chuẩn đối chiếu chuẩn mực.</p>
+          <div class="cover-facts">
+            <div class="fact-chip chip-blue"><span>3</span> Yếu tố vàng</div>
+            <div class="fact-chip chip-pink"><span>Khẳng định</span> &amp; Phủ định</div>
+            <div class="fact-chip chip-lavender"><span>Không bịa đặt</span> Chuẩn mực</div>
+          </div>
+        </div>
+
+        <div class="cover-right">
+          <div class="toc-card">
+            <div class="toc-card-head">
+              <span class="toc-icon icon-blue" aria-hidden="true"><span class="spark"></span></span>
+              <div><strong>Kịch bản bài giảng</strong><p>6 slide · Đỉnh cao Prompt</p></div>
+            </div>
+            <ul class="toc-list" role="list">
+              <li><button type="button" class="toc-link" data-go-to="2"><span class="toc-num">01</span> Vì sao cần thêm yếu tố Tham chiếu?</button></li>
+              <li><button type="button" class="toc-link" data-go-to="3"><span class="toc-num">02</span> Tham chiếu Khẳng định vs Tham chiếu Phủ định</button></li>
+              <li><button type="button" class="toc-link" data-go-to="4"><span class="toc-num">03</span> Phân tích ca mẫu: Soạn Hợp đồng Lao động</button></li>
+              <li><button type="button" class="toc-link" data-go-to="5"><span class="toc-num">04</span> Bảng đối chiếu câu lệnh 2 yếu tố vs 3 yếu tố</button></li>
+              <li><button type="button" class="toc-link" data-go-to="6"><span class="toc-num">05</span> Thực hành dự án câu lệnh 3 yếu tố</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 2: VÌ SAO CẦN YẾU TỐ THAM CHIẾU ─── -->
+    <section class="slide slide-concept" data-slide="2" aria-label="Slide 2: Yếu tố Tham chiếu">
+      <div class="slide-inner">
+        <div class="slide-label label-blue">PHẦN 1 · KHÁI NIỆM CỐT LÕI</div>
+        <h2 class="slide-title">Yếu tố then chốt: THAM CHIẾU (Reference)</h2>
+        <p class="slide-desc">Khi nhiệm vụ và ngữ cảnh đã rõ, AI vẫn có thể trả lời theo kiến thức tự do trên Internet nếu thiếu <strong>mỏ neo tham chiếu</strong>.</p>
+
+        <div class="feature-grid" style="grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 14px;">
+          <div class="feature-card fc-blue">
+            <span class="fc-emoji">⚓</span>
+            <strong>Tham chiếu là gì?</strong>
+            <p>Là thông tin, tài liệu nội bộ, quy định pháp luật, ví dụ mẫu hoặc tiêu chuẩn đối chiếu được cung cấp để làm cơ sở cho AI làm việc.</p>
+          </div>
+          <div class="feature-card fc-pink">
+            <span class="fc-emoji">🔒</span>
+            <strong>Khống chế ảo giác</strong>
+            <p>Bắt AI bám sát dữ liệu gốc, triệt tiêu nguy cơ AI tự bịa đặt điều khoản hoặc áp dụng luật của nước ngoài vào văn bản Việt Nam.</p>
+          </div>
+          <div class="feature-card fc-green">
+            <span class="fc-emoji">🎯</span>
+            <strong>Giữ vững văn hóa công ty</strong>
+            <p>Đảm bảo cách xưng hô, màu sắc thương hiệu và cấu trúc văn thư luôn đồng nhất với các biểu mẫu chuẩn của tổ chức.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 3: KHẲNG ĐỊNH VS PHỦ ĐỊNH ─── -->
+    <section class="slide slide-compare" data-slide="3" aria-label="Slide 3: Khẳng định vs Phủ định">
+      <div class="slide-inner">
+        <div class="slide-label label-pink">PHẦN 2 · KỸ THUẬT PHÂN LOẠI</div>
+        <h2 class="slide-title">Tham chiếu Khẳng định <span class="vs-word">vs</span> Tham chiếu Phủ định</h2>
+        <p class="slide-desc">Một chuyên gia giao việc luôn định hướng cả điều AI <strong>NÊN LÀM</strong> lẫn điều AI <strong>TUYỆT ĐỐI KHÔNG ĐƯỢC LÀM</strong>:</p>
+
+        <div class="vs-layout" style="margin-top: 14px;">
+          <div class="vs-card vs-left">
+            <div class="vs-card-head" style="background: #dbeafe; border-bottom: 2px solid var(--ink);">
+              <strong style="color: #1e40af;">📌 1. Tham chiếu Khẳng định (Nên dựa vào đâu)</strong>
+            </div>
+            <ul class="vs-points">
+              <li>Chỉ rõ nguồn tài liệu uy tín: <em>"Căn cứ theo Bộ luật Lao động Việt Nam năm 2019 và mẫu HĐLĐ chuẩn của công ty."</em></li>
+              <li>Chỉ rõ cấu trúc mẫu: <em>"Bố cục văn bản phải tuân thủ đúng 7 mục như tài liệu ISO-9001 đính kèm."</em></li>
+              <li>Tác dụng: Hướng AI đi đúng luồng nghiệp vụ của doanh nghiệp.</li>
+            </ul>
+          </div>
+          <div class="vs-divider"><span class="vs-badge">VS</span></div>
+          <div class="vs-card vs-right">
+            <div class="vs-card-head" style="background: #fee2e2; border-bottom: 2px solid var(--ink);">
+              <strong style="color: #991b1b;">🚫 2. Tham chiếu Phủ định (Rào chắn an toàn - Guardrails)</strong>
+            </div>
+            <ul class="vs-points">
+              <li>Cấm các hành vi sai trái: <em>"Không tự ý đưa vào các điều khoản phạt tiền trái pháp luật."</em></li>
+              <li>Cấm lỗi hành văn: <em>"Không sử dụng các từ ngữ trừu tượng, mơ hồ có thể gây tranh chấp pháp lý."</em></li>
+              <li>Giới hạn phạm vi: <em>"Không viết quá 500 từ và không bịa đặt số liệu ngoài tài liệu đính kèm."</em></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 4: PHÂN TÍCH CA MẪU HỢP ĐỒNG LAO ĐỘNG ─── -->
+    <section class="slide slide-concept" data-slide="4" aria-label="Slide 4: Ca mẫu thực tế">
+      <div class="slide-inner">
+        <div class="slide-label label-green">PHẦN 3 · CA MẪU THỰC TẾ</div>
+        <h2 class="slide-title">Bóc tách ca mẫu: Soạn Hợp đồng Lao động chuẩn 3 yếu tố</h2>
+        <p class="slide-desc">Xem cách phối hợp 3 mảnh ghép tạo nên câu lệnh hoàn hảo không tì vết:</p>
+
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 14px;">
+          <div style="padding: 12px 16px; background: #eff6ff; border: 2px solid var(--blue); border-radius: 10px;">
+            <strong style="color: var(--blue);">1. NHIỆM VỤ:</strong>
+            <span style="color: var(--ink); font-weight: 700;"> "Hãy soạn thảo một bản Hợp đồng lao động xác định thời hạn 12 tháng hoàn chỉnh."</span>
+          </div>
+          <div style="padding: 12px 16px; background: #fdf2f8; border: 2px solid var(--pink); border-radius: 10px;">
+            <strong style="color: var(--pink);">2. NGỮ CẢNH:</strong>
+            <span style="color: var(--ink); font-weight: 700;"> "Bạn là Chuyên viên Pháp chế của Công ty Sao Việt. Hợp đồng ký kết với vị trí Nhân viên Kinh doanh, mức lương cơ bản 12 triệu + hoa hồng theo doanh số, làm việc tại trụ sở Hà Nội."</span>
+          </div>
+          <div style="padding: 12px 16px; background: #f0fdf4; border: 2px solid var(--green); border-radius: 10px;">
+            <strong style="color: #15803d;">3. THAM CHIẾU (Khẳng định + Phủ định):</strong>
+            <span style="color: var(--ink); font-weight: 700;"> "Dựa theo cấu trúc hợp đồng lao động theo Bộ luật Lao động Việt Nam hiện hành và mẫu hợp đồng của công ty. [Tham chiếu phủ định]: Tuyệt đối không thêm điều khoản giữ bằng cấp gốc, không phạt tiền vi phạm kỷ luật trái luật và không bỏ sót các điều khoản bắt buộc về BHXH."</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 5: BẢNG ĐỐI CHIẾU 2 VS 3 YẾU TỐ ─── -->
+    <section class="slide slide-compare" data-slide="5" aria-label="Slide 5: Đối chiếu 2 vs 3 yếu tố">
+      <div class="slide-inner">
+        <div class="slide-label label-yellow">PHẦN 4 · SO SÁNH ĐỐI CHIẾU</div>
+        <h2 class="slide-title">Sự khác biệt khi có thêm yếu tố Tham chiếu</h2>
+        <p class="slide-desc">Thấy rõ bước nhảy vọt về chất lượng sản phẩm công sở:</p>
+
+        <div class="vs-layout" style="margin-top: 14px;">
+          <div class="vs-card vs-left">
+            <div class="vs-card-head" style="background: #fef9c3; border-bottom: 2px solid var(--ink);">
+              <strong>Câu lệnh 2 Yếu tố (Nhiệm vụ + Ngữ cảnh)</strong>
+            </div>
+            <ul class="vs-points">
+              <li>Văn bản đúng người, đúng việc, đáp ứng được ngữ cảnh công ty.</li>
+              <li><strong>Hạn chế:</strong> AI vẫn có thể chọn mẫu văn bản cũ trên mạng, câu chữ tự do, đôi khi mâu thuẫn với nội quy nội bộ hoặc văn bản luật mới sửa đổi.</li>
+              <li>Thích hợp cho: Email thông thường, bài viết mạng xã hội, ý tưởng ngắn.</li>
+            </ul>
+          </div>
+          <div class="vs-divider"><span class="vs-badge">VS</span></div>
+          <div class="vs-card vs-right">
+            <div class="vs-card-head" style="background: #dcfce7; border-bottom: 2px solid var(--ink);">
+              <strong style="color: #14532d;">Câu lệnh 3 Yếu tố (Thêm Tham chiếu)</strong>
+            </div>
+            <ul class="vs-points">
+              <li>Văn bản chuẩn xác tuyệt đối, khớp hoàn toàn với văn bản quy phạm và nội quy công ty.</li>
+              <li><strong>Ưu điểm:</strong> Triệt tiêu 100% rủi ro pháp lý và chi phí chỉnh sửa lại. Nghiệm thu được ngay.</li>
+              <li>Bắt buộc dùng cho: Hợp đồng, quy chế, báo cáo tài chính, thỏa thuận đối tác.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 6: THỰC HÀNH DỰ ÁN ─── -->
+    <section class="slide slide-conclusion" data-slide="6" aria-label="Slide 6: Thực hành dự án">
+      <div class="slide-inner conclusion-inner">
+        <div class="slide-label label-green">PHẦN 5 · THỰC HÀNH DỰ ÁN</div>
+        <h2 class="slide-title">Thực hành Câu lệnh Kết hợp 3 Yếu tố</h2>
+        <p class="slide-desc">Áp dụng công thức 3 yếu tố để soạn thảo 2 văn bản pháp lý và quản trị cao cấp.</p>
+
+        <div class="practice-box">
+          <div class="practice-header">
+            <div class="practice-header-text">
+              <span class="practice-badge">BÀI TẬP DỰ ÁN CÔNG SỞ</span>
+              <h3>Nhiệm vụ thiết lập rào chắn tham chiếu</h3>
+            </div>
+            <button type="button" class="master-unlock-btn" id="btn-master-unlock" title="Mở khóa toàn bộ prompt mẫu">
+              <span class="lock-icon" aria-hidden="true">🔒</span>
+              <span class="unlock-btn-text">Mở khóa toàn bộ</span>
+            </button>
+          </div>
+
+          <div class="practice-prompts">
+            <!-- DỰ ÁN 1 -->
+            <div class="prompt-card" data-prompt-card>
+              <div class="prompt-scenario">
+                <h4>
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  Dự án 1: Soạn Thỏa thuận Bảo mật Thông tin (NDA) cho đối tác
+                </h4>
+                <p><strong>Bối cảnh:</strong> Công ty chuẩn bị chia sẻ mã nguồn phần mềm cho đối tác lập trình bên ngoài. Cần kết hợp: Nhiệm vụ (soạn thảo NDA 6 điều khoản), Ngữ cảnh (thông tin dự án bảo mật), Tham chiếu (Luật Sở hữu Trí tuệ và cấm tiết lộ bí mật kinh doanh).</p>
+              </div>
+
+              <!-- Chỉ hiện Ổ Khóa (Bấm vào để mở khối nhập mật mã giữa màn hình) -->
+              <div class="prompt-lock-trigger" role="button" tabindex="0" title="Bấm vào để mở khóa prompt mẫu">
+                <span class="lock-shield-icon">🔒</span>
+                <div class="lock-trigger-info">
+                  <strong>Prompt mẫu đang khóa</strong>
+                  <span>Bấm vào để nhập mật mã mở khóa</span>
+                </div>
+              </div>
+
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span class="prompt-unlocked-tag">🔓 Prompt 3 yếu tố: Bản thỏa thuận NDA</span>
+                  <div class="prompt-head-actions">
+                    <button type="button" class="relock-btn" title="Khóa lại prompt này">🔒 Khóa</button>
+                    <button type="button" class="copy-btn" data-copy="p-b9-da1">Sao chép</button>
+                  </div>
+                </div>
+                <p id="p-b9-da1" class="prompt-text"><strong>[Nhiệm vụ]</strong> Hãy soạn thảo một bản Thỏa thuận Bảo mật Thông tin (NDA) hai bên hoàn chỉnh, cấu trúc gồm 6 điều khoản: Phạm vi bí mật kinh doanh, Nghĩa vụ bảo mật, Trường hợp ngoại lệ, Thời hạn bảo mật, Chế tài bồi thường thiệt hại và Cơ quan giải quyết tranh chấp. <strong>[Ngữ cảnh]</strong> Công ty Cổ phần Công nghệ Sao Việt thuê Công ty Đối tác gia công phần mềm ứng dụng di động; Sao Việt sẽ bàn giao tài liệu kiến trúc hệ thống và dữ liệu người dùng thử nghiệm. <strong>[Tham chiếu khẳng định]</strong> Căn cứ Luật Sở hữu Trí tuệ và Bộ luật Dân sự Việt Nam hiện hành. <strong>[Tham chiếu phủ định]</strong> Tuyệt đối không dùng các từ ngữ định tính mập mờ; không quy định thời hạn bảo mật dưới 03 năm kể từ ngày chấm dứt hợp đồng; không bỏ sót điều khoản về trách nhiệm của nhân viên bên nhận thông tin.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </div>
+
+            <!-- DỰ ÁN 2 -->
+            <div class="prompt-card" data-prompt-card>
+              <div class="prompt-scenario">
+                <h4>
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  Dự án 2: Soạn Quy chế Thưởng Nóng cho Đội ngũ Dự án Vượt Tiến độ
+                </h4>
+                <p><strong>Bối cảnh:</strong> Ban giám đốc lập quỹ thưởng nóng 50 triệu cho dự án hoàn thành trước 15 ngày. Cần 3 yếu tố: Nhiệm vụ (quy chế ban hành), Ngữ cảnh (tiêu chí nghiệm thu), Tham chiếu (hạn mức ngân sách và điều kiện không phát sinh lỗi nghiêm trọng).</p>
+              </div>
+
+              <!-- Chỉ hiện Ổ Khóa (Bấm vào để mở khối nhập mật mã giữa màn hình) -->
+              <div class="prompt-lock-trigger" role="button" tabindex="0" title="Bấm vào để mở khóa prompt mẫu">
+                <span class="lock-shield-icon">🔒</span>
+                <div class="lock-trigger-info">
+                  <strong>Prompt mẫu đang khóa</strong>
+                  <span>Bấm vào để nhập mật mã mở khóa</span>
+                </div>
+              </div>
+
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span class="prompt-unlocked-tag">🔓 Prompt 3 yếu tố: Quy chế thưởng nóng</span>
+                  <div class="prompt-head-actions">
+                    <button type="button" class="relock-btn" title="Khóa lại prompt này">🔒 Khóa</button>
+                    <button type="button" class="copy-btn" data-copy="p-b9-da2">Sao chép</button>
+                  </div>
+                </div>
+                <p id="p-b9-da2" class="prompt-text"><strong>[Nhiệm vụ]</strong> Hãy soạn thảo Quy chế Khen thưởng Nước rút hoàn thành dự án trước hạn, thể thức văn bản quản trị nội bộ dứt khoát. <strong>[Ngữ cảnh]</strong> Dự án Chuyển đổi số nội bộ của Sao Việt cần về đích trước ngày 30/11/2026 (sớm hơn 15 ngày so với hợp đồng). Đối tượng áp dụng là toàn bộ 12 nhân sự nòng cốt thuộc đội dự án. <strong>[Tham chiếu khẳng định]</strong> Tổng quỹ thưởng cố định là 50.000.000 VNĐ; tỷ lệ phân bổ: 40% cho Trưởng dự án và Kiến trúc sư trưởng, 60% chia theo mức độ đóng góp (A/B/C) của các thành viên. <strong>[Tham chiếu phủ định]</strong> Điều kiện tiên quyết: Sản phẩm bàn giao phải đạt 100% tiêu chí nghiệm thu DoD và không có lỗi bảo mật cấp độ Critical trong 14 ngày chạy thử; nếu phát sinh lỗi nghiêm trọng thì hủy bỏ tiền thưởng nóng.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson-links" style="margin-top: 24px;">
+          <a class="topbar-back" href="bai-8.html">← Bài 8</a>
+          <a class="topbar-back" href="../index.html">Về trang chủ ↑</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ KHỐI NHẬP MẬT MÃ NGAY GIỮA MÀN HÌNH (MODAL DIALOG) ═══ -->
+    <dialog id="lock-modal" class="lock-modal" aria-labelledby="lock-modal-title">
+      <div class="lock-modal-card">
+        <button type="button" class="lock-modal-close" id="lock-modal-close" aria-label="Đóng">✕</button>
+        <div class="lock-modal-icon">🔒</div>
+        <h3 class="lock-modal-title" id="lock-modal-title">Mở khóa Prompt mẫu</h3>
+        <p class="lock-modal-desc">Nhập mật mã để xem và sao chép câu lệnh prompt mẫu.</p>
+        <form id="lock-modal-form" class="lock-modal-form" onsubmit="return false;">
+          <input type="password" id="lock-modal-input" class="lock-modal-input" placeholder="Nhập mật mã mở khóa..." maxlength="10" autocomplete="off">
+          <button type="submit" class="lock-modal-submit">Mở khóa 🔓</button>
+        </form>
+        <div id="lock-modal-error" class="lock-modal-error" hidden>⚠️ Mật mã không đúng, vui lòng thử lại!</div>
+      </div>
+    </dialog>
+
+  </main>
+
+  <!-- ═══ THANH ĐIỀU HƯỚNG SLIDE DƯỚI CÙNG ═══ -->
+  <nav class="slide-nav" aria-label="Điều hướng slide">
+    <button class="nav-btn" id="btn-prev" aria-label="Slide trước" disabled>←</button>
+    <div class="nav-center">
+      <div class="dot-track" id="dot-track" role="tablist" aria-label="Chọn slide"></div>
+      <span class="slide-counter"><span id="cur">1</span> / <span id="total">6</span></span>
+    </div>
+    <button class="nav-btn" id="btn-next" aria-label="Slide tiếp theo">→</button>
+  </nav>
+
+  <script src="../js/slide-deck.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bài 6 · Tư Duy Đánh Giá & Kiểm Soát AI — Lớp học AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito:wght@700;800;900;1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/slide-deck.css">
+</head>
+<body data-course-lesson="6">
+
+  <!-- ═══ TOPBAR STUDIO ═══ -->
+  <header class="topbar">
+    <a class="topbar-logo" href="../index.html" aria-label="Về trang chủ Lớp học AI">
+      <span class="logo-mark" aria-hidden="true"><span class="book-icon"></span></span>
+      Lớp học AI
+    </a>
+    <div class="topbar-center">
+      <span class="studio-rec-pill"><span class="rec-dot"></span> BÀI HỌC CHUẨN</span>
+      <span class="topbar-lesson" style="margin-left: 10px;">Bài 6 · Tư Duy Đánh Giá &amp; Kiểm Soát AI</span>
+    </div>
+    <a class="topbar-back" href="../index.html">← Trang chủ</a>
+  </header>
+
+  <!-- ═══ SLIDE DECK WORKSPACE ═══ -->
+  <main class="deck" id="deck" aria-label="Bài 6">
+
+    <!-- ─── SLIDE 1: TRANG BÌA ─── -->
+    <section class="slide slide-cover" data-slide="1" aria-label="Slide 1: Trang bìa">
+      <div class="slide-inner cover-inner">
+        <div class="cover-left">
+          <div class="cover-kicker">
+            <span class="studio-rec-pill"><span class="rec-dot"></span> GIÁO TRÌNH CHUẨN</span>
+            <span class="cover-kicker-label">Chương 3 · Tư Duy Sử Dụng AI Trong Công Việc</span>
+          </div>
+          <h1 class="cover-title">Tư duy đánh giá<br><em>&amp; kiểm soát AI</em></h1>
+          <p class="cover-desc">AI không phải lúc nào cũng đúng. Hãy trang bị tư duy đánh giá phản biện và quy trình kiểm soát kết quả để sử dụng AI <strong>an toàn, chính xác và có trách nhiệm</strong>.</p>
+          <div class="cover-facts">
+            <div class="fact-chip chip-blue"><span>6</span> Bước kiểm tra</div>
+            <div class="fact-chip chip-pink"><span>4</span> Pha kiểm soát</div>
+            <div class="fact-chip chip-lavender"><span>Trách nhiệm</span> Con người</div>
+          </div>
+        </div>
+
+        <div class="cover-right">
+          <div class="toc-card">
+            <div class="toc-card-head">
+              <span class="toc-icon icon-blue" aria-hidden="true"><span class="spark"></span></span>
+              <div><strong>Kịch bản bài giảng</strong><p>6 slide · Nội dung &amp; Thực hành</p></div>
+            </div>
+            <ul class="toc-list" role="list">
+              <li><button type="button" class="toc-link" data-go-to="2"><span class="toc-num">01</span> Bản chất AI &amp; Vì sao phải đánh giá?</button></li>
+              <li><button type="button" class="toc-link" data-go-to="3"><span class="toc-num">02</span> 6 Cách kiểm tra lại kết quả AI</button></li>
+              <li><button type="button" class="toc-link" data-go-to="4"><span class="toc-num">03</span> Quy trình kiểm soát chuẩn 4 bước</button></li>
+              <li><button type="button" class="toc-link" data-go-to="5"><span class="toc-num">04</span> So sánh: Không kiểm soát vs Có kiểm soát</button></li>
+              <li><button type="button" class="toc-link" data-go-to="6"><span class="toc-num">05</span> Thực hành dự án kiểm soát AI</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 2: BẢN CHẤT VÀ VÌ SAO PHẢI ĐÁNH GIÁ ─── -->
+    <section class="slide slide-concept" data-slide="2" aria-label="Slide 2: Bản chất AI">
+      <div class="slide-inner">
+        <div class="slide-label label-blue">PHẦN 1 · NGUYÊN LÝ CỐT LÕI</div>
+        <h2 class="slide-title">Bản chất của AI &amp; Vì sao không thể tin 100%?</h2>
+        <p class="slide-desc">AI là mô hình ngôn ngữ dự đoán từ ngữ có xác suất cao nhất. AI <strong>không có ý thức tự kiểm chứng</strong> và hoàn toàn phụ thuộc vào chất lượng dữ liệu đầu vào.</p>
+
+        <div class="feature-grid">
+          <div class="feature-card fc-blue">
+            <span class="fc-emoji">🎲</span>
+            <strong>Dự đoán theo xác suất</strong>
+            <p>AI ghép nối câu từ dựa trên dữ liệu đã học. Câu văn có vẻ rất trôi chảy, thuyết phục nhưng số liệu bên trong hoàn toàn có thể bị bịa đặt (Ảo giác AI - Hallucination).</p>
+          </div>
+          <div class="feature-card fc-pink">
+            <span class="fc-emoji">🗑️</span>
+            <strong>Nguyên tắc "Rác vào rác ra"</strong>
+            <p>Nếu bạn cung cấp dữ liệu thiếu, mập mờ hoặc sai lệch, AI chắc chắn sẽ trả về kết quả sai nghiêm trọng mà không tự cảnh báo cho bạn.</p>
+          </div>
+          <div class="feature-card fc-green">
+            <span class="fc-emoji">🛡️</span>
+            <strong>Con người chịu trách nhiệm cuối cùng</strong>
+            <p>AI chỉ là công cụ hỗ trợ tính toán và soạn thảo. Khi gửi văn bản cho cấp trên hoặc khách hàng, <strong>bạn là người duy nhất chịu trách nhiệm</strong> pháp lý và chuyên môn.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 3: 6 CÁCH KIỂM TRA LẠI KẾT QUẢ AI ─── -->
+    <section class="slide slide-concept" data-slide="3" aria-label="Slide 3: 6 Phương pháp kiểm tra">
+      <div class="slide-inner">
+        <div class="slide-label label-pink">PHẦN 2 · PHƯƠNG PHÁP KIỂM TRA</div>
+        <h2 class="slide-title">6 Cách kiểm tra lại kết quả AI chuẩn công sở</h2>
+        <p class="slide-desc">Áp dụng bộ 6 kỹ thuật kiểm tra này trước khi sử dụng bất kỳ kết quả nào do AI tạo ra.</p>
+
+        <div class="feature-grid" style="grid-template-columns: repeat(3, 1fr); gap: 14px;">
+          <div class="feature-card fc-blue">
+            <span class="fc-emoji">📖</span>
+            <strong>1. Đọc lại &amp; So sánh thực tế</strong>
+            <p>Kiểm tra tính logic và kinh nghiệm thực tế. Nếu thấy thông tin "lạ" hoặc bất thường $\rightarrow$ tra cứu lại ngay.</p>
+          </div>
+          <div class="feature-card fc-pink">
+            <span class="fc-emoji">🔍</span>
+            <strong>2. Bắt AI giải thích chi tiết</strong>
+            <p>Yêu cầu AI giải thích lại cách tính hoặc nguồn gốc lập luận. Nếu AI lúng túng, kết quả ban đầu có thể chưa đúng.</p>
+          </div>
+          <div class="feature-card fc-green">
+            <span class="fc-emoji">⚔️</span>
+            <strong>3. Đặt câu hỏi ngược (Phản biện)</strong>
+            <p>Hỏi AI: <em>"Bản thảo này có điểm nào rủi ro hoặc thiếu căn cứ không? Có phương án nào tốt hơn không?"</em></p>
+          </div>
+          <div class="feature-card fc-yellow">
+            <span class="fc-emoji">🔄</span>
+            <strong>4. Đối chiếu nhiều nguồn độc lập</strong>
+            <p>Hỏi cùng câu hỏi ở một khung chat mới, hoặc so sánh trực tiếp với tài liệu gốc của công ty và Google Search.</p>
+          </div>
+          <div class="feature-card fc-lavender">
+            <span class="fc-emoji">📥</span>
+            <strong>5. Rà soát dữ liệu đầu vào</strong>
+            <p>Xem lại chính câu lệnh của bạn: Đã đưa đủ ngày tháng, ngân sách, nhân sự phụ trách chưa? Dữ liệu sai $\rightarrow$ AI sai.</p>
+          </div>
+          <div class="feature-card fc-peach">
+            <span class="fc-emoji">🧩</span>
+            <strong>6. Chia nhỏ để kiểm tra từng phần</strong>
+            <p>Với đề án dài, tách kiểm tra từng hạng mục thay vì đọc lướt cả bài để không bỏ sót sai sót trọng yếu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 4: QUY TRÌNH KIỂM SOÁT CHUẨN 4 BƯỚC ─── -->
+    <section class="slide slide-compare" data-slide="4" aria-label="Slide 4: Quy trình kiểm soát 4 bước">
+      <div class="slide-inner">
+        <div class="slide-label label-green">PHẦN 3 · QUY TRÌNH QUẢN TRỊ</div>
+        <h2 class="slide-title">Quy trình kiểm soát chuẩn 4 bước (Standard Control Loop)</h2>
+        <p class="slide-desc">Đừng để AI vội vàng làm ngay. Hãy áp dụng chốt chặn an toàn để AI hiểu đúng đề bài 100%.</p>
+
+        <div class="feature-grid" style="grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 14px;">
+          <div class="feature-card fc-blue" style="text-align: center;">
+            <div style="font-size: 26px; font-weight: 1000; color: var(--blue); margin-bottom: 6px;">01</div>
+            <strong>Yêu cầu phân tích đề</strong>
+            <p>Giao bài toán và bắt AI nêu rõ mục tiêu, phạm vi và các giới hạn cốt lõi.</p>
+          </div>
+          <div class="feature-card fc-pink" style="text-align: center;">
+            <div style="font-size: 26px; font-weight: 1000; color: var(--pink); margin-bottom: 6px;">02</div>
+            <strong>AI mô tả lại cách hiểu</strong>
+            <p>AI tóm tắt lại các giả định và phương pháp tiếp cận trước khi viết.</p>
+          </div>
+          <div class="feature-card fc-yellow" style="text-align: center;">
+            <div style="font-size: 26px; font-weight: 1000; color: #b45309; margin-bottom: 6px;">03</div>
+            <strong>Người dùng xác nhận</strong>
+            <p>Bạn đọc, bổ sung thông tin thiếu hoặc sửa lại hướng đi lệch lạc.</p>
+          </div>
+          <div class="feature-card fc-green" style="text-align: center;">
+            <div style="font-size: 26px; font-weight: 1000; color: #15803d; margin-bottom: 6px;">04</div>
+            <strong>AI mới thực hiện</strong>
+            <p>Khi đã thống nhất hướng đi, AI xuất bản văn bản chi tiết với độ chính xác cao nhất.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 20px; padding: 14px 18px; background: #fffbeb; border: 2.5px solid var(--ink); border-radius: 12px; box-shadow: 3px 3px 0 var(--ink);">
+          <strong style="color: #92400e; font-size: 14px;">⚡ Câu lệnh khóa kiểm soát mẫu:</strong>
+          <p style="margin: 4px 0 0; font-size: 13.5px; color: var(--ink); font-weight: 700;">“Trước khi trả lời hoặc soạn thảo, hãy phân tích lại bài toán, nêu rõ 3 điểm mấu chốt bạn cần làm và chờ tôi duyệt rồi mới bắt đầu nhé.”</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 5: SO SÁNH THỰC TẾ ─── -->
+    <section class="slide slide-compare" data-slide="5" aria-label="Slide 5: So sánh thực tế">
+      <div class="slide-inner">
+        <div class="slide-label label-yellow">PHẦN 4 · SO SÁNH THỰC CHIẾN</div>
+        <h2 class="slide-title">Không kiểm soát <span class="vs-word">vs</span> Có kiểm soát chặt chẽ</h2>
+        <p class="slide-desc">Sự khác biệt giữa nhân sự làm việc cẩu thả và nhân sự chuyên nghiệp khi ứng dụng AI.</p>
+
+        <div class="vs-layout" style="margin-top: 14px;">
+          <div class="vs-card vs-left">
+            <div class="vs-card-head" style="background: #fee2e2; border-bottom: 2px solid var(--ink);">
+              <strong style="color: #991b1b;">❌ Thói quen làm sai (Không kiểm soát)</strong>
+            </div>
+            <ul class="vs-points">
+              <li>Tin tưởng tuyệt đối vào câu trả lời đầu tiên của AI mà không đọc kỹ.</li>
+              <li>Sao chép nguyên văn số liệu, trích dẫn quy định luật cũ đã hết hiệu lực.</li>
+              <li>Gửi ngay báo cáo cho Sếp/Khách hàng mà không rà soát tính logic.</li>
+              <li>Hậu quả: Mất uy tín chuyên môn, bị khiển trách khi số liệu sai lệch nghiêm trọng.</li>
+            </ul>
+          </div>
+          <div class="vs-divider"><span class="vs-badge">VS</span></div>
+          <div class="vs-card vs-right">
+            <div class="vs-card-head" style="background: #dcfce7; border-bottom: 2px solid var(--ink);">
+              <strong style="color: #14532d;">✅ Thói quen chuẩn (Có kiểm soát chặt)</strong>
+            </div>
+            <ul class="vs-points">
+              <li>Luôn bắt AI giải trình cách tính toán và căn cứ pháp lý của từng điều khoản.</li>
+              <li>Đặt câu hỏi phản biện ngược: <em>"Bản thảo này có rủi ro gì về mặt ngân sách không?"</em></li>
+              <li>Đối chiếu số liệu với chứng từ gốc của công ty trước khi nghiệm thu.</li>
+              <li>Hiệu quả: Sản phẩm chỉn chu, bảo vệ an toàn cho bản thân và tổ chức.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 6: THỰC HÀNH DỰ ÁN ─── -->
+    <section class="slide slide-conclusion" data-slide="6" aria-label="Slide 6: Thực hành dự án">
+      <div class="slide-inner conclusion-inner">
+        <div class="slide-label label-green">PHẦN 5 · THỰC HÀNH DỰ ÁN</div>
+        <h2 class="slide-title">Thực hành Tư duy Đánh giá &amp; Kiểm soát AI</h2>
+        <p class="slide-desc">Áp dụng quy trình kiểm soát 4 bước và các câu lệnh phản biện trên Gemini/ChatGPT để hoàn thiện sản phẩm báo cáo.</p>
+
+        <div class="practice-box">
+          <div class="practice-header">
+            <div class="practice-header-text">
+              <span class="practice-badge">BÀI TẬP DỰ ÁN CÔNG SỞ</span>
+              <h3>Nhiệm vụ kiểm soát chất lượng &amp; Phản biện AI</h3>
+            </div>
+            <button type="button" class="master-unlock-btn" id="btn-master-unlock" title="Mở khóa toàn bộ prompt mẫu">
+              <span class="lock-icon" aria-hidden="true">🔒</span>
+              <span class="unlock-btn-text">Mở khóa toàn bộ</span>
+            </button>
+          </div>
+
+          <div class="practice-prompts">
+            <!-- DỰ ÁN 1 -->
+            <div class="prompt-card" data-prompt-card>
+              <div class="prompt-scenario">
+                <h4>
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  Dự án 1: Kiểm soát đề xuất ngân sách mua sắm trang thiết bị
+                </h4>
+                <p><strong>Bối cảnh:</strong> Bạn cần lập bảng dự trù kinh phí nâng cấp 10 máy tính cho phòng đồ họa. Cần bắt AI phân tích các phương án và phản biện xem mức giá đề xuất có bị ảo giá hoặc thiếu chi phí phát sinh không.</p>
+              </div>
+
+              <!-- Chỉ hiện Ổ Khóa (Bấm vào để mở khối nhập mật mã giữa màn hình) -->
+              <div class="prompt-lock-trigger" role="button" tabindex="0" title="Bấm vào để mở khóa prompt mẫu">
+                <span class="lock-shield-icon">🔒</span>
+                <div class="lock-trigger-info">
+                  <strong>Prompt mẫu đang khóa</strong>
+                  <span>Bấm vào để nhập mật mã mở khóa</span>
+                </div>
+              </div>
+
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span class="prompt-unlocked-tag">🔓 Prompt kiểm soát ngân sách</span>
+                  <div class="prompt-head-actions">
+                    <button type="button" class="relock-btn" title="Khóa lại prompt này">🔒 Khóa</button>
+                    <button type="button" class="copy-btn" data-copy="p-b6-da1">Sao chép</button>
+                  </div>
+                </div>
+                <p id="p-b6-da1" class="prompt-text">Em đóng vai Chuyên viên Mua sắm &amp; Quản trị thiết bị. Anh cần lên dự trù kinh phí nâng cấp máy tính cho 10 nhân sự thiết kế đồ họa 3D với tổng ngân sách tối đa 250 triệu. Trước khi lập bảng chi tiết, em hãy: 1. Nêu 3 cấu hình cốt lõi cần ưu tiên; 2. Đặt cho anh 2 câu hỏi để làm rõ nhu cầu thực tế; 3. Chỉ ra 2 chi phí ẩn (phát sinh bảo hành, phần mềm bản quyền) mà người quản lý hay bỏ quên. Đợi anh xác nhận rồi mới tiến hành chia cột dự toán nhé.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </div>
+
+            <!-- DỰ ÁN 2 -->
+            <div class="prompt-card" data-prompt-card>
+              <div class="prompt-scenario">
+                <h4>
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  Dự án 2: Lệnh phản biện ngược rà soát quy chế làm việc nội bộ
+                </h4>
+                <p><strong>Bối cảnh:</strong> Rà soát dự thảo quy định thưởng phạt đi làm đúng giờ của công ty để đảm bảo không vi phạm luật lao động và không gây ức chế tâm lý tiêu cực cho nhân viên.</p>
+              </div>
+
+              <!-- Chỉ hiện Ổ Khóa (Bấm vào để mở khối nhập mật mã giữa màn hình) -->
+              <div class="prompt-lock-trigger" role="button" tabindex="0" title="Bấm vào để mở khóa prompt mẫu">
+                <span class="lock-shield-icon">🔒</span>
+                <div class="lock-trigger-info">
+                  <strong>Prompt mẫu đang khóa</strong>
+                  <span>Bấm vào để nhập mật mã mở khóa</span>
+                </div>
+              </div>
+
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span class="prompt-unlocked-tag">🔓 Prompt phản biện ngược (Self-Audit)</span>
+                  <div class="prompt-head-actions">
+                    <button type="button" class="relock-btn" title="Khóa lại prompt này">🔒 Khóa</button>
+                    <button type="button" class="copy-btn" data-copy="p-b6-da2">Sao chép</button>
+                  </div>
+                </div>
+                <p id="p-b6-da2" class="prompt-text">Em đóng vai Chuyên gia Pháp chế doanh nghiệp và Nhân sự cao cấp. Dưới đây là dự thảo quy định chuyên cần của công ty: [Nhân viên đi trễ quá 15 phút bị phạt 100.000đ trừ trực tiếp vào lương cơ bản; đi trễ 3 lần trong tháng bị cảnh cáo toàn công ty và trừ 50% tiền thưởng chuyên cần]. Em hãy đóng vai một thanh tra lao động khó tính để phản biện: 1. Điều khoản nào vi phạm trực tiếp Bộ luật Lao động về việc trừ lương; 2. Đề xuất cách thay thế bằng cơ chế khen thưởng tích cực; 3. Viết lại quy chế theo hướng chuyên nghiệp, thấu tình đạt lý.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson-links" style="margin-top: 24px;">
+          <a class="topbar-back" href="bai-5.html">← Bài 5</a>
+          <a class="topbar-back" href="bai-7.html">Bài 7: Tư duy đa bước →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ KHỐI NHẬP MẬT MÃ NGAY GIỮA MÀN HÌNH (MODAL DIALOG) ═══ -->
+    <dialog id="lock-modal" class="lock-modal" aria-labelledby="lock-modal-title">
+      <div class="lock-modal-card">
+        <button type="button" class="lock-modal-close" id="lock-modal-close" aria-label="Đóng">✕</button>
+        <div class="lock-modal-icon">🔒</div>
+        <h3 class="lock-modal-title" id="lock-modal-title">Mở khóa Prompt mẫu</h3>
+        <p class="lock-modal-desc">Nhập mật mã để xem và sao chép câu lệnh prompt mẫu.</p>
+        <form id="lock-modal-form" class="lock-modal-form" onsubmit="return false;">
+          <input type="password" id="lock-modal-input" class="lock-modal-input" placeholder="Nhập mật mã mở khóa..." maxlength="10" autocomplete="off">
+          <button type="submit" class="lock-modal-submit">Mở khóa 🔓</button>
+        </form>
+        <div id="lock-modal-error" class="lock-modal-error" hidden>⚠️ Mật mã không đúng, vui lòng thử lại!</div>
+      </div>
+    </dialog>
+
+  </main>
+
+  <!-- ═══ THANH ĐIỀU HƯỚNG SLIDE DƯỚI CÙNG ═══ -->
+  <nav class="slide-nav" aria-label="Điều hướng slide">
+    <button class="nav-btn" id="btn-prev" aria-label="Slide trước" disabled>←</button>
+    <div class="nav-center">
+      <div class="dot-track" id="dot-track" role="tablist" aria-label="Chọn slide"></div>
+      <span class="slide-counter"><span id="cur">1</span> / <span id="total">6</span></span>
+    </div>
+    <button class="nav-btn" id="btn-next" aria-label="Slide tiếp theo">→</button>
+  </nav>
+
+  <script src="../js/slide-deck.js" defer></script>
+</body>
+</html>

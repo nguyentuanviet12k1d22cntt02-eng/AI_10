@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bài 7 · Tư Duy Đa Bước — Lớp học AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito:wght@700;800;900;1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/slide-deck.css">
+</head>
+<body data-course-lesson="7">
+
+  <!-- ═══ TOPBAR STUDIO ═══ -->
+  <header class="topbar">
+    <a class="topbar-logo" href="../index.html" aria-label="Về trang chủ Lớp học AI">
+      <span class="logo-mark" aria-hidden="true"><span class="book-icon"></span></span>
+      Lớp học AI
+    </a>
+    <div class="topbar-center">
+      <span class="studio-rec-pill"><span class="rec-dot"></span> BÀI HỌC CHUẨN</span>
+      <span class="topbar-lesson" style="margin-left: 10px;">Bài 7 · Tư Duy Đa Bước</span>
+    </div>
+    <a class="topbar-back" href="../index.html">← Trang chủ</a>
+  </header>
+
+  <!-- ═══ SLIDE DECK WORKSPACE ═══ -->
+  <main class="deck" id="deck" aria-label="Bài 7">
+
+    <!-- ─── SLIDE 1: TRANG BÌA ─── -->
+    <section class="slide slide-cover" data-slide="1" aria-label="Slide 1: Trang bìa">
+      <div class="slide-inner cover-inner">
+        <div class="cover-left">
+          <div class="cover-kicker">
+            <span class="studio-rec-pill"><span class="rec-dot"></span> GIÁO TRÌNH CHUẨN</span>
+            <span class="cover-kicker-label">Chương 3 · Tư Duy Sử Dụng AI Trong Công Việc</span>
+          </div>
+          <h1 class="cover-title">Tư duy đa bước<br><em>Chia nhỏ để thắng</em></h1>
+          <p class="cover-desc">Đối mặt với bài toán lớn và dữ liệu phức tạp, đừng bắt AI làm dồn một lần. Hãy làm chủ quy trình <strong>chia nhỏ nhiệm vụ thành từng bước tuần tự</strong> để đạt độ chính xác tuyệt đối.</p>
+          <div class="cover-facts">
+            <div class="fact-chip chip-blue"><span>4</span> Pha chuẩn</div>
+            <div class="fact-chip chip-pink"><span>Tuần tự</span> Quy trình</div>
+            <div class="fact-chip chip-lavender"><span>Không sót ý</span> Chất lượng</div>
+          </div>
+        </div>
+
+        <div class="cover-right">
+          <div class="toc-card">
+            <div class="toc-card-head">
+              <span class="toc-icon icon-blue" aria-hidden="true"><span class="spark"></span></span>
+              <div><strong>Kịch bản bài giảng</strong><p>6 slide · Tư duy &amp; Thực hành</p></div>
+            </div>
+            <ul class="toc-list" role="list">
+              <li><button type="button" class="toc-link" data-go-to="2"><span class="toc-num">01</span> Bệnh "bội thực thông tin" của AI</button></li>
+              <li><button type="button" class="toc-link" data-go-to="3"><span class="toc-num">02</span> Khung 4 Pha: Hiểu - Phân tích - Xác nhận - Thực hiện</button></li>
+              <li><button type="button" class="toc-link" data-go-to="4"><span class="toc-num">03</span> Nghiên cứu tình huống: Bài toán Tính lương</button></li>
+              <li><button type="button" class="toc-link" data-go-to="5"><span class="toc-num">04</span> So sánh: Làm dồn 1 cục vs Làm đa bước</button></li>
+              <li><button type="button" class="toc-link" data-go-to="6"><span class="toc-num">05</span> Thực hành dự án quy trình đa bước</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 2: BỆNH BỘI THỰC THÔNG TIN ─── -->
+    <section class="slide slide-concept" data-slide="2" aria-label="Slide 2: Vì sao phải chia nhỏ?">
+      <div class="slide-inner">
+        <div class="slide-label label-blue">PHẦN 1 · NGUYÊN LÝ CỐT LÕI</div>
+        <h2 class="slide-title">Vì sao câu lệnh dồn 1 cục luôn thất bại?</h2>
+        <p class="slide-desc">Khi bạn nhét toàn bộ yêu cầu, dữ liệu thô và mong muốn vào 1 câu lệnh duy nhất, AI sẽ bị quá tải năng lực xử lý trong một lượt sinh văn bản.</p>
+
+        <div class="feature-grid">
+          <div class="feature-card fc-blue">
+            <span class="fc-emoji">⚡</span>
+            <strong>Bỏ sót yêu cầu ngầm</strong>
+            <p>AI ưu tiên phản hồi những ý đầu tiên và dễ dàng bỏ qua các điều kiện ràng buộc ở giữa hoặc cuối đoạn văn dài.</p>
+          </div>
+          <div class="feature-card fc-pink">
+            <span class="fc-emoji">🌊</span>
+            <strong>Kết quả nông cạn, hời hợt</strong>
+            <p>Phải cáng đáng quá nhiều việc một lúc (vừa phân tích, vừa tính toán, vừa viết văn), AI chỉ có thể trả lời chung chung để kịp kết thúc câu.</p>
+          </div>
+          <div class="feature-card fc-green">
+            <span class="fc-emoji">🔄</span>
+            <strong>Khó sửa khi gặp lỗi</strong>
+            <p>Nếu kết quả sai một chi tiết nhỏ ở bước 1, bạn buộc phải yêu cầu AI làm lại toàn bộ từ đầu, gây lãng phí thời gian và token.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 3: KHUNG 4 PHA CHUẨN ─── -->
+    <section class="slide slide-concept" data-slide="3" aria-label="Slide 3: Khung 4 Pha chuẩn">
+      <div class="slide-inner">
+        <div class="slide-label label-pink">PHẦN 2 · KHUNG QUY TRÌNH</div>
+        <h2 class="slide-title">Khung 4 Pha tư duy đa bước chuyên nghiệp</h2>
+        <p class="slide-desc">Biến bài toán phức tạp thành một chuỗi hội thoại thông minh có kiểm soát qua 4 giai đoạn:</p>
+
+        <div class="feature-grid" style="grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 14px;">
+          <div class="feature-card fc-blue" style="text-align: center;">
+            <div style="font-size: 26px; font-weight: 1000; color: var(--blue); margin-bottom: 6px;">PHA 1</div>
+            <strong>HIỂU ĐỀ BÀI</strong>
+            <p>Bắt AI đọc dữ liệu, diễn giải lại mục tiêu và các biến số cần tính toán.</p>
+          </div>
+          <div class="feature-card fc-pink" style="text-align: center;">
+            <div style="font-size: 26px; font-weight: 1000; color: var(--pink); margin-bottom: 6px;">PHA 2</div>
+            <strong>PHÂN TÍCH DỮ LIỆU</strong>
+            <p>AI đề xuất công thức tính, cấu trúc bảng hoặc khung dàn ý sơ bộ.</p>
+          </div>
+          <div class="feature-card fc-yellow" style="text-align: center;">
+            <div style="font-size: 26px; font-weight: 1000; color: #b45309; margin-bottom: 6px;">PHA 3</div>
+            <strong>XÁC NHẬN LẠI</strong>
+            <p>Con người duyệt khung, tinh chỉnh các sai sót logic trước khi viết chi tiết.</p>
+          </div>
+          <div class="feature-card fc-green" style="text-align: center;">
+            <div style="font-size: 26px; font-weight: 1000; color: #15803d; margin-bottom: 6px;">PHA 4</div>
+            <strong>THỰC HIỆN YÊU CẦU</strong>
+            <p>AI tính toán chính thức hoặc xuất bản văn bản hoàn thiện đạt chuẩn 100%.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 18px; padding: 12px 18px; background: #f0fdf4; border: 2.5px solid var(--ink); border-radius: 12px; box-shadow: 3px 3px 0 var(--ink);">
+          <strong style="color: #166534; font-size: 14px;">💡 Nguyên tắc cốt lõi:</strong>
+          <span style="font-size: 13.5px; color: var(--ink); font-weight: 750;"> "Mỗi lượt câu lệnh chỉ giải quyết đúng 1 việc. Bước trước hoàn thành và được người duyệt thì bước sau mới bắt đầu."</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 4: CASE STUDY TÍNH LƯƠNG NHÂN VIÊN ─── -->
+    <section class="slide slide-compare" data-slide="4" aria-label="Slide 4: Nghiên cứu tình huống">
+      <div class="slide-inner">
+        <div class="slide-label label-green">PHẦN 3 · TÌNH HUỐNG THỰC TẾ</div>
+        <h2 class="slide-title">Case Study: Bài toán Tính lương &amp; Thưởng KPI phức tạp</h2>
+        <p class="slide-desc">Xem xét bài toán thực tế trong bộ phận Nhân sự - Kế toán tiền lương:</p>
+
+        <div class="vs-layout" style="margin-top: 14px;">
+          <div class="vs-card vs-left">
+            <div class="vs-card-head" style="background: #fee2e2; border-bottom: 2px solid var(--ink);">
+              <strong style="color: #991b1b;">❌ Cách làm sai (Dồn 1 cục)</strong>
+            </div>
+            <ul class="vs-points">
+              <li><strong>Câu lệnh:</strong> <em>"Tính lương cho 5 nhân viên kinh doanh tháng này gồm lương cứng, doanh số, hoa hồng theo mốc 3%-5%-7%, trừ tiền đi trễ 50k/lần và tính thuế TNCN giúp tôi."</em></li>
+              <li><strong>Kết quả:</strong> AI tính nhầm bậc lũy tiến hoa hồng, áp sai mức giảm trừ gia cảnh, xuất bảng số liệu lộn xộn không kiểm toán được.</li>
+            </ul>
+          </div>
+          <div class="vs-divider"><span class="vs-badge">VS</span></div>
+          <div class="vs-card vs-right">
+            <div class="vs-card-head" style="background: #dcfce7; border-bottom: 2px solid var(--ink);">
+              <strong style="color: #14532d;">✅ Cách làm đúng (Quy trình 3 bước)</strong>
+            </div>
+            <ul class="vs-points">
+              <li><strong>Bước 1:</strong> Xác lập công thức: <em>"Nêu công thức tính hoa hồng theo 3 mốc doanh số và mức phạt đi trễ để tôi duyệt."</em></li>
+              <li><strong>Bước 2:</strong> Nạp dữ liệu thô: <em>"Áp dụng công thức đã duyệt tính hoa hồng và tổng thu nhập trước thuế."</em></li>
+              <li><strong>Bước 3:</strong> Hoàn thiện bảng: <em>"Áp mức giảm trừ gia cảnh, xuất bảng lương 7 cột chuẩn Excel có công thức đối chiếu."</em></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 5: SO SÁNH HIỆU QUẢ ─── -->
+    <section class="slide slide-compare" data-slide="5" aria-label="Slide 5: So sánh hiệu quả">
+      <div class="slide-inner">
+        <div class="slide-label label-yellow">PHẦN 4 · SO SÁNH TỔNG QUAN</div>
+        <h2 class="slide-title">Làm dồn 1 lần <span class="vs-word">vs</span> Làm từng bước tuần tự</h2>
+        <p class="slide-desc">Đánh giá trên 4 tiêu chí cốt lõi trong công việc văn phòng hàng ngày.</p>
+
+        <div class="feature-grid" style="grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 14px;">
+          <div class="feature-card fc-pink">
+            <strong style="color: #991b1b; font-size: 16px;">❌ Làm dồn 1 lần</strong>
+            <p><strong>Thời gian:</strong> Tưởng là nhanh (1 prompt) nhưng mất cả buổi để rà lỗi và chat qua chat lại sửa vụn vặt.</p>
+            <p><strong>Độ tin cậy:</strong> Thấp, dễ bị ảo giác số liệu và bỏ sót các yêu cầu phụ.</p>
+            <p><strong>Khả năng kiểm soát:</strong> Rất khó phát hiện lỗi sai bắt nguồn từ đâu.</p>
+          </div>
+          <div class="feature-card fc-green">
+            <strong style="color: #14532d; font-size: 16px;">✅ Làm từng bước tuần tự</strong>
+            <p><strong>Thời gian:</strong> Thao tác 3-4 lượt đối thoại ngắn nhưng chỉ mất 3-5 phút là có kết quả chuẩn xác 100%.</p>
+            <p><strong>Độ tin cậy:</strong> Cực kỳ cao vì mỗi bước đều được con người duyệt nghiệm thu.</p>
+            <p><strong>Khả năng kiểm soát:</strong> Sai ở bước nào cô lập sửa ngay ở bước đó.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 6: THỰC HÀNH DỰ ÁN ─── -->
+    <section class="slide slide-conclusion" data-slide="6" aria-label="Slide 6: Thực hành dự án">
+      <div class="slide-inner conclusion-inner">
+        <div class="slide-label label-green">PHẦN 5 · THỰC HÀNH DỰ ÁN</div>
+        <h2 class="slide-title">Thực hành Quy trình Đa bước Thực tế</h2>
+        <p class="slide-desc">Áp dụng tư duy chia nhỏ nhiệm vụ để xử lý 2 bài toán lớn trong doanh nghiệp.</p>
+
+        <div class="practice-box">
+          <div class="practice-header">
+            <div class="practice-header-text">
+              <span class="practice-badge">BÀI TẬP DỰ ÁN CÔNG SỞ</span>
+              <h3>Nhiệm vụ chia nhỏ quy trình tuần tự</h3>
+            </div>
+            <button type="button" class="master-unlock-btn" id="btn-master-unlock" title="Mở khóa toàn bộ prompt mẫu">
+              <span class="lock-icon" aria-hidden="true">🔒</span>
+              <span class="unlock-btn-text">Mở khóa toàn bộ</span>
+            </button>
+          </div>
+
+          <div class="practice-prompts">
+            <!-- DỰ ÁN 1 -->
+            <div class="prompt-card" data-prompt-card>
+              <div class="prompt-scenario">
+                <h4>
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  Dự án 1: Quy trình 3 bước lập kế hoạch Onboarding nhân sự mới
+                </h4>
+                <p><strong>Bối cảnh:</strong> Xây dựng quy trình 30 ngày hội nhập cho chuyên viên truyền thông mới. Bước 1: Xác lập 3 mục tiêu trọng tâm; Bước 2: Phân bổ checklist tuần; Bước 3: Soạn email bàn giao và tiêu chí đánh giá.</p>
+              </div>
+
+              <!-- Chỉ hiện Ổ Khóa (Bấm vào để mở khối nhập mật mã giữa màn hình) -->
+              <div class="prompt-lock-trigger" role="button" tabindex="0" title="Bấm vào để mở khóa prompt mẫu">
+                <span class="lock-shield-icon">🔒</span>
+                <div class="lock-trigger-info">
+                  <strong>Prompt mẫu đang khóa</strong>
+                  <span>Bấm vào để nhập mật mã mở khóa</span>
+                </div>
+              </div>
+
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span class="prompt-unlocked-tag">🔓 Prompt chia nhỏ bước 1: Xác lập mục tiêu</span>
+                  <div class="prompt-head-actions">
+                    <button type="button" class="relock-btn" title="Khóa lại prompt này">🔒 Khóa</button>
+                    <button type="button" class="copy-btn" data-copy="p-b7-da1">Sao chép</button>
+                  </div>
+                </div>
+                <p id="p-b7-da1" class="prompt-text">Em đóng vai Trưởng phòng Nhân sự &amp; Đào tạo nội bộ. Công ty chuẩn bị đón 1 Chuyên viên Truyền thông &amp; PR mới. Bước 1: Hãy đề xuất 3 mục tiêu cốt lõi cần đạt được trong 30 ngày đầu tiên (về văn hóa công ty, chuyên môn xuất bản nội dung và quan hệ phối hợp phòng ban). Nêu rõ lý do tại sao 3 mục tiêu này giúp nhân sự không bị bỡ ngỡ. Chờ anh duyệt 3 mục tiêu này rồi mới lập lịch trình chi tiết từng tuần nhé.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </div>
+
+            <!-- DỰ ÁN 2 -->
+            <div class="prompt-card" data-prompt-card>
+              <div class="prompt-scenario">
+                <h4>
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  Dự án 2: Quy trình 3 bước phân tích đánh giá dịch vụ khách hàng
+                </h4>
+                <p><strong>Bối cảnh:</strong> Xử lý 100 phản hồi tiêu cực của khách hàng về dịch vụ giao hàng chậm. Bước 1: Phân loại nguyên nhân gốc rễ; Bước 2: Đề xuất giải pháp khắc phục; Bước 3: Soạn kịch bản giải tỏa bức xúc.</p>
+              </div>
+
+              <!-- Chỉ hiện Ổ Khóa (Bấm vào để mở khối nhập mật mã giữa màn hình) -->
+              <div class="prompt-lock-trigger" role="button" tabindex="0" title="Bấm vào để mở khóa prompt mẫu">
+                <span class="lock-shield-icon">🔒</span>
+                <div class="lock-trigger-info">
+                  <strong>Prompt mẫu đang khóa</strong>
+                  <span>Bấm vào để nhập mật mã mở khóa</span>
+                </div>
+              </div>
+
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span class="prompt-unlocked-tag">🔓 Prompt chia nhỏ bước 1: Phân loại gốc rễ</span>
+                  <div class="prompt-head-actions">
+                    <button type="button" class="relock-btn" title="Khóa lại prompt này">🔒 Khóa</button>
+                    <button type="button" class="copy-btn" data-copy="p-b7-da2">Sao chép</button>
+                  </div>
+                </div>
+                <p id="p-b7-da2" class="prompt-text">Em đóng vai Giám đốc Trải nghiệm Khách hàng (CXO). Dưới đây là dữ liệu phản ánh sau đợt sale: [35 khiếu nại shipper không gọi trước; 40 khiếu nại hàng móp méo vỏ hộp; 25 khiếu nại hẹn giao 3 lần không tới]. Bước 1: Em hãy phân tích và nhóm các sự cố này vào 3 nhóm nguyên nhân gốc rễ (Vận hành kho, Đơn vị vận chuyển đối tác, Quy trình giao tiếp). Đánh giá mức độ tổn hại uy tín thương hiệu theo thang điểm 10. Chờ anh duyệt phân tích này rồi chúng ta mới soạn phương án đền bù.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson-links" style="margin-top: 24px;">
+          <a class="topbar-back" href="bai-6.html">← Bài 6</a>
+          <a class="topbar-back" href="bai-8.html">Bài 8: Câu lệnh 2 yếu tố →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ KHỐI NHẬP MẬT MÃ NGAY GIỮA MÀN HÌNH (MODAL DIALOG) ═══ -->
+    <dialog id="lock-modal" class="lock-modal" aria-labelledby="lock-modal-title">
+      <div class="lock-modal-card">
+        <button type="button" class="lock-modal-close" id="lock-modal-close" aria-label="Đóng">✕</button>
+        <div class="lock-modal-icon">🔒</div>
+        <h3 class="lock-modal-title" id="lock-modal-title">Mở khóa Prompt mẫu</h3>
+        <p class="lock-modal-desc">Nhập mật mã để xem và sao chép câu lệnh prompt mẫu.</p>
+        <form id="lock-modal-form" class="lock-modal-form" onsubmit="return false;">
+          <input type="password" id="lock-modal-input" class="lock-modal-input" placeholder="Nhập mật mã mở khóa..." maxlength="10" autocomplete="off">
+          <button type="submit" class="lock-modal-submit">Mở khóa 🔓</button>
+        </form>
+        <div id="lock-modal-error" class="lock-modal-error" hidden>⚠️ Mật mã không đúng, vui lòng thử lại!</div>
+      </div>
+    </dialog>
+
+  </main>
+
+  <!-- ═══ THANH ĐIỀU HƯỚNG SLIDE DƯỚI CÙNG ═══ -->
+  <nav class="slide-nav" aria-label="Điều hướng slide">
+    <button class="nav-btn" id="btn-prev" aria-label="Slide trước" disabled>←</button>
+    <div class="nav-center">
+      <div class="dot-track" id="dot-track" role="tablist" aria-label="Chọn slide"></div>
+      <span class="slide-counter"><span id="cur">1</span> / <span id="total">6</span></span>
+    </div>
+    <button class="nav-btn" id="btn-next" aria-label="Slide tiếp theo">→</button>
+  </nav>
+
+  <script src="../js/slide-deck.js" defer></script>
+</body>
+</html>
