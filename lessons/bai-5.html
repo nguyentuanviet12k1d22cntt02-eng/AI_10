@@ -556,9 +556,13 @@
         <div class="practice-box">
           <div class="practice-box-head">
             <span class="pill pill-pink">🎯 Prompt thực hành mẫu</span>
+            <button type="button" class="master-unlock-btn" id="btn-master-unlock" title="Mở khóa toàn bộ prompt bằng mã 1009">
+              <span class="lock-icon" aria-hidden="true">🔒</span>
+              <span class="unlock-btn-text">Mở khóa toàn bộ</span>
+            </button>
           </div>
           <div class="practice-prompts">
-            <div class="prompt-card">
+            <div class="prompt-card" data-prompt-card>
               <div class="prompt-scenario">
                 <h4>
                   <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
@@ -566,17 +570,35 @@
                 </h4>
                 <p><strong>Bối cảnh:</strong> Bạn là quản lý cần soạn thông báo nội bộ điều chỉnh lịch làm việc mùa hè năm 2026 cho toàn bộ nhân viên công ty. Giao việc dứt khoát, đưa đủ mốc thời gian và định dạng văn bản.</p>
               </div>
-              <div class="prompt-box-inner">
+
+              <!-- Giao diện Ổ Khóa Bảo vệ -->
+              <div class="prompt-lock-shield">
+                <div class="lock-shield-icon">🔒</div>
+                <div class="lock-shield-content">
+                  <div class="lock-shield-title">Prompt mẫu đang được khóa</div>
+                  <p class="lock-shield-desc">Hãy tự tư duy và soạn prompt trước. Nhập mã để mở gợi ý.</p>
+                </div>
+                <form class="lock-shield-form" onsubmit="return false;">
+                  <input type="password" class="lock-shield-input" placeholder="Mã mở khóa..." maxlength="10">
+                  <button type="submit" class="lock-shield-submit">Mở khóa 🔓</button>
+                </form>
+                <div class="lock-shield-error" hidden>⚠️ Mật mã không đúng, vui lòng thử lại!</div>
+              </div>
+
+              <div class="prompt-box-inner" hidden>
                 <div class="prompt-box-head">
-                  <span>Prompt giao việc chuẩn</span>
-                  <button type="button" class="copy-btn" data-copy="p-b5-da1">Sao chép</button>
+                  <span class="prompt-unlocked-tag">🔓 Prompt giao việc chuẩn</span>
+                  <div class="prompt-head-actions">
+                    <button type="button" class="relock-btn" title="Khóa lại prompt này">🔒 Khóa</button>
+                    <button type="button" class="copy-btn" data-copy="p-b5-da1">Sao chép</button>
+                  </div>
                 </div>
                 <p id="p-b5-da1" class="prompt-text">Em đóng vai Trợ lý Nhân sự của công ty. Hãy soạn giúp anh một thông báo nội bộ gửi toàn thể cán bộ nhân viên về việc điều chỉnh lịch làm việc mùa hè năm 2026. Lịch mới áp dụng từ ngày 01/06/2026 đến hết ngày 31/08/2026: Sáng từ 07:30 đến 11:30, Chiều từ 13:30 đến 17:00. Khối văn phòng áp dụng bắt buộc, khối dự án linh hoạt theo công trường. Trình bày văn bản trang trọng, rõ ràng gồm 3 phần: Mục đích, Nội dung chi tiết và Trách nhiệm thi hành.</p>
                 <p class="copy-status" role="status"></p>
               </div>
             </div>
 
-            <div class="prompt-card">
+            <div class="prompt-card" data-prompt-card>
               <div class="prompt-scenario">
                 <h4>
                   <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
@@ -584,17 +606,35 @@
                 </h4>
                 <p><strong>Bối cảnh:</strong> Khách hàng bức xúc vì đơn hàng đồ gia dụng bị giao chậm 2 ngày làm ảnh hưởng lịch khai trương. Áp dụng quy trình chia nhỏ 2 bước: Bước 1 tìm phương án đền bù, Bước 2 mới soạn thư xin lỗi.</p>
               </div>
-              <div class="prompt-box-inner">
+
+              <!-- Giao diện Ổ Khóa Bảo vệ -->
+              <div class="prompt-lock-shield">
+                <div class="lock-shield-icon">🔒</div>
+                <div class="lock-shield-content">
+                  <div class="lock-shield-title">Prompt mẫu đang được khóa</div>
+                  <p class="lock-shield-desc">Hãy tự tư duy và soạn prompt trước. Nhập mã để mở gợi ý.</p>
+                </div>
+                <form class="lock-shield-form" onsubmit="return false;">
+                  <input type="password" class="lock-shield-input" placeholder="Mã mở khóa..." maxlength="10">
+                  <button type="submit" class="lock-shield-submit">Mở khóa 🔓</button>
+                </form>
+                <div class="lock-shield-error" hidden>⚠️ Mật mã không đúng, vui lòng thử lại!</div>
+              </div>
+
+              <div class="prompt-box-inner" hidden>
                 <div class="prompt-box-head">
-                  <span>Prompt chia nhỏ bước 1</span>
-                  <button type="button" class="copy-btn" data-copy="p-b5-da2">Sao chép</button>
+                  <span class="prompt-unlocked-tag">🔓 Prompt chia nhỏ bước 1</span>
+                  <div class="prompt-head-actions">
+                    <button type="button" class="relock-btn" title="Khóa lại prompt này">🔒 Khóa</button>
+                    <button type="button" class="copy-btn" data-copy="p-b5-da2">Sao chép</button>
+                  </div>
                 </div>
                 <p id="p-b5-da2" class="prompt-text">Em đóng vai Chuyên viên Chăm sóc khách hàng. Khách hàng đang rất bức xúc vì đơn hàng khai trương giao trễ 2 ngày. Bước 1: Hãy phân tích tâm lý khách hàng và đề xuất 2 phương án bồi thường thực tế với ngân sách dưới 200.000đ. Đợi anh duyệt phương án rồi mới viết thư xin lỗi nhé.</p>
                 <p class="copy-status" role="status"></p>
               </div>
             </div>
 
-            <div class="prompt-card">
+            <div class="prompt-card" data-prompt-card>
               <div class="prompt-scenario">
                 <h4>
                   <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
@@ -602,17 +642,35 @@
                 </h4>
                 <p><strong>Bối cảnh:</strong> Xử lý ghi chép thô sau cuộc họp giao ban đầu tuần. Cung cấp đầy đủ dữ liệu thô, ra lệnh cho AI trích xuất 3 quyết định chính và bảng phân bổ công việc 5 cột kèm deadline cụ thể.</p>
               </div>
-              <div class="prompt-box-inner">
+
+              <!-- Giao diện Ổ Khóa Bảo vệ -->
+              <div class="prompt-lock-shield">
+                <div class="lock-shield-icon">🔒</div>
+                <div class="lock-shield-content">
+                  <div class="lock-shield-title">Prompt mẫu đang được khóa</div>
+                  <p class="lock-shield-desc">Hãy tự tư duy và soạn prompt trước. Nhập mã để mở gợi ý.</p>
+                </div>
+                <form class="lock-shield-form" onsubmit="return false;">
+                  <input type="password" class="lock-shield-input" placeholder="Mã mở khóa..." maxlength="10">
+                  <button type="submit" class="lock-shield-submit">Mở khóa 🔓</button>
+                </form>
+                <div class="lock-shield-error" hidden>⚠️ Mật mã không đúng, vui lòng thử lại!</div>
+              </div>
+
+              <div class="prompt-box-inner" hidden>
                 <div class="prompt-box-head">
-                  <span>Prompt đóng gói biên bản</span>
-                  <button type="button" class="copy-btn" data-copy="p-b5-da3">Sao chép</button>
+                  <span class="prompt-unlocked-tag">🔓 Prompt đóng gói biên bản</span>
+                  <div class="prompt-head-actions">
+                    <button type="button" class="relock-btn" title="Khóa lại prompt này">🔒 Khóa</button>
+                    <button type="button" class="copy-btn" data-copy="p-b5-da3">Sao chép</button>
+                  </div>
                 </div>
                 <p id="p-b5-da3" class="prompt-text">Em đóng vai Thư ký dự án chuyên nghiệp. Dưới đây là các ghi chú thô từ cuộc họp giao ban sáng thứ Hai: [Nam báo cáo module đăng nhập xong 90% còn lỗi mobile hẹn thứ Tư; Mai cần 1 designer hỗ trợ banner khuyến mại trước thứ Sáu; Tuấn cảnh báo server thử nghiệm đang quá tải cần nâng RAM trước 17:00 ngày mai; Thống nhất tuần này ưu tiên sửa lỗi trước khi ra tính năng mới]. Em hãy xử lý dữ liệu và xuất bản: 1. Ba quyết định trọng tâm đã chốt; 2. Bảng phân bổ công việc tuần gồm 5 cột: STT, Đầu việc, Người phụ trách, Hạn chót, Tiêu chí hoàn thành; 3. Hai rủi ro cần phòng ngừa. Trình bày dứt khoát, không bịa đặt thêm ngoài ghi chú.</p>
                 <p class="copy-status" role="status"></p>
               </div>
             </div>
 
-            <div class="prompt-card">
+            <div class="prompt-card" data-prompt-card>
               <div class="prompt-scenario">
                 <h4>
                   <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
@@ -620,10 +678,28 @@
                 </h4>
                 <p><strong>Bối cảnh:</strong> Thiết kế khảo sát gắn kết và sự hài lòng nhân viên Quý 2. Chia nhỏ thành 2 bước: Bước 1 yêu cầu AI đề xuất 4 nhóm trụ cột đo lường; Bước 2 soạn câu hỏi Likert 1-5 và lệnh tự kiểm tra khách quan.</p>
               </div>
-              <div class="prompt-box-inner">
+
+              <!-- Giao diện Ổ Khóa Bảo vệ -->
+              <div class="prompt-lock-shield">
+                <div class="lock-shield-icon">🔒</div>
+                <div class="lock-shield-content">
+                  <div class="lock-shield-title">Prompt mẫu đang được khóa</div>
+                  <p class="lock-shield-desc">Hãy tự tư duy và soạn prompt trước. Nhập mã để mở gợi ý.</p>
+                </div>
+                <form class="lock-shield-form" onsubmit="return false;">
+                  <input type="password" class="lock-shield-input" placeholder="Mã mở khóa..." maxlength="10">
+                  <button type="submit" class="lock-shield-submit">Mở khóa 🔓</button>
+                </form>
+                <div class="lock-shield-error" hidden>⚠️ Mật mã không đúng, vui lòng thử lại!</div>
+              </div>
+
+              <div class="prompt-box-inner" hidden>
                 <div class="prompt-box-head">
-                  <span>Prompt chia nhỏ bước 1</span>
-                  <button type="button" class="copy-btn" data-copy="p-b5-da4">Sao chép</button>
+                  <span class="prompt-unlocked-tag">🔓 Prompt chia nhỏ bước 1</span>
+                  <div class="prompt-head-actions">
+                    <button type="button" class="relock-btn" title="Khóa lại prompt này">🔒 Khóa</button>
+                    <button type="button" class="copy-btn" data-copy="p-b5-da4">Sao chép</button>
+                  </div>
                 </div>
                 <p id="p-b5-da4" class="prompt-text">Em đóng vai Chuyên gia Nhân sự (HR Specialist). Công ty chuẩn bị làm khảo sát sự hài lòng nhân viên Quý 2. Bước 1: Hãy đề xuất 4 nhóm chỉ số trọng tâm cần đo lường, giải thích ngắn gọn lý do tại sao 4 nhóm này quyết định mức độ gắn bó của nhân sự. Đợi anh duyệt 4 nhóm này rồi mới tiến hành soạn câu hỏi chi tiết nhé.</p>
                 <p class="copy-status" role="status"></p>

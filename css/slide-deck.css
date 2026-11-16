@@ -1864,3 +1864,186 @@ body {
   .video-stage { min-height: 250px; }
   .studio-scenes-nav { flex-wrap: nowrap; }
 }
+
+/* ============================================================
+   PROMPT LOCK SYSTEM (Ổ KHÓA BẢO VỆ PROMPT MẪU)
+   ============================================================ */
+
+.practice-box-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.master-unlock-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  background: #fef08a;
+  border: 2px solid var(--ink);
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 850;
+  color: var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+.master-unlock-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--ink);
+  background: #fde047;
+}
+.master-unlock-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+.prompt-lock-shield {
+  background: #fffbeb;
+  border: 2px dashed #d97706;
+  border-radius: 12px;
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 0 var(--ink);
+  margin-top: 6px;
+  transition: all 200ms ease;
+}
+.prompt-card.is-unlocked .prompt-lock-shield {
+  display: none !important;
+}
+
+.lock-shield-icon {
+  font-size: 26px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #fef08a;
+  border: 2.5px solid var(--ink);
+  display: grid;
+  place-items: center;
+  box-shadow: 2px 2px 0 var(--ink);
+  animation: lock-bounce 3s infinite ease-in-out;
+}
+@keyframes lock-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.lock-shield-title {
+  font-size: 13.5px;
+  font-weight: 900;
+  color: #92400e;
+}
+.lock-shield-desc {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin: 0;
+  max-width: 280px;
+  line-height: 1.45;
+}
+
+.lock-shield-form {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  max-width: 290px;
+  margin-top: 4px;
+}
+.lock-shield-input {
+  flex: 1;
+  padding: 7px 12px;
+  border: 2px solid var(--ink);
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 800;
+  background: white;
+  box-shadow: 2px 2px 0 var(--ink);
+  text-align: center;
+  letter-spacing: 0.08em;
+  outline: none;
+}
+.lock-shield-input:focus {
+  box-shadow: 3px 3px 0 var(--ink);
+  border-color: #d97706;
+}
+.lock-shield-submit {
+  padding: 7px 14px;
+  border: 2px solid var(--ink);
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 850;
+  background: var(--green-light);
+  color: #14532d;
+  box-shadow: 2px 2px 0 var(--ink);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 120ms ease;
+}
+.lock-shield-submit:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.lock-shield-submit:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+.lock-shield-error {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #dc2626;
+  background: #fee2e2;
+  border: 1.5px solid #dc2626;
+  border-radius: 6px;
+  padding: 4px 10px;
+}
+.lock-shield-error.shake {
+  animation: lock-shake 250ms ease-in-out;
+}
+@keyframes lock-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.prompt-head-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.relock-btn {
+  padding: 4px 9px;
+  font-size: 11px;
+  font-weight: 800;
+  border: 1.5px solid var(--ink);
+  border-radius: 7px;
+  background: #f1f5f9;
+  color: #475569;
+  box-shadow: 1px 1px 0 var(--ink);
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+.relock-btn:hover {
+  background: #fee2e2;
+  color: #991b1b;
+  transform: translate(-1px, -1px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.prompt-unlocked-tag {
+  font-size: 11px;
+  font-weight: 850;
+  color: #15803d;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}

@@ -188,4 +188,98 @@
     });
   });
 
+  // ── Prompt Lock System (Mật khẩu: 1009) ──────────────────
+  const PASSCODE = '1009';
+
+  function unlockCard(card) {
+    const shield = card.querySelector('.prompt-lock-shield');
+    const content = card.querySelector('.prompt-box-inner');
+    if (shield) shield.hidden = true;
+    if (content) content.hidden = false;
+    card.classList.add('is-unlocked');
+  }
+
+  function relockCard(card) {
+    const shield = card.querySelector('.prompt-lock-shield');
+    const content = card.querySelector('.prompt-box-inner');
+    const input = card.querySelector('.lock-shield-input');
+    const errorMsg = card.querySelector('.lock-shield-error');
+    if (shield) shield.hidden = false;
+    if (content) content.hidden = true;
+    if (input) input.value = '';
+    if (errorMsg) errorMsg.hidden = true;
+    card.classList.remove('is-unlocked');
+  }
+
+  function updateMasterBtnState() {
+    const masterUnlockBtn = document.getElementById('btn-master-unlock');
+    if (!masterUnlockBtn) return;
+    const allCards = document.querySelectorAll('[data-prompt-card]');
+    const allUnlocked = allCards.length > 0 && Array.from(allCards).every(c => c.classList.contains('is-unlocked'));
+    if (allUnlocked) {
+      masterUnlockBtn.innerHTML = '<span class="lock-icon" aria-hidden="true">🔓</span><span class="unlock-btn-text">Khóa lại toàn bộ</span>';
+      masterUnlockBtn.style.background = '#dcfce7';
+    } else {
+      masterUnlockBtn.innerHTML = '<span class="lock-icon" aria-hidden="true">🔒</span><span class="unlock-btn-text">Mở khóa toàn bộ</span>';
+      masterUnlockBtn.style.background = '#fef08a';
+    }
+  }
+
+  document.querySelectorAll('[data-prompt-card]').forEach((card) => {
+    const form = card.querySelector('.lock-shield-form');
+    const input = card.querySelector('.lock-shield-input');
+    const errorMsg = card.querySelector('.lock-shield-error');
+    const relockBtn = card.querySelector('.relock-btn');
+
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const entered = (input ? input.value : '').trim();
+        if (entered === PASSCODE) {
+          if (errorMsg) errorMsg.hidden = true;
+          unlockCard(card);
+          updateMasterBtnState();
+        } else {
+          if (errorMsg) {
+            errorMsg.hidden = false;
+            errorMsg.classList.remove('shake');
+            void errorMsg.offsetWidth;
+            errorMsg.classList.add('shake');
+          }
+          if (input) {
+            input.value = '';
+            input.focus();
+          }
+        }
+      });
+    }
+
+    if (relockBtn) {
+      relockBtn.addEventListener('click', () => {
+        relockCard(card);
+        updateMasterBtnState();
+      });
+    }
+  });
+
+  const masterUnlockBtn = document.getElementById('btn-master-unlock');
+  if (masterUnlockBtn) {
+    masterUnlockBtn.addEventListener('click', () => {
+      const allCards = document.querySelectorAll('[data-prompt-card]');
+      const allUnlocked = allCards.length > 0 && Array.from(allCards).every(c => c.classList.contains('is-unlocked'));
+      if (allUnlocked) {
+        allCards.forEach(relockCard);
+        updateMasterBtnState();
+        return;
+      }
+      const entered = window.prompt('Nhập mật mã để mở khóa toàn bộ prompt mẫu (1009):');
+      if (entered === PASSCODE) {
+        allCards.forEach(unlockCard);
+        updateMasterBtnState();
+      } else if (entered !== null) {
+        alert('Mật mã không đúng, vui lòng thử lại!');
+      }
+    });
+  }
+
 })();
