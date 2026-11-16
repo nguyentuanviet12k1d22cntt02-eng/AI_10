@@ -1960,6 +1960,11 @@ body {
   box-shadow: 1px 1px 0 var(--ink);
 }
 
+/* Bắt buộc ẩn mọi phần tử có thuộc tính hidden */
+[hidden] {
+  display: none !important;
+}
+
 /* Nút Ổ Khóa Ban Đầu Trong Thẻ (Chỉ hiện ô ổ khóa này) */
 .prompt-lock-trigger {
   display: flex;
@@ -1986,8 +1991,21 @@ body {
   transform: translate(1px, 1px);
   box-shadow: 1px 1px 0 var(--ink);
 }
+
+/* Thẻ prompt khi ĐANG KHÓA: Ẩn tuyệt đối phần nội dung / câu trả lời */
+.prompt-card:not(.is-unlocked) .prompt-box-inner,
+.prompt-card .prompt-box-inner[hidden],
+.prompt-box-inner[hidden] {
+  display: none !important;
+}
+
+/* Thẻ prompt khi ĐÃ MỞ KHÓA: Ẩn ổ khóa, Hiện nội dung câu trả lời */
 .prompt-card.is-unlocked .prompt-lock-trigger {
   display: none !important;
+}
+.prompt-card.is-unlocked .prompt-box-inner {
+  display: grid !important;
+  animation: dialogue-pop 250ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .prompt-lock-trigger .lock-shield-icon {
