@@ -184,11 +184,82 @@
       const slide = btn.closest('.slide');
       if (slide) {
         slide.querySelectorAll('.director-take-view').forEach((dv) => {
-          dv.style.display = (dv.dataset.take === targetTake) ? 'grid' : 'none';
+          dv.style.display = (dv.dataset.take === targetTake) ? 'block' : 'none';
         });
+      }
+
+      // Update header label and timecode
+      const headerTitle = monitor.querySelector('.video-header-title');
+      const timecodeEl = monitor.querySelector('.video-timecode');
+      const timecodeEl2 = monitor.querySelector('.video-timecode-bot');
+      const fillEl = monitor.querySelector('.timeline-fill');
+
+      if (targetTake === 'bad') {
+        if (headerTitle) headerTitle.textContent = '● SEQUENCE PREVIEW · ONE-SHOT FAILURE';
+        if (timecodeEl) timecodeEl.textContent = '00:00:28:14';
+        if (timecodeEl2) timecodeEl2.textContent = '00:00:28:14';
+        if (fillEl) fillEl.style.width = '35%';
+      } else {
+        if (headerTitle) headerTitle.textContent = '● SEQUENCE PREVIEW · 3-STEP PIPELINE';
+        // Active Cut 1 by default
+        const activeCutBtn = monitor.querySelector('.cut-step-btn.active') || monitor.querySelector('.cut-step-btn');
+        if (activeCutBtn) {
+          activeCutBtn.click();
+        }
       }
     });
   });
+
+  // ── Multi-Step Cut Navigator in Dialogue Studio (Slide 2) ────────
+  function initCutStepper() {
+    const monitor = document.querySelector('.video-monitor');
+    if (!monitor) return;
+
+    function setCut(cutId) {
+      // Update buttons
+      monitor.querySelectorAll('.cut-step-btn').forEach(btn => {
+        const isCurrent = btn.dataset.cutStep === cutId;
+        btn.classList.toggle('active', isCurrent);
+        btn.setAttribute('aria-selected', isCurrent ? 'true' : 'false');
+      });
+      // Update views
+      monitor.querySelectorAll('.cut-view-panel').forEach(panel => {
+        panel.style.display = (panel.dataset.cutView === cutId) ? 'flex' : 'none';
+      });
+      // Update timecode, timeline fill, and stamp
+      const timecodeEl = monitor.querySelector('.video-timecode');
+      const timecodeEl2 = monitor.querySelector('.video-timecode-bot');
+      const fillEl = monitor.querySelector('.timeline-fill');
+      const stampEl = monitor.querySelector('.stamp-take-2');
+
+      const times = {
+        '1': { tc: '00:00:10:00', pct: '33%', stamp: 'APPROVED! NHỊP 1: KHÓA TỶ LỆ VỐN' },
+        '2': { tc: '00:00:20:15', pct: '66%', stamp: 'APPROVED! NHỊP 2: BÓC TÁCH DỰ PHÓNG ROI' },
+        '3': { tc: '00:00:30:00', pct: '100%', stamp: 'MASTER APPROVED! XUẤT BẢN THÀNH PHẨM' },
+        'all': { tc: '00:00:30:00', pct: '100%', stamp: 'APPROVED! CHUỖI 3 NHỊP LIÊN HOÀN' }
+      };
+
+      if (times[cutId]) {
+        if (timecodeEl) timecodeEl.textContent = times[cutId].tc;
+        if (timecodeEl2) timecodeEl2.textContent = times[cutId].tc;
+        if (fillEl) fillEl.style.width = times[cutId].pct;
+        if (stampEl) stampEl.textContent = times[cutId].stamp;
+      }
+    }
+
+    monitor.querySelectorAll('.cut-step-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        setCut(btn.dataset.cutStep);
+      });
+    });
+
+    monitor.querySelectorAll('[data-cut-jump]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        setCut(btn.dataset.cutJump);
+      });
+    });
+  }
+  initCutStepper();
 
   // ── Prompt Lock System (Mật khẩu: 1009 hoặc *) ──────────────────
   const PASSCODE = '1009';

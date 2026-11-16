@@ -73,14 +73,14 @@
           <!-- Cột trái: Màn hình Video Monitor mô phỏng chat -->
           <div class="video-monitor">
             <div class="video-header-bar">
-              <span>● SEQUENCE PREVIEW · ONE-SHOT FAILURE</span>
+              <span class="video-header-title">● SEQUENCE PREVIEW · ONE-SHOT FAILURE</span>
               <span class="video-timecode">00:00:28:14</span>
               <span class="video-res-tag">4K PREVIEW</span>
             </div>
 
             <div class="take-bar">
               <button type="button" class="take-btn take-bad active" data-take="bad">❌ Take 1: Render dồn 1 cục (Lỗi Crash)</button>
-              <button type="button" class="take-btn take-good" data-take="good">✅ Take 2: Dựng từng Cut (Đạt chuẩn)</button>
+              <button type="button" class="take-btn take-good" data-take="good">✅ Take 2: Dựng từng Cut (Đạt chuẩn 3 Bước)</button>
             </div>
 
             <div class="video-stage">
@@ -103,47 +103,200 @@
                 </div>
               </div>
 
-              <!-- Take 2 View (Good) -->
-              <div class="take-view take-view-good" data-take="good" style="display: none; flex-direction: column; gap: 12px; width: 100%;">
-                <span class="video-stamp stamp-approved">APPROVED! DỰNG TỪNG NHỊP CHUẨN</span>
-                <div class="dialogue-msg msg-boss">
-                  <img src="../assets/images/avatar-boss.svg" alt="Sếp" class="dialogue-avatar">
-                  <div class="dialogue-bubble">
-                    <div class="dialogue-speaker"><span>Sếp</span><span class="speaker-role">Multi-step Prompt</span></div>
-                    <p class="dialogue-text">“Bước 1: Em hãy phân bổ tỷ lệ ngân sách 500 triệu cho 4 kênh theo mục tiêu chuyển đổi đơn hàng và nêu căn cứ phân bổ. Dừng lại đợi anh duyệt rồi mới tính tiếp.”</p>
+              <!-- Take 2 View (Good: Multi-Step Sequence) -->
+              <div class="take-view take-view-good" data-take="good" style="display: none; flex-direction: column; gap: 10px; width: 100%;">
+                <span class="video-stamp stamp-approved stamp-take-2">APPROVED! NHỊP 1: KHÓA TỶ LỆ VỐN</span>
+
+                <!-- THANH ĐIỀU HƯỚNG TỪNG BƯỚC CUT (CUT STEPPER BAR) -->
+                <div class="cut-stepper-bar" role="tablist" aria-label="Các bước câu lệnh tuần tự">
+                  <button type="button" class="cut-step-btn active" data-cut-step="1" role="tab" aria-selected="true">
+                    <span class="cut-num">Cut 1</span>
+                    <span class="cut-title">Khóa mục tiêu vốn</span>
+                  </button>
+                  <span class="cut-arrow" aria-hidden="true">➔</span>
+                  <button type="button" class="cut-step-btn" data-cut-step="2" role="tab" aria-selected="false">
+                    <span class="cut-num">Cut 2</span>
+                    <span class="cut-title">Tính dự phóng ROI</span>
+                  </button>
+                  <span class="cut-arrow" aria-hidden="true">➔</span>
+                  <button type="button" class="cut-step-btn" data-cut-step="3" role="tab" aria-selected="false">
+                    <span class="cut-num">Cut 3</span>
+                    <span class="cut-title">Xuất bản Content</span>
+                  </button>
+                  <button type="button" class="cut-step-btn cut-all-btn" data-cut-step="all" role="tab" aria-selected="false" title="Xem toàn bộ 3 bước liên hoàn">
+                    <span>📜 Xem cả 3 Cut</span>
+                  </button>
+                </div>
+
+                <!-- CUT 1 VIEW PANEL -->
+                <div class="cut-view-panel" data-cut-view="1" style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
+                  <div class="dialogue-msg msg-boss">
+                    <img src="../assets/images/avatar-boss.svg" alt="Sếp" class="dialogue-avatar">
+                    <div class="dialogue-bubble">
+                      <div class="dialogue-speaker"><span>Sếp</span><span class="speaker-role" style="background: #dbeafe; color: #1e40af;">Lệnh Bước 1 · Cut 1</span></div>
+                      <p class="dialogue-text">“Bước 1: Em hãy phân bổ tỷ lệ ngân sách 500 triệu cho 4 kênh (Google, Facebook, TikTok, KOL) theo mục tiêu chuyển đổi đơn hàng và nêu căn cứ phân bổ. <strong>Dừng lại đợi anh duyệt rồi mới tính tiếp.</strong>”</p>
+                    </div>
+                  </div>
+                  <div class="dialogue-msg msg-ai">
+                    <img src="../assets/images/avatar-ai.svg" alt="AI" class="dialogue-avatar">
+                    <div class="dialogue-bubble">
+                      <div class="dialogue-speaker"><span>Trợ lý AI</span><span class="speaker-role" style="background: #dcfce7; color: #166534;">Phản hồi nhịp 1</span></div>
+                      <p class="dialogue-text">“Đề xuất phân bổ tập trung hiệu quả:<br>• <strong>Google Search (40% - 200tr):</strong> Đón khách hàng có nhu cầu mua ngay.<br>• <strong>Facebook &amp; TikTok Ads (45% - 225tr):</strong> Retargeting và video viral.<br>• <strong>KOL/Seeding (15% - 75tr):</strong> Tạo uy tín xã hội &amp; review.<br>👉 <em>Anh duyệt tỷ lệ này để em tính dự phóng ROI chi tiết từng kênh nhé ạ.</em>”</p>
+                    </div>
+                  </div>
+                  <div class="cut-action-bar">
+                    <button type="button" class="cut-jump-btn btn-primary" data-cut-jump="2">Tiếp tục: Sang Cut 2 (Tính ROI) ➔</button>
                   </div>
                 </div>
-                <div class="dialogue-msg msg-ai">
-                  <img src="../assets/images/avatar-ai.svg" alt="AI" class="dialogue-avatar">
-                  <div class="dialogue-bubble">
-                    <div class="dialogue-speaker"><span>Trợ lý AI</span><span class="speaker-role">Phản hồi sâu sắc</span></div>
-                    <p class="dialogue-text">“Đề xuất phân bổ tập trung hiệu quả:<br>• <strong>Google Search (40% - 200tr):</strong> Đón khách hàng có nhu cầu mua ngay.<br>• <strong>Facebook &amp; TikTok Ads (45% - 225tr):</strong> Retargeting và video viral.<br>• <strong>KOL/Seeding (15% - 75tr):</strong> Tạo uy tín xã hội.<br>👉 Anh duyệt tỷ lệ này để em tính dự phóng ROI chi tiết từng kênh nhé ạ.”</p>
+
+                <!-- CUT 2 VIEW PANEL -->
+                <div class="cut-view-panel" data-cut-view="2" style="display: none; flex-direction: column; gap: 12px; width: 100%;">
+                  <div class="dialogue-msg msg-boss">
+                    <img src="../assets/images/avatar-boss.svg" alt="Sếp" class="dialogue-avatar">
+                    <div class="dialogue-bubble">
+                      <div class="dialogue-speaker"><span>Sếp</span><span class="speaker-role" style="background: #fef3c7; color: #92400e;">Lệnh Bước 2 · Cut 2</span></div>
+                      <p class="dialogue-text">“Anh duyệt tỷ lệ 40/45/15%. Bước 2: Dựa trên số liệu trung bình ngành TMĐT (CPA, AOV 400.000đ), em hãy tính dự phóng số đơn hàng mang về và chỉ số ROI cho từng kênh. Bắt buộc có bảng tổng hợp. <strong>Dừng lại đợi anh duyệt nhé.</strong>”</p>
+                    </div>
+                  </div>
+                  <div class="dialogue-msg msg-ai">
+                    <img src="../assets/images/avatar-ai.svg" alt="AI" class="dialogue-avatar">
+                    <div class="dialogue-bubble">
+                      <div class="dialogue-speaker"><span>Trợ lý AI</span><span class="speaker-role" style="background: #dcfce7; color: #166534;">Phản hồi nhịp 2</span></div>
+                      <p class="dialogue-text">“Bảng dự phóng tài chính chi tiết:<br>• <strong>Google (200tr):</strong> CPA 80k &rarr; 2.500 đơn &rarr; Doanh thu 1.0 tỷ (ROI 5.0x)<br>• <strong>FB &amp; TikTok (225tr):</strong> CPA 100k &rarr; 2.250 đơn &rarr; Doanh thu 900tr (ROI 4.0x)<br>• <strong>KOL (75tr):</strong> Hỗ trợ chuyển đổi chéo &rarr; Doanh thu 300tr (ROI 4.0x)<br>📊 <strong>Tổng doanh thu: 2.2 tỷ VNĐ (ROI trung bình 4.4x)</strong>.<br>👉 <em>Anh duyệt bảng này để em sang bước 3 viết Content nhé!</em>”</p>
+                    </div>
+                  </div>
+                  <div class="cut-action-bar">
+                    <button type="button" class="cut-jump-btn" data-cut-jump="1">← Quay lại Cut 1</button>
+                    <button type="button" class="cut-jump-btn btn-primary" data-cut-jump="3">Tiếp tục: Sang Cut 3 (Xuất bản) ➔</button>
                   </div>
                 </div>
+
+                <!-- CUT 3 VIEW PANEL -->
+                <div class="cut-view-panel" data-cut-view="3" style="display: none; flex-direction: column; gap: 12px; width: 100%;">
+                  <div class="dialogue-msg msg-boss">
+                    <img src="../assets/images/avatar-boss.svg" alt="Sếp" class="dialogue-avatar">
+                    <div class="dialogue-bubble">
+                      <div class="dialogue-speaker"><span>Sếp</span><span class="speaker-role" style="background: #dcfce7; color: #166534;">Lệnh Bước 3 · Cut 3</span></div>
+                      <p class="dialogue-text">“Số liệu ROI 4.4x rất thuyết phục! Bước 3: Hãy viết 2 mẫu status Facebook Ads theo công thức PAS đánh trúng nỗi đau khách hàng và 1 kịch bản video TikTok 60 giây phân cảnh chi tiết (Hook 3s - Nỗi đau - Giải pháp - Kêu gọi mua).”</p>
+                    </div>
+                  </div>
+                  <div class="dialogue-msg msg-ai">
+                    <img src="../assets/images/avatar-ai.svg" alt="AI" class="dialogue-avatar">
+                    <div class="dialogue-bubble">
+                      <div class="dialogue-speaker"><span>Trợ lý AI</span><span class="speaker-role" style="background: #dcfce7; color: #166534;">Phản hồi nhịp 3</span></div>
+                      <p class="dialogue-text">“Đã xuất bản bộ nội dung hoàn chỉnh:<br>📝 <strong>2 Mẫu FB Ads PAS:</strong> Giật tít giải quyết da khô mùa hè, cam kết serum dưỡng ẩm phục hồi cấp tốc, CTA voucher 20%.<br>🎬 <strong>Kịch bản TikTok 60s (4 Phân cảnh):</strong><br>• 0-3s: Visual giọt serum tan mướt trên da (Hook mạnh).<br>• 3-20s: Cảnh mốc nền khi makeup ngày nóng.<br>• 20-45s: Đo độ ẩm tăng 80% sau 1 tuần test máy.<br>• 45-60s: Flash deal giảm giá độc quyền trong live.<br>🎉 <em>Hoàn thành trọn vẹn quy trình 3 Cut!</em>”</p>
+                    </div>
+                  </div>
+                  <div class="cut-action-bar">
+                    <button type="button" class="cut-jump-btn" data-cut-jump="2">← Quay lại Cut 2</button>
+                    <button type="button" class="cut-jump-btn btn-primary" data-cut-jump="all">📜 Xem toàn bộ 3 Cut liên hoàn</button>
+                  </div>
+                </div>
+
+                <!-- ALL CUTS COMBINED VIEW PANEL -->
+                <div class="cut-view-panel" data-cut-view="all" style="display: none; flex-direction: column; gap: 10px; width: 100%;">
+                  <!-- CUT 1 MINI -->
+                  <div class="cut-timeline-divider">
+                    <span class="cut-checkpoint-tag">🎬 CUT 1 · KHÓA MỤC TIÊU VỐN</span>
+                  </div>
+                  <div class="dialogue-msg msg-boss">
+                    <img src="../assets/images/avatar-boss.svg" alt="Sếp" class="dialogue-avatar">
+                    <div class="dialogue-bubble">
+                      <div class="dialogue-speaker"><span>Sếp</span><span class="speaker-role">Lệnh Bước 1</span></div>
+                      <p class="dialogue-text">“Bước 1: Em hãy phân bổ tỷ lệ 500 triệu cho 4 kênh. <strong>Dừng lại đợi anh duyệt.</strong>”</p>
+                    </div>
+                  </div>
+                  <div class="dialogue-msg msg-ai">
+                    <img src="../assets/images/avatar-ai.svg" alt="AI" class="dialogue-avatar">
+                    <div class="dialogue-bubble">
+                      <div class="dialogue-speaker"><span>Trợ lý AI</span><span class="speaker-role">Phản hồi 1</span></div>
+                      <p class="dialogue-text">“Đề xuất: Google Search 40% (200tr), FB &amp; TikTok 45% (225tr), KOL 15% (75tr). Anh duyệt tỷ lệ này nhé ạ!”</p>
+                    </div>
+                  </div>
+
+                  <!-- CUT 2 MINI -->
+                  <div class="cut-timeline-divider">
+                    <span class="cut-checkpoint-tag">🎬 CUT 2 · BÓC TÁCH DỰ PHÓNG ROI</span>
+                  </div>
+                  <div class="dialogue-msg msg-boss">
+                    <img src="../assets/images/avatar-boss.svg" alt="Sếp" class="dialogue-avatar">
+                    <div class="dialogue-bubble">
+                      <div class="dialogue-speaker"><span>Sếp</span><span class="speaker-role">Lệnh Bước 2</span></div>
+                      <p class="dialogue-text">“Duyệt tỷ lệ. Bước 2: Hãy tính dự phóng ROI chi tiết từng kênh dạng bảng. <strong>Dừng lại đợi duyệt.</strong>”</p>
+                    </div>
+                  </div>
+                  <div class="dialogue-msg msg-ai">
+                    <img src="../assets/images/avatar-ai.svg" alt="AI" class="dialogue-avatar">
+                    <div class="dialogue-bubble">
+                      <div class="dialogue-speaker"><span>Trợ lý AI</span><span class="speaker-role">Phản hồi 2</span></div>
+                      <p class="dialogue-text">“Bảng ROI: Google mang về 1.0 tỷ (ROI 5.0x); FB/TikTok mang về 900tr (ROI 4.0x); KOL 300tr (ROI 4.0x). <strong>Tổng doanh thu: 2.2 tỷ (ROI 4.4x)</strong>. Anh duyệt để sang bước 3 nhé!”</p>
+                    </div>
+                  </div>
+
+                  <!-- CUT 3 MINI -->
+                  <div class="cut-timeline-divider">
+                    <span class="cut-checkpoint-tag">🎬 CUT 3 · XUẤT BẢN THÀNH PHẨM</span>
+                  </div>
+                  <div class="dialogue-msg msg-boss">
+                    <img src="../assets/images/avatar-boss.svg" alt="Sếp" class="dialogue-avatar">
+                    <div class="dialogue-bubble">
+                      <div class="dialogue-speaker"><span>Sếp</span><span class="speaker-role">Lệnh Bước 3</span></div>
+                      <p class="dialogue-text">“Duyệt ROI 4.4x! Bước 3: Hãy viết 2 status FB Ads PAS và 1 kịch bản video TikTok 60 giây.”</p>
+                    </div>
+                  </div>
+                  <div class="dialogue-msg msg-ai">
+                    <img src="../assets/images/avatar-ai.svg" alt="AI" class="dialogue-avatar">
+                    <div class="dialogue-bubble">
+                      <div class="dialogue-speaker"><span>Trợ lý AI</span><span class="speaker-role">Phản hồi 3</span></div>
+                      <p class="dialogue-text">“Đã xuất bản: 2 status FB Ads PAS đánh trúng nỗi đau mốc nền da + Kịch bản TikTok 60s 4 phân cảnh hoàn chỉnh. 🎉 <strong>Xuất bản thành công!</strong>”</p>
+                    </div>
+                  </div>
+
+                  <div class="cut-action-bar">
+                    <button type="button" class="cut-jump-btn btn-primary" data-cut-jump="1">↺ Xem chi tiết từng Cut</button>
+                  </div>
+                </div>
+
               </div>
             </div>
 
             <div class="video-controls-bar">
               <span class="v-btn">▶</span>
               <div class="timeline-track-mini"><div class="timeline-fill" style="width: 35%;"></div></div>
-              <span style="font-size: 11px; font-family: monospace;">00:00:28:14</span>
+              <span class="video-timecode-bot" style="font-size: 11px; font-family: monospace;">00:00:28:14</span>
             </div>
           </div>
 
           <!-- Cột phải: Director's Inspector Panel -->
           <div class="director-panel">
-            <div class="director-card">
+            <!-- Panel khi xem Take 1 (Lỗi dồn 1 cục) -->
+            <div class="director-card director-take-view" data-take="bad">
               <div class="director-head">
-                <span class="director-icon">🎞️</span>
+                <span class="director-icon">⚠️</span>
                 <div>
-                  <span class="rule-tag">Quy luật Phòng dựng</span>
+                  <span class="rule-tag" style="background: #fee2e2; color: #991b1b;">Cảnh báo Phòng dựng</span>
                   <h3 class="director-title">Bóc tách 3 điểm nghẽn "Bội thực"</h3>
                 </div>
               </div>
-              <p class="director-rule">👉 <mark>Chia nhỏ nhiệm vụ &rarr; Kết quả sâu sắc gấp 5 lần</mark></p>
+              <p class="director-rule">❌ <mark style="background: #fee2e2;">Dồn hết vào 1 câu lệnh &rarr; Thất bại chắc chắn</mark></p>
               <p class="director-desc">1. <strong>Bỏ sót điều kiện ngầm:</strong> Trong câu lệnh dài, AI chỉ chú ý ý đầu và ý cuối, toàn bộ yêu cầu ở giữa bị "trôi timeline".</p>
               <p class="director-desc">2. <strong>Ảo giác khi vừa tính vừa viết:</strong> Năng lực suy luận bị phân tán giữa việc tính số và sáng tạo câu chữ dẫn đến sai số học.</p>
               <p class="director-desc">3. <strong>Chi phí sửa sai cực đắt:</strong> Sai một chi tiết nhỏ ở bước đầu buộc phải vứt bỏ toàn bộ bài viết và làm lại từ con số 0.</p>
+            </div>
+
+            <!-- Panel khi xem Take 2 (Dựng từng Cut đạt chuẩn) -->
+            <div class="director-card director-take-view" data-take="good" style="display: none;">
+              <div class="director-head">
+                <span class="director-icon">🎬</span>
+                <div>
+                  <span class="rule-tag" style="background: #dcfce7; color: #166534;">Quy luật Phòng dựng</span>
+                  <h3 class="director-title">3 Bí quyết vàng của "Dựng từng Cut"</h3>
+                </div>
+              </div>
+              <p class="director-rule">👉 <mark>Chia nhỏ nhiệm vụ &rarr; Kết quả sâu sắc gấp 5 lần</mark></p>
+              <p class="director-desc">1. <strong>Chốt chặn kiểm duyệt (Checkpoint):</strong> Luôn bắt AI dừng lại đợi duyệt ở mỗi nhịp. Chỉ khi nền móng vững chắc mới dựng tiếp.</p>
+              <p class="director-desc">2. <strong>Kế thừa ngữ cảnh (Context Carry):</strong> Cut 2 và Cut 3 sử dụng trực tiếp kết quả đã chốt, AI tập trung 100% năng lượng suy luận vào một việc duy nhất.</p>
+              <p class="director-desc">3. <strong>Sửa sai tức thì, chi phí 0đ:</strong> Nếu chưa ưng ý tỷ lệ ở Cut 1, chỉ cần chỉnh sửa trong vài giây mà không hỏng cả bài viết.</p>
             </div>
           </div>
         </div>
