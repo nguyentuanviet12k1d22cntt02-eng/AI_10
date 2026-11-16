@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="3" dy="4" stdDeviation="0" flood-color="#293140"/>
+    </filter>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="60" cy="60" r="54" fill="#ffc0b6" stroke="#293140" stroke-width="3.5" filter="url(#shadow)"/>
+  
+  <!-- Body/Suit -->
+  <path d="M26 106 C26 84 40 76 60 76 C80 76 94 84 94 106 Z" fill="#293140"/>
+  <!-- White Shirt Collar -->
+  <polygon points="60,76 46,92 56,104 60,86 64,104 74,92" fill="#FFFFFF" stroke="#293140" stroke-width="2"/>
+  <!-- Orange Tie -->
+  <polygon points="60,84 56,98 60,106 64,98" fill="#f59e0b" stroke="#293140" stroke-width="1.5"/>
+  
+  <!-- Head & Neck -->
+  <rect x="52" y="66" width="16" height="14" fill="#ffd1b3" stroke="#293140" stroke-width="2.5"/>
+  <ellipse cx="60" cy="50" rx="22" ry="24" fill="#ffd1b3" stroke="#293140" stroke-width="3"/>
+  
+  <!-- Hair -->
+  <path d="M38 46 C38 32 46 24 60 24 C74 24 82 32 82 46 C76 38 68 36 60 36 C50 36 44 40 38 46 Z" fill="#4a2810" stroke="#293140" stroke-width="2.5"/>
+  
+  <!-- Glasses -->
+  <rect x="42" y="44" width="15" height="12" rx="3" fill="#ffffff" fill-opacity="0.8" stroke="#293140" stroke-width="2.5"/>
+  <rect x="63" y="44" width="15" height="12" rx="3" fill="#ffffff" fill-opacity="0.8" stroke="#293140" stroke-width="2.5"/>
+  <line x1="57" y1="50" x2="63" y2="50" stroke="#293140" stroke-width="2.5"/>
+  <line x1="39" y1="48" x2="42" y2="48" stroke="#293140" stroke-width="2.5"/>
+  <line x1="78" y1="48" x2="81" y2="48" stroke="#293140" stroke-width="2.5"/>
+  
+  <!-- Eyes behind glasses -->
+  <circle cx="49" cy="50" r="2.5" fill="#293140"/>
+  <circle cx="70" cy="50" r="2.5" fill="#293140"/>
+  
+  <!-- Eyebrows -->
+  <path d="M43 40 Q50 38 55 41" fill="none" stroke="#293140" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M65 41 Q70 38 77 40" fill="none" stroke="#293140" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Smile -->
+  <path d="M54 62 Q60 67 66 62" fill="none" stroke="#293140" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

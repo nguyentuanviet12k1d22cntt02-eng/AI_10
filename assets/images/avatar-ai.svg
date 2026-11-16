@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <filter id="shadow-ai" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="3" dy="4" stdDeviation="0" flood-color="#293140"/>
+    </filter>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="60" cy="60" r="54" fill="#b0dbe7" stroke="#293140" stroke-width="3.5" filter="url(#shadow-ai)"/>
+  
+  <!-- Robot Antenna -->
+  <line x1="60" y1="28" x2="60" y2="16" stroke="#293140" stroke-width="3"/>
+  <circle cx="60" cy="14" r="6" fill="#f59e0b" stroke="#293140" stroke-width="2.5"/>
+  <circle cx="62" cy="12" r="1.5" fill="#ffffff"/>
+  
+  <!-- Robot Body / Shoulders -->
+  <path d="M36 104 C36 88 46 82 60 82 C74 82 84 88 84 104 Z" fill="#ffffff" stroke="#293140" stroke-width="3"/>
+  <rect x="52" y="88" width="16" height="8" rx="4" fill="#22c55e" stroke="#293140" stroke-width="1.5"/>
+  
+  <!-- Robot Neck -->
+  <rect x="54" y="74" width="12" height="10" rx="2" fill="#e2e8f0" stroke="#293140" stroke-width="2"/>
+  <line x1="56" y1="78" x2="64" y2="78" stroke="#293140" stroke-width="1.5"/>
+  
+  <!-- Robot Ears -->
+  <rect x="26" y="44" width="8" height="18" rx="4" fill="#f59e0b" stroke="#293140" stroke-width="2.5"/>
+  <rect x="86" y="44" width="8" height="18" rx="4" fill="#f59e0b" stroke="#293140" stroke-width="2.5"/>
+  
+  <!-- Robot Head Box -->
+  <rect x="32" y="28" width="56" height="48" rx="14" fill="#ffffff" stroke="#293140" stroke-width="3"/>
+  
+  <!-- Screen Face -->
+  <rect x="38" y="34" width="44" height="34" rx="8" fill="#293140"/>
+  
+  <!-- Big Friendly Glowing Eyes -->
+  <ellipse cx="48" cy="48" rx="5.5" ry="7" fill="#00f2fe"/>
+  <circle cx="46" cy="45" r="2" fill="#ffffff"/>
+  <ellipse cx="72" cy="48" rx="5.5" ry="7" fill="#00f2fe"/>
+  <circle cx="70" cy="45" r="2" fill="#ffffff"/>
+  
+  <!-- Happy Robot Mouth -->
+  <path d="M54 58 Q60 62 66 58" fill="none" stroke="#a1f7a0" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Sparkles -->
+  <path d="M96 22 L98 27 L103 29 L98 31 L96 36 L94 31 L89 29 L94 27 Z" fill="#f59e0b" stroke="#293140" stroke-width="1"/>
+</svg>

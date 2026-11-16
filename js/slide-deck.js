@@ -167,4 +167,25 @@
     });
   });
 
+  // ── Take Selector (Bad vs Good Take Toggle for Dialogue Studio) ────────
+  document.querySelectorAll('.take-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const monitor = btn.closest('.video-monitor');
+      if (!monitor) return;
+      const targetTake = btn.dataset.take; // 'bad' or 'good'
+      monitor.querySelectorAll('.take-btn').forEach((b) => {
+        b.classList.toggle('active', b.dataset.take === targetTake);
+      });
+      monitor.querySelectorAll('.take-view').forEach((v) => {
+        v.style.display = (v.dataset.take === targetTake) ? 'flex' : 'none';
+      });
+      const slide = btn.closest('.slide');
+      if (slide) {
+        slide.querySelectorAll('.director-take-view').forEach((dv) => {
+          dv.style.display = (dv.dataset.take === targetTake) ? 'grid' : 'none';
+        });
+      }
+    });
+  });
+
 })();
