@@ -190,58 +190,60 @@
 
   // ── Prompt Lock System (Mật khẩu: 1009) ──────────────────
   const PASSCODE = '1009';
+  const lockModal = document.getElementById('lock-modal');
+  const lockModalForm = document.getElementById('lock-modal-form');
+  const lockModalInput = document.getElementById('lock-modal-input');
+  const lockModalClose = document.getElementById('lock-modal-close');
+  const lockModalError = document.getElementById('lock-modal-error');
+  const masterUnlockBtn = document.getElementById('btn-master-unlock');
 
-  function showLockInput(card) {
-    const trigger = card.querySelector('.prompt-lock-trigger');
-    const shield = card.querySelector('.prompt-lock-shield');
-    const input = card.querySelector('.lock-shield-input');
-    const errorMsg = card.querySelector('.lock-shield-error');
-    if (trigger) trigger.hidden = true;
-    if (shield) shield.hidden = false;
-    if (errorMsg) errorMsg.hidden = true;
-    if (input) {
-      input.value = '';
-      setTimeout(() => input.focus(), 60);
+  let activeCardTarget = null; // null: mở khóa toàn bộ; HTMLElement: mở khóa 1 card cụ thể
+
+  function openLockModal(targetCard = null) {
+    activeCardTarget = targetCard;
+    if (lockModalError) lockModalError.hidden = true;
+    if (lockModalInput) lockModalInput.value = '';
+    if (lockModal) {
+      if (typeof lockModal.showModal === 'function') {
+        lockModal.showModal();
+      } else {
+        lockModal.setAttribute('open', '');
+      }
+      setTimeout(() => {
+        if (lockModalInput) lockModalInput.focus();
+      }, 50);
     }
   }
 
-  function hideLockInput(card) {
-    const trigger = card.querySelector('.prompt-lock-trigger');
-    const shield = card.querySelector('.prompt-lock-shield');
-    const input = card.querySelector('.lock-shield-input');
-    const errorMsg = card.querySelector('.lock-shield-error');
-    if (trigger) trigger.hidden = false;
-    if (shield) shield.hidden = true;
-    if (input) input.value = '';
-    if (errorMsg) errorMsg.hidden = true;
+  function closeLockModal() {
+    if (!lockModal) return;
+    if (typeof lockModal.close === 'function') {
+      lockModal.close();
+    } else {
+      lockModal.removeAttribute('open');
+    }
+    if (lockModalError) lockModalError.hidden = true;
+    if (lockModalInput) lockModalInput.value = '';
+    activeCardTarget = null;
   }
 
   function unlockCard(card) {
     const trigger = card.querySelector('.prompt-lock-trigger');
-    const shield = card.querySelector('.prompt-lock-shield');
     const content = card.querySelector('.prompt-box-inner');
     if (trigger) trigger.hidden = true;
-    if (shield) shield.hidden = true;
     if (content) content.hidden = false;
     card.classList.add('is-unlocked');
   }
 
   function relockCard(card) {
     const trigger = card.querySelector('.prompt-lock-trigger');
-    const shield = card.querySelector('.prompt-lock-shield');
     const content = card.querySelector('.prompt-box-inner');
-    const input = card.querySelector('.lock-shield-input');
-    const errorMsg = card.querySelector('.lock-shield-error');
     if (trigger) trigger.hidden = false;
-    if (shield) shield.hidden = true;
     if (content) content.hidden = true;
-    if (input) input.value = '';
-    if (errorMsg) errorMsg.hidden = true;
     card.classList.remove('is-unlocked');
   }
 
   function updateMasterBtnState() {
-    const masterUnlockBtn = document.getElementById('btn-master-unlock');
     if (!masterUnlockBtn) return;
     const allCards = document.querySelectorAll('[data-prompt-card]');
     const allUnlocked = allCards.length > 0 && Array.from(allCards).every(c => c.classList.contains('is-unlocked'));
@@ -254,55 +256,23 @@
     }
   }
 
+  // Gắn sự kiện cho từng thẻ prompt
   document.querySelectorAll('[data-prompt-card]').forEach((card) => {
     const trigger = card.querySelector('.prompt-lock-trigger');
-    const closeBtn = card.querySelector('.lock-shield-close');
-    const form = card.querySelector('.lock-shield-form');
-    const input = card.querySelector('.lock-shield-input');
-    const errorMsg = card.querySelector('.lock-shield-error');
     const relockBtn = card.querySelector('.relock-btn');
 
-    // Bấm vào ổ khóa -> Mới mở khung nhập mật khẩu
+    // Bấm vào ô ổ khóa -> Bật hộp thoại modal nhập mật mã ngay giữa màn hình
     if (trigger) {
-      trigger.addEventListener('click', () => showLockInput(card));
+      trigger.addEventListener('click', () => openLockModal(card));
       trigger.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          showLockInput(card);
+          openLockModal(card);
         }
       });
     }
 
-    // Nút đóng khung nhập mật khẩu [X]
-    if (closeBtn) {
-      closeBtn.addEventListener('click', () => hideLockInput(card));
-    }
-
-    // Submit mật khẩu
-    if (form) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const entered = (input ? input.value : '').trim();
-        if (entered === PASSCODE) {
-          if (errorMsg) errorMsg.hidden = true;
-          unlockCard(card);
-          updateMasterBtnState();
-        } else {
-          if (errorMsg) {
-            errorMsg.hidden = false;
-            errorMsg.classList.remove('shake');
-            void errorMsg.offsetWidth;
-            errorMsg.classList.add('shake');
-          }
-          if (input) {
-            input.value = '';
-            input.focus();
-          }
-        }
-      });
-    }
-
-    // Nút khóa lại
+    // Nút khóa lại riêng cho từng thẻ
     if (relockBtn) {
       relockBtn.addEventListener('click', () => {
         relockCard(card);
@@ -311,7 +281,7 @@
     }
   });
 
-  const masterUnlockBtn = document.getElementById('btn-master-unlock');
+  // Nút mở khóa toàn bộ trên thanh tiêu đề
   if (masterUnlockBtn) {
     masterUnlockBtn.addEventListener('click', () => {
       const allCards = document.querySelectorAll('[data-prompt-card]');
@@ -319,14 +289,55 @@
       if (allUnlocked) {
         allCards.forEach(relockCard);
         updateMasterBtnState();
-        return;
+      } else {
+        openLockModal(null); // null = mở khóa tất cả khi nhập đúng
       }
-      const entered = window.prompt('Nhập mật mã để mở khóa toàn bộ prompt mẫu (1009):');
+    });
+  }
+
+  // Đóng modal bằng nút [✕]
+  if (lockModalClose) {
+    lockModalClose.addEventListener('click', closeLockModal);
+  }
+
+  // Đóng modal khi bấm vào vùng nền mờ bên ngoài
+  if (lockModal) {
+    lockModal.addEventListener('click', (e) => {
+      const rect = lockModal.getBoundingClientRect();
+      const isInDialog = (
+        rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
+        rect.left <= e.clientX && e.clientX <= rect.left + rect.width
+      );
+      if (!isInDialog) {
+        closeLockModal();
+      }
+    });
+  }
+
+  // Xử lý gửi mật khẩu trong modal
+  if (lockModalForm) {
+    lockModalForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const entered = (lockModalInput ? lockModalInput.value : '').trim();
       if (entered === PASSCODE) {
-        allCards.forEach(unlockCard);
+        if (activeCardTarget) {
+          unlockCard(activeCardTarget);
+        } else {
+          document.querySelectorAll('[data-prompt-card]').forEach(unlockCard);
+        }
         updateMasterBtnState();
-      } else if (entered !== null) {
-        alert('Mật mã không đúng, vui lòng thử lại!');
+        closeLockModal();
+      } else {
+        if (lockModalError) {
+          lockModalError.hidden = false;
+          lockModalError.classList.remove('shake');
+          void lockModalError.offsetWidth;
+          lockModalError.classList.add('shake');
+        }
+        if (lockModalInput) {
+          lockModalInput.value = '';
+          lockModalInput.focus();
+        }
       }
     });
   }

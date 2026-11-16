@@ -1560,7 +1560,7 @@ body {
   width: 100%;
   flex-direction: column;
   gap: 12px;
-  padding-top: 32px;
+  padding-top: 48px;
 }
 
 /* Dialogue Messages */
@@ -1903,19 +1903,19 @@ body {
   box-shadow: 1px 1px 0 var(--ink);
 }
 
-/* Nút Ổ Khóa Ban Đầu (Chỉ hiện ổ khóa) */
+/* Nút Ổ Khóa Ban Đầu Trong Thẻ (Chỉ hiện ô ổ khóa này) */
 .prompt-lock-trigger {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 13px 18px;
+  padding: 16px 18px;
   background: #fffbeb;
-  border: 2px dashed #d97706;
-  border-radius: 12px;
-  box-shadow: 2.5px 3px 0 var(--ink);
+  border: 2.5px dashed #d97706;
+  border-radius: 14px;
+  box-shadow: 2.5px 3.5px 0 var(--ink);
   cursor: pointer;
-  margin-top: 6px;
+  margin-top: 8px;
   transition: all 140ms ease;
   user-select: none;
 }
@@ -1923,96 +1923,27 @@ body {
   background: #fef3c7;
   border-color: #b45309;
   transform: translate(-1px, -2px);
-  box-shadow: 3.5px 4.5px 0 var(--ink);
+  box-shadow: 3.5px 5px 0 var(--ink);
 }
 .prompt-lock-trigger:active {
   transform: translate(1px, 1px);
   box-shadow: 1px 1px 0 var(--ink);
 }
-.prompt-lock-trigger .lock-shield-icon {
-  font-size: 24px;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #fef08a;
-  border: 2px solid var(--ink);
-  display: grid;
-  place-items: center;
-  box-shadow: 2px 2px 0 var(--ink);
-  flex: none;
-}
-.lock-trigger-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  text-align: left;
-}
-.lock-trigger-info strong {
-  font-size: 13.5px;
-  font-weight: 900;
-  color: #92400e;
-}
-.lock-trigger-info span {
-  font-size: 11.5px;
-  color: #b45309;
-  font-weight: 750;
-}
-
-/* Khung Nhập Mật Khẩu (Chỉ hiện khi bấm vào ổ khóa) */
-.prompt-lock-shield {
-  background: #fffbeb;
-  border: 2px dashed #d97706;
-  border-radius: 12px;
-  padding: 14px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  text-align: center;
-  box-shadow: 2px 2px 0 var(--ink);
-  margin-top: 6px;
-  transition: all 200ms ease;
-  animation: dialogue-pop 200ms ease-out forwards;
-}
-.prompt-card.is-unlocked .prompt-lock-shield,
 .prompt-card.is-unlocked .prompt-lock-trigger {
   display: none !important;
 }
 
-.lock-shield-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 6px;
-  border-bottom: 1.5px solid #fde68a;
-}
-.lock-shield-close {
-  background: none;
-  border: none;
-  font-size: 14px;
-  font-weight: 900;
-  color: var(--muted);
-  cursor: pointer;
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-.lock-shield-close:hover {
-  color: #dc2626;
-  background: #fee2e2;
-}
-
-.lock-shield-icon {
+.prompt-lock-trigger .lock-shield-icon {
   font-size: 26px;
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: #fef08a;
   border: 2.5px solid var(--ink);
   display: grid;
   place-items: center;
   box-shadow: 2px 2px 0 var(--ink);
+  flex: none;
   animation: lock-bounce 3s infinite ease-in-out;
 }
 @keyframes lock-bounce {
@@ -2020,75 +1951,155 @@ body {
   50% { transform: translateY(-4px); }
 }
 
-.lock-shield-title {
-  font-size: 13.5px;
+.lock-trigger-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+}
+.lock-trigger-info strong {
+  font-size: 14px;
   font-weight: 900;
   color: #92400e;
 }
-.lock-shield-desc {
-  font-size: 11.5px;
-  color: var(--muted);
-  margin: 0;
-  max-width: 280px;
-  line-height: 1.45;
+.lock-trigger-info span {
+  font-size: 12px;
+  color: #b45309;
+  font-weight: 750;
 }
 
-.lock-shield-form {
-  display: flex;
-  gap: 8px;
-  width: 100%;
-  max-width: 290px;
-  margin-top: 4px;
-}
-.lock-shield-input {
-  flex: 1;
-  padding: 7px 12px;
-  border: 2px solid var(--ink);
-  border-radius: 9px;
-  font-size: 13px;
-  font-weight: 800;
+/* KHỐI NHẬP MẬT MÃ NGAY GIỮA MÀN HÌNH (MODAL DIALOG) */
+.lock-modal {
+  border: 3px solid var(--ink);
+  border-radius: 20px;
   background: white;
-  box-shadow: 2px 2px 0 var(--ink);
+  box-shadow: 8px 10px 0 var(--ink);
+  padding: 0;
+  width: min(440px, calc(100vw - 32px));
+  margin: auto;
+  overflow: visible;
+  animation: lock-modal-pop 250ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+.lock-modal::backdrop {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+}
+@keyframes lock-modal-pop {
+  from { opacity: 0; transform: scale(0.9) translateY(24px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.lock-modal-card {
+  padding: 30px 26px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  letter-spacing: 0.08em;
-  outline: none;
+  position: relative;
 }
-.lock-shield-input:focus {
-  box-shadow: 3px 3px 0 var(--ink);
-  border-color: #d97706;
-}
-.lock-shield-submit {
-  padding: 7px 14px;
+.lock-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
   border: 2px solid var(--ink);
-  border-radius: 9px;
-  font-size: 12px;
-  font-weight: 850;
-  background: var(--green-light);
-  color: #14532d;
-  box-shadow: 2px 2px 0 var(--ink);
+  background: #f1f5f9;
+  font-size: 14px;
+  font-weight: 900;
+  display: grid;
+  place-items: center;
   cursor: pointer;
-  white-space: nowrap;
   transition: all 120ms ease;
 }
-.lock-shield-submit:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 3px 3px 0 var(--ink);
+.lock-modal-close:hover {
+  background: #fee2e2;
+  color: #dc2626;
+  transform: scale(1.08);
 }
-.lock-shield-submit:active {
-  transform: translate(1px, 1px);
+.lock-modal-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fef08a;
+  border: 2.5px solid var(--ink);
+  font-size: 32px;
+  display: grid;
+  place-items: center;
+  box-shadow: 3px 3px 0 var(--ink);
+  margin-bottom: 12px;
+}
+.lock-modal-title {
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+.lock-modal-desc {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 18px;
+  line-height: 1.5;
+}
+.lock-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.lock-modal-input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 2.5px solid var(--ink);
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.12em;
+  background: #f8fafc;
+  box-shadow: 2px 3px 0 var(--ink);
+  outline: none;
+  box-sizing: border-box;
+}
+.lock-modal-input:focus {
+  background: white;
+  box-shadow: 4px 5px 0 var(--ink);
+  border-color: #d97706;
+}
+.lock-modal-submit {
+  padding: 11px 18px;
+  border: 2.5px solid var(--ink);
+  border-radius: 12px;
+  background: var(--green-light);
+  color: #14532d;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 3px 4px 0 var(--ink);
+  transition: all 120ms ease;
+}
+.lock-modal-submit:hover {
+  transform: translate(-1px, -2px);
+  box-shadow: 4px 6px 0 var(--ink);
+  background: #86efac;
+}
+.lock-modal-submit:active {
+  transform: translate(1px, 2px);
   box-shadow: 1px 1px 0 var(--ink);
 }
-
-.lock-shield-error {
-  font-size: 11.5px;
+.lock-modal-error {
+  font-size: 12px;
   font-weight: 800;
   color: #dc2626;
   background: #fee2e2;
   border: 1.5px solid #dc2626;
-  border-radius: 6px;
-  padding: 4px 10px;
+  border-radius: 8px;
+  padding: 7px 12px;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
-.lock-shield-error.shake {
+.lock-modal-error.shake {
   animation: lock-shake 250ms ease-in-out;
 }
 @keyframes lock-shake {
