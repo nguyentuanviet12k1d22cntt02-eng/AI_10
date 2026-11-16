@@ -188,24 +188,35 @@
     });
   });
 
-  // ── Prompt Lock System (Mật khẩu: 1009) ──────────────────
+  // ── Prompt Lock System (Mật khẩu: 1009 hoặc *) ──────────────────
   const PASSCODE = '1009';
   const lockModal = document.getElementById('lock-modal');
   const lockModalForm = document.getElementById('lock-modal-form');
   const lockModalInput = document.getElementById('lock-modal-input');
   const lockModalClose = document.getElementById('lock-modal-close');
   const lockModalError = document.getElementById('lock-modal-error');
+  const lockModalSubmit = document.getElementById('lock-modal-submit') || document.querySelector('.lock-modal-submit');
   const masterUnlockBtn = document.getElementById('btn-master-unlock');
 
   let activeCardTarget = null; // null: mở khóa toàn bộ; HTMLElement: mở khóa 1 card cụ thể
 
   function openLockModal(targetCard = null) {
     activeCardTarget = targetCard;
-    if (lockModalError) lockModalError.hidden = true;
-    if (lockModalInput) lockModalInput.value = '';
+    if (lockModalError) {
+      lockModalError.setAttribute('hidden', '');
+      lockModalError.hidden = true;
+      lockModalError.style.display = 'none';
+    }
+    if (lockModalInput) {
+      lockModalInput.value = '';
+    }
     if (lockModal) {
       if (typeof lockModal.showModal === 'function') {
-        lockModal.showModal();
+        try {
+          lockModal.showModal();
+        } catch {
+          lockModal.setAttribute('open', '');
+        }
       } else {
         lockModal.setAttribute('open', '');
       }
@@ -218,29 +229,55 @@
   function closeLockModal() {
     if (!lockModal) return;
     if (typeof lockModal.close === 'function') {
-      lockModal.close();
+      try {
+        lockModal.close();
+      } catch {
+        lockModal.removeAttribute('open');
+      }
     } else {
       lockModal.removeAttribute('open');
     }
-    if (lockModalError) lockModalError.hidden = true;
+    if (lockModalError) {
+      lockModalError.setAttribute('hidden', '');
+      lockModalError.hidden = true;
+      lockModalError.style.display = 'none';
+    }
     if (lockModalInput) lockModalInput.value = '';
     activeCardTarget = null;
   }
 
   function unlockCard(card) {
+    if (!card) return;
+    card.classList.add('is-unlocked');
     const trigger = card.querySelector('.prompt-lock-trigger');
     const content = card.querySelector('.prompt-box-inner');
-    if (trigger) trigger.hidden = true;
-    if (content) content.hidden = false;
-    card.classList.add('is-unlocked');
+    if (trigger) {
+      trigger.setAttribute('hidden', '');
+      trigger.hidden = true;
+      trigger.style.display = 'none';
+    }
+    if (content) {
+      content.removeAttribute('hidden');
+      content.hidden = false;
+      content.style.display = 'grid';
+    }
   }
 
   function relockCard(card) {
+    if (!card) return;
+    card.classList.remove('is-unlocked');
     const trigger = card.querySelector('.prompt-lock-trigger');
     const content = card.querySelector('.prompt-box-inner');
-    if (trigger) trigger.hidden = false;
-    if (content) content.hidden = true;
-    card.classList.remove('is-unlocked');
+    if (trigger) {
+      trigger.removeAttribute('hidden');
+      trigger.hidden = false;
+      trigger.style.display = 'flex';
+    }
+    if (content) {
+      content.setAttribute('hidden', '');
+      content.hidden = true;
+      content.style.display = 'none';
+    }
   }
 
   function updateMasterBtnState() {
@@ -253,6 +290,38 @@
     } else {
       masterUnlockBtn.innerHTML = '<span class="lock-icon" aria-hidden="true">🔒</span><span class="unlock-btn-text">Mở khóa toàn bộ</span>';
       masterUnlockBtn.style.background = '#fef08a';
+    }
+  }
+
+  function isPasscodeMatch(val) {
+    const s = (val || '').trim();
+    // Chấp nhận: 1009, hoặc * (dấu hoa thị khi người dùng nhập theo gợi ý ẩn mã), hoặc •, hoặc 1009*
+    return s === '1009' || s === '*' || s === '•' || s === '1009*';
+  }
+
+  function submitUnlock() {
+    const val = lockModalInput ? lockModalInput.value : '';
+    if (isPasscodeMatch(val)) {
+      if (activeCardTarget) {
+        unlockCard(activeCardTarget);
+      } else {
+        document.querySelectorAll('[data-prompt-card]').forEach(unlockCard);
+      }
+      updateMasterBtnState();
+      closeLockModal();
+    } else {
+      if (lockModalError) {
+        lockModalError.removeAttribute('hidden');
+        lockModalError.hidden = false;
+        lockModalError.style.display = 'block';
+        lockModalError.classList.remove('shake');
+        void lockModalError.offsetWidth;
+        lockModalError.classList.add('shake');
+      }
+      if (lockModalInput) {
+        lockModalInput.focus();
+        lockModalInput.select();
+      }
     }
   }
 
@@ -314,30 +383,26 @@
     });
   }
 
-  // Xử lý gửi mật khẩu trong modal
+  // Xử lý gửi mật khẩu trong modal qua: Form submit, Nút mở khóa click, và phím Enter
+  if (lockModalSubmit) {
+    lockModalSubmit.addEventListener('click', (e) => {
+      e.preventDefault();
+      submitUnlock();
+    });
+  }
+
   if (lockModalForm) {
     lockModalForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const entered = (lockModalInput ? lockModalInput.value : '').trim();
-      if (entered === PASSCODE) {
-        if (activeCardTarget) {
-          unlockCard(activeCardTarget);
-        } else {
-          document.querySelectorAll('[data-prompt-card]').forEach(unlockCard);
-        }
-        updateMasterBtnState();
-        closeLockModal();
-      } else {
-        if (lockModalError) {
-          lockModalError.hidden = false;
-          lockModalError.classList.remove('shake');
-          void lockModalError.offsetWidth;
-          lockModalError.classList.add('shake');
-        }
-        if (lockModalInput) {
-          lockModalInput.value = '';
-          lockModalInput.focus();
-        }
+      submitUnlock();
+    });
+  }
+
+  if (lockModalInput) {
+    lockModalInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        submitUnlock();
       }
     });
   }

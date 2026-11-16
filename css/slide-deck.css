@@ -1992,11 +1992,12 @@ body {
   box-shadow: 1px 1px 0 var(--ink);
 }
 
-/* Thẻ prompt khi ĐANG KHÓA: Ẩn tuyệt đối phần nội dung / câu trả lời */
-.prompt-card:not(.is-unlocked) .prompt-box-inner,
-.prompt-card .prompt-box-inner[hidden],
-.prompt-box-inner[hidden] {
+/* Thẻ prompt khi ĐANG KHÓA: Ẩn tuyệt đối phần nội dung / câu trả lời, chỉ hiện ổ khóa */
+.prompt-card:not(.is-unlocked) .prompt-box-inner {
   display: none !important;
+}
+.prompt-card:not(.is-unlocked) .prompt-lock-trigger {
+  display: flex !important;
 }
 
 /* Thẻ prompt khi ĐÃ MỞ KHÓA: Ẩn ổ khóa, Hiện nội dung câu trả lời */

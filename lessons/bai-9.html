@@ -279,9 +279,9 @@
         <div class="lock-modal-icon">🔒</div>
         <h3 class="lock-modal-title" id="lock-modal-title">Mở khóa Prompt mẫu</h3>
         <p class="lock-modal-desc">Nhập mật mã để xem và sao chép câu lệnh prompt mẫu.</p>
-        <form id="lock-modal-form" class="lock-modal-form" onsubmit="return false;">
+        <form id="lock-modal-form" class="lock-modal-form">
           <input type="password" id="lock-modal-input" class="lock-modal-input" placeholder="Nhập mật mã mở khóa..." maxlength="10" autocomplete="off">
-          <button type="submit" class="lock-modal-submit">Mở khóa 🔓</button>
+          <button type="button" id="lock-modal-submit" class="lock-modal-submit">Mở khóa 🔓</button>
         </form>
         <div id="lock-modal-error" class="lock-modal-error" hidden>⚠️ Mật mã không đúng, vui lòng thử lại!</div>
       </div>
