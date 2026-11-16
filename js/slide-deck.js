@@ -191,20 +191,49 @@
   // ── Prompt Lock System (Mật khẩu: 1009) ──────────────────
   const PASSCODE = '1009';
 
+  function showLockInput(card) {
+    const trigger = card.querySelector('.prompt-lock-trigger');
+    const shield = card.querySelector('.prompt-lock-shield');
+    const input = card.querySelector('.lock-shield-input');
+    const errorMsg = card.querySelector('.lock-shield-error');
+    if (trigger) trigger.hidden = true;
+    if (shield) shield.hidden = false;
+    if (errorMsg) errorMsg.hidden = true;
+    if (input) {
+      input.value = '';
+      setTimeout(() => input.focus(), 60);
+    }
+  }
+
+  function hideLockInput(card) {
+    const trigger = card.querySelector('.prompt-lock-trigger');
+    const shield = card.querySelector('.prompt-lock-shield');
+    const input = card.querySelector('.lock-shield-input');
+    const errorMsg = card.querySelector('.lock-shield-error');
+    if (trigger) trigger.hidden = false;
+    if (shield) shield.hidden = true;
+    if (input) input.value = '';
+    if (errorMsg) errorMsg.hidden = true;
+  }
+
   function unlockCard(card) {
+    const trigger = card.querySelector('.prompt-lock-trigger');
     const shield = card.querySelector('.prompt-lock-shield');
     const content = card.querySelector('.prompt-box-inner');
+    if (trigger) trigger.hidden = true;
     if (shield) shield.hidden = true;
     if (content) content.hidden = false;
     card.classList.add('is-unlocked');
   }
 
   function relockCard(card) {
+    const trigger = card.querySelector('.prompt-lock-trigger');
     const shield = card.querySelector('.prompt-lock-shield');
     const content = card.querySelector('.prompt-box-inner');
     const input = card.querySelector('.lock-shield-input');
     const errorMsg = card.querySelector('.lock-shield-error');
-    if (shield) shield.hidden = false;
+    if (trigger) trigger.hidden = false;
+    if (shield) shield.hidden = true;
     if (content) content.hidden = true;
     if (input) input.value = '';
     if (errorMsg) errorMsg.hidden = true;
@@ -226,11 +255,30 @@
   }
 
   document.querySelectorAll('[data-prompt-card]').forEach((card) => {
+    const trigger = card.querySelector('.prompt-lock-trigger');
+    const closeBtn = card.querySelector('.lock-shield-close');
     const form = card.querySelector('.lock-shield-form');
     const input = card.querySelector('.lock-shield-input');
     const errorMsg = card.querySelector('.lock-shield-error');
     const relockBtn = card.querySelector('.relock-btn');
 
+    // Bấm vào ổ khóa -> Mới mở khung nhập mật khẩu
+    if (trigger) {
+      trigger.addEventListener('click', () => showLockInput(card));
+      trigger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          showLockInput(card);
+        }
+      });
+    }
+
+    // Nút đóng khung nhập mật khẩu [X]
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => hideLockInput(card));
+    }
+
+    // Submit mật khẩu
     if (form) {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -254,6 +302,7 @@
       });
     }
 
+    // Nút khóa lại
     if (relockBtn) {
       relockBtn.addEventListener('click', () => {
         relockCard(card);

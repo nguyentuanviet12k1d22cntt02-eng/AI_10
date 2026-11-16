@@ -1903,11 +1903,67 @@ body {
   box-shadow: 1px 1px 0 var(--ink);
 }
 
+/* Nút Ổ Khóa Ban Đầu (Chỉ hiện ổ khóa) */
+.prompt-lock-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px 18px;
+  background: #fffbeb;
+  border: 2px dashed #d97706;
+  border-radius: 12px;
+  box-shadow: 2.5px 3px 0 var(--ink);
+  cursor: pointer;
+  margin-top: 6px;
+  transition: all 140ms ease;
+  user-select: none;
+}
+.prompt-lock-trigger:hover {
+  background: #fef3c7;
+  border-color: #b45309;
+  transform: translate(-1px, -2px);
+  box-shadow: 3.5px 4.5px 0 var(--ink);
+}
+.prompt-lock-trigger:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+.prompt-lock-trigger .lock-shield-icon {
+  font-size: 24px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fef08a;
+  border: 2px solid var(--ink);
+  display: grid;
+  place-items: center;
+  box-shadow: 2px 2px 0 var(--ink);
+  flex: none;
+}
+.lock-trigger-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+.lock-trigger-info strong {
+  font-size: 13.5px;
+  font-weight: 900;
+  color: #92400e;
+}
+.lock-trigger-info span {
+  font-size: 11.5px;
+  color: #b45309;
+  font-weight: 750;
+}
+
+/* Khung Nhập Mật Khẩu (Chỉ hiện khi bấm vào ổ khóa) */
 .prompt-lock-shield {
   background: #fffbeb;
   border: 2px dashed #d97706;
   border-radius: 12px;
-  padding: 18px 14px;
+  padding: 14px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1917,9 +1973,34 @@ body {
   box-shadow: 2px 2px 0 var(--ink);
   margin-top: 6px;
   transition: all 200ms ease;
+  animation: dialogue-pop 200ms ease-out forwards;
 }
-.prompt-card.is-unlocked .prompt-lock-shield {
+.prompt-card.is-unlocked .prompt-lock-shield,
+.prompt-card.is-unlocked .prompt-lock-trigger {
   display: none !important;
+}
+
+.lock-shield-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 6px;
+  border-bottom: 1.5px solid #fde68a;
+}
+.lock-shield-close {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.lock-shield-close:hover {
+  color: #dc2626;
+  background: #fee2e2;
 }
 
 .lock-shield-icon {

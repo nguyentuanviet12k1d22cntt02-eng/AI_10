@@ -571,15 +571,23 @@
                 <p><strong>Bối cảnh:</strong> Bạn là quản lý cần soạn thông báo nội bộ điều chỉnh lịch làm việc mùa hè năm 2026 cho toàn bộ nhân viên công ty. Giao việc dứt khoát, đưa đủ mốc thời gian và định dạng văn bản.</p>
               </div>
 
-              <!-- Giao diện Ổ Khóa Bảo vệ -->
-              <div class="prompt-lock-shield">
-                <div class="lock-shield-icon">🔒</div>
-                <div class="lock-shield-content">
-                  <div class="lock-shield-title">Prompt mẫu đang được khóa</div>
-                  <p class="lock-shield-desc">Hãy tự tư duy và soạn prompt trước. Nhập mã để mở gợi ý.</p>
+              <!-- 1. Chỉ hiện Ổ Khóa (Bấm vào mới hiện khung nhập mật mã) -->
+              <div class="prompt-lock-trigger" role="button" tabindex="0" title="Bấm vào để mở khóa prompt mẫu">
+                <span class="lock-shield-icon">🔒</span>
+                <div class="lock-trigger-info">
+                  <strong>Prompt mẫu đang khóa</strong>
+                  <span>Bấm vào để nhập mật mã (1009)</span>
+                </div>
+              </div>
+
+              <!-- 2. Khung Nhập Mật Khẩu (Ban đầu ẩn, bấm ổ khóa mới hiện) -->
+              <div class="prompt-lock-shield" hidden>
+                <div class="lock-shield-head">
+                  <span class="lock-shield-title">🔒 Nhập mật mã mở khóa</span>
+                  <button type="button" class="lock-shield-close" title="Đóng">✕</button>
                 </div>
                 <form class="lock-shield-form" onsubmit="return false;">
-                  <input type="password" class="lock-shield-input" placeholder="Mã mở khóa..." maxlength="10">
+                  <input type="password" class="lock-shield-input" placeholder="Mã mở khóa (1009)..." maxlength="10" autocomplete="off">
                   <button type="submit" class="lock-shield-submit">Mở khóa 🔓</button>
                 </form>
                 <div class="lock-shield-error" hidden>⚠️ Mật mã không đúng, vui lòng thử lại!</div>
@@ -607,15 +615,23 @@
                 <p><strong>Bối cảnh:</strong> Khách hàng bức xúc vì đơn hàng đồ gia dụng bị giao chậm 2 ngày làm ảnh hưởng lịch khai trương. Áp dụng quy trình chia nhỏ 2 bước: Bước 1 tìm phương án đền bù, Bước 2 mới soạn thư xin lỗi.</p>
               </div>
 
-              <!-- Giao diện Ổ Khóa Bảo vệ -->
-              <div class="prompt-lock-shield">
-                <div class="lock-shield-icon">🔒</div>
-                <div class="lock-shield-content">
-                  <div class="lock-shield-title">Prompt mẫu đang được khóa</div>
-                  <p class="lock-shield-desc">Hãy tự tư duy và soạn prompt trước. Nhập mã để mở gợi ý.</p>
+              <!-- 1. Chỉ hiện Ổ Khóa (Bấm vào mới hiện khung nhập mật mã) -->
+              <div class="prompt-lock-trigger" role="button" tabindex="0" title="Bấm vào để mở khóa prompt mẫu">
+                <span class="lock-shield-icon">🔒</span>
+                <div class="lock-trigger-info">
+                  <strong>Prompt mẫu đang khóa</strong>
+                  <span>Bấm vào để nhập mật mã (1009)</span>
+                </div>
+              </div>
+
+              <!-- 2. Khung Nhập Mật Khẩu (Ban đầu ẩn, bấm ổ khóa mới hiện) -->
+              <div class="prompt-lock-shield" hidden>
+                <div class="lock-shield-head">
+                  <span class="lock-shield-title">🔒 Nhập mật mã mở khóa</span>
+                  <button type="button" class="lock-shield-close" title="Đóng">✕</button>
                 </div>
                 <form class="lock-shield-form" onsubmit="return false;">
-                  <input type="password" class="lock-shield-input" placeholder="Mã mở khóa..." maxlength="10">
+                  <input type="password" class="lock-shield-input" placeholder="Mã mở khóa (1009)..." maxlength="10" autocomplete="off">
                   <button type="submit" class="lock-shield-submit">Mở khóa 🔓</button>
                 </form>
                 <div class="lock-shield-error" hidden>⚠️ Mật mã không đúng, vui lòng thử lại!</div>
@@ -643,15 +659,23 @@
                 <p><strong>Bối cảnh:</strong> Xử lý ghi chép thô sau cuộc họp giao ban đầu tuần. Cung cấp đầy đủ dữ liệu thô, ra lệnh cho AI trích xuất 3 quyết định chính và bảng phân bổ công việc 5 cột kèm deadline cụ thể.</p>
               </div>
 
-              <!-- Giao diện Ổ Khóa Bảo vệ -->
-              <div class="prompt-lock-shield">
-                <div class="lock-shield-icon">🔒</div>
-                <div class="lock-shield-content">
-                  <div class="lock-shield-title">Prompt mẫu đang được khóa</div>
-                  <p class="lock-shield-desc">Hãy tự tư duy và soạn prompt trước. Nhập mã để mở gợi ý.</p>
+              <!-- 1. Chỉ hiện Ổ Khóa (Bấm vào mới hiện khung nhập mật mã) -->
+              <div class="prompt-lock-trigger" role="button" tabindex="0" title="Bấm vào để mở khóa prompt mẫu">
+                <span class="lock-shield-icon">🔒</span>
+                <div class="lock-trigger-info">
+                  <strong>Prompt mẫu đang khóa</strong>
+                  <span>Bấm vào để nhập mật mã (1009)</span>
+                </div>
+              </div>
+
+              <!-- 2. Khung Nhập Mật Khẩu (Ban đầu ẩn, bấm ổ khóa mới hiện) -->
+              <div class="prompt-lock-shield" hidden>
+                <div class="lock-shield-head">
+                  <span class="lock-shield-title">🔒 Nhập mật mã mở khóa</span>
+                  <button type="button" class="lock-shield-close" title="Đóng">✕</button>
                 </div>
                 <form class="lock-shield-form" onsubmit="return false;">
-                  <input type="password" class="lock-shield-input" placeholder="Mã mở khóa..." maxlength="10">
+                  <input type="password" class="lock-shield-input" placeholder="Mã mở khóa (1009)..." maxlength="10" autocomplete="off">
                   <button type="submit" class="lock-shield-submit">Mở khóa 🔓</button>
                 </form>
                 <div class="lock-shield-error" hidden>⚠️ Mật mã không đúng, vui lòng thử lại!</div>
@@ -679,15 +703,23 @@
                 <p><strong>Bối cảnh:</strong> Thiết kế khảo sát gắn kết và sự hài lòng nhân viên Quý 2. Chia nhỏ thành 2 bước: Bước 1 yêu cầu AI đề xuất 4 nhóm trụ cột đo lường; Bước 2 soạn câu hỏi Likert 1-5 và lệnh tự kiểm tra khách quan.</p>
               </div>
 
-              <!-- Giao diện Ổ Khóa Bảo vệ -->
-              <div class="prompt-lock-shield">
-                <div class="lock-shield-icon">🔒</div>
-                <div class="lock-shield-content">
-                  <div class="lock-shield-title">Prompt mẫu đang được khóa</div>
-                  <p class="lock-shield-desc">Hãy tự tư duy và soạn prompt trước. Nhập mã để mở gợi ý.</p>
+              <!-- 1. Chỉ hiện Ổ Khóa (Bấm vào mới hiện khung nhập mật mã) -->
+              <div class="prompt-lock-trigger" role="button" tabindex="0" title="Bấm vào để mở khóa prompt mẫu">
+                <span class="lock-shield-icon">🔒</span>
+                <div class="lock-trigger-info">
+                  <strong>Prompt mẫu đang khóa</strong>
+                  <span>Bấm vào để nhập mật mã (1009)</span>
+                </div>
+              </div>
+
+              <!-- 2. Khung Nhập Mật Khẩu (Ban đầu ẩn, bấm ổ khóa mới hiện) -->
+              <div class="prompt-lock-shield" hidden>
+                <div class="lock-shield-head">
+                  <span class="lock-shield-title">🔒 Nhập mật mã mở khóa</span>
+                  <button type="button" class="lock-shield-close" title="Đóng">✕</button>
                 </div>
                 <form class="lock-shield-form" onsubmit="return false;">
-                  <input type="password" class="lock-shield-input" placeholder="Mã mở khóa..." maxlength="10">
+                  <input type="password" class="lock-shield-input" placeholder="Mã mở khóa (1009)..." maxlength="10" autocomplete="off">
                   <button type="submit" class="lock-shield-submit">Mở khóa 🔓</button>
                 </form>
                 <div class="lock-shield-error" hidden>⚠️ Mật mã không đúng, vui lòng thử lại!</div>
