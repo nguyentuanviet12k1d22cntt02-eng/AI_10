@@ -487,7 +487,7 @@
                   <img src="../assets/images/avatar-ai.svg" alt="AI" class="dialogue-avatar">
                   <div class="dialogue-bubble">
                     <div class="dialogue-speaker"><span>Trợ lý AI</span><span class="speaker-role">Không ai kiểm soát</span></div>
-                    <p class="dialogue-text">⚠️ <em>Kết quả: Báo cáo bị cấp trên khiển trách vì có 2 số liệu mâu thuẫn mà người dùng không hề phát hiện ra.</em></p>
+                    <p class="dialogue-text">⚠️ <em>Kết quả: Báo cáo phải làm lại vì ngày tháng và tên phòng ban bị sai so với tài liệu nguồn.</em></p>
                   </div>
                 </div>
               </div>
@@ -499,14 +499,14 @@
                   <img src="../assets/images/avatar-boss.svg" alt="Sếp" class="dialogue-avatar">
                   <div class="dialogue-bubble">
                     <div class="dialogue-speaker"><span>Sếp</span><span class="speaker-role">Quản lý cẩn trọng</span></div>
-                    <p class="dialogue-text">“Trước khi chốt bản cuối, em hãy tự rà soát lại xem trong bảng tính vừa rồi có số liệu nào chưa khớp logic hoặc câu văn nào dễ gây hiểu nhầm không?”</p>
+                    <p class="dialogue-text">“Trước khi chốt báo cáo, em hãy đối chiếu từng mốc thời gian, tên phòng ban và tỷ lệ thưởng với tài liệu nguồn. Ghi rõ chi tiết nào còn thiếu căn cứ.”</p>
                   </div>
                 </div>
                 <div class="dialogue-msg msg-ai">
                   <img src="../assets/images/avatar-ai.svg" alt="AI" class="dialogue-avatar">
                   <div class="dialogue-bubble">
                     <div class="dialogue-speaker"><span>Trợ lý AI</span><span class="speaker-role">Tự kiểm tra (Audit)</span></div>
-                    <p class="dialogue-text">“Em đã rà soát lại: Ở dòng nhân viên Nam, tỷ lệ thưởng là 2% (khớp đề). Tuy nhiên câu kết đang ghi thiếu thời hạn chuyển khoản tiền thưởng, em đề xuất thêm dòng: <em>'Tiền thưởng sẽ được chuyển cùng kỳ lương ngày 05 hàng tháng'</em>.”</p>
+                    <p class="dialogue-text">“Tỷ lệ thưởng 2% ở dòng của Nam khớp tài liệu nguồn. Em chưa tìm thấy ngày chi trả được duyệt nên sẽ ghi <em>“Ngày chi trả: chờ xác nhận”</em> và hỏi lại bộ phận phụ trách.”</p>
                   </div>
                 </div>
               </div>
@@ -529,7 +529,7 @@
                 </div>
               </div>
               <p class="director-rule">👉 <mark>Luôn kiểm tra trước khi sử dụng thực tế</mark></p>
-              <p class="director-desc">Kỹ thuật thông minh nhất của một người quản lý giỏi là bắt nhân viên AI <strong>tự phản biện và kiểm tra chéo</strong> (Self-Correction Prompt). Chỉ thêm một câu hỏi kiểm tra, bạn đã loại trừ 90% lỗi sai ngớ ngẩn.</p>
+              <p class="director-desc">Kỹ thuật thông minh nhất của một người quản lý giỏi là bắt nhân viên AI <strong>tự phản biện và kiểm tra chéo</strong> (Self-Correction Prompt). Yêu cầu AI chỉ rõ dữ kiện đối chiếu, sau đó kiểm lại các mục quan trọng trên tài liệu gốc.</p>
             </div>
 
             <div class="director-prompt-box">
@@ -566,10 +566,10 @@
               <div class="prompt-scenario">
                 <h4>
                   <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
-                  Dự án 1: Bảng phân công nhiệm vụ văn phòng &amp; Lịch làm việc mùa hè
+                  Dự án 1: Thông báo lịch làm việc mùa hè và chính sách hỗ trợ
                 </h4>
                 <p><strong>🏢 Tình huống thực tế:</strong> Bạn là Quản lý Hành chính - Nhân sự của Công ty Công nghệ Sao Việt (quy mô 120 nhân sự). Vào mùa hè (tháng 6 đến tháng 8), thời tiết nắng nóng gay gắt nên Ban Giám đốc yêu cầu điều chỉnh giờ làm việc sớm hơn 30 phút so với giờ mùa đông.</p>
-                <p><strong>📋 Dữ liệu đầu vào:</strong> Thời gian áp dụng: 01/06/2026 đến 31/08/2026; Giờ làm việc mới: Sáng 07:30 - 11:30, Chiều 13:30 - 17:00; Khối văn phòng áp dụng bắt buộc, khối dự án công trường linh hoạt theo điều kiện thực tế.</p>
+                <p><strong>📋 Dữ liệu đầu vào:</strong> Thời gian áp dụng: 01/06/2026 đến 31/08/2026; Giờ làm việc mới: Sáng 07:30 - 11:30, Chiều 13:30 - 17:00; Khối văn phòng áp dụng bắt buộc, khối dự án công trường linh hoạt theo điều kiện thực tế. Thông báo phải nêu đủ đồ uống giải nhiệt, lịch trực văn phòng và chế độ điều hòa theo file Word.</p>
                 <p><strong>🎯 Nhiệm vụ của học viên:</strong> Áp dụng nguyên tắc <em>"Giao việc dứt khoát &amp; Nạp đủ nguyên liệu"</em>: Gán vai trò trợ lý nhân sự, cung cấp đủ mốc thời gian, đối tượng và yêu cầu văn bản hành chính gồm 3 phần (Mục đích, Nội dung, Trách nhiệm) trước khi mở khóa đáp án.</p>
               </div>
 
@@ -578,8 +578,8 @@
                 <div class="dataset-info">
                   <span class="dataset-icon">📄</span>
                   <div>
-                    <span class="dataset-name">Tờ trình &amp; Đề xuất Điều chỉnh Lịch Làm việc Mùa hè</span>
-                    <span class="dataset-desc">Văn bản đề xuất thông số 120 nhân sự, ca Flexitime và chính sách hỗ trợ tiền điện điều hòa</span>
+                    <span class="dataset-name">Lịch làm việc mùa hè và chính sách hỗ trợ đã chốt</span>
+                    <span class="dataset-desc">File Word ghi lịch áp dụng cho 120 nhân sự và quy định về đồ uống giải nhiệt, lịch trực, điều hòa</span>
                   </div>
                 </div>
                 <a href="../assets/data/bai-5/data-b5-da1-yeu-cau-lich-lam-viec-mua-he.docx" class="dataset-dl-btn word" download title="Tải file Word để nạp vào AI">
@@ -605,7 +605,7 @@
                     <button type="button" class="copy-btn" data-copy="p-b5-da1">Sao chép</button>
                   </div>
                 </div>
-                <p id="p-b5-da1" class="prompt-text">Em đóng vai Trợ lý Nhân sự của công ty. Hãy soạn giúp anh một thông báo nội bộ gửi toàn thể cán bộ nhân viên về việc điều chỉnh lịch làm việc mùa hè năm 2026. Lịch mới áp dụng từ ngày 01/06/2026 đến hết ngày 31/08/2026: Sáng từ 07:30 đến 11:30, Chiều từ 13:30 đến 17:00. Khối văn phòng áp dụng bắt buộc, khối dự án linh hoạt theo công trường. Trình bày văn bản trang trọng, rõ ràng gồm 3 phần: Mục đích, Nội dung chi tiết và Trách nhiệm thi hành.</p>
+                <p id="p-b5-da1" class="prompt-text">Em là Trợ lý Hành chính - Nhân sự Công ty Công nghệ Sao Việt. Dựa vào file Word đính kèm, hãy soạn thông báo nội bộ về lịch làm việc từ 01/06/2026 đến hết 31/08/2026 (sáng 07:30–11:30, chiều 13:30–17:00). Giữ đúng phạm vi áp dụng cho khối văn phòng và khối dự án/công trường. Nêu đủ ba chính sách hỗ trợ trong file, giữ nguyên thời gian và điều kiện. Trình bày trang trọng theo ba phần: Mục đích, Nội dung, Trách nhiệm thực hiện. Kiểm tra lại lịch, đối tượng và ba chính sách trước khi chốt.</p>
                 <p class="copy-status" role="status"></p>
               </div>
             </div>
@@ -616,8 +616,8 @@
                   <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
                   Dự án 2: Quy trình chia nhỏ giải quyết khiếu nại khách hàng VIP
                 </h4>
-                <p><strong>🏢 Tình huống thực tế:</strong> Bạn là Trưởng bộ phận Chăm sóc Khách hàng. Khách hàng VIP là chị Phương (đã mua hơn 100 triệu) phản ánh máy lọc không khí đặt làm quà tân gia bị giao chậm 2 ngày làm lỡ tiệc mừng. Khách hàng đang rất bức xúc và dọa hủy hợp đồng đối tác.</p>
-                <p><strong>📋 Yêu cầu tình huống:</strong> Ngân sách bồi thường tối đa 300.000đ (có thể tặng voucher mua sắm hoặc gói bảo dưỡng tận nơi 1 năm). Phải giữ chân được khách hàng mà không làm phát sinh chi phí lớn.</p>
+                <p><strong>🏢 Tình huống thực tế:</strong> Bạn là Trưởng bộ phận Chăm sóc Khách hàng. Khách hàng VIP là chị Phương (đã mua hơn 100 triệu) phản ánh máy lọc không khí đặt làm quà tân gia bị giao chậm 2 ngày làm lỡ tiệc mừng. Chị yêu cầu hoàn 100% tiền hàng trong ngày, được đại diện có thẩm quyền của Ban Giám đốc trực tiếp xin lỗi và giải thích, đồng thời cảnh báo sẽ ngừng mua thiết bị văn phòng nếu xử lý không thỏa đáng.</p>
+                <p><strong>📋 Yêu cầu tình huống:</strong> Ngân sách bồi thường thiện chí tối đa 300.000đ, tính riêng khoản hoàn 18.500.000đ tiền đơn hàng. Có thể chọn voucher mua sắm hoặc gói bảo dưỡng tận nơi một năm nếu tổng chi phí nằm trong hạn mức. Phải giữ chân được khách hàng mà không làm phát sinh chi phí lớn.</p>
                 <p><strong>🎯 Nhiệm vụ của học viên:</strong> Áp dụng nguyên tắc <em>"Nhiệm vụ lớn &rarr; Chia nhỏ từng bước"</em>: Tuyệt đối không bảo AI viết ngay thư xin lỗi chung chung. Bước 1: Yêu cầu AI phân tích tâm lý bức xúc và đề xuất 2 phương án bồi thường thực tế, bắt buộc AI dừng lại đợi duyệt mới viết thư.</p>
               </div>
 
@@ -659,7 +659,7 @@
                     <span class="step-badge step-1">Bước 1 · Phân tích tâm lý &amp; Đề xuất 2 phương án bồi thường</span>
                     <button type="button" class="copy-btn" data-copy="p-b5-da2-s1">Sao chép Bước 1</button>
                   </div>
-                  <p id="p-b5-da2-s1" class="prompt-text">Em đóng vai Trưởng bộ phận Chăm sóc khách hàng (CSKH) của Công ty Điện máy Sao Việt. Khách hàng VIP là chị Phương (đã mua tích lũy hơn 100 triệu) đang vô cùng bức xúc vì máy lọc không khí đặt làm quà tân gia bị giao chậm 2 ngày làm lỡ tiệc mừng tân gia của đối tác quan trọng. Bước 1: Hãy phân tích tâm lý bức xúc của khách hàng và đề xuất 2 phương án bồi thường thực tế, khéo léo với ngân sách dưới 300.000đ (ví dụ: tặng voucher giảm giá đơn sau hoặc miễn phí gói bảo dưỡng tận nơi 1 năm). Nêu rõ lý do tại sao phương án này vừa giữ chân được khách VIP vừa không làm phát sinh chi phí lớn cho công ty. Dừng lại chờ anh duyệt phương án tối ưu rồi mới viết thư xin lỗi nhé.</p>
+                  <p id="p-b5-da2-s1" class="prompt-text">Em là Trưởng bộ phận CSKH của Điện máy Sao Việt. Đọc hồ sơ khiếu nại của chị Nguyễn Hoài Phương, phân tích nguyên nhân bức xúc và đề xuất hai phương án bồi thường thiện chí. Từng phương án không vượt 300.000đ, tính riêng khoản hoàn đủ 18.500.000đ trong ngày. Nêu chi phí, điều kiện áp dụng và cách bố trí đại diện có thẩm quyền trực tiếp xin lỗi, giải thích lỗi luân chuyển kho. Dừng lại chờ duyệt trước khi viết thư.</p>
                 </div>
 
                 <!-- BƯỚC 2 -->
@@ -668,7 +668,7 @@
                     <span class="step-badge step-2">Bước 2 · Duyệt phương án &amp; Soạn Thư xin lỗi từ Ban Giám đốc</span>
                     <button type="button" class="copy-btn" data-copy="p-b5-da2-s2">Sao chép Bước 2</button>
                   </div>
-                  <p id="p-b5-da2-s2" class="prompt-text">Anh duyệt Phương án 2: Tặng gói bảo dưỡng miễn phí tận nhà 1 năm (trị giá 500.000đ nhưng chi phí nội bộ chỉ 150.000đ) kèm voucher giảm 15% cho lần mua sắm tiếp theo. Bước 2: Hãy soạn một bức thư xin lỗi chính thức (khoảng 250 từ) từ Giám đốc Dịch vụ Khách hàng gửi riêng cho chị Phương với văn phong chân thành, lịch thiệp, sâu sắc: 1. Thẳng thắn thừa nhận lỗi luân chuyển kho liên tỉnh và gửi lời xin lỗi vì đã làm ảnh hưởng uy tín của chị; 2. Trân trọng trao tặng gói bảo dưỡng tận nơi và voucher tri ân; 3. Cam kết cử nhân viên kỹ thuật cao cấp trực tiếp đến bàn giao máy lọc không khí và hướng dẫn sử dụng tại nhà ngay trong hôm nay.</p>
+                  <p id="p-b5-da2-s2" class="prompt-text">Anh chọn phương án tặng voucher mua sắm 300.000đ, dùng cho lần mua kế tiếp trong 6 tháng kể từ ngày phát hành. Hãy soạn thư xin lỗi chính thức từ đại diện Ban Giám đốc gửi riêng chị Nguyễn Hoài Phương. Thừa nhận lỗi luân chuyển kho liên tỉnh và ảnh hưởng đến buổi tân gia, xác nhận kế hoạch hoàn đủ 18.500.000đ trong ngày, nêu điều kiện voucher và cách đại diện liên hệ trực tiếp để xin lỗi, giải thích. Chỉ viết khoản hoàn tiền đã thực hiện khi có xác nhận.</p>
                 </div>
 
                 <p class="copy-status" role="status"></p>
@@ -681,8 +681,8 @@
                   <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
                   Dự án 3: Đóng gói biên bản &amp; Phân công tuần từ ghi chú thô
                 </h4>
-                <p><strong>🏢 Tình huống thực tế:</strong> Bạn làm Thư ký cuộc họp giao ban đầu tuần giữa Ban Giám đốc và các Trưởng bộ phận. Ghi chú cuộc họp rất lộn xộn: Nam (module login xong 90%, lỗi mobile hẹn thứ 4); Mai (cần 1 designer banner trước thứ 6); Tuấn (server test quá tải cần nâng RAM trước 17h ngày mai); Sếp chốt ưu tiên sửa lỗi trước khi ra tính năng mới.</p>
-                <p><strong>📋 Yêu cầu sản phẩm:</strong> Phải chuyển đổi ghi chú thô thành văn bản hành chính có cấu trúc rõ ràng: 3 quyết định trọng tâm đã chốt, bảng phân công 5 cột (STT, Đầu việc, Phụ trách, Hạn chót, Tiêu chí nghiệm thu) và cảnh báo rủi ro.</p>
+                <p><strong>🏢 Tình huống thực tế:</strong> Bạn là thư ký cuộc họp giao ban sáng thứ Hai, 13/07/2026. File Word ghi các đầu việc về lỗi thanh toán iOS, thiết kế banner và chạy thử quảng cáo, thanh lý máy POS và thu hồi công nợ. Tổng Giám đốc yêu cầu gửi bảng phân công trước 15h cùng ngày.</p>
+                <p><strong>📋 Yêu cầu sản phẩm:</strong> Phải chuyển đổi ghi chú thô thành văn bản hành chính có cấu trúc rõ ràng: 3 nội dung trọng tâm ghi rõ trạng thái, bảng phân công 5 cột (STT, Đầu việc, Phụ trách và phối hợp, Hạn chót, Tiêu chí nghiệm thu) và 2 rủi ro ưu tiên.</p>
                 <p><strong>🎯 Nhiệm vụ của học viên:</strong> Áp dụng nguyên tắc <em>"Cung cấp đủ nguyên liệu đầu vào"</em>: Nạp trọn vẹn văn bản ghi chép thô, ra lệnh AI bóc tách chính xác và nghiêm cấm AI bịa đặt thêm thông tin ngoài ghi chú.</p>
               </div>
 
@@ -718,7 +718,7 @@
                     <button type="button" class="copy-btn" data-copy="p-b5-da3">Sao chép</button>
                   </div>
                 </div>
-                <p id="p-b5-da3" class="prompt-text">Em đóng vai Thư ký dự án chuyên nghiệp. Dưới đây là các ghi chú thô từ cuộc họp giao ban sáng thứ Hai: [Nam báo cáo module đăng nhập xong 90% còn lỗi mobile hẹn thứ Tư; Mai cần 1 designer hỗ trợ banner khuyến mại trước thứ Sáu; Tuấn cảnh báo server thử nghiệm đang quá tải cần nâng RAM trước 17:00 ngày mai; Thống nhất tuần này ưu tiên sửa lỗi trước khi ra tính năng mới]. Em hãy xử lý dữ liệu và xuất bản: 1. Ba quyết định trọng tâm đã chốt; 2. Bảng phân bổ công việc tuần gồm 5 cột: STT, Đầu việc, Người phụ trách, Hạn chót, Tiêu chí hoàn thành; 3. Hai rủi ro cần phòng ngừa. Trình bày dứt khoát, không bịa đặt thêm ngoài ghi chú.</p>
+                <p id="p-b5-da3" class="prompt-text">Em là Thư ký cuộc họp giao ban ngày 13/07/2026. Dựa trên toàn bộ file Word ghi chép cuộc họp, hãy soạn biên bản và bảng phân công. Tóm tắt 3 nội dung trọng tâm, ghi rõ nội dung đã chốt, cam kết hoặc còn là đề xuất. Lập bảng 5 cột: STT, Đầu việc, Phụ trách và phối hợp, Hạn chót, Tiêu chí nghiệm thu. Ghi đủ các đầu việc của Nam, Mai, Tuấn, Lan và mốc thư ký gửi bảng trước 15h ngày 13/07. Cảnh báo 2 rủi ro cần ưu tiên. Mục nào chưa có người hoặc hạn thì ghi “chưa xác định”. Đối chiếu bảng với file trước khi chốt.</p>
                 <p class="copy-status" role="status"></p>
               </div>
             </div>
@@ -729,8 +729,8 @@
                   <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
                   Dự án 4: Quy trình 2 bước thiết kế khảo sát gắn kết nhân viên
                 </h4>
-                <p><strong>🏢 Tình huống thực tế:</strong> Ban Lãnh đạo nhận thấy tỷ lệ biến động nhân sự sau Tết có xu hướng tăng nhẹ. Bạn là Chuyên viên Nhân sự được giao xây dựng bảng khảo sát mức độ gắn kết nội bộ và sự hài lòng nhân viên Quý 2 cho 150 nhân sự toàn công ty.</p>
-                <p><strong>📋 Yêu cầu sản phẩm:</strong> Khảo sát cần đo lường toàn diện các khía cạnh công việc, sử dụng thang đo chuẩn Likert 1-5 (Rất không hài lòng &rarr; Rất hài lòng) và đảm bảo tính ẩn danh, khách quan.</p>
+                <p><strong>🏢 Tình huống thực tế:</strong> Ban Lãnh đạo nhận thấy tỷ lệ biến động nhân sự sau Tết có xu hướng tăng nhẹ. Bạn là Chuyên viên Nhân sự được giao xây dựng bảng khảo sát mức độ gắn kết nội bộ và sự hài lòng nhân viên Quý 2 cho 120 nhân sự, gồm cả nhân viên thử việc.</p>
+                <p><strong>📋 Yêu cầu sản phẩm:</strong> Khảo sát trực tuyến ẩn danh trong 7 ngày cuối Quý 2/2026, mất 5–7 phút. Cần 10–15 câu Likert 1–5 theo 4 trụ cột, 1 câu eNPS thang 0–10 và 2 câu hỏi mở.</p>
                 <p><strong>🎯 Nhiệm vụ của học viên:</strong> Áp dụng nguyên tắc <em>"Chia nhỏ &amp; Nghiệm thu từng bước"</em>: Bước 1 yêu cầu AI đề xuất 4 nhóm trụ cột đo lường trọng yếu kèm lập luận, bắt buộc AI dừng lại để duyệt 4 trụ cột trước khi soạn chi tiết bộ câu hỏi.</p>
               </div>
 
@@ -772,7 +772,7 @@
                     <span class="step-badge step-1">Bước 1 · Khóa khung: Đề xuất 4 trụ cột khảo sát trọng yếu</span>
                     <button type="button" class="copy-btn" data-copy="p-b5-da4-s1">Sao chép Bước 1</button>
                   </div>
-                  <p id="p-b5-da4-s1" class="prompt-text">Em đóng vai Chuyên gia Quản trị Trải nghiệm Nhân viên (EX Specialist) kiêm HR BP. Công ty chuẩn bị triển khai khảo sát mức độ gắn kết nội bộ Quý 2 cho 150 nhân sự sau Tết. Bước 1: Hãy đề xuất 4 nhóm trụ cột đo lường trọng yếu (ví dụ: Môi trường làm việc &amp; Công cụ; Lãnh đạo &amp; Tầm nhìn; Lương thưởng &amp; Đãi ngộ; Cơ hội phát triển &amp; Đào tạo). Với mỗi trụ cột, hãy giải thích ngắn gọn tại sao chỉ số này quyết định tỷ lệ giữ chân nhân sự tại thời điểm nhạy cảm sau Tết. Dừng lại chờ anh duyệt và chốt 4 trụ cột này rồi mới tiến hành thiết kế bộ câu hỏi chi tiết nhé.</p>
+                  <p id="p-b5-da4-s1" class="prompt-text">Em là Chuyên viên Quản trị Trải nghiệm Nhân viên. Đọc đề cương khảo sát ẩn danh cuối Quý 2/2026 cho 120 nhân sự, gồm cả người thử việc. Hãy diễn giải 4 trụ cột trong đề cương: môi trường và điều kiện làm việc, quan hệ với quản lý và đồng nghiệp, lương thưởng và ghi nhận, thăng tiến và phát triển. Giải thích vì sao cần đo từng trụ cột rồi dừng để chờ duyệt.</p>
                 </div>
 
                 <!-- BƯỚC 2 -->
@@ -781,7 +781,7 @@
                     <span class="step-badge step-2">Bước 2 · Duyệt khung &amp; Thiết kế Bộ câu hỏi Likert + eNPS</span>
                     <button type="button" class="copy-btn" data-copy="p-b5-da4-s2">Sao chép Bước 2</button>
                   </div>
-                  <p id="p-b5-da4-s2" class="prompt-text">Anh duyệt chuẩn y 4 trụ cột đo lường em đề xuất. Bước 2: Hãy thiết kế bộ câu hỏi khảo sát hoàn chỉnh gồm: 1. Đoạn giới thiệu mở đầu (khoảng 80 từ) giải thích mục đích khảo sát và cam kết bảo mật danh tính tuyệt đối 100%; 2. Thiết kế 8 câu hỏi định lượng (mỗi trụ cột 2 câu) sử dụng thang đo chuẩn Likert 5 điểm (1: Rất không hài lòng &rarr; 5: Rất hài lòng); 3. Thêm 1 câu hỏi chỉ số eNPS kinh điển (Từ 0-10 điểm, bạn sẵn sàng giới thiệu công ty là nơi làm việc lý tưởng cho bạn bè không?); 4. Một câu hỏi mở ngắn để nhân viên hiến kế giải pháp cải thiện môi trường làm việc.</p>
+                  <p id="p-b5-da4-s2" class="prompt-text">Anh duyệt 4 trụ cột trong đề cương. Hãy thiết kế biểu mẫu hoàn chỉnh: mở đầu nêu mục đích, tính ẩn danh và thời lượng 5–7 phút; soạn 12 câu Likert (3 câu mỗi trụ cột, 1: Rất không hài lòng đến 5: Rất hài lòng), 1 câu eNPS (0–10) và 2 câu hỏi mở. Rà lại câu chữ trung lập, mỗi câu chỉ hỏi một vấn đề và không thu thập dữ liệu nhận dạng.</p>
                 </div>
 
                 <p class="copy-status" role="status"></p>
@@ -797,6 +797,7 @@
 
           <div class="exercise-report">
             <h4>Cách nộp báo cáo Word</h4>
+            <p>Dùng đề để xác định sản phẩm cần nộp và đọc toàn bộ file đầu vào để lấy dữ kiện. Nếu tài liệu chưa chốt người phụ trách, thời hạn hoặc điều kiện áp dụng, ghi rõ “chưa xác nhận”.</p>
             <ol>
               <li>Tạo một file <code>.docx</code>. Ghi rõ họ tên, lớp và mã dự án (<code>B5-DA01</code>, <code>B5-DA02</code>, <code>B5-DA03</code> hoặc <code>B5-DA04</code>) ở trang đầu.</li>
               <li>Chia báo cáo thành 3 phần rõ ràng: <strong>1. Câu lệnh giao việc thực tế</strong>; <strong>2. Quá trình kiểm tra / phản biện ngược</strong>; <strong>3. Văn bản sản phẩm hoàn chỉnh</strong>.</li>
@@ -815,7 +816,7 @@
                     <h5>Yêu cầu thực hiện</h5>
                     <ol>
                       <li>Chuyển đổi hoàn toàn từ dạng hỏi vu vơ sang câu lệnh giao việc dứt khoát như Sếp giao cho nhân sự.</li>
-                      <li>Cung cấp đầy đủ nguyên liệu: Ngày áp dụng, khung giờ sáng chiều và đối tượng chịu trách nhiệm.</li>
+                      <li>Cung cấp đầy đủ nguyên liệu: Ngày áp dụng, giờ sáng và chiều, đối tượng áp dụng và ba chính sách hỗ trợ mùa hè trong file Word.</li>
                       <li>Đặt 1 câu lệnh phản biện kiểm tra lại văn bản trước khi nghiệm thu.</li>
                     </ol>
                   </div>
@@ -828,8 +829,8 @@
                   <div class="exercise-requirements">
                     <h5>Checklist nghiệm thu</h5>
                     <ol>
-                      <li>Có cấu trúc văn bản hành chính rõ ràng (Mục đích, Lịch cụ thể, Trách nhiệm).</li>
-                      <li>Không bị AI bịa đặt các thông tin ngoài luồng.</li>
+                      <li>Có cấu trúc văn bản hành chính rõ ràng (Mục đích, Nội dung, Trách nhiệm thực hiện).</li>
+                      <li>Đúng ngày, giờ, phạm vi áp dụng và đủ đồ uống giải nhiệt, lịch trực đến 17:30, chế độ điều hòa theo file Word.</li>
                       <li>Lời văn trang trọng, chuẩn mực môi trường công sở.</li>
                     </ol>
                   </div>
@@ -845,12 +846,12 @@
               <div class="exercise-grid">
                 <article class="exercise-card">
                   <h4><span class="exercise-code">B5-DA02</span> Quy trình 2 bước giải quyết khiếu nại khách hàng</h4>
-                  <p>Xử lý sự cố giao hàng trễ ngày khai trương theo phương pháp chia nhỏ nhiệm vụ, không làm dồn 1 lần.</p>
+                  <p>Xử lý khiếu nại giao trễ máy lọc không khí khiến chị Phương lỡ quà tân gia.</p>
                   <div class="exercise-requirements">
                     <h5>Yêu cầu thực hiện</h5>
                     <ol>
-                      <li>Bước 1: Bắt AI phân tích tâm lý và đề xuất 2 phương án bồi thường trong ngân sách dưới 200.000đ.</li>
-                      <li>Bước 2: Sau khi chọn phương án, ra lệnh cho AI soạn email giải thích và xin lỗi chân thành.</li>
+                      <li>Bước 1: Phân tích bức xúc và đề xuất hai phương án bồi thường thiện chí, mỗi phương án tối đa 300.000đ, tính riêng khoản hoàn tiền hàng.</li>
+                      <li>Bước 2: Chọn một phương án và soạn thư xin lỗi, ghi rõ cách hoàn 18.500.000đ trong ngày và cách đại diện Ban Giám đốc trực tiếp liên hệ.</li>
                       <li>Kiểm tra tính logic: Không đổ lỗi cho nhân viên giao hàng, thể hiện sự thấu hiểu và trách nhiệm của công ty.</li>
                     </ol>
                   </div>
@@ -864,7 +865,7 @@
                     <h5>Checklist nghiệm thu</h5>
                     <ol>
                       <li>Thấu cảm với tổn thất của khách hàng, xoa dịu cảm xúc trước khi giải thích nguyên nhân.</li>
-                      <li>Phương án đền bù thực tế, rõ ràng (hoàn tiền ship, voucher có hạn dùng cụ thể).</li>
+                      <li>Giải quyết yêu cầu hoàn đủ tiền hàng trong ngày, xin lỗi trực tiếp và chốt một khoản bồi thường khả thi. Nêu hạn dùng nếu chọn voucher.</li>
                       <li>Không có các câu nói sáo rỗng gây phản cảm cho người đang bức xúc.</li>
                     </ol>
                   </div>
@@ -885,8 +886,8 @@
                     <h5>Yêu cầu thực hiện</h5>
                     <ol>
                       <li>Cung cấp đầy đủ dữ liệu thô: tiến độ, đầu việc cần hỗ trợ, cảnh báo kỹ thuật và hạn chót.</li>
-                      <li>Ra lệnh AI cấu trúc thành bảng 5 cột: STT, Đầu việc, Người phụ trách, Hạn chót, Tiêu chí hoàn thành (DoD).</li>
-                      <li>Trích xuất 3 quyết định trọng tâm và 2 rủi ro cần xử lý trước mà không bịa đặt số liệu.</li>
+                      <li>Lập bảng 5 cột: STT, Đầu việc, Phụ trách và phối hợp, Hạn chót, Tiêu chí hoàn thành (DoD).</li>
+                      <li>Tóm tắt 3 nội dung trọng tâm, phân biệt việc đã chốt với đề xuất, và chọn 2 rủi ro ưu tiên từ ghi chép.</li>
                     </ol>
                   </div>
                   <p><strong>Sản phẩm nộp:</strong> File Word báo cáo kèm prompt thực tế và bảng kết quả phân công từ AI.</p>
@@ -920,7 +921,7 @@
                     <h5>Yêu cầu thực hiện</h5>
                     <ol>
                       <li>Bước 1: Bắt AI đề xuất khung 4 nhóm chỉ số trọng tâm và giải thích lý do; duyệt khung trước khi viết câu hỏi.</li>
-                      <li>Bước 2: Ra lệnh soạn bộ câu hỏi trắc nghiệm Likert 1-5 và 1 câu hỏi mở chia sẻ tâm tư.</li>
+                      <li>Bước 2: Soạn biểu mẫu ẩn danh gồm 10–15 câu Likert 1–5, 1 câu eNPS 0–10 và 2 câu hỏi mở.</li>
                       <li>Lệnh nghiệm thu: Bắt AI tự rà soát xem có câu hỏi nào mang tính thiên vị (bias) hoặc làm lộ danh tính nhân viên không.</li>
                     </ol>
                   </div>
@@ -933,8 +934,8 @@
                   <div class="exercise-requirements">
                     <h5>Checklist nghiệm thu</h5>
                     <ol>
-                      <li>Khung chỉ số toàn diện (Môi trường, Lãnh đạo, Đãi ngộ, Phát triển nghề nghiệp).</li>
-                      <li>Câu hỏi diễn đạt trung lập, thang điểm 1-5 thống nhất, câu hỏi mở khơi gợi được ý kiến thẳng thắn.</li>
+                      <li>Đủ 4 trụ cột trong đề cương: Môi trường, Quan hệ với quản lý và đồng nghiệp, Lương thưởng và ghi nhận, Phát triển nghề nghiệp.</li>
+                      <li>Câu hỏi trung lập, đủ số lượng, đúng thang điểm cho Likert và eNPS, hoàn thành trong 5–7 phút.</li>
                       <li>Vượt qua bước kiểm tra khách quan (không có câu hỏi định hướng hay gài bẫy nhân sự).</li>
                     </ol>
                   </div>
