@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 280" width="100%" height="100%">
+  <defs>
+    <filter id="neo-shadow-5" x="-5%" y="-5%" width="120%" height="120%">
+      <feDropShadow dx="4" dy="4" stdDeviation="0" flood-color="#293140" flood-opacity="1"/>
+    </filter>
+    <filter id="soft-shadow-5" x="-5%" y="-5%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="0" flood-color="#293140" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect x="10" y="10" width="520" height="260" rx="18" fill="#f8fafc" stroke="#293140" stroke-width="3" filter="url(#neo-shadow-5)"/>
+
+  <!-- LEFT FIGHTER: 2 YẾU TỐ (RISKY / ẢO GIÁC) -->
+  <g transform="translate(25, 25)">
+    <!-- Box -->
+    <rect x="0" y="0" width="225" height="230" rx="14" fill="#fff7ed" stroke="#293140" stroke-width="2.5" filter="url(#soft-shadow-5)"/>
+    
+    <!-- Top Pill -->
+    <rect x="12" y="12" width="201" height="30" rx="8" fill="#ffedd5" stroke="#293140" stroke-width="2"/>
+    <text x="112" y="32" font-family="'Nunito', sans-serif" font-weight="900" font-size="11.5" fill="#c2410c" text-anchor="middle">⚠️ CÂU LỆNH 2 YẾU TỐ</text>
+
+    <!-- Subtitle -->
+    <text x="112" y="56" font-family="'Nunito', sans-serif" font-weight="700" font-size="10" fill="#9a3412" text-anchor="middle">Thiếu mỏ neo tham chiếu</text>
+
+    <!-- Confused Robot Face Mascot -->
+    <g transform="translate(112, 95)">
+      <!-- Head Box -->
+      <rect x="-35" y="-30" width="70" height="55" rx="12" fill="#fed7aa" stroke="#293140" stroke-width="2.5"/>
+      <!-- Ears -->
+      <rect x="-42" y="-12" width="7" height="18" rx="3" fill="#ea580c" stroke="#293140" stroke-width="1.5"/>
+      <rect x="35" y="-12" width="7" height="18" rx="3" fill="#ea580c" stroke="#293140" stroke-width="1.5"/>
+      <!-- Screen -->
+      <rect x="-27" y="-22" width="54" height="40" rx="8" fill="#1e293b"/>
+      <!-- Swirl / Dizzy Eyes -->
+      <circle cx="-14" cy="-3" r="7" fill="none" stroke="#f97316" stroke-width="2"/>
+      <circle cx="-14" cy="-3" r="3" fill="#f97316"/>
+      <circle cx="14" cy="-3" r="7" fill="none" stroke="#f97316" stroke-width="2"/>
+      <circle cx="14" cy="-3" r="3" fill="#f97316"/>
+      <!-- Wavy mouth (Dizzy) -->
+      <path d="M-10 11 Q-5 6 0 11 Q5 16 10 11" fill="none" stroke="#fed7aa" stroke-width="2" stroke-linecap="round"/>
+      <!-- Sweat drop -->
+      <path d="M26 -18 C30 -26 34 -20 30 -14 C27 -11 23 -14 26 -18 Z" fill="#38bdf8" stroke="#293140" stroke-width="1"/>
+    </g>
+
+    <!-- Comic Scorecard -->
+    <g transform="translate(15, 140)">
+      <rect x="0" y="0" width="195" height="75" rx="8" fill="#ffffff" stroke="#293140" stroke-width="1.5"/>
+      <text x="12" y="22" font-family="'Nunito', sans-serif" font-weight="800" font-size="10.5" fill="#dc2626">❌ Rủi ro ảo giác: 60%</text>
+      <text x="12" y="40" font-family="'Nunito', sans-serif" font-weight="700" font-size="10" fill="#64748b">• AI tự chế điều khoản trên mạng</text>
+      <text x="12" y="55" font-family="'Nunito', sans-serif" font-weight="700" font-size="10" fill="#64748b">• Sếp phải sửa lại 3 - 4 lần</text>
+      <text x="12" y="70" font-family="'Nunito', sans-serif" font-weight="800" font-size="9.5" fill="#ea580c">👉 Chỉ hợp: Email, văn bản đơn giản</text>
+    </g>
+  </g>
+
+  <!-- CENTER: COMIC VS BADGE -->
+  <g transform="translate(270, 135)">
+    <polygon points="0,-30 9,-10 30,-14 15,3 26,22 5,13 -9,30 -13,9 -30,7 -15,-5 -24,-22 -5,-13" 
+             fill="#fde047" stroke="#293140" stroke-width="3" filter="url(#neo-shadow-5)"/>
+    <text x="0" y="6" font-family="'Nunito', sans-serif" font-weight="1000" font-size="16" fill="#1e3a8a" text-anchor="middle">VS</text>
+  </g>
+
+  <!-- RIGHT FIGHTER: 3 YẾU TỐ (CHAMPION / CHUẨN XÁC) -->
+  <g transform="translate(290, 25)">
+    <!-- Box -->
+    <rect x="0" y="0" width="225" height="230" rx="14" fill="#f0fdf4" stroke="#293140" stroke-width="2.5" filter="url(#soft-shadow-5)"/>
+    
+    <!-- Top Pill -->
+    <rect x="12" y="12" width="201" height="30" rx="8" fill="#dcfce7" stroke="#293140" stroke-width="2"/>
+    <text x="112" y="32" font-family="'Nunito', sans-serif" font-weight="900" font-size="11.5" fill="#166534" text-anchor="middle">🌟 CÂU LỆNH 3 YẾU TỐ</text>
+
+    <!-- Subtitle -->
+    <text x="112" y="56" font-family="'Nunito', sans-serif" font-weight="700" font-size="10" fill="#15803d" text-anchor="middle">Khóa chặt mỏ neo tham chiếu</text>
+
+    <!-- Superhero Robot Face Mascot -->
+    <g transform="translate(112, 95)">
+      <!-- Head Box -->
+      <rect x="-35" y="-30" width="70" height="55" rx="12" fill="#38bdf8" stroke="#293140" stroke-width="2.5"/>
+      <!-- Ears -->
+      <rect x="-42" y="-12" width="7" height="18" rx="3" fill="#f59e0b" stroke="#293140" stroke-width="1.5"/>
+      <rect x="35" y="-12" width="7" height="18" rx="3" fill="#f59e0b" stroke="#293140" stroke-width="1.5"/>
+      <!-- Screen -->
+      <rect x="-27" y="-22" width="54" height="40" rx="8" fill="#1e293b"/>
+      
+      <!-- Cool Sunglasses / Hero Visor -->
+      <polygon points="-24,-12 24,-12 20,4 -20,4" fill="#f59e0b" stroke="#293140" stroke-width="1.5"/>
+      <line x1="-16" y1="-8" x2="16" y2="-8" stroke="#ffffff" stroke-width="2"/>
+
+      <!-- Big Confident Robot Smile -->
+      <path d="M-10 8 Q0 16 10 8" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round"/>
+      
+      <!-- Crown on top -->
+      <polygon points="-12,-30 -16,-40 -5,-34 0,-42 5,-34 16,-40 12,-30" fill="#facc15" stroke="#293140" stroke-width="1.5"/>
+    </g>
+
+    <!-- Comic Scorecard -->
+    <g transform="translate(15, 140)">
+      <rect x="0" y="0" width="195" height="75" rx="8" fill="#ffffff" stroke="#293140" stroke-width="1.5"/>
+      <text x="12" y="22" font-family="'Nunito', sans-serif" font-weight="900" font-size="10.5" fill="#15803d">🛡️ Rủi ro ảo giác: 0%</text>
+      <text x="12" y="40" font-family="'Nunito', sans-serif" font-weight="700" font-size="10" fill="#166534">• Khớp 100% Luật VN &amp; Mẫu công ty</text>
+      <text x="12" y="55" font-family="'Nunito', sans-serif" font-weight="700" font-size="10" fill="#166534">• Sếp duyệt ngay lần đầu tiên</text>
+      <text x="12" y="70" font-family="'Nunito', sans-serif" font-weight="900" font-size="9.5" fill="#15803d">👉 Bắt buộc: Hợp đồng, quy chế, tiền nong</text>
+    </g>
+  </g>
+</svg>

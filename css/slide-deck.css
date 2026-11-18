@@ -152,6 +152,41 @@ body {
 .lesson-sources a { color: #166435; font-size: 13px; text-decoration: underline; text-underline-offset: 3px; }
 .practice-prompts:has(> :only-child) { grid-template-columns: 1fr; }
 
+[data-lesson-series] .lesson-examples {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+[data-lesson-series] .lesson-examples .vs-card { min-width: 0; }
+[data-lesson-series] .lesson-examples .vs-card-head {
+  background: color-mix(in srgb, var(--lesson-tint) 64%, white);
+}
+[data-lesson-series] .lesson-rubric { list-style: none; }
+[data-lesson-series] .prompt-scenario h3 { font-size: 16px; }
+[data-lesson-series] .prompt-card:not([data-prompt-card]) .prompt-box-inner { display: grid !important; }
+[data-lesson-series] .prompt-box-head button { min-height: 44px; }
+[data-lesson-series] .prompt-text { font-size: 14px !important; }
+[data-lesson-series] .prompt-lock-trigger { width: 100%; text-align: left; }
+[data-lesson-series] .lock-trigger-info small { display: block; }
+[data-lesson-series] :is(button, a, summary):focus-visible { outline: 3px solid #176c45; outline-offset: 3px; }
+
+.canvas-walkthrough { display: grid; gap: 10px; min-width: 0; margin: 0; }
+.canvas-walkthrough a {
+  display: block;
+  overflow: hidden;
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  background: white;
+  box-shadow: var(--shadow);
+  cursor: zoom-in;
+}
+.canvas-walkthrough img { display: block; width: 100%; height: auto; }
+.canvas-walkthrough figcaption { color: var(--muted); font-size: 13px; line-height: 1.6; }
+
+@media (max-width: 680px) {
+  [data-lesson-series] .lesson-examples { grid-template-columns: 1fr; }
+}
+
 /* Slide backgrounds */
 .slide-cover    { background: var(--cream); }
 .slide-concept  { background: white; }
@@ -167,6 +202,11 @@ body {
 [data-course-lesson="3"] { --lesson-tint: #cce7f8; --sticker-position: 100% 0; }
 [data-course-lesson="4"] { --lesson-tint: #f8d2df; --sticker-position: 0 100%; }
 [data-course-lesson="5"] { --lesson-tint: #e1d8fb; --sticker-position: 50% 100%; }
+[data-course-lesson="10"] { --lesson-tint: #d4ecfb; --sticker-position: 0 0; }
+[data-course-lesson="11"] { --lesson-tint: #d5efdf; --sticker-position: 100% 100%; }
+[data-course-lesson="12"] { --lesson-tint: #e8defb; --sticker-position: 50% 100%; }
+[data-course-lesson="13"] { --lesson-tint: #ffe4d2; --sticker-position: 100% 0; }
+[data-course-lesson="14"] { --lesson-tint: #fbebc4; --sticker-position: 100% 100%; }
 
 [data-course-lesson] .slide {
   isolation: isolate;
@@ -2674,4 +2714,199 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+}
+
+/* ============================================================
+   BÀI 9: CARTOON & COMIC ILLUSTRATION STYLES
+   Giao diện hoạt họa sinh động, thẻ đối thoại và rào chắn tham chiếu
+   ============================================================ */
+.comic-slide-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-top: 14px;
+}
+.comic-art-wrap {
+  background: white;
+  border: 3px solid var(--ink);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 4px 5px 0 var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.comic-art-wrap:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 7px 0 var(--ink);
+}
+.comic-art-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+.comic-art-caption {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11.5px;
+  font-weight: 850;
+  color: var(--muted);
+  margin-top: 8px;
+  text-align: center;
+}
+.comic-badge-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: #fde047;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 13px;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.comic-formula-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+.comic-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 2.5px solid var(--ink);
+  border-radius: 12px;
+  box-shadow: 3px 3px 0 var(--ink);
+  background: white;
+  transition: transform 150ms ease;
+}
+.comic-block:hover {
+  transform: translateX(4px);
+}
+.comic-block-icon {
+  font-size: 24px;
+  line-height: 1;
+  padding: 6px;
+  background: #f8fafc;
+  border: 1.5px solid var(--ink);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.comic-block-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  margin-bottom: 3px;
+}
+.comic-block-desc {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink);
+  margin: 0;
+}
+.comic-block.block-task {
+  background: #fff7ed;
+  border-color: var(--ink);
+}
+.comic-block.block-task .comic-block-title { color: #c2410c; }
+.comic-block.block-context {
+  background: #fdf2f8;
+  border-color: var(--ink);
+}
+.comic-block.block-context .comic-block-title { color: #be185d; }
+.comic-block.block-ref {
+  background: #f0fdf4;
+  border-color: var(--ink);
+}
+.comic-block.block-ref .comic-block-title { color: #15803d; }
+
+/* Prompt Highlight Tags */
+.tag-task {
+  background: #fed7aa;
+  color: #7c2d12;
+  font-weight: 900;
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid #c2410c;
+  display: inline-block;
+  margin-right: 2px;
+}
+.tag-context {
+  background: #fbcfe8;
+  color: #831843;
+  font-weight: 900;
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid #db2777;
+  display: inline-block;
+  margin-right: 2px;
+}
+.tag-pos {
+  background: #bbf7d0;
+  color: #14532d;
+  font-weight: 900;
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid #16a34a;
+  display: inline-block;
+  margin-right: 2px;
+}
+.tag-neg {
+  background: #fecaca;
+  color: #7f1d1d;
+  font-weight: 900;
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid #dc2626;
+  display: inline-block;
+  margin-right: 2px;
+}
+
+/* Guardrails Box for Projects */
+.guardrails-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 8px 0 10px;
+}
+.guardrail-card {
+  padding: 8px 10px;
+  border: 1.5px solid var(--ink);
+  border-radius: 8px;
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+.guardrail-card.pos {
+  background: #f0fdf4;
+  border-color: #16a34a;
+}
+.guardrail-card.pos strong {
+  color: #166534;
+  display: block;
+  margin-bottom: 2px;
+}
+.guardrail-card.neg {
+  background: #fef2f2;
+  border-color: #dc2626;
+}
+.guardrail-card.neg strong {
+  color: #991b1b;
+  display: block;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 900px) {
+  .comic-slide-grid {
+    grid-template-columns: 1fr;
+  }
+  .guardrails-grid {
+    grid-template-columns: 1fr;
+  }
 }
