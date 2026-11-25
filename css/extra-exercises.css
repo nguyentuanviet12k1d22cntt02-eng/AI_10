@@ -162,76 +162,83 @@
   margin: 0;
 }
 
-/* 3. KHUNG HÌNH MINH HỌA 8 GÓC NHÌN & DẢI PHIM 3 CẢNH */
+/* 3. KHUNG HÌNH MINH HỌA 8 GÓC NHÌN & CHIA CẢNH (RỘNG RÃI, SẮC NÉT) */
 .visual-guides-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 20px;
-  margin-top: 26px;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  margin-top: 28px;
 }
 
 .visual-panel {
   border: 2.5px solid var(--ink);
-  border-radius: 20px;
+  border-radius: 22px;
   background: var(--cream);
   box-shadow: var(--shadow);
-  padding: 20px;
+  padding: 22px 24px;
   display: grid;
   align-content: start;
-  gap: 12px;
+  gap: 14px;
 }
 
 .visual-panel h3 {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 950;
   line-height: 1.25;
 }
 
 .visual-panel-sub {
-  font-size: 13px;
+  font-size: 13.5px;
   color: var(--muted);
   margin: 0;
 }
 
-/* Khung so sánh Ảnh gốc -> Ảnh 8 góc thật */
+/* Khung so sánh Ảnh gốc -> Ảnh 8 góc thật (Rộng rãi, không bị bóp chữ) */
 .real-turnaround-flow {
   display: grid;
-  grid-template-columns: 0.34fr auto 1fr;
-  gap: 12px;
+  grid-template-columns: 230px auto 1fr;
+  gap: 18px;
   align-items: center;
 }
 
 .turnaround-box {
-  border: 2px solid var(--ink);
-  border-radius: 14px;
+  margin: 0;
+  border: 2.5px solid var(--ink);
+  border-radius: 16px;
   background: white;
-  padding: 8px;
-  box-shadow: 2px 3px 0 var(--ink);
+  padding: 12px;
+  box-shadow: 3px 4px 0 var(--ink);
   display: grid;
-  gap: 6px;
+  gap: 10px;
 }
 
-.turnaround-box a {
+.turnaround-thumb {
   display: block;
   overflow: hidden;
-  border-radius: 9px;
-  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  border: 2px solid var(--ink);
+  background: #fff;
   cursor: zoom-in;
 }
 
-.turnaround-box img {
+.turnaround-thumb img {
   display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
+  transition: transform 180ms ease;
 }
 
-.turnaround-box.ref-photo img {
+.turnaround-thumb:hover img {
+  transform: scale(1.02);
+}
+
+.turnaround-box.ref-photo .turnaround-thumb img {
   aspect-ratio: 3 / 4;
   object-position: top center;
 }
 
-.turnaround-box.sheet-photo img {
+.turnaround-box.sheet-photo .turnaround-thumb img {
   aspect-ratio: 16 / 9;
 }
 
@@ -239,40 +246,98 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 6px;
-  font-size: 11.5px;
-  font-weight: 850;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.turnaround-label {
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.turnaround-dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 2px 2px 0 var(--ink);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.turnaround-dl-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--ink);
+  background: #1d4ed8;
+}
+
+.turnaround-box.ref-photo .turnaround-caption {
+  justify-content: center;
+}
+
+.turnaround-box.ref-photo .turnaround-dl-btn {
+  width: 100%;
+  justify-content: center;
+  background: white;
   color: var(--ink);
 }
 
-.turnaround-caption a.mini-dl {
-  color: #1d4ed8;
-  text-decoration: underline;
-  font-size: 11px;
+.turnaround-box.ref-photo .turnaround-dl-btn:hover {
+  background: var(--blue);
+}
+
+.turnaround-arrow-wrap {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
 }
 
 .turnaround-arrow {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: 2px solid var(--ink);
+  border: 2.5px solid var(--ink);
   background: #fef08a;
+  box-shadow: 2px 3px 0 var(--ink);
   display: grid;
   place-items: center;
   font-weight: 900;
-  font-size: 14px;
+  font-size: 18px;
+}
+
+.turnaround-arrow-tag {
+  font-size: 11px;
+  font-weight: 850;
+  color: var(--ink);
+  background: white;
+  border: 1.5px solid var(--ink);
+  border-radius: 99px;
+  padding: 2px 9px;
+  white-space: nowrap;
 }
 
 .sheet-row-legend {
   display: grid;
-  gap: 6px;
-  font-size: 12px;
-  line-height: 1.45;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  font-size: 12.5px;
+  line-height: 1.5;
   color: var(--ink);
+}
+
+.sheet-row-legend > div {
   background: white;
   border: 2px solid var(--ink);
   border-radius: 12px;
-  padding: 10px 12px;
+  padding: 10px 14px;
 }
 
 .prompt-scroll-text {
@@ -285,22 +350,23 @@
   background: #f8fafc;
 }
 
-/* Dải phim 3 cảnh kèm lời nói */
+/* Dải phim 3 cảnh xếp ngang 3 cột gọn đẹp */
 .storyboard-strip {
   display: grid;
-  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .strip-shot {
   display: grid;
-  grid-template-columns: 52px 1fr;
+  grid-template-columns: 50px 1fr;
   gap: 12px;
   align-items: center;
-  padding: 10px 12px;
+  padding: 12px 14px;
   border: 2px solid var(--ink);
-  border-radius: 12px;
+  border-radius: 14px;
   background: white;
-  box-shadow: 2px 3px 0 var(--ink);
+  box-shadow: 3px 4px 0 var(--ink);
 }
 
 .strip-icon {
@@ -337,6 +403,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
+  align-items: start;
 }
 
 /* Header khu vực bài tập + nút Mở khóa toàn bộ */
@@ -450,6 +517,7 @@
 .mini-step-row span:first-child { font-size: 20px; flex: none; }
 
 .input-photo-card {
+  margin: 0;
   border: 2px solid var(--ink);
   border-radius: 14px;
   background: var(--cream);
@@ -754,18 +822,20 @@
 @media (max-width: 1050px) {
   .pipeline-board { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
   .pipeline-stage::after { display: none; }
-  .visual-guides-grid { grid-template-columns: 1fr; }
+  .storyboard-strip { grid-template-columns: 1fr; }
   .pipeline-prompts-box { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 860px) {
   .visual-mindset-grid { grid-template-columns: 1fr; }
+  .real-turnaround-flow { grid-template-columns: 1fr; }
+  .turnaround-box.ref-photo { max-width: 260px; margin-inline: auto; width: 100%; }
+  .turnaround-arrow { transform: rotate(90deg); }
+  .sheet-row-legend { grid-template-columns: 1fr; }
   .exercise-brief-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
   .pipeline-board { grid-template-columns: 1fr; }
-  .real-turnaround-flow { grid-template-columns: 1fr; }
-  .turnaround-arrow { justify-self: center; transform: rotate(90deg); }
   .extra-exercise-card { padding: 18px 16px; }
 }
