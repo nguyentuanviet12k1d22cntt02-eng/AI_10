@@ -1,0 +1,541 @@
+/* ============================================================
+   TRANG BÀI TẬP THÊM — GOOGLE FLOW STUDIO WORKFLOW
+   Dùng chung hệ biến & Neobrutalism của main.css
+   ============================================================ */
+
+.extra-flow-guide {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.flow-step-card {
+  padding: 18px 18px 20px;
+  border: 2.5px solid var(--ink);
+  border-radius: 18px;
+  background: white;
+  box-shadow: 4px 5px 0 var(--ink);
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+.flow-step-card.fc-blue { background: #f0f9ff; }
+.flow-step-card.fc-pink { background: #fff1f2; }
+.flow-step-card.fc-green { background: #f0fdf4; }
+.flow-step-card.fc-lavender { background: #f5f3ff; }
+
+.flow-step-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 3px 10px;
+  border: 2px solid var(--ink);
+  border-radius: 99px;
+  background: #fef08a;
+  font-size: 11.5px;
+  font-weight: 850;
+}
+
+.flow-step-card h3 {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.flow-step-card p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* Header khu vực bài tập + nút Mở khóa toàn bộ */
+.extra-practice-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.extra-practice-toolbar h2 {
+  font-size: clamp(26px, 2.8vw, 36px);
+  font-weight: 1000;
+  line-height: 1.15;
+  margin-top: 10px;
+}
+
+.extra-practice-toolbar p {
+  color: var(--muted);
+  font-size: 14.5px;
+  margin-top: 6px;
+}
+
+.master-unlock-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: #fef08a;
+  border: 2.5px solid var(--ink);
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 850;
+  color: var(--ink);
+  box-shadow: 3px 4px 0 var(--ink);
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+
+.master-unlock-btn:hover {
+  transform: translate(-1px, -2px);
+  box-shadow: 4px 6px 0 var(--ink);
+  background: #fde047;
+}
+
+/* Danh sách thẻ bài tập */
+.extra-exercise-list {
+  display: grid;
+  gap: 28px;
+}
+
+.extra-exercise-card {
+  border: 2.5px solid var(--ink);
+  border-radius: var(--radius);
+  background: white;
+  box-shadow: var(--shadow);
+  padding: 24px 26px;
+  display: grid;
+  gap: 18px;
+}
+
+.exercise-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.exercise-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mode-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 11px;
+  border: 2px solid var(--ink);
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 800;
+  background: var(--blue);
+}
+
+.mode-tag.tag-pink { background: var(--pink); }
+.mode-tag.tag-green { background: var(--green-light); }
+.mode-tag.tag-lavender { background: var(--lavender); }
+
+.exercise-card-title {
+  font-size: clamp(20px, 2.2vw, 25px);
+  font-weight: 950;
+  line-height: 1.25;
+  margin-top: 8px;
+}
+
+.exercise-brief-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.exercise-brief-grid.no-image {
+  grid-template-columns: 1fr;
+}
+
+.brief-text-blocks {
+  display: grid;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.brief-text-blocks p {
+  margin: 0;
+}
+
+.input-photo-card {
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  background: var(--cream);
+  padding: 10px;
+  box-shadow: 3px 3px 0 var(--ink);
+  display: grid;
+  gap: 8px;
+}
+
+.input-photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 9px;
+  border: 1.5px solid var(--ink);
+}
+
+.input-photo-caption {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Hàng tải dữ liệu đầu vào */
+.dataset-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.prompt-dataset-box {
+  background: #f0fdf4;
+  border: 2px dashed #16a34a;
+  border-radius: 12px;
+  padding: 11px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.prompt-dataset-box.word {
+  background: #eff6ff;
+  border-color: #2563eb;
+}
+
+.prompt-dataset-box.image-asset {
+  background: #fefce8;
+  border-color: #ca8a04;
+}
+
+.dataset-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 190px;
+}
+
+.dataset-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.dataset-name {
+  display: block;
+  font-size: 13px;
+  font-weight: 850;
+  color: var(--ink);
+}
+
+.prompt-dataset-box.word .dataset-name { color: #1d4ed8; }
+.prompt-dataset-box.image-asset .dataset-name { color: #854d0e; }
+
+.dataset-desc {
+  display: block;
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.dataset-dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  background: #16a34a;
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 9px;
+  border: 2px solid var(--ink);
+  box-shadow: 2px 3px 0 var(--ink);
+  white-space: nowrap;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.dataset-dl-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 4px 0 var(--ink);
+}
+
+.dataset-dl-btn.word { background: #2563eb; }
+.dataset-dl-btn.image-asset { background: #ca8a04; }
+
+.dataset-format-tag {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+/* Ổ khóa & Prompt mẫu 3 cảnh */
+[hidden] { display: none !important; }
+
+.prompt-lock-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 15px 18px;
+  background: #fffbeb;
+  border: 2.5px dashed #d97706;
+  border-radius: 14px;
+  box-shadow: 3px 4px 0 var(--ink);
+  text-align: left;
+  transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease;
+}
+
+.prompt-lock-trigger:hover {
+  background: #fef3c7;
+  transform: translate(-1px, -2px);
+  box-shadow: 4px 5px 0 var(--ink);
+}
+
+.extra-exercise-card:not(.is-unlocked) .prompt-box-inner { display: none !important; }
+.extra-exercise-card.is-unlocked .prompt-lock-trigger { display: none !important; }
+.extra-exercise-card.is-unlocked .prompt-box-inner { display: grid !important; gap: 12px; }
+
+.lock-shield-icon {
+  font-size: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fef08a;
+  border: 2.5px solid var(--ink);
+  display: grid;
+  place-items: center;
+  box-shadow: 2px 2px 0 var(--ink);
+  flex: none;
+}
+
+.lock-trigger-info strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 900;
+  color: #92400e;
+}
+
+.lock-trigger-info span {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #b45309;
+}
+
+.prompt-box-inner {
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  padding: 16px 18px;
+  background: #f8fafc;
+}
+
+.prompt-box-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.prompt-unlocked-tag {
+  font-size: 13px;
+  font-weight: 850;
+  color: #15803d;
+}
+
+.relock-btn {
+  padding: 5px 11px;
+  font-size: 12px;
+  font-weight: 800;
+  border: 1.5px solid var(--ink);
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #334155;
+  box-shadow: 1.5px 2px 0 var(--ink);
+}
+
+.relock-btn:hover { background: #fee2e2; color: #991b1b; }
+
+.step-prompt-item {
+  background: white;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  padding: 13px 15px;
+  box-shadow: 2px 3px 0 var(--ink);
+}
+
+.step-prompt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 7px;
+  border: 1.5px solid var(--ink);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.step-badge.step-1 { background: #dbeafe; color: #1e3a8a; }
+.step-badge.step-2 { background: #fce7f3; color: #831843; }
+.step-badge.step-3 { background: #dcfce7; color: #14532d; }
+
+.step-prompt-item .prompt-text {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--ink);
+  margin: 0;
+}
+
+.step-prompt-note {
+  margin-top: 6px !important;
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.copy-btn {
+  padding: 5px 12px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.copy-btn:hover { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--ink); }
+
+.copy-status {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #166435;
+  margin: 0;
+}
+
+/* Modal nhập mật mã */
+.lock-modal {
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  padding: 0;
+  width: min(400px, calc(100% - 32px));
+  box-shadow: 6px 8px 0 var(--ink);
+  background: white;
+}
+
+.lock-modal::backdrop { background: rgba(15, 23, 42, 0.55); }
+
+.lock-modal-card {
+  position: relative;
+  padding: 26px 24px 24px;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.lock-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: #f1f5f9;
+  font-weight: 900;
+}
+
+.lock-modal-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fef08a;
+  border: 2.5px solid var(--ink);
+  font-size: 28px;
+  display: grid;
+  place-items: center;
+  box-shadow: 3px 3px 0 var(--ink);
+  margin-bottom: 12px;
+}
+
+.lock-modal-title { font-size: 19px; font-weight: 900; margin-bottom: 6px; }
+.lock-modal-desc { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+
+.lock-modal-form {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+}
+
+.lock-modal-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2.5px solid var(--ink);
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.12em;
+}
+
+.lock-modal-submit {
+  padding: 10px 16px;
+  border: 2.5px solid var(--ink);
+  border-radius: 12px;
+  background: var(--green-light);
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: 3px 4px 0 var(--ink);
+}
+
+.lock-modal-error {
+  margin-top: 10px;
+  padding: 7px 12px;
+  width: 100%;
+  border: 1.5px solid #dc2626;
+  border-radius: 8px;
+  background: #fee2e2;
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+@media (max-width: 960px) {
+  .extra-flow-guide { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .exercise-brief-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .extra-flow-guide { grid-template-columns: 1fr; }
+  .extra-exercise-card { padding: 18px 16px; }
+}
