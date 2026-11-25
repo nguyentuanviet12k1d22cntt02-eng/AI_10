@@ -7,20 +7,23 @@ Website học tập và bài giảng tương tác về Trí tuệ Nhân tạo (G
 ```text
 AI_10/
 ├── index.html                   # Trang chủ / Lộ trình học AI
-├── bai-1.html                   # Redirect thông minh sang lessons/bai-1.html
 ├── docs/                        # Giáo án & tài liệu tham khảo (.docx)
 │   └── Giáo án dạy AI.docx
 ├── css/
 │   ├── main.css                 # Style trang chủ & thành phần chung
-│   └── slide-deck.css           # Engine giao diện slide bài giảng
+│   ├── slide-deck.css           # Engine giao diện slide bài giảng
+│   └── lesson-10.css            # Style riêng cho Bài 10
 ├── js/
 │   ├── main.js                  # Logic trang chủ (lộ trình, tiến độ)
-│   └── slide-deck.js            # Engine điều khiển slide (phím mũi tên, cảm ứng, copy prompt)
+│   ├── slide-deck.js            # Engine điều khiển slide (phím mũi tên, cảm ứng, copy prompt)
+│   └── lesson-10.js             # Tương tác riêng cho Bài 10
 ├── assets/
 │   ├── images/                  # Hình ảnh minh họa
+│   ├── data/                    # Tệp dữ liệu thực hành (.docx, .xlsx)
+│   ├── answers/                 # Đáp án mẫu (.docx)
 │   └── logos/                   # Logo các thương hiệu AI (Gemini, ChatGPT, Claude, Google, NotebookLM)
 └── lessons/
-    ├── bai-1.html               # Bài 1: Gemini, ChatGPT & Claude AI
+    ├── bai-1.html .. bai-14.html # 14 bài giảng slide tương tác
     └── template.html            # Mẫu bài giảng chuẩn để nhân bản cho các bài tiếp theo
 ```
 

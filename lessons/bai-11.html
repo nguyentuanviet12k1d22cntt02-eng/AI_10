@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bài 11 · Câu lệnh kiểm tra — Lớp học AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Nunito:wght@700;800;900;1000&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/slide-deck.css">
+</head>
+<body data-course-lesson="11" data-lesson-series="advanced">
+  <header class="topbar">
+    <a class="topbar-logo" href="../index.html" aria-label="Về trang chủ Lớp học AI"><span class="logo-mark" aria-hidden="true"><span class="book-icon"></span></span>Lớp học AI</a>
+    <div class="topbar-center">Bài 11 · Câu lệnh kiểm tra</div>
+    <a class="topbar-back" href="../index.html#lo-trinh">← Lộ trình</a>
+  </header>
+
+  <main class="deck" id="deck" aria-label="Bài 11">
+    <section class="slide slide-cover" data-slide="1" aria-label="Câu lệnh kiểm tra">
+      <div class="slide-inner cover-inner">
+        <div class="cover-left">
+          <div class="cover-kicker">
+            <span class="pill pill-green">Bài 11</span>
+            <span class="cover-kicker-label">Chương 5 · Tương tác và kiểm tra</span>
+          </div>
+          <h1 class="cover-title">Câu lệnh<br><em>kiểm tra</em></h1>
+          <p class="cover-desc">Yêu cầu AI dò lỗi, chỉ rõ chỗ chưa khớp và sửa bản nháp. Sau đó tự đối chiếu lại với tài liệu gốc.</p>
+        </div>
+        <div class="toc-card">
+          <div class="toc-card-head">
+            <span class="toc-icon icon-blue" aria-hidden="true"><span class="book-icon"></span></span>
+            <div><strong>Nội dung bài học</strong><p>5 slide</p></div>
+          </div>
+          <ul class="toc-list" role="list">
+            <li><button class="toc-link" type="button" data-go-to="2" data-content-art="report"><span class="toc-num" aria-hidden="true">01</span>Bốn nhóm cần đối chiếu</button></li>
+            <li><button class="toc-link" type="button" data-go-to="3" data-content-art="brief"><span class="toc-num" aria-hidden="true">02</span>Ví dụ rà email</button></li>
+            <li><button class="toc-link" type="button" data-go-to="4" data-content-art="format"><span class="toc-num" aria-hidden="true">03</span>Cách nghiệm thu bản sửa</button></li>
+            <li><button class="toc-link" type="button" data-go-to="5" data-content-art="practice"><span class="toc-num" aria-hidden="true">04</span>Thực hành 4 bài</button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide-concept" data-slide="2" aria-label="Giao tiêu chí trước khi yêu cầu kiểm">
+      <div class="slide-inner">
+        <div class="slide-label label-blue">Bốn nhóm cần đối chiếu</div>
+        <h2 class="slide-title" id="slide-title-2">Giao tiêu chí trước khi yêu cầu kiểm</h2>
+        <p class="slide-desc">Hỏi “đã đúng chưa?” thường không đủ. Hãy chỉ định nguồn đối chiếu và kết quả cần trả.</p>
+        <div class="feature-grid lesson-feature-grid">
+          <article class="feature-card fc-blue" data-content-art="task"><h3>Đúng dữ kiện</h3><p>Đối chiếu tên, số, đơn vị và hạn với đề. Với phép tính, yêu cầu viết công thức và đối chiếu kết quả.</p></article>
+          <article class="feature-card fc-pink" data-content-art="context"><h3>Đủ nội dung</h3><p>Kiểm tiêu đề, người nhận, hành động cần làm và thông tin bắt buộc đã được giao.</p></article>
+          <article class="feature-card fc-lavender" data-content-art="format"><h3>Dễ đọc</h3><p>Rà chính tả, câu dài và giọng văn. Chỉ sửa câu gây hiểu nhầm hoặc không phù hợp người nhận.</p></article>
+          <article class="feature-card fc-green" data-content-art="report"><h3>Có căn cứ</h3><p>Đánh dấu “chưa xác nhận” nếu nguồn thiếu. Yêu cầu liệt kê lỗi trước khi xuất bản sửa.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide-compare" data-slide="3" aria-label="Rà email thông báo họp">
+      <div class="slide-inner">
+        <div class="slide-label label-pink">Ví dụ rà email</div>
+        <h2 class="slide-title" id="slide-title-3">Rà email thông báo họp</h2>
+        <p class="slide-desc">Nguồn đã chốt: họp nhóm lúc 14h thứ Tư tại phòng 302, người nhận xác nhận trước 17h thứ Ba.</p>
+        <div class="lesson-examples">
+          <article class="vs-card">
+            <div class="vs-card-head"><strong>Bản nháp cần kiểm</strong></div>
+            <p class="slide-desc">Nhóm sẽ họp lúc 14h thứ Ba tại phòng 302. Vui lòng xác nhận nếu tham dự.</p>
+          </article>
+          <article class="vs-card">
+            <div class="vs-card-head"><strong>Bản đã đối chiếu</strong></div>
+            <p class="slide-desc">Tiêu đề: Mời họp nhóm lúc 14h thứ Tư. Chào cả nhóm, buổi họp diễn ra tại phòng 302. Vui lòng xác nhận tham dự trước 17h thứ Ba.</p>
+          </article>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-box-inner">
+            <div class="prompt-box-head">
+              <span>Lệnh kiểm tra mẫu</span>
+              <div class="prompt-head-actions">
+                <button class="copy-btn" type="button" data-copy="p-b11-s3">Sao chép</button>
+              </div>
+            </div>
+            <p class="prompt-text" id="p-b11-s3">Dùng dữ kiện gốc để rà bản nháp. Liệt kê mục sai hoặc thiếu, ghi rõ thông tin đối chiếu rồi viết lại email. Kiểm đúng thứ Tư lúc 14h, phòng 302 và hạn xác nhận 17h thứ Ba. Giữ giọng lịch sự.</p>
+            <p class="copy-status" role="status"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide-concept" data-slide="4" aria-label="Đọc kết quả kiểm tra theo thứ tự">
+      <div class="slide-inner">
+        <div class="slide-label label-green">Cách nghiệm thu bản sửa</div>
+        <h2 class="slide-title" id="slide-title-4">Đọc kết quả kiểm tra theo thứ tự</h2>
+        <p class="slide-desc">Bản rà soát hữu ích phải làm rõ lỗi nào được sửa và dữ kiện nào vẫn cần hỏi lại.</p>
+        <ol class="lesson-steps">
+          <li><strong>Đặt nguồn cạnh bản nháp</strong><p>So từng dòng có số liệu, tên hoặc thời hạn. Đánh dấu từng chỗ khác nguồn.</p></li>
+          <li><strong>Xem lý do sửa</strong><p>Ưu tiên thay đổi có căn cứ. Gắn nhãn cho các chi tiết còn thiếu thay vì điền theo suy đoán.</p></li>
+          <li><strong>Mở lại dữ liệu gốc</strong><p>Tự kiểm những dữ kiện có thể khiến người nhận hành động sai nếu bị ghi nhầm.</p></li>
+          <li><strong>Chốt phiên bản gửi</strong><p>Đọc trọn bản sửa để kiểm tra giọng văn, cách trình bày và thông tin bắt buộc.</p></li>
+        </ol>
+      </div>
+    </section>
+    <section class="slide slide-conclusion" data-slide="5" aria-label="Thực hành">
+      <div class="slide-inner conclusion-inner">
+        <div class="slide-label label-green">Thực hành</div>
+        <h2 class="slide-title" id="slide-title-5">Bốn bài thực hành</h2>
+        <p class="slide-desc">Tải và đính kèm tệp dữ liệu ở những đề có nút tải. Với dữ kiện còn thiếu, ghi rõ phần cần xác nhận.</p>
+        <div class="practice-box">
+          <div class="practice-box-head">
+            <h3>Bài tập dự án</h3>
+            <button class="master-unlock-btn" id="btn-master-unlock" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+              <span class="lock-icon" aria-hidden="true">🔒</span>
+              <span class="unlock-btn-text">Mở khóa toàn bộ</span>
+            </button>
+          </div>
+          <div class="practice-prompts">
+            <article class="prompt-card" data-prompt-card aria-labelledby="b11-bt01-title">
+              <div class="prompt-scenario">
+                <h4 id="b11-bt01-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  B11-BT01 · Kiểm email dời lịch bảo trì
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn chuẩn bị thông báo để nhân viên biết cách in tài liệu trong thời gian bảo trì máy in khu A.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, bản nháp ghi bảo trì vào thứ Năm và hẹn dùng lại ngay sau 15h. Mong muốn thực tế là ghi đúng lịch, máy in thay thế và điều kiện dùng lại theo thông tin đã xác nhận trong tệp Word.</p>
+                <p><strong>Mục tiêu.</strong> Đính kèm tệp Word và yêu cầu AI tìm chi tiết sai hoặc thiếu. Nộp câu lệnh kiểm tra, danh sách lỗi và thông báo đã sửa.</p>
+              </div>
+              <div class="prompt-dataset-box word">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📄</span>
+                  <div>
+                    <span class="dataset-name">Email nháp và lịch bảo trì máy in</span>
+                    <span class="dataset-desc">Đối chiếu nội dung email với lịch và hướng dẫn đã xác nhận.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/bai-11/data-b11-bt01-email-bao-tri-may-in.docx" class="dataset-dl-btn word" download aria-label="Tải tệp DOCX cho B11-BT01">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">DOCX</span>
+                </a>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-b11-bt01">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-b11-bt01">Đọc tệp Word đính kèm. Đối chiếu email nháp với phần Thông tin đã xác nhận. Lập bảng gồm Chi tiết nháp, Dữ kiện gốc và Cách sửa. Sau đó viết thông báo có ngày, giờ bảo trì, máy in thay thế và điều kiện dùng lại.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="b11-bt02-title">
+              <div class="prompt-scenario">
+                <h4 id="b11-bt02-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  B11-BT02 · Kiểm tỷ lệ xử lý hồ sơ
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn kiểm báo cáo tiến độ xử lý hồ sơ trước khi gửi trưởng nhóm.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, báo cáo nháp ghi đã xử lý 120 hồ sơ, đạt 85% và còn 20 hồ sơ. Mong muốn thực tế là tính lại tỷ lệ và số hồ sơ còn lại từ số liệu gốc của ba nhóm trong Excel.</p>
+                <p><strong>Mục tiêu.</strong> Yêu cầu AI tổng hợp số hồ sơ, ghi công thức và đối chiếu từng chỉ tiêu với bản nháp. Nộp bảng đối chiếu và câu báo cáo đã sửa.</p>
+              </div>
+              <div class="prompt-dataset-box">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📊</span>
+                  <div>
+                    <span class="dataset-name">Sổ theo dõi tiến độ xử lý hồ sơ</span>
+                    <span class="dataset-desc">Ba nhóm hồ sơ và ba chỉ tiêu trong báo cáo nháp.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/bai-11/data-b11-bt02-tien-do-xu-ly-ho-so.xlsx" class="dataset-dl-btn" download aria-label="Tải tệp XLSX cho B11-BT02">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">XLSX</span>
+                </a>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-b11-bt02">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-b11-bt02">Đọc tệp Excel, tính tổng số hồ sơ và số hồ sơ đã xử lý từ sổ theo dõi. Ghi công thức tính tỷ lệ và số còn lại. Đối chiếu từng chỉ tiêu với bản nháp, rồi viết một câu báo cáo đã sửa.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="b11-bt03-title">
+              <div class="prompt-scenario">
+                <h4 id="b11-bt03-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  B11-BT03 · Kiểm cam kết trong email giao hàng
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn phụ trách chăm sóc khách hàng và cần cập nhật tình trạng đơn 24 bộ tài liệu cho khách.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, email nháp hứa giao trước 10h thứ Sáu và miễn phí vận chuyển. Mong muốn thực tế là xác nhận số lượng đã đóng gói, ghi lịch dự kiến và nêu rõ những thông tin còn chờ xác nhận.</p>
+                <p><strong>Mục tiêu.</strong> Đính kèm tệp Word và yêu cầu AI đối chiếu từng cam kết với thông tin từ Kho. Nộp câu lệnh, bảng đối chiếu và email cuối.</p>
+              </div>
+              <div class="prompt-dataset-box word">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📄</span>
+                  <div>
+                    <span class="dataset-name">Email giao hàng và xác nhận từ Kho</span>
+                    <span class="dataset-desc">Kiểm số lượng, lịch giao dự kiến và các cam kết chưa chốt.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/bai-11/data-b11-bt03-email-giao-hang.docx" class="dataset-dl-btn word" download aria-label="Tải tệp DOCX cho B11-BT03">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">DOCX</span>
+                </a>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-b11-bt03">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-b11-bt03">Đọc bản nháp và phần Thông tin từ Kho trong tệp Word. Lập bảng gồm Chi tiết trong nháp, Căn cứ và Trạng thái. Sau đó viết email xác nhận số lượng đã đóng gói, nêu lịch giao dự kiến và đánh dấu giờ giao, phí vận chuyển đang chờ xác nhận.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="b11-bt04-title">
+              <div class="prompt-scenario">
+                <h4 id="b11-bt04-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  B11-BT04 · Kiểm đơn vị và tổng tiền trong bảng mua văn phòng phẩm
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn rà đề xuất mua bút bi và sổ cho phòng Hành chính.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, bảng nháp ghi mua 6 hộp bút và tổng 808.000đ. Mong muốn thực tế là mua đủ số bút và sổ trong đề, tính tiền theo đúng quy cách và đơn giá của nhà cung cấp.</p>
+                <p><strong>Mục tiêu.</strong> Yêu cầu AI đọc tệp Excel, kiểm số cây mỗi hộp, số lượng cần mua, từng thành tiền và dòng tổng. Nộp câu lệnh và bảng đã sửa có công thức.</p>
+              </div>
+              <div class="prompt-dataset-box">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📊</span>
+                  <div>
+                    <span class="dataset-name">Báo giá gốc và bảng đề xuất nháp</span>
+                    <span class="dataset-desc">Đối chiếu số lượng cần mua, quy cách bán và tổng tiền.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/bai-11/data-b11-bt04-bao-gia-van-phong-pham.xlsx" class="dataset-dl-btn" download aria-label="Tải tệp XLSX cho B11-BT04">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">XLSX</span>
+                </a>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-b11-bt04">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-b11-bt04">Đọc bảng đề xuất nháp và bảng báo giá gốc trong tệp Excel. Tính số hộp bút cần mua từ nhu cầu và quy cách bán. Rà đơn giá, từng thành tiền và phép cộng tổng. Chỉ ra các điểm lệch rồi lập lại bảng có đơn vị bán, số lượng, đơn giá và công thức thành tiền.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="lesson-sources"><a href="../Giao_trinh/UNG-DUNG-AI-TRONG-VAN-PHONG-CO-BAN-KY-NANG-GIAO-TIEP-1%20%283%29.pdf#page=39">Giáo trình PDF · Trang 39</a></p>
+        <nav class="lesson-links" aria-label="Chuyển bài">
+          <a class="topbar-back" href="bai-10.html">← Bài 10</a>
+          <a class="topbar-back" href="bai-12.html">Bài 12 →</a>
+        </nav>
+      </div>
+    </section>
+    <dialog class="lock-modal" id="lock-modal" aria-labelledby="lock-modal-title">
+      <div class="lock-modal-card">
+        <button class="lock-modal-close" type="button" id="lock-modal-close" aria-label="Đóng">×</button>
+        <h2 class="lock-modal-title" id="lock-modal-title">Mở gợi ý câu lệnh</h2>
+        <p class="lock-modal-desc" id="lock-modal-desc">Nhập mã do giảng viên cung cấp.</p>
+        <form class="lock-modal-form" id="lock-modal-form">
+          <input class="lock-modal-input" id="lock-modal-input" type="password" aria-label="Mã mở gợi ý" aria-describedby="lock-modal-desc" autocomplete="off" maxlength="10">
+          <button class="lock-modal-submit" id="lock-modal-submit" type="submit">Mở gợi ý</button>
+        </form>
+        <p class="lock-modal-error" id="lock-modal-error" role="alert" hidden>Mã chưa đúng. Vui lòng thử lại.</p>
+      </div>
+    </dialog>
+  </main>
+
+  <nav class="slide-nav" aria-label="Điều hướng slide">
+    <button class="nav-btn" type="button" id="btn-prev" aria-label="Slide trước" disabled>←</button>
+    <div class="nav-center">
+      <div class="dot-track" id="dot-track" role="tablist" aria-label="Chọn slide"></div>
+      <span class="slide-counter"><span id="cur">1</span> / <span id="total">5</span></span>
+    </div>
+    <button class="nav-btn" type="button" id="btn-next" aria-label="Slide tiếp theo">→</button>
+  </nav>
+  <script src="../js/slide-deck.js" defer></script>
+</body>
+</html>

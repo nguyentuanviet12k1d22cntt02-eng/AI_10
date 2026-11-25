@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bài 14 · Thực hành kiểm tra cuối khóa — Lớp học AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Nunito:wght@700;800;900;1000&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/slide-deck.css">
+</head>
+<body data-course-lesson="14" data-lesson-series="advanced">
+  <header class="topbar">
+    <a class="topbar-logo" href="../index.html" aria-label="Về trang chủ Lớp học AI"><span class="logo-mark" aria-hidden="true"><span class="book-icon"></span></span>Lớp học AI</a>
+    <div class="topbar-center">Bài 14 · Thực hành kiểm tra cuối khóa</div>
+    <a class="topbar-back" href="../index.html#lo-trinh">← Lộ trình</a>
+  </header>
+
+  <main class="deck" id="deck" aria-label="Bài 14">
+    <section class="slide slide-cover" data-slide="1" aria-label="Thực hành kiểm tra cuối khóa">
+      <div class="slide-inner cover-inner">
+        <div class="cover-left">
+          <div class="cover-kicker">
+            <span class="pill pill-green">Bài 14</span>
+            <span class="cover-kicker-label">Chương 7 · Kiểm tra cuối khóa</span>
+          </div>
+          <h1 class="cover-title">Thực hành<br><em>kiểm tra cuối khóa</em></h1>
+          <p class="cover-desc">Bốn tình huống công sở để thực hành giao việc, tinh chỉnh và kiểm tra kết quả AI trước khi gửi.</p>
+        </div>
+        <div class="toc-card">
+          <div class="toc-card-head">
+            <span class="toc-icon icon-blue" aria-hidden="true"><span class="book-icon"></span></span>
+            <div><strong>Nội dung bài học</strong><p>4 slide</p></div>
+          </div>
+          <ul class="toc-list" role="list">
+            <li><button class="toc-link" type="button" data-go-to="2" data-content-art="brief"><span class="toc-num" aria-hidden="true">01</span>Bốn đề thực hành</button></li>
+            <li><button class="toc-link" type="button" data-go-to="3" data-content-art="task"><span class="toc-num" aria-hidden="true">02</span>Quy trình và sản phẩm nộp</button></li>
+            <li><button class="toc-link" type="button" data-go-to="4" data-content-art="report"><span class="toc-num" aria-hidden="true">03</span>Thang điểm và tự kiểm</button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide-conclusion" data-slide="2" aria-label="Đề thực hành tổng hợp">
+      <div class="slide-inner conclusion-inner">
+        <div class="slide-label label-blue">Thực hành tổng hợp</div>
+        <h2 class="slide-title" id="slide-title-2">Bốn đề thực hành cuối khóa</h2>
+        <div class="practice-box">
+          <div class="practice-prompts">
+            <article class="prompt-card" aria-labelledby="b14-ck-title">
+              <div class="prompt-scenario">
+                <h4 id="b14-ck-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  B14-CK · Thông báo bảo trì cổng hồ sơ
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn phụ trách hành chính ở Sao Việt và cần thông báo bảo trì cổng hồ sơ cho toàn thể nhân viên.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, cổng có lịch tạm dừng và địa chỉ nhận hồ sơ khẩn chưa được cung cấp. Mong muốn thực tế là nhân viên biết gửi hồ sơ khẩn cho Hành chính qua email công vụ và chỉ dùng lại cổng sau khi Kỹ thuật xác nhận.</p>
+                <p><strong>Mục tiêu.</strong> Dùng AI soạn thông báo tối đa 160 từ, nêu lịch bảo trì, cách xử lý hồ sơ khẩn và điều kiện mở lại. Lập bảng kiểm ba cột để đối chiếu và đánh dấu địa chỉ email cần xác nhận.</p>
+              </div>
+              <div class="prompt-dataset-box word">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📄</span>
+                  <div>
+                    <span class="dataset-name">Phiếu giao việc bảo trì cổng hồ sơ</span>
+                    <span class="dataset-desc">Lịch, kênh xử lý hồ sơ khẩn và điều kiện dùng lại cổng.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/bai-14/data-b14-ck-thong-bao-bao-tri-cong-ho-so.docx" class="dataset-dl-btn word" download aria-label="Tải tệp DOCX cho B14-CK">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">DOCX</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="prompt-card" aria-labelledby="b14-ck02-title">
+              <div class="prompt-scenario">
+                <h4 id="b14-ck02-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  B14-CK02 · Thông báo đổi phòng tập huấn
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn phụ trách tập huấn cho nhân viên mới tại Sao Việt. Phòng Nhân sự đã chốt địa điểm thay thế.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, bản nháp vẫn ghi phòng 201, tòa A và yêu cầu toàn công ty tham gia. Mong muốn thực tế là thông báo đúng phòng mới, đúng nhóm đã đăng ký và đúng hạn xác nhận trong tệp Word.</p>
+                <p><strong>Mục tiêu.</strong> Dùng AI soạn thông báo và đưa địa điểm, việc cần làm lên đầu. Lập bảng kiểm người nhận, giờ học, phòng, vật dụng cần mang và hạn xác nhận.</p>
+              </div>
+              <div class="prompt-dataset-box word">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📄</span>
+                  <div>
+                    <span class="dataset-name">Phiếu đổi phòng và thông báo nháp</span>
+                    <span class="dataset-desc">Lịch đã chốt, phòng mới, người tham dự và hạn xác nhận.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/bai-14/data-b14-ck02-doi-phong-tap-huan.docx" class="dataset-dl-btn word" download aria-label="Tải tệp DOCX cho B14-CK02">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">DOCX</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="prompt-card" aria-labelledby="b14-ck03-title">
+              <div class="prompt-scenario">
+                <h4 id="b14-ck03-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  B14-CK03 · Cập nhật các đơn giao chậm
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn cần gửi cập nhật nội bộ về 20 đơn giao chậm cho trưởng nhóm.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, bản nháp ghi cả 20 đơn đã giao và hứa hoàn tiền. Mong muốn thực tế là báo đúng số đơn theo từng trạng thái và làm rõ những nội dung đang chờ xác nhận.</p>
+                <p><strong>Mục tiêu.</strong> Tổng hợp tệp Excel thành email có các mục Kết quả, Việc còn lại và Đầu mối. Lập bảng kiểm số lượng, hạn gửi và các cam kết trước khi gửi.</p>
+              </div>
+              <div class="prompt-dataset-box">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📊</span>
+                  <div>
+                    <span class="dataset-name">Sổ theo dõi 20 đơn giao chậm</span>
+                    <span class="dataset-desc">Trạng thái từng đơn, đầu mối xử lý và trích email nháp.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/bai-14/data-b14-ck03-don-giao-cham.xlsx" class="dataset-dl-btn" download aria-label="Tải tệp XLSX cho B14-CK03">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">XLSX</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="prompt-card" aria-labelledby="b14-ck04-title">
+              <div class="prompt-scenario">
+                <h4 id="b14-ck04-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  B14-CK04 · Tóm tắt khảo sát sau tập huấn
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn báo cáo cho quản lý về khảo sát sau một buổi tập huấn có 40 người tham dự.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, bản nháp ghi “80% người tham dự đánh giá cao” và khẳng định hai cải tiến sẽ áp dụng tháng tới. Mong muốn thực tế là tính đúng mẫu số và ghi hai cải tiến ở mức đề xuất.</p>
+                <p><strong>Mục tiêu.</strong> Dùng phiếu trong tệp Excel để tính tỷ lệ phản hồi, tỷ lệ chấm 4 hoặc 5 trong số người trả lời và số lượt chọn từng đề xuất. Viết tóm tắt và lập bảng kiểm có công thức.</p>
+              </div>
+              <div class="prompt-dataset-box">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📊</span>
+                  <div>
+                    <span class="dataset-name">Phiếu khảo sát sau tập huấn</span>
+                    <span class="dataset-desc">Danh sách phiếu, số người tham dự và trích báo cáo nháp.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/bai-14/data-b14-ck04-khao-sat-tap-huan.xlsx" class="dataset-dl-btn" download aria-label="Tải tệp XLSX cho B14-CK04">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">XLSX</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide-concept" data-slide="3" aria-label="Thực hiện và nộp bài">
+      <div class="slide-inner">
+        <div class="slide-label label-pink">Quy trình và sản phẩm nộp</div>
+        <h2 class="slide-title" id="slide-title-3">Thực hiện và nộp bài</h2>
+        <p class="slide-desc">Bài nộp của mỗi đề gồm một tệp Word có văn bản cuối, bảng kiểm và các câu lệnh đã dùng.</p>
+        <ol class="lesson-steps">
+          <li><strong>Giao việc bằng 3 yếu tố</strong><p>Viết câu lệnh có nhiệm vụ, ngữ cảnh và tham chiếu. Cung cấp dữ kiện của đề và nói rõ văn bản cần tạo.</p></li>
+          <li><strong>Tinh chỉnh theo đối tượng</strong><p>Chỉnh bản nháp cho đúng người đọc và đúng mục tiêu của đề. Văn bản cuối tối đa 160 từ.</p></li>
+          <li><strong>Đối chiếu với dữ liệu</strong><p>Lập bảng có ba cột Chi tiết, Dữ kiện gốc và Kết quả kiểm. Đối chiếu các mốc, số liệu, điều kiện và mục chờ xác nhận theo đề.</p></li>
+          <li><strong>Đóng gói bài làm</strong><p>Đặt tên tệp theo mẫu <code>HoTen_MaDe.docx</code>, chẳng hạn <code>HoTen_B14-CK.docx</code> hoặc <code>HoTen_B14-CK02.docx</code>. Kèm câu lệnh giao việc, tinh chỉnh và kiểm tra.</p></li>
+        </ol>
+      </div>
+    </section>
+    <section class="slide slide-concept" data-slide="4" aria-label="Thang điểm 10">
+      <div class="slide-inner">
+        <div class="slide-label label-green">Thang điểm và tự kiểm</div>
+        <h2 class="slide-title" id="slide-title-4">Thang điểm 10</h2>
+        <p class="slide-desc">Đối chiếu từng tiêu chí với bài nộp trước khi gửi.</p>
+        <ul class="lesson-steps lesson-rubric" role="list">
+          <li><strong>4 điểm · Bám dữ liệu</strong><p>Văn bản đúng dữ kiện, đối tượng, mốc thời gian và số liệu của đề đang làm.</p></li>
+          <li><strong>3 điểm · Xử lý tình huống</strong><p>Giải quyết đúng vấn đề, nêu đủ hành động hoặc kết quả cần có và đánh dấu thông tin còn chờ xác nhận nếu đề có.</p></li>
+          <li><strong>2 điểm · Sản phẩm hoàn chỉnh</strong><p>Văn bản phù hợp người đọc, tối đa 160 từ. Có bảng kiểm ba cột.</p></li>
+          <li><strong>1 điểm · Minh chứng</strong><p>Có câu lệnh giao việc, lệnh tinh chỉnh và lệnh kiểm tra.</p></li>
+        </ul>
+        <p class="lesson-sources"><a href="../Giao_trinh/UNG-DUNG-AI-TRONG-VAN-PHONG-CO-BAN-KY-NANG-GIAO-TIEP-1%20%283%29.pdf#page=51">Giáo trình PDF · Trang 51</a></p>
+        <nav class="lesson-links" aria-label="Chuyển bài">
+          <a class="topbar-back" href="bai-13.html">← Bài 13</a>
+          <a class="topbar-back" href="../index.html#lo-trinh">Về lộ trình ↑</a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <nav class="slide-nav" aria-label="Điều hướng slide">
+    <button class="nav-btn" type="button" id="btn-prev" aria-label="Slide trước" disabled>←</button>
+    <div class="nav-center">
+      <div class="dot-track" id="dot-track" role="tablist" aria-label="Chọn slide"></div>
+      <span class="slide-counter"><span id="cur">1</span> / <span id="total">4</span></span>
+    </div>
+    <button class="nav-btn" type="button" id="btn-next" aria-label="Slide tiếp theo">→</button>
+  </nav>
+  <script src="../js/slide-deck.js" defer></script>
+</body>
+</html>

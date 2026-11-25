@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bài 10 · Câu lệnh tương tác — Lớp học AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Nunito:wght@700;800;900;1000&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/slide-deck.css">
+  <link rel="stylesheet" href="../css/lesson-10.css">
+</head>
+<body data-course-lesson="10" data-lesson-series="advanced">
+  <header class="topbar">
+    <a class="topbar-logo" href="../index.html" aria-label="Về trang chủ Lớp học AI"><span class="logo-mark" aria-hidden="true"><span class="book-icon"></span></span>Lớp học AI</a>
+    <div class="topbar-center">Bài 10 · Câu lệnh tương tác</div>
+    <a class="topbar-back" href="../index.html#lo-trinh">← Lộ trình</a>
+  </header>
+
+  <main class="deck" id="deck" aria-label="Bài 10">
+    <section class="slide slide-cover" data-slide="1" aria-label="Câu lệnh tương tác">
+      <div class="slide-inner cover-inner lesson10-cover">
+        <div class="cover-left">
+          <div class="cover-kicker">
+            <span class="pill pill-green">Bài 10</span>
+            <span class="cover-kicker-label">Chương 5 · Tương tác và kiểm tra</span>
+          </div>
+          <h1 class="cover-title">Câu lệnh<br><em>tương tác</em></h1>
+          <p class="cover-desc">Khi bản nháp chưa đạt, hãy viết câu lệnh tiếp theo để chỉ đúng điều cần sửa và dữ kiện cần giữ.</p>
+          <div class="lesson10-cover-actions">
+            <button class="lesson10-action" type="button" data-go-to="2">Bắt đầu bài học <span aria-hidden="true">→</span></button>
+            <button class="lesson10-action lesson10-outline" type="button" data-go-to="3">Xem ví dụ</button>
+          </div>
+          <details class="slide-exercises lesson10-index">
+            <summary>Mục lục</summary>
+            <ul class="toc-list exercise-body" role="list">
+              <li><button class="toc-link" type="button" data-go-to="2">Cách viết lệnh tương tác</button></li>
+              <li><button class="toc-link" type="button" data-go-to="3">Ví dụ trước và sau</button></li>
+              <li><button class="toc-link" type="button" data-go-to="4">Kiểm tra bản sửa</button></li>
+              <li><button class="toc-link" type="button" data-go-to="5">Thực hành 4 dự án công sở</button></li>
+              <li><button class="toc-link" type="button" data-go-to="6">Tham khảo · Gemini Canvas</button></li>
+            </ul>
+          </details>
+        </div>
+        <figure class="lesson10-cover-art">
+          <img src="../assets/images/bai-10/cau-lenh-tuong-tac-cover.png" width="1448" height="1086" alt="Nhân viên văn phòng chỉ ra một dòng cần sửa trên bản nháp rồi kiểm tra bản đã chỉnh.">
+        </figure>
+      </div>
+    </section>
+    <section class="slide slide-concept" data-slide="2" aria-labelledby="slide-title-2">
+      <div class="slide-inner">
+        <div class="slide-label label-blue">Cách viết lệnh tương tác</div>
+        <h2 class="slide-title" id="slide-title-2">Một vòng chỉnh bản nháp</h2>
+        <p class="slide-desc">Gửi yêu cầu chỉnh sửa ở lượt chat tiếp theo và đối chiếu hai bản.</p>
+        <ol class="lesson10-flow" role="list">
+          <li><span class="lesson10-icon" aria-hidden="true"><span class="search-icon"></span></span><strong>Khoanh chỗ lệch</strong><p>“Dành cho mọi người” còn quá chung.</p></li>
+          <li><span class="lesson10-icon" aria-hidden="true"><span class="chat-icon"></span></span><strong>Nêu điều cần đổi</strong><p>Ví dụ: viết cho nhân viên văn phòng, dùng giọng trẻ trung.</p></li>
+          <li><span class="lesson10-icon" aria-hidden="true"><span class="book-icon"></span></span><strong>Giữ dữ kiện</strong><p>Giữ tên khóa học và lời mời.</p></li>
+          <li><span class="lesson10-icon" aria-hidden="true"><span class="target-icon"></span></span><strong>Đọc lại</strong><p>Đã nêu rõ cách dùng AI trong Excel chưa?</p></li>
+        </ol>
+        <p class="lesson10-flow-note"><strong>Chọn điểm cần sửa</strong> <span class="lesson10-token">Đối tượng</span> <span class="lesson10-token">Giọng văn</span> <span class="lesson10-token">Trọng tâm</span> <span class="lesson10-token">Định dạng</span></p>
+      </div>
+    </section>
+    <section class="slide slide-compare" data-slide="3" aria-label="Sửa bản quảng cáo khóa học Excel">
+      <div class="slide-inner">
+        <div class="slide-label label-pink">Ví dụ trước và sau</div>
+        <h2 class="slide-title" id="slide-title-3">Sửa bản quảng cáo khóa học Excel</h2>
+        <figure class="lesson10-story-art">
+          <img src="../assets/images/bai-10/cau-lenh-tuong-tac-ba-khung.png" width="2172" height="724" alt="Ba khung theo thứ tự: xem bản nháp, gửi yêu cầu sửa và xem bản đã chỉnh.">
+        </figure>
+        <div class="lesson10-story">
+          <article class="lesson10-story-card">
+            <div class="lesson10-story-label"><span class="book-icon" aria-hidden="true"></span>Bản nháp</div>
+            <p>Khóa học Excel <mark>dành cho mọi người</mark>. Hãy đăng ký để nâng cao kỹ năng.</p>
+          </article>
+          <article class="lesson10-story-card lesson10-story-request">
+            <div class="lesson10-story-label"><span class="chat-icon" aria-hidden="true"></span>Lệnh chỉnh</div>
+            <p>Viết cho <strong>nhân viên văn phòng</strong> với giọng trẻ trung. Nhấn vào cách <strong>AI gợi ý công thức</strong>.</p>
+          </article>
+          <article class="lesson10-story-card">
+            <div class="lesson10-story-label"><span class="target-icon" aria-hidden="true"></span>Bản đã sửa</div>
+            <p>Mất thời gian vì bảng tính? Khóa học Excel hướng dẫn cách dùng AI gợi ý công thức cho công việc văn phòng. <strong>Nhắn tin để nhận đề cương.</strong></p>
+          </article>
+        </div>
+        <details class="slide-exercises lesson10-disclosure">
+          <summary>Xem câu lệnh đầy đủ</summary>
+          <div class="exercise-body">
+            <div class="prompt-card">
+              <div class="prompt-box-inner">
+                <div class="prompt-box-head">
+                  <span>Câu lệnh sửa bản nháp</span>
+                  <button class="copy-btn" type="button" data-copy="p-b10-s3">Sao chép</button>
+                </div>
+                <p class="prompt-text" id="p-b10-s3">Viết lại lời mời học Excel cho nhân viên văn phòng, giọng trẻ trung. Mở đầu bằng một khó khăn khi xử lý bảng tính, nêu cách dùng AI gợi ý công thức và kết bằng “Nhắn tin để nhận đề cương”. Giữ tên khóa học. Không tự thêm học phí, ưu đãi hoặc lịch khai giảng.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+    <section class="slide slide-concept" data-slide="4" aria-labelledby="slide-title-4">
+      <div class="slide-inner">
+        <div class="slide-label label-green">Kiểm tra bản sửa</div>
+        <h2 class="slide-title" id="slide-title-4">Khi nào bản sửa đã đạt?</h2>
+        <dl class="lesson10-review">
+          <div><dt><span aria-hidden="true">✓</span> Đúng người đọc</dt><dd><span class="lesson10-token">Nhân viên văn phòng</span> Giọng gần gũi, mở bằng một khó khăn khi làm việc với bảng tính.</dd></div>
+          <div><dt><span aria-hidden="true">✓</span> Rõ lợi ích</dt><dd><span class="lesson10-token">AI gợi ý công thức Excel</span> Nêu việc cụ thể người học sẽ làm.</dd></div>
+          <div><dt><span aria-hidden="true">✓</span> Giữ dữ kiện</dt><dd><span class="lesson10-token">Nhắn tin để nhận đề cương</span> Giữ tên khóa học và lời mời. Học phí, ưu đãi và ngày học chưa có trong đề.</dd></div>
+          <div><dt><span aria-hidden="true">✓</span> Đúng định dạng</dt><dd><span class="lesson10-token">Câu mở · Nội dung · Lời mời</span> Kiểm lại bố cục và giới hạn độ dài đã giao.</dd></div>
+        </dl>
+        <button class="lesson10-action lesson10-outline" type="button" data-go-to="5">Thử viết câu lệnh chỉnh <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+    <section class="slide slide-conclusion" data-slide="5" aria-labelledby="slide-title-5">
+      <div class="slide-inner conclusion-inner">
+        <div class="slide-label label-green">Thực hành dự án</div>
+        <h2 class="slide-title" id="slide-title-5">Thực hành câu lệnh tương tác</h2>
+        <p class="slide-desc">Tải tệp Word của dự án rồi đính kèm khi gửi câu lệnh đầu tiên. Tự viết hai câu lệnh trong cùng cuộc trò chuyện. Nộp hai câu lệnh, bản sau lượt 1 và bản cuối kèm ít nhất hai chỗ đã đối chiếu với tệp.</p>
+
+        <div class="practice-box">
+          <div class="practice-box-head">
+            <h3>Bài tập dự án công sở</h3>
+            <button class="master-unlock-btn" id="btn-master-unlock" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+              <span class="lock-icon" aria-hidden="true">🔒</span>
+              <span class="unlock-btn-text">Mở khóa toàn bộ</span>
+            </button>
+          </div>
+          <div class="practice-prompts">
+            <article class="prompt-card" data-prompt-card aria-labelledby="b10-da1-title">
+              <div class="prompt-scenario">
+                <h4 id="b10-da1-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  Dự án 1 · Chỉnh bài Facebook mở lớp Excel với AI
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn chuẩn bị bài Facebook giới thiệu lớp Excel với AI cho nhân viên văn phòng.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, bản nháp ghi lớp học 5 buổi qua Zoom, miễn phí và có chứng chỉ. Mong muốn thực tế là bài đăng ghi đúng lịch 3 buổi qua Google Meet và bỏ phần học phí, chứng chỉ vì hai mục này còn chờ duyệt.</p>
+                <p><strong>Mục tiêu.</strong> Dùng AI chỉnh các chỗ tô đỏ theo dữ kiện trong tệp Word để có bài Facebook đúng thông tin, dễ đọc và kết bằng “Nhắn tin để nhận đề cương”.</p>
+              </div>
+
+              <div class="prompt-dataset-box word">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📄</span>
+                  <div>
+                    <span class="dataset-name">Dữ liệu bài Facebook mở lớp Excel với AI</span>
+                    <span class="dataset-desc">Bản nháp có đánh dấu lỗi bằng chữ đỏ và dữ kiện để đối chiếu.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/bai-10/data-b10-da1-bai-facebook-lop-excel-ai.docx" class="dataset-dl-btn word" download aria-label="Tải tệp Word dữ liệu dự án 1">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">DOCX</span>
+                </a>
+              </div>
+
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Prompt mẫu đang khóa</strong><small>Nhập mã do giảng viên cung cấp</small></span>
+              </button>
+
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span class="prompt-unlocked-tag">🔓 Hai lượt chỉnh</span>
+                  <button class="relock-btn" type="button">Khóa lại</button>
+                </div>
+                <div class="step-prompt-item">
+                  <div class="step-prompt-header">
+                    <span class="step-badge step-1">Lượt 1 · Sửa bản nháp</span>
+                    <button class="copy-btn" type="button" data-copy="p-b10-da1-1" aria-label="Sao chép prompt lượt 1">Sao chép</button>
+                  </div>
+                  <p class="prompt-text" id="p-b10-da1-1">Đối chiếu các cụm chữ đỏ trong bản nháp Facebook với mục Thông tin đã duyệt. Ghi ngắn gọn mỗi chỗ cần sửa hoặc bỏ và lý do. Sau đó sửa bài theo đúng tên lớp, người đọc, ba nội dung học, lịch và lời mời cuối bài. Chỉ dùng dữ kiện đã duyệt.</p>
+                </div>
+                <div class="step-prompt-item">
+                  <div class="step-prompt-header">
+                    <span class="step-badge step-2">Lượt 2 · Chỉnh bản vừa nhận</span>
+                    <button class="copy-btn" type="button" data-copy="p-b10-da1-2" aria-label="Sao chép prompt lượt 2">Sao chép</button>
+                  </div>
+                  <p class="prompt-text" id="p-b10-da1-2">Chỉnh bài Facebook vừa sửa. Mở đầu bằng một khó khăn khi tổng hợp báo cáo, trình bày ba nội dung học bằng ba gạch đầu dòng và giới hạn phần bài đăng ở 130 từ. Giữ tên lớp, người đọc, lịch Google Meet và câu “Nhắn tin để nhận đề cương”.</p>
+                </div>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="b10-da2-title">
+              <div class="prompt-scenario">
+                <h4 id="b10-da2-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  Dự án 2 · Rút gọn cập nhật tiến độ rà soát phiếu kho
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn tổng hợp tiến độ rà soát phiếu kho để gửi trưởng nhóm vận hành qua nhóm chat.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, bản nháp ghi còn một phiếu chờ Kế toán và coi 16h thứ Sáu là hạn gửi báo cáo. Mong muốn thực tế là nêu 18/20 phiếu đã kiểm, hai phiếu chờ Kho xác nhận và Hà theo dõi trước 16h thứ Sáu. Lịch gửi báo cáo còn chờ chốt.</p>
+                <p><strong>Mục tiêu.</strong> Yêu cầu AI sửa theo tệp Word rồi rút bản cập nhật còn đúng ba dòng: Kết quả, Vướng mắc và Việc tiếp theo.</p>
+              </div>
+
+              <div class="prompt-dataset-box word">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📄</span>
+                  <div>
+                    <span class="dataset-name">Dữ liệu cập nhật tiến độ rà soát phiếu kho</span>
+                    <span class="dataset-desc">Biên bản chốt tiến độ và bản cập nhật của AI.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/bai-10/data-b10-da2-cap-nhat-tien-do-ra-soat-phieu-kho.docx" class="dataset-dl-btn word" download aria-label="Tải tệp Word dữ liệu dự án 2">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">DOCX</span>
+                </a>
+              </div>
+
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Prompt mẫu đang khóa</strong><small>Nhập mã do giảng viên cung cấp</small></span>
+              </button>
+
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span class="prompt-unlocked-tag">🔓 Hai lượt chỉnh</span>
+                  <button class="relock-btn" type="button">Khóa lại</button>
+                </div>
+                <div class="step-prompt-item">
+                  <div class="step-prompt-header">
+                    <span class="step-badge step-1">Lượt 1 · Sửa bản nháp</span>
+                    <button class="copy-btn" type="button" data-copy="p-b10-da2-1" aria-label="Sao chép prompt lượt 1">Sao chép</button>
+                  </div>
+                  <p class="prompt-text" id="p-b10-da2-1">Dựa vào dữ kiện trong tệp đính kèm, sửa bản cập nhật tiến độ gửi trưởng nhóm vận hành. Nêu đúng số phiếu đã kiểm, hai mã phiếu đang chờ Kho xác nhận số lô, người theo dõi và hạn theo dõi. Ghi thời điểm gửi báo cáo đang chờ chốt.</p>
+                </div>
+                <div class="step-prompt-item">
+                  <div class="step-prompt-header">
+                    <span class="step-badge step-2">Lượt 2 · Chỉnh bản vừa nhận</span>
+                    <button class="copy-btn" type="button" data-copy="p-b10-da2-2" aria-label="Sao chép prompt lượt 2">Sao chép</button>
+                  </div>
+                  <p class="prompt-text" id="p-b10-da2-2">Rút bản cập nhật vừa sửa còn đúng ba dòng, lần lượt bắt đầu bằng “Kết quả”, “Vướng mắc” và “Việc tiếp theo”. Giữ 18/20 phiếu, hai mã đang chờ Kho xác nhận số lô, tên Hà và hạn 16h00 thứ Sáu, ngày 04/12/2026. Dòng cuối ghi thêm tình trạng lịch gửi báo cáo.</p>
+                </div>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="b10-da3-title">
+              <div class="prompt-scenario">
+                <h4 id="b10-da3-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  Dự án 3 · Sửa email dời buổi hướng dẫn phần mềm
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn phụ trách chăm sóc khách hàng và cần báo chị Mai ở Minh An về việc dời buổi hướng dẫn phần mềm.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, bản nháp vẫn ghi lịch cũ, mời khách đến văn phòng và đổ lỗi cho khách. Mong muốn thực tế là báo lịch mới 14h–15h ngày 10/12/2026 qua Google Meet và đề nghị xác nhận lịch, danh sách 6 người trước 12h ngày 09/12.</p>
+                <p><strong>Mục tiêu.</strong> Yêu cầu AI sửa email theo tệp Word, rồi chỉnh giọng lịch sự, có lời xin lỗi và cách nhận liên kết Meet. Giới hạn phần thân ở 120 từ.</p>
+              </div>
+
+              <div class="prompt-dataset-box word">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📄</span>
+                  <div>
+                    <span class="dataset-name">Dữ liệu email dời buổi hướng dẫn phần mềm</span>
+                    <span class="dataset-desc">Thông tin dời lịch đã duyệt và email nháp cần chỉnh.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/bai-10/data-b10-da3-email-doi-lich-huong-dan-phan-mem.docx" class="dataset-dl-btn word" download aria-label="Tải tệp Word dữ liệu dự án 3">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">DOCX</span>
+                </a>
+              </div>
+
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Prompt mẫu đang khóa</strong><small>Nhập mã do giảng viên cung cấp</small></span>
+              </button>
+
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span class="prompt-unlocked-tag">🔓 Hai lượt chỉnh</span>
+                  <button class="relock-btn" type="button">Khóa lại</button>
+                </div>
+                <div class="step-prompt-item">
+                  <div class="step-prompt-header">
+                    <span class="step-badge step-1">Lượt 1 · Sửa bản nháp</span>
+                    <button class="copy-btn" type="button" data-copy="p-b10-da3-1" aria-label="Sao chép prompt lượt 1">Sao chép</button>
+                  </div>
+                  <p class="prompt-text" id="p-b10-da3-1">Sửa email trong tệp đính kèm để báo dời buổi hướng dẫn cho chị Mai. Đặt tiêu đề rõ mục đích. Căn cứ dữ kiện đã duyệt để sửa lịch mới, hình thức họp, hạn phản hồi, danh sách cần gửi và thời điểm gửi liên kết Meet.</p>
+                </div>
+                <div class="step-prompt-item">
+                  <div class="step-prompt-header">
+                    <span class="step-badge step-2">Lượt 2 · Chỉnh bản vừa nhận</span>
+                    <button class="copy-btn" type="button" data-copy="p-b10-da3-2" aria-label="Sao chép prompt lượt 2">Sao chép</button>
+                  </div>
+                  <p class="prompt-text" id="p-b10-da3-2">Chỉnh email vừa sửa để gửi khách hàng. Xưng “em”, gọi “chị Mai”, nêu lịch mới ngay sau lời chào và thêm một lời xin lỗi ngắn vì bất tiện. Dùng lý do dời lịch trong tệp. Giữ tiêu đề, hạn phản hồi, yêu cầu danh sách sáu người và cách nhận liên kết. Thân email tối đa 120 từ.</p>
+                </div>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="b10-da4-title">
+              <div class="prompt-scenario">
+                <h4 id="b10-da4-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  Dự án 4 · Chỉnh riêng đoạn hướng dẫn khi bảo trì cổng nội bộ
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn chuẩn bị thông báo bảo trì cổng nội bộ. Tiêu đề, đoạn Thời gian và đoạn Liên hệ đã được duyệt.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, đoạn Hướng dẫn bảo gửi mọi yêu cầu vào nhóm chat và giao kỹ thuật tạo phiếu hộ. Mong muốn thực tế là nhân viên gửi yêu cầu gấp qua email đúng mẫu và tự tạo lại phiếu khi cổng mở.</p>
+                <p><strong>Mục tiêu.</strong> Yêu cầu AI sửa riêng đoạn Hướng dẫn theo tệp Word, rồi trình bày đoạn này thành hai gạch đầu dòng. Giữ nguyên tiêu đề và hai đoạn đã duyệt.</p>
+              </div>
+
+              <div class="prompt-dataset-box word">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📄</span>
+                  <div>
+                    <span class="dataset-name">Dữ liệu thông báo bảo trì cổng nội bộ</span>
+                    <span class="dataset-desc">Quy trình xử lý yêu cầu gấp và bản thông báo ba đoạn.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/bai-10/data-b10-da4-thong-bao-bao-tri-cong-noi-bo.docx" class="dataset-dl-btn word" download aria-label="Tải tệp Word dữ liệu dự án 4">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">DOCX</span>
+                </a>
+              </div>
+
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Prompt mẫu đang khóa</strong><small>Nhập mã do giảng viên cung cấp</small></span>
+              </button>
+
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span class="prompt-unlocked-tag">🔓 Hai lượt chỉnh</span>
+                  <button class="relock-btn" type="button">Khóa lại</button>
+                </div>
+                <div class="step-prompt-item">
+                  <div class="step-prompt-header">
+                    <span class="step-badge step-1">Lượt 1 · Sửa bản nháp</span>
+                    <button class="copy-btn" type="button" data-copy="p-b10-da4-1" aria-label="Sao chép prompt lượt 1">Sao chép</button>
+                  </div>
+                  <p class="prompt-text" id="p-b10-da4-1">Trong bản thông báo đính kèm, chỉ sửa đoạn bắt đầu bằng “Hướng dẫn”. Dùng quy trình đã duyệt để ghi cách gửi yêu cầu gấp, cú pháp tiêu đề, tên người gửi, số máy lẻ và thao tác sau bảo trì. Trả lại toàn bộ thông báo, giữ nguyên văn tiêu đề và hai đoạn Thời gian, Liên hệ.</p>
+                </div>
+                <div class="step-prompt-item">
+                  <div class="step-prompt-header">
+                    <span class="step-badge step-2">Lượt 2 · Chỉnh bản vừa nhận</span>
+                    <button class="copy-btn" type="button" data-copy="p-b10-da4-2" aria-label="Sao chép prompt lượt 2">Sao chép</button>
+                  </div>
+                  <p class="prompt-text" id="p-b10-da4-2">Trong bản vừa sửa, trình bày phần Hướng dẫn thành đúng hai gạch đầu dòng. Dòng đầu ghi các bước gửi yêu cầu gấp trong lúc bảo trì. Dòng sau ghi việc tạo lại phiếu khi cổng mở. Giữ mọi dữ kiện trong đoạn và giữ nguyên văn tiêu đề, Thời gian, Liên hệ. Trả lại toàn bộ thông báo để đối chiếu.</p>
+                </div>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="lesson-sources"><a href="../Giao_trinh/UNG-DUNG-AI-TRONG-VAN-PHONG-CO-BAN-KY-NANG-GIAO-TIEP-1%20%283%29.pdf#page=37">Giáo trình PDF · Trang 37</a></p>
+        <nav class="lesson-links" aria-label="Chuyển bài">
+          <a class="topbar-back" href="bai-9.html">← Bài 9</a>
+          <a class="topbar-back" href="bai-11.html">Sang Bài 11 →</a>
+          <button class="lesson10-action lesson10-outline" type="button" data-go-to="6">Tham khảo thêm · Gemini Canvas</button>
+        </nav>
+      </div>
+    </section>
+    <section class="slide slide-concept" data-slide="6" aria-labelledby="slide-title-6">
+      <div class="slide-inner">
+        <div class="slide-label label-blue">Hướng dẫn bổ sung</div>
+        <h2 class="slide-title" id="slide-title-6">Sửa một đoạn trong Gemini Canvas</h2>
+        <p class="slide-desc">Nếu đã biết phần thay thế, bôi đen rồi gõ thẳng vào tài liệu. Nếu muốn Gemini viết lại, bôi đen rồi nhập một yêu cầu ngắn.</p>
+        <div class="lesson10-canvas-photos">
+          <article>
+            <h3>Bước 1 · Chọn Canvas cạnh dấu +</h3>
+        <figure class="canvas-walkthrough">
+          <a href="../assets/images/bai-10/gemini-canvas-chon-che-do.png" target="_blank" rel="noopener" aria-label="Mở ảnh gốc bước chọn Canvas trong thẻ mới">
+            <img src="../assets/images/bai-10/gemini-canvas-chon-che-do.png" width="1181" height="515" alt="Ô soạn Gemini với nút Canvas ở phía dưới bên trái, cạnh dấu cộng.">
+            <span class="lesson10-callout lesson10-callout-open" aria-hidden="true"><span>Chọn Canvas</span></span>
+          </a>
+          <figcaption>Bấm vào ảnh để mở ở kích thước gốc.</figcaption>
+        </figure>
+          </article>
+          <article>
+            <h3>Bước 2 · Bôi đen đoạn muốn sửa</h3>
+        <figure class="canvas-walkthrough">
+          <a href="../assets/images/bai-10/gemini-canvas-boi-den-doan.png" target="_blank" rel="noopener" aria-label="Mở ảnh gốc bước bôi đen đoạn trong thẻ mới">
+            <img src="../assets/images/bai-10/gemini-canvas-boi-den-doan.png" width="1895" height="827" alt="Lịch trình Đà Lạt trong Canvas với cụm tên món ăn sáng được bôi xanh và ô yêu cầu Gemini hiện bên dưới.">
+            <span class="lesson10-callout lesson10-callout-select" aria-hidden="true"><span>Vùng đã chọn</span></span>
+          </a>
+          <figcaption>Trong ảnh, người dùng đang thử cách nhờ Gemini sửa. Bấm ảnh để mở ở kích thước gốc.</figcaption>
+        </figure>
+          </article>
+        </div>
+        <details class="slide-exercises lesson10-disclosure">
+          <summary>Thử đổi món trên bản mô phỏng</summary>
+          <div class="exercise-body">
+            <div class="prompt-scenario">
+              <p><strong>Tình huống.</strong> Bạn đã có lịch trình Đà Lạt và cần đổi món ăn sáng trong lịch.</p>
+              <p><strong>Vấn đề.</strong> Hiện tại, lịch ghi món bánh ướt lòng gà lúc 08h00 tại Trại Mát. Mong muốn thực tế là đổi món sang cơm tấm, giữ đúng giờ và địa điểm.</p>
+              <p><strong>Mục tiêu.</strong> Bấm tên món đã tô xanh, nhập “cơm tấm” rồi lưu. Đối chiếu lại dòng ăn sáng và lịch uống cà phê lúc 09h30.</p>
+            </div>
+          <div class="lesson10-editor" data-canvas-demo>
+            <div class="lesson10-editor-bar"><span class="book-icon" aria-hidden="true"></span><strong>Lịch trình Đà Lạt</strong><span>Mô phỏng</span></div>
+            <div class="lesson10-editor-body">
+              <div class="lesson10-schedule">
+                <p><time datetime="08:00">08h00</time><span>Ăn sáng với <button class="lesson10-selection" type="button" aria-expanded="false" aria-controls="canvas-edit-form" data-canvas-select>bánh ướt lòng gà</button> tại khu Trại Mát.</span></p>
+                <p><time datetime="09:30">09h30</time><span>Nghỉ uống cà phê.</span></p>
+              </div>
+              <form class="lesson10-edit-form" id="canvas-edit-form" hidden>
+                <label for="canvas-dish">Tên món thay thế</label>
+                <input id="canvas-dish" type="text" required maxlength="60" autocomplete="off">
+                <button class="lesson10-action" type="submit">Lưu đoạn sửa</button>
+              </form>
+              <div class="lesson10-demo-actions">
+                <p role="status" data-canvas-status></p>
+                <button class="lesson10-reset" type="button" data-canvas-reset hidden>Làm lại</button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </details>
+        <p class="slide-desc lesson10-canvas-note">Sửa trực tiếp giúp bớt lượt chat và bớt dán lại bản nháp. Khi nhờ Gemini viết lại, mô hình vẫn có giới hạn ngữ cảnh.</p>
+        <nav class="lesson-links" aria-label="Chuyển bài">
+          <a class="topbar-back" href="bai-11.html">Sang Bài 11 →</a>
+          <a class="lesson10-guide-link" href="https://support.google.com/gemini/answer/16047321?hl=vi">Hướng dẫn Canvas của Google ↗</a>
+        </nav>
+      </div>
+    </section>
+    <dialog class="lock-modal" id="lock-modal" aria-labelledby="lock-modal-title">
+      <div class="lock-modal-card">
+        <button class="lock-modal-close" type="button" id="lock-modal-close" aria-label="Đóng">×</button>
+        <h2 class="lock-modal-title" id="lock-modal-title">Mở khóa prompt mẫu</h2>
+        <p class="lock-modal-desc" id="lock-modal-desc">Nhập mã do giảng viên cung cấp.</p>
+        <form class="lock-modal-form" id="lock-modal-form">
+          <input class="lock-modal-input" id="lock-modal-input" type="password" aria-label="Mã mở khóa prompt mẫu" aria-describedby="lock-modal-desc" autocomplete="off" maxlength="10">
+          <button class="lock-modal-submit" id="lock-modal-submit" type="submit">Mở khóa</button>
+        </form>
+        <p class="lock-modal-error" id="lock-modal-error" role="alert" hidden>Mã chưa đúng. Vui lòng thử lại.</p>
+      </div>
+    </dialog>
+  </main>
+
+  <nav class="slide-nav" aria-label="Điều hướng slide">
+    <button class="nav-btn" type="button" id="btn-prev" aria-label="Slide trước" disabled>←</button>
+    <div class="nav-center">
+      <div class="dot-track" id="dot-track" role="tablist" aria-label="Chọn slide"></div>
+      <span class="slide-counter"><span id="cur">1</span> / <span id="total">6</span></span>
+    </div>
+    <button class="nav-btn" type="button" id="btn-next" aria-label="Slide tiếp theo">→</button>
+  </nav>
+  <script src="../js/slide-deck.js" defer></script>
+  <script src="../js/lesson-10.js" defer></script>
+</body>
+</html>

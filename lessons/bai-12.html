@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bài 12 · Kỹ năng xây dựng câu lệnh nâng cao — Lớp học AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Nunito:wght@700;800;900;1000&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/slide-deck.css">
+</head>
+<body data-course-lesson="12" data-lesson-series="advanced">
+  <header class="topbar">
+    <a class="topbar-logo" href="../index.html" aria-label="Về trang chủ Lớp học AI"><span class="logo-mark" aria-hidden="true"><span class="book-icon"></span></span>Lớp học AI</a>
+    <div class="topbar-center">Bài 12 · Kỹ năng xây dựng câu lệnh nâng cao</div>
+    <a class="topbar-back" href="../index.html#lo-trinh">← Lộ trình</a>
+  </header>
+
+  <main class="deck" id="deck" aria-label="Bài 12">
+    <section class="slide slide-cover" data-slide="1" aria-label="Kỹ năng xây dựng câu lệnh nâng cao">
+      <div class="slide-inner cover-inner">
+        <div class="cover-left">
+          <div class="cover-kicker">
+            <span class="pill pill-green">Bài 12</span>
+            <span class="cover-kicker-label">Chương 6 · Hoàn thiện kỹ năng</span>
+          </div>
+          <h1 class="cover-title">Xây dựng câu lệnh<br><em>nâng cao</em></h1>
+          <p class="cover-desc">Chọn cách làm theo tình huống: để AI hỏi lại khi thiếu dữ kiện, học theo ví dụ có sẵn hoặc làm từng phần có điểm duyệt.</p>
+        </div>
+        <div class="toc-card">
+          <div class="toc-card-head">
+            <span class="toc-icon icon-blue" aria-hidden="true"><span class="book-icon"></span></span>
+            <div><strong>Nội dung bài học</strong><p>6 slide</p></div>
+          </div>
+          <ul class="toc-list" role="list">
+            <li><button class="toc-link" type="button" data-go-to="2" data-content-art="role"><span class="toc-num" aria-hidden="true">01</span>Tương tác đảo ngược</button></li>
+            <li><button class="toc-link" type="button" data-go-to="3" data-content-art="format"><span class="toc-num" aria-hidden="true">02</span>Dạy AI bằng ví dụ mẫu</button></li>
+            <li><button class="toc-link" type="button" data-go-to="4" data-content-art="task"><span class="toc-num" aria-hidden="true">03</span>Chia nhỏ nhiệm vụ</button></li>
+            <li><button class="toc-link" type="button" data-go-to="5" data-content-art="report"><span class="toc-num" aria-hidden="true">04</span>Chọn kỹ thuật phù hợp</button></li>
+            <li><button class="toc-link" type="button" data-go-to="6" data-content-art="practice"><span class="toc-num" aria-hidden="true">05</span>Thực hành 4 bài</button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide-concept" data-slide="2" aria-label="Tương tác đảo ngược">
+      <div class="slide-inner">
+        <div class="slide-label label-blue">Tương tác đảo ngược</div>
+        <h2 class="slide-title" id="slide-title-2">Tương tác đảo ngược</h2>
+        <p class="slide-desc">Khi còn thiếu thông tin quan trọng, đề nghị AI hỏi lại trước khi viết.</p>
+        <div class="feature-grid lesson-feature-grid">
+          <article class="feature-card fc-blue" data-content-art="task"><h3>Dùng khi nào</h3><p>Bạn chưa có đủ dữ kiện hoặc chưa biết phải mô tả yêu cầu theo những chiều nào.</p></article>
+          <article class="feature-card fc-pink" data-content-art="context"><h3>Cách sử dụng</h3><p>Giới hạn số câu hỏi và nêu rõ phải chờ trả lời. Dùng câu trả lời của bạn làm đầu vào cho lượt sau.</p></article>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-box-inner">
+            <div class="prompt-box-head">
+              <span>Prompt hỏi lại</span>
+              <div class="prompt-head-actions">
+                <button class="copy-btn" type="button" data-copy="p-b12-s2">Sao chép</button>
+              </div>
+            </div>
+            <p class="prompt-text" id="p-b12-s2">Đóng vai chuyên viên hành chính, chuẩn bị soạn email về chính sách làm việc từ xa. Trước khi viết, hỏi tôi 3 câu quan trọng nhất về người áp dụng, lịch thực hiện và cách đăng ký. Chờ tôi trả lời rồi mới soạn.</p>
+            <p class="copy-status" role="status"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide-compare" data-slide="3" aria-label="Dạy AI bằng ví dụ mẫu">
+      <div class="slide-inner">
+        <div class="slide-label label-pink">Dạy AI bằng ví dụ mẫu</div>
+        <h2 class="slide-title" id="slide-title-3">Dạy AI bằng ví dụ mẫu</h2>
+        <p class="slide-desc">Ví dụ mẫu giúp AI nhìn thấy cấu trúc và giọng văn bạn cần.</p>
+        <div class="lesson-examples">
+          <article class="vs-card">
+            <div class="vs-card-head"><strong>Giữ từ mẫu</strong></div>
+            <p class="slide-desc">Tiêu đề ngắn, lời chào, các dòng Ai áp dụng / Thời gian / Việc cần làm, và đầu mối liên hệ.</p>
+          </article>
+          <article class="vs-card">
+            <div class="vs-card-head"><strong>Lấy từ dữ liệu mới</strong></div>
+            <p class="slide-desc">Điền đúng người áp dụng, thời gian, quy trình và đầu mối của chính sách mới. Đánh dấu nếu còn thiếu.</p>
+          </article>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-box-inner">
+            <div class="prompt-box-head">
+              <span>Prompt dùng ví dụ</span>
+              <div class="prompt-head-actions">
+                <button class="copy-btn" type="button" data-copy="p-b12-s3">Sao chép</button>
+              </div>
+            </div>
+            <p class="prompt-text" id="p-b12-s3">Dựa vào cấu trúc và giọng văn của email mẫu tôi cung cấp, viết thông báo làm việc từ xa. Giữ bố cục, nhưng lấy ngày, đối tượng và liên hệ từ dữ liệu chính sách mới. Liệt kê nếu có mục chưa xác nhận.</p>
+            <p class="copy-status" role="status"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide-concept" data-slide="4" aria-label="Phân lớp nhiệm vụ">
+      <div class="slide-inner">
+        <div class="slide-label label-green">Chia nhỏ nhiệm vụ</div>
+        <h2 class="slide-title" id="slide-title-4">Phân lớp nhiệm vụ</h2>
+        <p class="slide-desc">Chia công việc phức tạp thành các lượt có đầu ra riêng. Duyệt đầu ra của lượt trước rồi dùng chính kết quả đó cho lượt tiếp theo.</p>
+        <ol class="lesson-steps">
+          <li><strong>Xác định nhóm khách hàng</strong><p>Dùng mô tả khóa học để chọn tối đa 5 nhóm và ghi nhu cầu của từng nhóm.</p></li>
+          <li><strong>Đối chiếu lợi thế khóa học</strong><p>Chỉ dùng lợi thế có trong tài liệu và gắn với nhu cầu từng nhóm đã duyệt.</p></li>
+          <li><strong>Viết thông điệp</strong><p>Viết tối đa 5 thông điệp, mỗi thông điệp gắn với một nhóm và một lợi thế đã xác nhận.</p></li>
+        </ol>
+        <div class="prompt-card">
+          <div class="prompt-box-inner">
+            <div class="prompt-box-head">
+              <span>Prompt cho lượt đầu</span>
+              <div class="prompt-head-actions">
+                <button class="copy-btn" type="button" data-copy="p-b12-s4">Sao chép</button>
+              </div>
+            </div>
+            <p class="prompt-text" id="p-b12-s4">Dựa vào mô tả khóa học AI văn phòng tôi cung cấp, phân tích tối đa 5 nhóm học viên, nêu nghề nghiệp, nhu cầu, khó khăn và mục tiêu. Ghi rõ nếu chi tiết chỉ là giả định. Dừng để tôi duyệt trước khi viết thông điệp.</p>
+            <p class="copy-status" role="status"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide-concept" data-slide="5" aria-label="Khi nào nên phối hợp các kỹ thuật?">
+      <div class="slide-inner">
+        <div class="slide-label label-yellow">Chọn kỹ thuật phù hợp</div>
+        <h2 class="slide-title" id="slide-title-5">Khi nào nên phối hợp các kỹ thuật?</h2>
+        <p class="slide-desc">Với một email quan trọng, có thể hỏi lại để chốt dữ kiện, áp dụng mẫu để viết và kiểm tra để nghiệm thu.</p>
+        <div class="feature-grid lesson-feature-grid">
+          <article class="feature-card fc-blue" data-content-art="task"><h3>Thiếu thông tin</h3><p>Dùng tương tác đảo ngược. Chốt thứ cần hỏi trước khi soạn.</p></article>
+          <article class="feature-card fc-pink" data-content-art="context"><h3>Đã có mẫu tốt</h3><p>Dùng ví dụ mẫu. Chỉ định phần được học theo và phần phải thay theo dữ kiện mới.</p></article>
+          <article class="feature-card fc-lavender" data-content-art="format"><h3>Có nhiều kết quả nối tiếp</h3><p>Dùng phân lớp. Chốt đầu ra từng lượt trước khi chuyển bước.</p></article>
+          <article class="feature-card fc-green" data-content-art="report"><h3>Cần gửi cho người thật</h3><p>Dùng câu lệnh kiểm tra của Bài 11, sau đó đọc và xác nhận lại theo nguồn.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide-conclusion" data-slide="6" aria-label="Thực hành">
+      <div class="slide-inner conclusion-inner">
+        <div class="slide-label label-green">Thực hành</div>
+        <h2 class="slide-title" id="slide-title-6">Bốn bài thực hành</h2>
+        <p class="slide-desc">Tải và đính kèm tệp dữ liệu ở những đề có nút tải. Với dữ kiện còn thiếu, ghi rõ phần cần xác nhận.</p>
+        <div class="practice-box">
+          <div class="practice-box-head">
+            <h3>Bài tập dự án</h3>
+            <button class="master-unlock-btn" id="btn-master-unlock" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+              <span class="lock-icon" aria-hidden="true">🔒</span>
+              <span class="unlock-btn-text">Mở khóa toàn bộ</span>
+            </button>
+          </div>
+          <div class="practice-prompts">
+            <article class="prompt-card" data-prompt-card aria-labelledby="b12-bt01-title">
+              <div class="prompt-scenario">
+                <h4 id="b12-bt01-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  B12-BT01 · Hỏi lại trước khi soạn email
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn chuẩn bị email về chính sách làm từ xa vào thứ Tư cho khối văn phòng từ 07/10/2026. Nhân viên đăng ký qua trưởng nhóm trước 16h thứ Hai. Phòng Nhân sự giải đáp.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, AI mới biết tên chính sách. Mong muốn thực tế là AI hỏi 3 câu rồi đợi bạn cung cấp dữ kiện trước khi soạn email.</p>
+                <p><strong>Mục tiêu.</strong> Dùng tương tác đảo ngược để AI hỏi trước, rồi trả lời bằng các dữ kiện trên. Nộp ba câu hỏi và email nêu rõ ai áp dụng, khi nào và cách đăng ký.</p>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-b12-bt01">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-b12-bt01">Trước khi soạn thông báo làm việc từ xa, hãy hỏi tôi đúng 3 câu về đối tượng và lịch, ngày bắt đầu, cách đăng ký và đầu mối hỗ trợ. Dừng chờ tôi cung cấp thông tin.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="b12-bt02-title">
+              <div class="prompt-scenario">
+                <h4 id="b12-bt02-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  B12-BT02 · Dùng mẫu và chia hai lượt
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn cần dùng một email cũ làm mẫu cho thông báo nộp số liệu lần này.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, email mẫu có bốn mục nhưng các dữ kiện trong đó thuộc kỳ trước. Mong muốn thực tế là giữ bố cục, thay người phụ trách, việc cần làm, hạn và kênh gửi theo dữ kiện kỳ này.</p>
+                <p><strong>Mục tiêu.</strong> Đính kèm tệp Word. Yêu cầu AI lập bảng người, việc, hạn và kênh gửi để duyệt, rồi soạn email theo mẫu. Nộp cả bảng và email.</p>
+              </div>
+              <div class="prompt-dataset-box word">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📄</span>
+                  <div>
+                    <span class="dataset-name">Email mẫu và dữ kiện kỳ này</span>
+                    <span class="dataset-desc">Tách bố cục mẫu khỏi tên, đầu việc và hạn gửi của kỳ mới.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/bai-12/data-b12-bt02-mau-email-nop-so-lieu.docx" class="dataset-dl-btn word" download aria-label="Tải tệp DOCX cho B12-BT02">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">DOCX</span>
+                </a>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-b12-bt02">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-b12-bt02">Lượt 1. Đọc phần Dữ kiện kỳ này trong tệp Word, lập bảng người, việc, hạn và kênh gửi rồi chờ duyệt. Lượt 2. Sau khi tôi duyệt, dùng bảng đã chốt để viết email theo bốn mục trong mẫu kỳ trước.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="b12-bt03-title">
+              <div class="prompt-scenario">
+                <h4 id="b12-bt03-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  B12-BT03 · Dạy AI giọng nhắc việc bằng hai tin nhắn mẫu
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn đã nhận bản Word của chị Vy và cần nhờ chị gửi lại bản PDF có chữ ký.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, bạn có hai mẫu nhắc việc của các tình huống khác. Mong muốn thực tế là giữ cách xưng hô và giọng nhắc thân thiện, dùng đúng việc, hạn và kênh gửi của chị Vy.</p>
+                <p><strong>Mục tiêu.</strong> Đính kèm tệp Word và chỉ rõ phần AI cần học từ mẫu. Nộp câu lệnh và tin nhắn mới tối đa 3 câu.</p>
+              </div>
+              <div class="prompt-dataset-box word">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📄</span>
+                  <div>
+                    <span class="dataset-name">Hai tin nhắn mẫu và thông tin cần nhắc</span>
+                    <span class="dataset-desc">Dùng hai mẫu để hướng dẫn AI viết cho chị Vy.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/bai-12/data-b12-bt03-mau-tin-nhan-nhac-viec.docx" class="dataset-dl-btn word" download aria-label="Tải tệp DOCX cho B12-BT03">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">DOCX</span>
+                </a>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-b12-bt03">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-b12-bt03">Đọc hai tin nhắn trong tệp Word, học cách xưng hô, nhắc việc và cảm ơn. Dùng phần Việc cần nhắc lần này cho người nhận, tệp, hạn và kênh gửi. Viết tin nhắn tối đa 3 câu.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="b12-bt04-title">
+              <div class="prompt-scenario">
+                <h4 id="b12-bt04-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  B12-BT04 · Phân lớp xử lý phản hồi sau tập huấn
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn tổng hợp 5 phản hồi sau buổi tập huấn nội bộ.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, các ý kiến nằm rời rạc trong bảng phản hồi. Mong muốn thực tế là có bảng nhóm ý kiến, hai đề xuất ưu tiên có căn cứ và bản tóm tắt ngắn cho ban tổ chức.</p>
+                <p><strong>Mục tiêu.</strong> Đính kèm tệp Excel. Duyệt bảng nhóm ý kiến ở lượt 1, duyệt hai đề xuất ở lượt 2, rồi yêu cầu AI viết tóm tắt. Nộp đầu ra từng lượt.</p>
+              </div>
+              <div class="prompt-dataset-box">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📊</span>
+                  <div>
+                    <span class="dataset-name">Bảng phản hồi sau tập huấn</span>
+                    <span class="dataset-desc">Năm ý kiến nguyên văn có mã để nhóm và đối chiếu.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/bai-12/data-b12-bt04-phan-hoi-tap-huan.xlsx" class="dataset-dl-btn" download aria-label="Tải tệp XLSX cho B12-BT04">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">XLSX</span>
+                </a>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <button class="relock-btn" type="button">Khóa lại</button>
+                </div>
+                <div class="step-prompt-item">
+                  <div class="step-prompt-header">
+                    <span class="step-badge step-1">Lượt 1 · Nhóm ý kiến</span>
+                    <button class="copy-btn" type="button" data-copy="p-b12-bt04-1">Sao chép</button>
+                  </div>
+                  <p class="prompt-text" id="p-b12-bt04-1">Đọc năm phản hồi nguyên văn trong tệp Excel. Lập bảng gồm Nhóm, Mã ý kiến, Phản hồi gốc và Số ý kiến. Mỗi mã tính một lần. Dừng để tôi duyệt cách nhóm.</p>
+                </div>
+                <div class="step-prompt-item">
+                  <div class="step-prompt-header">
+                    <span class="step-badge step-2">Lượt 2 · Đề xuất thay đổi</span>
+                    <button class="copy-btn" type="button" data-copy="p-b12-bt04-2">Sao chép</button>
+                  </div>
+                  <p class="prompt-text" id="p-b12-bt04-2">Dựa vào bảng vừa duyệt, đề xuất hai thay đổi ưu tiên cho buổi sau. Với mỗi đề xuất, nêu phản hồi làm căn cứ và việc cụ thể ban tổ chức có thể làm. Dừng để tôi chọn.</p>
+                </div>
+                <div class="step-prompt-item">
+                  <div class="step-prompt-header">
+                    <span class="step-badge step-3">Lượt 3 · Viết bản tóm tắt</span>
+                    <button class="copy-btn" type="button" data-copy="p-b12-bt04-3">Sao chép</button>
+                  </div>
+                  <p class="prompt-text" id="p-b12-bt04-3">Viết bản tóm tắt cho ban tổ chức, tối đa 100 từ. Nêu điểm được khen và các đề xuất tôi vừa chọn. Ghi rõ các thay đổi đang được đề xuất nếu chưa có quyết định triển khai.</p>
+                </div>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="lesson-sources"><a href="../Giao_trinh/UNG-DUNG-AI-TRONG-VAN-PHONG-CO-BAN-KY-NANG-GIAO-TIEP-1%20%283%29.pdf#page=42">Giáo trình PDF · Trang 42</a></p>
+        <nav class="lesson-links" aria-label="Chuyển bài">
+          <a class="topbar-back" href="bai-11.html">← Bài 11</a>
+          <a class="topbar-back" href="bai-13.html">Bài 13 →</a>
+        </nav>
+      </div>
+    </section>
+    <dialog class="lock-modal" id="lock-modal" aria-labelledby="lock-modal-title">
+      <div class="lock-modal-card">
+        <button class="lock-modal-close" type="button" id="lock-modal-close" aria-label="Đóng">×</button>
+        <h2 class="lock-modal-title" id="lock-modal-title">Mở gợi ý câu lệnh</h2>
+        <p class="lock-modal-desc" id="lock-modal-desc">Nhập mã do giảng viên cung cấp.</p>
+        <form class="lock-modal-form" id="lock-modal-form">
+          <input class="lock-modal-input" id="lock-modal-input" type="password" aria-label="Mã mở gợi ý" aria-describedby="lock-modal-desc" autocomplete="off" maxlength="10">
+          <button class="lock-modal-submit" id="lock-modal-submit" type="submit">Mở gợi ý</button>
+        </form>
+        <p class="lock-modal-error" id="lock-modal-error" role="alert" hidden>Mã chưa đúng. Vui lòng thử lại.</p>
+      </div>
+    </dialog>
+  </main>
+
+  <nav class="slide-nav" aria-label="Điều hướng slide">
+    <button class="nav-btn" type="button" id="btn-prev" aria-label="Slide trước" disabled>←</button>
+    <div class="nav-center">
+      <div class="dot-track" id="dot-track" role="tablist" aria-label="Chọn slide"></div>
+      <span class="slide-counter"><span id="cur">1</span> / <span id="total">6</span></span>
+    </div>
+    <button class="nav-btn" type="button" id="btn-next" aria-label="Slide tiếp theo">→</button>
+  </nav>
+  <script src="../js/slide-deck.js" defer></script>
+</body>
+</html>

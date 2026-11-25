@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bài 13 · Đặt câu lệnh cho công việc thường ngày — Lớp học AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Nunito:wght@700;800;900;1000&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/slide-deck.css">
+</head>
+<body data-course-lesson="13" data-lesson-series="advanced">
+  <header class="topbar">
+    <a class="topbar-logo" href="../index.html" aria-label="Về trang chủ Lớp học AI"><span class="logo-mark" aria-hidden="true"><span class="book-icon"></span></span>Lớp học AI</a>
+    <div class="topbar-center">Bài 13 · Đặt câu lệnh cho công việc thường ngày</div>
+    <a class="topbar-back" href="../index.html#lo-trinh">← Lộ trình</a>
+  </header>
+
+  <main class="deck" id="deck" aria-label="Bài 13">
+    <section class="slide slide-cover" data-slide="1" aria-label="Đặt câu lệnh cho công việc thường ngày">
+      <div class="slide-inner cover-inner">
+        <div class="cover-left">
+          <div class="cover-kicker">
+            <span class="pill pill-green">Bài 13</span>
+            <span class="cover-kicker-label">Chương 6 · Hoàn thiện kỹ năng</span>
+          </div>
+          <h1 class="cover-title">Đặt câu lệnh cho<br><em>công việc thường ngày</em></h1>
+          <p class="cover-desc">Áp dụng nhiệm vụ, ngữ cảnh và tham chiếu vào hai tình huống từ giáo trình: lên kế hoạch kỳ nghỉ và tạo ảnh bộ sưu tập.</p>
+        </div>
+        <div class="toc-card">
+          <div class="toc-card-head">
+            <span class="toc-icon icon-blue" aria-hidden="true"><span class="book-icon"></span></span>
+            <div><strong>Nội dung bài học</strong><p>5 slide</p></div>
+          </div>
+          <ul class="toc-list" role="list">
+            <li><button class="toc-link" type="button" data-go-to="2" data-content-art="context"><span class="toc-num" aria-hidden="true">01</span>Lên kế hoạch kỳ nghỉ</button></li>
+            <li><button class="toc-link" type="button" data-go-to="3" data-content-art="brief"><span class="toc-num" aria-hidden="true">02</span>Tạo ảnh từ mô tả sản phẩm</button></li>
+            <li><button class="toc-link" type="button" data-go-to="4" data-content-art="report"><span class="toc-num" aria-hidden="true">03</span>Kiểm và chỉnh đầu ra</button></li>
+            <li><button class="toc-link" type="button" data-go-to="5" data-content-art="practice"><span class="toc-num" aria-hidden="true">04</span>Thực hành 4 bài</button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide-concept" data-slide="2" aria-label="Lên kế hoạch kỳ nghỉ">
+      <div class="slide-inner">
+        <div class="slide-label label-blue">Lên kế hoạch kỳ nghỉ</div>
+        <h2 class="slide-title" id="slide-title-2">Lên kế hoạch kỳ nghỉ</h2>
+        <p class="slide-desc">Bắt đầu bằng lịch khung rồi thêm điều kiện, điểm ưu tiên và phần chi phí.</p>
+        <div class="feature-grid lesson-feature-grid">
+          <article class="feature-card fc-blue" data-content-art="task"><h3>Nhiệm vụ</h3><p>Nêu điểm đến, số ngày và định dạng lịch trình. Yêu cầu ước tính chi phí theo từng nhóm.</p></article>
+          <article class="feature-card fc-pink" data-content-art="context"><h3>Ngữ cảnh</h3><p>Cho biết số người, ngân sách, mức độ di chuyển và nhu cầu ăn uống.</p></article>
+          <article class="feature-card fc-lavender" data-content-art="format"><h3>Tham chiếu</h3><p>Đưa danh sách điểm không muốn bỏ lỡ hoặc lịch trình có sẵn. Chỉ tên phần được ưu tiên.</p></article>
+          <article class="feature-card fc-green" data-content-art="report"><h3>Kiểm trước khi đặt</h3><p>Kiểm thời gian di chuyển, tổng dự toán, giờ mở cửa và giá thực tế với nguồn phù hợp.</p></article>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-box-inner">
+            <div class="prompt-box-head">
+              <span>Prompt lịch trình mẫu</span>
+              <div class="prompt-head-actions">
+                <button class="copy-btn" type="button" data-copy="p-b13-s2">Sao chép</button>
+              </div>
+            </div>
+            <p class="prompt-text" id="p-b13-s2">Lập lịch khung 2 ngày 1 đêm tại Đà Lạt cho 2 người, tổng ngân sách dự kiến 4 triệu đồng. Ưu tiên hoạt động nhẹ quanh hồ Xuân Hương, cần lựa chọn ăn chay. Tách đi lại, lưu trú, ăn uống và dự phòng. Cho biết mục nào mới là ước tính.</p>
+            <p class="copy-status" role="status"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide-concept" data-slide="3" aria-label="Tạo ảnh cho bộ sưu tập Tối giản">
+      <div class="slide-inner">
+        <div class="slide-label label-pink">Tạo ảnh từ mô tả sản phẩm</div>
+        <h2 class="slide-title" id="slide-title-3">Tạo ảnh cho bộ sưu tập Tối giản</h2>
+        <p class="slide-desc">Cửa hàng thời trang Sao Việt hướng đến khách hàng từ 18–39 tuổi. Bộ sưu tập có sơ mi cotton dài tay, sơ mi cotton ngắn tay và áo ba lỗ.</p>
+        <div class="feature-grid lesson-feature-grid">
+          <article class="feature-card fc-blue" data-content-art="task"><h3>Chọn đúng mẫu áo</h3><p>Mỗi ảnh tập trung vào một mẫu. Ví dụ: sơ mi cotton dài tay màu xanh navy.</p></article>
+          <article class="feature-card fc-pink" data-content-art="context"><h3>Nêu màu được phép</h3><p>Bộ sưu tập có trắng, xám, xanh ngọc, xanh navy và xanh lá cây đậm.</p></article>
+          <article class="feature-card fc-lavender" data-content-art="format"><h3>Mô tả bố cục và ánh sáng</h3><p>Đặt người mẫu trong văn phòng hiện đại, dùng ánh sáng tự nhiên và nền sáng tối giản.</p></article>
+          <article class="feature-card fc-green" data-content-art="report"><h3>Kiểm lại ảnh tạo ra</h3><p>Nhìn cổ áo, chiều dài tay, màu vải và bố cục. Không dùng hình có chi tiết sản phẩm sai.</p></article>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-box-inner">
+            <div class="prompt-box-head">
+              <span>Prompt ảnh mẫu</span>
+              <div class="prompt-head-actions">
+                <button class="copy-btn" type="button" data-copy="p-b13-s3">Sao chép</button>
+              </div>
+            </div>
+            <p class="prompt-text" id="p-b13-s3">Tạo ảnh quảng bá Bộ sưu tập Tối giản của Sao Việt hướng đến khách hàng từ 18–39 tuổi. Người mẫu mặc sơ mi cotton dài tay xanh navy trong văn phòng hiện đại, nền sáng, ánh sáng tự nhiên, phong cách ảnh thời trang chân thực. Ảnh 4:5, thấy rõ tay áo và phom áo. Không chèn chữ.</p>
+            <p class="copy-status" role="status"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide-compare" data-slide="4" aria-label="Một vòng chỉnh sau lần tạo đầu tiên">
+      <div class="slide-inner">
+        <div class="slide-label label-green">Kiểm và chỉnh đầu ra</div>
+        <h2 class="slide-title" id="slide-title-4">Một vòng chỉnh sau lần tạo đầu tiên</h2>
+        <p class="slide-desc">Chọn một thay đổi có thể kiểm lại bằng dữ liệu đầu vào.</p>
+        <div class="lesson-examples">
+          <article class="vs-card">
+            <div class="vs-card-head"><strong>Với lịch trình</strong></div>
+            <p class="slide-desc">Nếu lịch đi quá nhiều, yêu cầu gom hoạt động theo khu vực, giữ điểm ưu tiên và tính lại chi phí phát sinh.</p>
+          </article>
+          <article class="vs-card">
+            <div class="vs-card-head"><strong>Với ảnh sản phẩm</strong></div>
+            <p class="slide-desc">Nếu áo bị tạo thành tay ngắn, yêu cầu giữ bối cảnh, màu navy và đổi về tay dài đến cổ tay.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide-conclusion" data-slide="5" aria-label="Thực hành">
+      <div class="slide-inner conclusion-inner">
+        <div class="slide-label label-green">Thực hành</div>
+        <h2 class="slide-title" id="slide-title-5">Bốn bài thực hành</h2>
+        <p class="slide-desc">Tải và đính kèm tệp dữ liệu ở những đề có nút tải. Với dữ kiện còn thiếu, ghi rõ phần cần xác nhận.</p>
+        <div class="practice-box">
+          <div class="practice-box-head">
+            <h3>Bài tập dự án</h3>
+            <button class="master-unlock-btn" id="btn-master-unlock" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+              <span class="lock-icon" aria-hidden="true">🔒</span>
+              <span class="unlock-btn-text">Mở khóa toàn bộ</span>
+            </button>
+          </div>
+          <div class="practice-prompts">
+            <article class="prompt-card" data-prompt-card aria-labelledby="b13-bt01-title">
+              <div class="prompt-scenario">
+                <h4 id="b13-bt01-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  B13-BT01 · Lập lịch nghỉ hai ngày
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn lên lịch đi Đà Lạt cho 2 người trong 2 ngày 1 đêm, với ngân sách tổng 4 triệu đồng.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, bạn mới có điểm đến và ngân sách. Mong muốn thực tế là lịch ưu tiên khu hồ Xuân Hương, ít di chuyển, có chỗ ăn món chay và phù hợp ngân sách.</p>
+                <p><strong>Mục tiêu.</strong> Viết câu lệnh có Nhiệm vụ, Ngữ cảnh và Tham chiếu để AI lập lịch theo buổi và bảng dự toán. Giảm một điểm xa nếu có và nêu một thông tin cần kiểm tra trước khi đặt.</p>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-b13-bt01">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-b13-bt01">Lập lịch 2 ngày 1 đêm theo buổi cho 2 người, ưu tiên hồ Xuân Hương và có bữa chay. Tổng trần 4 triệu đồng. Tách đi lại, chỗ ở, ăn uống, hoạt động và dự phòng. Đánh dấu chi phí chưa có nguồn.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="b13-bt02-title">
+              <div class="prompt-scenario">
+                <h4 id="b13-bt02-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  B13-BT02 · Tạo ảnh sơ mi cotton dài tay
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn chuẩn bị ảnh quảng cáo bộ sưu tập Tối giản của Sao Việt cho khách 18–39 tuổi.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, bạn có mô tả sơ mi cotton dài tay màu trắng hoặc xanh navy. Mong muốn thực tế là ảnh dọc 4:5, đúng mẫu và màu đã chọn, trong văn phòng có ánh sáng tự nhiên. Ảnh không có chữ.</p>
+                <p><strong>Mục tiêu.</strong> Viết prompt, tạo một ảnh và đối chiếu mẫu áo, màu, bối cảnh, tỷ lệ khung. Nộp prompt, ảnh và ghi chú chi tiết đã kiểm hoặc sửa.</p>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-b13-bt02">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-b13-bt02">Tạo ảnh dọc 4:5 cho bộ sưu tập Tối giản của Sao Việt. Người mẫu mặc sơ mi cotton dài tay màu trắng, đứng trong văn phòng hiện đại với ánh sáng tự nhiên. Giữ rõ cổ và cổ tay áo, nền sáng và không thêm chữ.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="b13-bt03-title">
+              <div class="prompt-scenario">
+                <h4 id="b13-bt03-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  B13-BT03 · Lên kế hoạch đặt tiệc nhẹ tại văn phòng
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn chuẩn bị tiệc nhẹ cho 12 người tại văn phòng, trong đó có 2 người ăn chay.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, danh sách nháp chỉ có suất mặn và chưa tính phí giao. Mong muốn thực tế là mỗi người có suất phù hợp và tổng chi phí gồm giao hàng nằm trong trần 900.000đ.</p>
+                <p><strong>Mục tiêu.</strong> Dùng giá tham chiếu trong tệp Excel để yêu cầu AI lập bảng số lượng, thành tiền và mức còn lại cho phí giao. Nộp câu lệnh, bảng đặt món và điều cần xác nhận.</p>
+              </div>
+              <div class="prompt-dataset-box">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📊</span>
+                  <div>
+                    <span class="dataset-name">Bảng giá và nhu cầu đặt tiệc nhẹ</span>
+                    <span class="dataset-desc">Số người, suất ăn, giá tham chiếu và danh sách đặt nháp.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/bai-13/data-b13-bt03-du-toan-tiec-nhe.xlsx" class="dataset-dl-btn" download aria-label="Tải tệp XLSX cho B13-BT03">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">XLSX</span>
+                </a>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-b13-bt03">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-b13-bt03">Đọc nhu cầu, giá tham chiếu và danh sách nháp trong tệp Excel. Lập bảng đặt tiệc với số suất mặn, suất chay, nước, đơn giá và thành tiền. Tính mức tối đa còn lại cho phí giao trong trần 900.000đ. Ghi phí giao là khoản cần xác nhận trước khi đặt.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="b13-bt04-title">
+              <div class="prompt-scenario">
+                <h4 id="b13-bt04-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  B13-BT04 · Chỉnh bố cục ảnh bìa cho bài chia sẻ
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn chuẩn bị ảnh bìa ngang cho bài chia sẻ mẹo sắp xếp bàn làm việc.</p>
+                <p><strong>Vấn đề.</strong> Hiện tại, ảnh nháp đặt laptop đóng, sổ bìa xanh và ly nước giữa khung. Mong muốn thực tế là ảnh ngang 16:9, giữ ba vật dụng ở bên phải, chừa khoảng một phần ba khung bên trái để đặt tiêu đề sau.</p>
+                <p><strong>Mục tiêu.</strong> Tạo một ảnh nháp theo mô tả hiện tại rồi viết lệnh chỉnh bố cục. Nộp ảnh trước và sau cùng lệnh chỉnh. Kiểm lại ba vật dụng, tỷ lệ ảnh và khoảng trống.</p>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <button class="relock-btn" type="button">Khóa lại</button>
+                </div>
+                <div class="step-prompt-item">
+                  <div class="step-prompt-header">
+                    <span class="step-badge step-1">Lượt 1 · Tạo ảnh nháp</span>
+                    <button class="copy-btn" type="button" data-copy="p-b13-bt04-1">Sao chép</button>
+                  </div>
+                  <p class="prompt-text" id="p-b13-bt04-1">Tạo ảnh ngang 16:9 nhìn từ trên xuống, mặt bàn sáng có laptop đóng, sổ bìa xanh và ly nước. Đặt ba vật dụng ở giữa khung. Dùng ánh sáng tự nhiên và giữ ảnh sạch chữ.</p>
+                </div>
+                <div class="step-prompt-item">
+                  <div class="step-prompt-header">
+                    <span class="step-badge step-2">Lượt 2 · Chừa chỗ cho tiêu đề</span>
+                    <button class="copy-btn" type="button" data-copy="p-b13-bt04-2">Sao chép</button>
+                  </div>
+                  <p class="prompt-text" id="p-b13-bt04-2">Chỉnh ảnh vừa tạo. Dịch laptop đóng, sổ bìa xanh và ly nước sang bên phải. Chừa khoảng một phần ba khung bên trái trống để đặt tiêu đề sau. Giữ góc chụp, nền sáng, ánh sáng tự nhiên và tỷ lệ ngang 16:9.</p>
+                </div>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="lesson-sources"><a href="../Giao_trinh/UNG-DUNG-AI-TRONG-VAN-PHONG-CO-BAN-KY-NANG-GIAO-TIEP-1%20%283%29.pdf#page=46">Giáo trình PDF · Trang 46</a></p>
+        <nav class="lesson-links" aria-label="Chuyển bài">
+          <a class="topbar-back" href="bai-12.html">← Bài 12</a>
+          <a class="topbar-back" href="bai-14.html">Bài 14 →</a>
+        </nav>
+      </div>
+    </section>
+    <dialog class="lock-modal" id="lock-modal" aria-labelledby="lock-modal-title">
+      <div class="lock-modal-card">
+        <button class="lock-modal-close" type="button" id="lock-modal-close" aria-label="Đóng">×</button>
+        <h2 class="lock-modal-title" id="lock-modal-title">Mở gợi ý câu lệnh</h2>
+        <p class="lock-modal-desc" id="lock-modal-desc">Nhập mã do giảng viên cung cấp.</p>
+        <form class="lock-modal-form" id="lock-modal-form">
+          <input class="lock-modal-input" id="lock-modal-input" type="password" aria-label="Mã mở gợi ý" aria-describedby="lock-modal-desc" autocomplete="off" maxlength="10">
+          <button class="lock-modal-submit" id="lock-modal-submit" type="submit">Mở gợi ý</button>
+        </form>
+        <p class="lock-modal-error" id="lock-modal-error" role="alert" hidden>Mã chưa đúng. Vui lòng thử lại.</p>
+      </div>
+    </dialog>
+  </main>
+
+  <nav class="slide-nav" aria-label="Điều hướng slide">
+    <button class="nav-btn" type="button" id="btn-prev" aria-label="Slide trước" disabled>←</button>
+    <div class="nav-center">
+      <div class="dot-track" id="dot-track" role="tablist" aria-label="Chọn slide"></div>
+      <span class="slide-counter"><span id="cur">1</span> / <span id="total">5</span></span>
+    </div>
+    <button class="nav-btn" type="button" id="btn-next" aria-label="Slide tiếp theo">→</button>
+  </nav>
+  <script src="../js/slide-deck.js" defer></script>
+</body>
+</html>
