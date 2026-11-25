@@ -80,6 +80,7 @@ button { color: inherit; font: inherit; cursor: pointer; }
   color: var(--muted);
   font-size: 14px;
   font-weight: 600;
+  white-space: nowrap;
 }
 .header-nav a:hover, .header-nav .home-link { color: var(--ink); }
 .header-action { justify-self: end; }
@@ -129,6 +130,7 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .hero-kicker span { width: 7px; height: 7px; border-radius: 50%; background: #168342; }
 .pill-blue { background: var(--blue); }
 .pill-pink { background: var(--pink); }
+.pill-lavender { background: var(--lavender); }
 h1, h2, h3 { font-family: Nunito, Inter, "Segoe UI", sans-serif; }
 h1 {
   margin-top: 25px;
@@ -279,6 +281,28 @@ progress::-moz-progress-bar { border-radius: 99px; background: var(--green); }
 .chat-icon::after { position: absolute; top: 5px; left: 3px; width: 2px; height: 2px; border-radius: 50%; background: currentColor; box-shadow: 5px 0 currentColor, 10px 0 currentColor; content: ""; }
 
 .practice-section { padding-block: 69px 75px; background: var(--cream); }
+.extra-section { padding-block: 72px 76px; }
+.extra-empty-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 720px;
+  margin-inline: auto;
+  padding: 24px 26px;
+  border: 2.5px solid var(--ink);
+  border-radius: var(--radius);
+  background: white;
+  box-shadow: var(--shadow);
+  --tile: var(--lavender);
+}
+.extra-empty-card .course-icon {
+  position: static;
+  width: 52px;
+  height: 52px;
+}
+.extra-empty-body h3 { font-size: 20px; font-weight: 900; line-height: 1.25; }
+.extra-empty-body p { margin-top: 6px; color: var(--muted); font-size: 14px; line-height: 1.65; }
 .practice { display: grid; grid-template-columns: .9fr 1.1fr; gap: 42px; align-items: center; }
 .practice-intro > p:last-child { max-width: 390px; margin-top: 14px; }
 .prompt-card { padding: 17px 20px 20px; }
@@ -324,7 +348,8 @@ body:has(.lesson-dialog[open]) { overflow: hidden; }
   .decoration-target { width: 49px; height: 49px; right: -9px; top: -12px; }
   .decoration-star { width: 35px; height: 35px; right: -14px; font-size: 20px; }
   .decoration-book { width: 37px; height: 37px; left: -10px; bottom: -10px; }
-  .courses, .practice-section { padding-block: 47px; }
+  .courses, .practice-section, .extra-section { padding-block: 47px; }
+  .extra-empty-card { flex-direction: column; align-items: flex-start; padding: 20px; }
   .section-heading { margin-bottom: 26px; }
   .course-grid, .practice { grid-template-columns: 1fr; gap: 17px; }
   .practice { gap: 24px; }
