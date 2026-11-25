@@ -147,17 +147,35 @@
         <!-- HÌNH MINH HỌA 8 GÓC & CHIA CẢNH -->
         <div class="visual-guides-grid">
           <div class="visual-panel">
-            <h3>Hình mẫu: Bộ nhân vật 8 góc nhìn</h3>
-            <p class="visual-panel-sub">Tạo 1 bức ảnh gồm 8 góc như mẫu, rồi cắt góc phù hợp để đưa vào Google Flow:</p>
-            <div class="eight-sheet-mockup" aria-label="Minh họa 8 góc nhìn">
-              <div class="sheet-cell"><span>🧍</span><strong>1. Nhìn thẳng</strong></div>
-              <div class="sheet-cell"><span>🔙</span><strong>2. Sau lưng</strong></div>
-              <div class="sheet-cell"><span>⬅️</span><strong>3. Nghiêng trái</strong></div>
-              <div class="sheet-cell"><span>➡️</span><strong>4. Nghiêng phải</strong></div>
-              <div class="sheet-cell"><span>↙️</span><strong>5. Xoay nhẹ trái</strong></div>
-              <div class="sheet-cell"><span>↘️</span><strong>6. Xoay nhẹ phải</strong></div>
-              <div class="sheet-cell"><span>😊</span><strong>7. Cận khuôn mặt</strong></div>
-              <div class="sheet-cell"><span>🚶</span><strong>8. Toàn thân</strong></div>
+            <h3>Hình mẫu: Bộ nhân vật 8 góc nhìn từ ảnh thật</h3>
+            <p class="visual-panel-sub">Chỉ từ 1 ảnh chân dung nền trắng, dùng câu lệnh chuẩn bên dưới để AI dựng đủ 8 góc (bấm vào ảnh để xem to):</p>
+            <div class="real-turnaround-flow">
+              <figure class="turnaround-box ref-photo">
+                <a href="../assets/data/bai-tap-them/img-nhan-vat-nu-goc.jpg" target="_blank" title="Bấm để xem ảnh gốc kích thước đầy đủ">
+                  <img src="../assets/data/bai-tap-them/img-nhan-vat-nu-goc.jpg" alt="Ảnh chân dung nhân vật nữ nền trắng dùng làm ảnh gốc">
+                </a>
+                <figcaption class="turnaround-caption">
+                  <span>1. Ảnh gốc</span>
+                  <a class="mini-dl" href="../assets/data/bai-tap-them/img-nhan-vat-nu-goc.jpg" download>Tải về</a>
+                </figcaption>
+              </figure>
+
+              <div class="turnaround-arrow" aria-hidden="true">→</div>
+
+              <figure class="turnaround-box sheet-photo">
+                <a href="../assets/data/bai-tap-them/image.png" target="_blank" title="Bấm để xem ảnh 8 góc nhìn kích thước đầy đủ">
+                  <img src="../assets/data/bai-tap-them/image.png" alt="Kết quả AI tạo ra đủ 8 góc nhìn của nhân vật nữ trên nền trắng">
+                </a>
+                <figcaption class="turnaround-caption">
+                  <span>2. Kết quả đủ 8 góc nhìn</span>
+                  <a class="mini-dl" href="../assets/data/bai-tap-them/image.png" download>Tải ảnh 8 góc</a>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="sheet-row-legend">
+              <div><strong>Hàng trên (Toàn thân):</strong> 1. Trước · 2. Trái 90° · 3. Phải 90° · 4. Sau lưng</div>
+              <div><strong>Hàng dưới (Chân dung):</strong> 5. Trước · 6. Trái 90° · 7. Phải 90° · 8. Sau lưng</div>
             </div>
           </div>
 
@@ -194,10 +212,67 @@
         <div class="pipeline-prompts-box">
           <div class="step-prompt-item">
             <div class="step-prompt-header">
-              <span class="step-badge step-0">Lệnh mẫu Bước 2 · Tạo ảnh 8 góc nhìn</span>
+              <span class="step-badge step-0">Lệnh mẫu Bước 2 · Tạo ảnh 8 góc nhìn từ ảnh gốc (Dán kèm ảnh mẫu)</span>
               <button type="button" class="copy-btn" data-copy="p-pipe-8view">Sao chép</button>
             </div>
-            <p id="p-pipe-8view" class="prompt-text">Create a clean 8-view character turnaround sheet on a pure solid white background, arranged in a neat 2x4 grid. Character: [MÔ TẢ NHÂN VẬT: ví dụ 27-year-old Vietnamese woman, neat hair, beige blazer]. Include 8 views: front, back, left side, right side, 3/4 left, 3/4 right, close-up face, full-body standing. Realistic studio photo, consistent face and outfit, no text.</p>
+            <p id="p-pipe-8view" class="prompt-text prompt-scroll-text">Use the uploaded image as the ONLY and STRICT reference for the character.
+
+Create a professional character turnaround / character reference sheet showing the EXACT SAME CHARACTER from multiple viewpoints.
+
+The character's identity and appearance must remain highly consistent across every panel. Do not redesign or reinterpret the character.
+
+Create a clean 2 × 4 grid containing 8 views of the SAME character:
+
+TOP ROW — FULL BODY:
+1. Front view — full body, standing naturally and facing the camera.
+2. Left side profile — full body, exactly 90-degree side view.
+3. Right side profile — full body, exactly 90-degree side view.
+4. Back view — full body, facing away from the camera.
+
+BOTTOM ROW — PORTRAIT / UPPER BODY:
+5. Front view — close-up portrait.
+6. Left side profile — close-up portrait.
+7. Right side profile — close-up portrait.
+8. Back view — close-up of the head and upper body.
+
+CRITICAL CHARACTER CONSISTENCY:
+- The 8 panels must show one single identical character.
+- Preserve the exact facial features and identity from the reference image.
+- Preserve the exact hairstyle, hairline, face shape, eyes, nose, mouth, ears and skin tone.
+- Preserve the exact body proportions and physique.
+- Preserve the exact clothing, colors, patterns, logos and accessories.
+- Do not change the character's age, gender, hairstyle, clothing or physical appearance.
+- Do not create variations of the character.
+- Side profiles must logically match the front-facing face.
+- The back view must correctly reconstruct the hairstyle, neck, shoulders and back of the clothing.
+- Do not add or remove accessories.
+
+PRESENTATION:
+Professional character model sheet / turnaround reference sheet.
+Photorealistic human character.
+Neutral white studio background.
+Soft, even studio lighting.
+Consistent lighting across all panels.
+Consistent camera height and perspective.
+Clean symmetrical composition.
+Each panel has the same scale and framing appropriate to the view.
+Thin black lines separating the 8 panels.
+Character centered in every panel.
+Minimal shadows.
+No environment.
+No props.
+No dramatic camera angles.
+
+IMPORTANT:
+The uploaded reference image is the SOURCE OF TRUTH.
+Do not use it merely as inspiration.
+Reconstruct the same character accurately from viewpoints that are not visible in the reference image.
+
+No text.
+No labels.
+No watermark.
+No extra people.
+No duplicate characters.</p>
             <p class="copy-status" role="status"></p>
           </div>
 

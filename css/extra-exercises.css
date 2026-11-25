@@ -193,29 +193,97 @@
   margin: 0;
 }
 
-/* Lưới 2x4 giống tờ ảnh 8 góc thật */
-.eight-sheet-mockup {
-  border: 2.5px solid var(--ink);
+/* Khung so sánh Ảnh gốc -> Ảnh 8 góc thật */
+.real-turnaround-flow {
+  display: grid;
+  grid-template-columns: 0.34fr auto 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.turnaround-box {
+  border: 2px solid var(--ink);
   border-radius: 14px;
   background: white;
-  padding: 10px;
+  padding: 8px;
+  box-shadow: 2px 3px 0 var(--ink);
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px;
+  gap: 6px;
 }
 
-.sheet-cell {
+.turnaround-box a {
+  display: block;
+  overflow: hidden;
+  border-radius: 9px;
   border: 1.5px solid var(--ink);
-  border-radius: 10px;
-  background: #f8fafc;
-  padding: 10px 6px;
-  text-align: center;
-  display: grid;
-  gap: 3px;
+  cursor: zoom-in;
 }
 
-.sheet-cell span { font-size: 24px; line-height: 1.1; }
-.sheet-cell strong { font-size: 11px; font-weight: 900; color: var(--ink); }
+.turnaround-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.turnaround-box.ref-photo img {
+  aspect-ratio: 3 / 4;
+  object-position: top center;
+}
+
+.turnaround-box.sheet-photo img {
+  aspect-ratio: 16 / 9;
+}
+
+.turnaround-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 850;
+  color: var(--ink);
+}
+
+.turnaround-caption a.mini-dl {
+  color: #1d4ed8;
+  text-decoration: underline;
+  font-size: 11px;
+}
+
+.turnaround-arrow {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  background: #fef08a;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.sheet-row-legend {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink);
+  background: white;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.prompt-scroll-text {
+  max-height: 210px;
+  overflow-y: auto;
+  white-space: pre-line;
+  padding: 10px 12px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 9px;
+  background: #f8fafc;
+}
 
 /* Dải phim 3 cảnh kèm lời nói */
 .storyboard-strip {
@@ -697,6 +765,7 @@
 
 @media (max-width: 640px) {
   .pipeline-board { grid-template-columns: 1fr; }
-  .eight-sheet-mockup { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .real-turnaround-flow { grid-template-columns: 1fr; }
+  .turnaround-arrow { justify-self: center; transform: rotate(90deg); }
   .extra-exercise-card { padding: 18px 16px; }
 }
