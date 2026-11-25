@@ -115,7 +115,7 @@
     const orig = btn.textContent.trim();
     btn.addEventListener('click', async () => {
       const target = document.getElementById(btn.dataset.copy);
-      const box = btn.closest('.prompt-box-inner');
+      const box = btn.closest('.prompt-box-inner, .step-prompt-item');
       const status = box?.querySelector('.copy-status');
       if (!target) return;
       try {

@@ -1,53 +1,240 @@
 /* ============================================================
-   TRANG BÀI TẬP THÊM — GOOGLE FLOW STUDIO WORKFLOW
+   TRANG BÀI TẬP THÊM — TƯ DUY & PIPELINE GOOGLE FLOW STUDIO
    Dùng chung hệ biến & Neobrutalism của main.css
    ============================================================ */
 
-.extra-flow-guide {
+/* Khối so sánh Tư duy Làm Vội vs Tư duy Đạo diễn AI */
+.mindset-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
 }
 
-.flow-step-card {
-  padding: 18px 18px 20px;
+.mindset-card {
+  padding: 20px 22px;
   border: 2.5px solid var(--ink);
   border-radius: 18px;
   background: white;
+  box-shadow: 4px 5px 0 var(--ink);
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.mindset-card.bad { background: #fff1f2; }
+.mindset-card.good { background: #f0fdf4; }
+
+.mindset-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mindset-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border: 2px solid var(--ink);
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.mindset-card.bad .mindset-pill { background: #fecdd3; color: #881337; }
+.mindset-card.good .mindset-pill { background: #bbf7d0; color: #14532d; }
+
+.mindset-card h3 {
+  font-size: 18px;
+  font-weight: 950;
+  line-height: 1.3;
+}
+
+.mindset-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+/* SƠ ĐỒ PIPELINE 5 CHẶNG (VISUAL FLOWCHART) */
+.pipeline-section {
+  padding-block: 56px 64px;
+  background: white;
+  border-top: 2.5px solid var(--ink);
+  border-bottom: 2.5px solid var(--ink);
+}
+
+.pipeline-board {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 26px;
+  align-items: stretch;
+}
+
+.pipeline-stage {
+  position: relative;
+  padding: 18px 16px;
+  border: 2.5px solid var(--ink);
+  border-radius: 18px;
+  background: #f8fafc;
   box-shadow: 4px 5px 0 var(--ink);
   display: grid;
   align-content: start;
   gap: 8px;
 }
 
-.flow-step-card.fc-blue { background: #f0f9ff; }
-.flow-step-card.fc-pink { background: #fff1f2; }
-.flow-step-card.fc-green { background: #f0fdf4; }
-.flow-step-card.fc-lavender { background: #f5f3ff; }
-
-.flow-step-badge {
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  padding: 3px 10px;
+.pipeline-stage::after {
+  content: "→";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
   border: 2px solid var(--ink);
-  border-radius: 99px;
   background: #fef08a;
-  font-size: 11.5px;
-  font-weight: 850;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+  z-index: 2;
 }
 
-.flow-step-card h3 {
-  font-size: 16px;
+.pipeline-stage:last-child::after {
+  display: none;
+}
+
+.pipeline-stage.st-1 { background: #eff6ff; }
+.pipeline-stage.st-2 { background: #fffbeb; }
+.pipeline-stage.st-3 { background: #fdf2f8; }
+.pipeline-stage.st-4 { background: #f0fdf4; }
+.pipeline-stage.st-5 { background: #f5f3ff; }
+
+.stage-num {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  padding: 3px 9px;
+  border: 2px solid var(--ink);
+  border-radius: 99px;
+  background: white;
+  font-size: 11px;
   font-weight: 900;
+}
+
+.stage-icon {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.pipeline-stage h3 {
+  font-size: 15.5px;
+  font-weight: 950;
   line-height: 1.3;
 }
 
-.flow-step-card p {
-  font-size: 13px;
+.pipeline-stage p {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.stage-io {
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1.5px dashed rgba(41, 49, 64, 0.25);
+  font-size: 11.5px;
+  font-weight: 750;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+/* KHUNG BẢNG 8 GÓC NHÌN + PROMPT MẪU CHUẨN PIPELINE */
+.pipeline-deepdive {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 20px;
+  margin-top: 28px;
+  align-items: stretch;
+}
+
+.deepdive-panel {
+  border: 2.5px solid var(--ink);
+  border-radius: 20px;
+  background: var(--cream);
+  box-shadow: var(--shadow);
+  padding: 20px 22px;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.deepdive-panel h3 {
+  font-size: 18px;
+  font-weight: 950;
+  line-height: 1.25;
+}
+
+.deepdive-panel > p {
+  font-size: 13.5px;
   line-height: 1.55;
   color: var(--muted);
+}
+
+.eight-views-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.view-chip {
+  padding: 9px 8px;
+  border: 2px solid var(--ink);
+  border-radius: 11px;
+  background: white;
+  box-shadow: 2px 2px 0 var(--ink);
+  text-align: center;
+  display: grid;
+  gap: 3px;
+}
+
+.view-chip span { font-size: 18px; line-height: 1.1; }
+.view-chip strong { font-size: 11.5px; font-weight: 900; color: var(--ink); }
+.view-chip small { font-size: 10.5px; color: var(--muted); font-weight: 600; }
+
+.dialogue-formula-box {
+  display: grid;
+  gap: 8px;
+}
+
+.dialogue-layer {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 12px;
+  border: 2px solid var(--ink);
+  border-radius: 11px;
+  background: white;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.dialogue-layer strong { white-space: nowrap; }
+
+.pipeline-prompts-box {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
 /* Header khu vực bài tập + nút Mở khóa toàn bộ */
@@ -166,9 +353,7 @@
   color: var(--ink);
 }
 
-.brief-text-blocks p {
-  margin: 0;
-}
+.brief-text-blocks p { margin: 0; }
 
 .input-photo-card {
   border: 2px solid var(--ink);
@@ -218,15 +403,8 @@
   gap: 10px;
 }
 
-.prompt-dataset-box.word {
-  background: #eff6ff;
-  border-color: #2563eb;
-}
-
-.prompt-dataset-box.image-asset {
-  background: #fefce8;
-  border-color: #ca8a04;
-}
+.prompt-dataset-box.word { background: #eff6ff; border-color: #2563eb; }
+.prompt-dataset-box.image-asset { background: #fefce8; border-color: #ca8a04; }
 
 .dataset-info {
   display: flex;
@@ -236,27 +414,13 @@
   min-width: 190px;
 }
 
-.dataset-icon {
-  font-size: 22px;
-  line-height: 1;
-}
+.dataset-icon { font-size: 22px; line-height: 1; }
 
-.dataset-name {
-  display: block;
-  font-size: 13px;
-  font-weight: 850;
-  color: var(--ink);
-}
-
+.dataset-name { display: block; font-size: 13px; font-weight: 850; color: var(--ink); }
 .prompt-dataset-box.word .dataset-name { color: #1d4ed8; }
 .prompt-dataset-box.image-asset .dataset-name { color: #854d0e; }
 
-.dataset-desc {
-  display: block;
-  font-size: 11.5px;
-  color: var(--muted);
-  margin-top: 2px;
-}
+.dataset-desc { display: block; font-size: 11.5px; color: var(--muted); margin-top: 2px; }
 
 .dataset-dl-btn {
   display: inline-flex;
@@ -274,11 +438,7 @@
   transition: transform 120ms ease, box-shadow 120ms ease;
 }
 
-.dataset-dl-btn:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 3px 4px 0 var(--ink);
-}
-
+.dataset-dl-btn:hover { transform: translate(-1px, -1px); box-shadow: 3px 4px 0 var(--ink); }
 .dataset-dl-btn.word { background: #2563eb; }
 .dataset-dl-btn.image-asset { background: #ca8a04; }
 
@@ -331,19 +491,8 @@
   flex: none;
 }
 
-.lock-trigger-info strong {
-  display: block;
-  font-size: 14px;
-  font-weight: 900;
-  color: #92400e;
-}
-
-.lock-trigger-info span {
-  display: block;
-  font-size: 12px;
-  font-weight: 700;
-  color: #b45309;
-}
+.lock-trigger-info strong { display: block; font-size: 14px; font-weight: 900; color: #92400e; }
+.lock-trigger-info span { display: block; font-size: 12px; font-weight: 700; color: #b45309; }
 
 .prompt-box-inner {
   border: 2px solid var(--ink);
@@ -360,11 +509,7 @@
   gap: 10px;
 }
 
-.prompt-unlocked-tag {
-  font-size: 13px;
-  font-weight: 850;
-  color: #15803d;
-}
+.prompt-unlocked-tag { font-size: 13px; font-weight: 850; color: #15803d; }
 
 .relock-btn {
   padding: 5px 11px;
@@ -406,6 +551,7 @@
   font-weight: 850;
 }
 
+.step-badge.step-0 { background: #fef08a; color: #854d0e; }
 .step-badge.step-1 { background: #dbeafe; color: #1e3a8a; }
 .step-badge.step-2 { background: #fce7f3; color: #831843; }
 .step-badge.step-3 { background: #dcfce7; color: #14532d; }
@@ -417,8 +563,19 @@
   margin: 0;
 }
 
+.dialogue-pill {
+  margin-top: 9px;
+  padding: 8px 12px;
+  border: 1.5px dashed #16a34a;
+  border-radius: 9px;
+  background: #f0fdf4;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #14532d;
+}
+
 .step-prompt-note {
-  margin-top: 6px !important;
+  margin-top: 7px !important;
   font-size: 12px;
   color: var(--muted);
   font-style: italic;
@@ -436,12 +593,7 @@
 
 .copy-btn:hover { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--ink); }
 
-.copy-status {
-  font-size: 12.5px;
-  font-weight: 700;
-  color: #166435;
-  margin: 0;
-}
+.copy-status { font-size: 12.5px; font-weight: 700; color: #166435; margin: 0; }
 
 /* Modal nhập mật mã */
 .lock-modal {
@@ -490,12 +642,7 @@
 
 .lock-modal-title { font-size: 19px; font-weight: 900; margin-bottom: 6px; }
 .lock-modal-desc { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
-
-.lock-modal-form {
-  display: grid;
-  gap: 10px;
-  width: 100%;
-}
+.lock-modal-form { display: grid; gap: 10px; width: 100%; }
 
 .lock-modal-input {
   width: 100%;
@@ -530,12 +677,20 @@
   font-weight: 800;
 }
 
-@media (max-width: 960px) {
-  .extra-flow-guide { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 1050px) {
+  .pipeline-board { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .pipeline-stage::after { display: none; }
+  .pipeline-deepdive { grid-template-columns: 1fr; }
+  .pipeline-prompts-box { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 860px) {
+  .mindset-grid { grid-template-columns: 1fr; }
   .exercise-brief-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
-  .extra-flow-guide { grid-template-columns: 1fr; }
+  .pipeline-board { grid-template-columns: 1fr; }
+  .eight-views-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .extra-exercise-card { padding: 18px 16px; }
 }

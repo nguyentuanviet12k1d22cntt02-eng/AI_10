@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fbf6f0">
   <meta name="description"
-    content="Kho bài tập thêm thực hành tạo video quảng cáo sản phẩm và giới thiệu địa điểm bằng Google Flow.">
-  <title>Bài tập thêm · Thực hành Google Flow — Lớp học AI</title>
+    content="Hướng dẫn tư duy, Pipeline 5 chặng tạo nhân vật 8 góc nhìn, kịch bản lời thoại và bài tập thực hành Google Flow.">
+  <title>Bài tập thêm · Tư duy &amp; Pipeline Google Flow — Lớp học AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -39,48 +39,157 @@
   </header>
 
   <main id="noi-dung">
-    <!-- PHẦN MỞ ĐẦU & QUY TRÌNH GOOGLE FLOW -->
+    <!-- 1. TƯ DUY ĐÚNG KHI LÀM VIDEO VỚI GOOGLE FLOW -->
     <section class="extra-page-hero" aria-labelledby="extra-title">
       <div class="shell">
         <div class="section-heading extra-page-heading">
-          <p class="pill pill-lavender">Bài tập mở rộng · Tạo Video AI</p>
-          <h1 id="extra-title">Thực hành làm video với <span>Google Flow</span></h1>
-          <p>Luyện tập dựng video quảng cáo sản phẩm (Ghế, Kẹo) và video giới thiệu điểm đến du lịch (Đà Nẵng) từ bộ dữ liệu đầu vào chuẩn chỉnh.</p>
+          <p class="pill pill-lavender">Tư duy &amp; Thực chiến Google Flow</p>
+          <h1 id="extra-title">Tư duy Đạo diễn &amp; <span>Pipeline 5 Chặng</span></h1>
+          <p>Muốn video quảng cáo sản phẩm hay giới thiệu địa điểm không bị "biến dạng nhân vật, rời rạc nội dung", đừng vội bấm tạo video ngay — hãy đi đúng trình tự từ tạo nhân vật 8 góc nhìn đến kịch bản có lời thoại.</p>
         </div>
 
-        <div class="extra-flow-guide" aria-label="Quy trình 4 bước trên Google Flow">
-          <article class="flow-step-card fc-blue">
-            <span class="flow-step-badge">Bước 1 · Chuẩn bị</span>
-            <h3>Tải dữ liệu đầu vào</h3>
-            <p>Tải <strong>File Brief (.docx)</strong> để nắm thông số từng cảnh quay và tải <strong>Ảnh sản phẩm (.png)</strong> nếu bài có sẵn hình gốc.</p>
+        <div class="mindset-grid" aria-label="So sánh tư duy làm video AI">
+          <article class="mindset-card bad">
+            <div class="mindset-head">
+              <span class="mindset-pill">❌ Cách làm vội (Rất dễ hỏng)</span>
+            </div>
+            <h3>Gõ 1 câu lệnh ăn ngay</h3>
+            <ul class="mindset-list">
+              <li>Mở Google Flow lên là gõ ngay một câu mô tả dài rồi bấm tạo.</li>
+              <li><strong>Hậu quả 1:</strong> Cảnh 1 mặt nhân vật/kiểu ghế khác hẳn Cảnh 2 vì AI tự tưởng tượng lại từ đầu.</li>
+              <li><strong>Hậu quả 2:</strong> Video không có lời thoại dẫn chuyện, cảnh rời rạc, khó dùng chạy quảng cáo thật.</li>
+              <li><strong>Hậu quả 3:</strong> Hết credit thử đi thử lại mà vẫn không nối được thành một mạch câu chuyện.</li>
+            </ul>
           </article>
-          <article class="flow-step-card fc-pink">
-            <span class="flow-step-badge">Bước 2 · Chọn chế độ</span>
-            <h3>Ingredients / Frames</h3>
-            <p>Dùng <strong>Frames to Video</strong> (đặt ảnh làm khung đầu) hoặc <strong>Ingredients to Video</strong> để AI giữ nguyên kiểu dáng sản phẩm.</p>
-          </article>
-          <article class="flow-step-card fc-green">
-            <span class="flow-step-badge">Bước 3 · Tạo 3 Shot</span>
-            <h3>Prompt chuẩn điện ảnh</h3>
-            <p>Nhập lệnh mô tả rõ: <em>Chủ thể + Hành động + Góc máy + Ánh sáng + Âm thanh (Audio)</em> để tạo từng clip ngắn 8 giây bằng Veo.</p>
-          </article>
-          <article class="flow-step-card fc-lavender">
-            <span class="flow-step-badge">Bước 4 · Nối cảnh</span>
-            <h3>Dựng trên Scenebuilder</h3>
-            <p>Đưa 3 clip vừa tạo vào <strong>Scenebuilder</strong> theo đúng thứ tự Mở đầu → Chi tiết → Kết cảnh rồi xuất video 24 giây hoàn chỉnh.</p>
+
+          <article class="mindset-card good">
+            <div class="mindset-head">
+              <span class="mindset-pill">✅ Tư duy Đạo diễn AI (Chuẩn Pipeline)</span>
+            </div>
+            <h3>Khóa nguyên liệu trước — Dựng cảnh sau</h3>
+            <ul class="mindset-list">
+              <li><strong>Bước đệm 1:</strong> Chốt Brief mục tiêu, đối tượng, thông điệp trước khi chạm vào công cụ video.</li>
+              <li><strong>Bước đệm 2:</strong> Tạo <strong>Sheet Nhân vật / Sản phẩm 8 góc nhìn</strong> để nạp vào <em>Ingredients</em> — khóa chặt sự đồng nhất qua mọi góc máy.</li>
+              <li><strong>Bước đệm 3:</strong> Viết <strong>Kịch bản 3 hồi kèm Lời thoại &amp; Âm thanh</strong> rõ từng giây (0–8s, 8–16s, 16–24s).</li>
+              <li><strong>Bước đệm 4:</strong> Tạo từng Shot trên Google Flow rồi lắp vào <strong>Scenebuilder</strong> là ra sản phẩm chuẩn ngay.</li>
+            </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- DANH SÁCH 3 BÀI TẬP THỰC HÀNH -->
+    <!-- 2. SƠ ĐỒ PIPELINE 5 CHẶNG DẪN DẮT TỪNG BƯỚC -->
+    <section class="pipeline-section" aria-labelledby="pipeline-title">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="pill pill-blue">Sơ đồ quy trình chuẩn</p>
+          <h2 id="pipeline-title">Pipeline 5 chặng dẫn dắt thực hiện</h2>
+          <p>Học viên thực hiện lần lượt từ Chặng 1 → Chặng 5. Hoàn thành đầu ra của chặng trước mới sang chặng sau.</p>
+        </div>
+
+        <!-- FLOWCHART 5 CHẶNG -->
+        <ol class="pipeline-board" role="list">
+          <li class="pipeline-stage st-1">
+            <span class="stage-num">CHẶNG 1</span>
+            <span class="stage-icon" aria-hidden="true">📋</span>
+            <h3>Chốt Ý tưởng &amp; Brief</h3>
+            <p>Xác định sản phẩm/địa điểm, đối tượng xem, thông điệp chính (USP) và tổng thời lượng 24s.</p>
+            <div class="stage-io">Đầu ra: File Brief (.docx) &amp; Ảnh gốc sản phẩm.</div>
+          </li>
+
+          <li class="pipeline-stage st-2">
+            <span class="stage-num">CHẶNG 2</span>
+            <span class="stage-icon" aria-hidden="true">🎭</span>
+            <h3>Tạo Nhân vật 8 góc nhìn</h3>
+            <p>Dùng AI tạo ảnh (Imagen/Gemini) dựng <strong>Character Sheet 8 góc</strong> trên nền trắng, sau đó cắt từng góc riêng.</p>
+            <div class="stage-io">Đầu ra: 8 ảnh góc nhìn để nạp vào <em>Ingredients</em>.</div>
+          </li>
+
+          <li class="pipeline-stage st-3">
+            <span class="stage-num">CHẶNG 3</span>
+            <span class="stage-icon" aria-hidden="true">🎬</span>
+            <h3>Kịch bản &amp; Lời thoại</h3>
+            <p>Chia 3 Shot (Hook → Trải nghiệm → CTA). Viết rõ 4 lớp: Hình ảnh, Góc máy, Lời thoại, Âm thanh.</p>
+            <div class="stage-io">Đầu ra: Bảng phân cảnh 3 Shot có sẵn Voiceover.</div>
+          </li>
+
+          <li class="pipeline-stage st-4">
+            <span class="stage-num">CHẶNG 4</span>
+            <span class="stage-icon" aria-hidden="true">⚡</span>
+            <h3>Tạo từng Shot trên Flow</h3>
+            <p>Nạp ảnh góc nhìn tương ứng vào <em>Ingredients / Frames</em>, dán prompt từng Shot để Veo render 8s/clip.</p>
+            <div class="stage-io">Đầu ra: 3 clip rời mượt mà, đồng nhất ngoại hình.</div>
+          </li>
+
+          <li class="pipeline-stage st-5">
+            <span class="stage-num">CHẶNG 5</span>
+            <span class="stage-icon" aria-hidden="true">🎞️</span>
+            <h3>Ghép nối Scenebuilder</h3>
+            <p>Kéo 3 clip vào timeline Scenebuilder, kiểm tra chuyển cảnh, lời thoại &amp; nhạc nền rồi xuất bản.</p>
+            <div class="stage-io">Đầu ra: Video hoàn chỉnh 24 giây (16:9).</div>
+          </li>
+        </ol>
+
+        <!-- GIẢI THÍCH SÂU: 8 GÓC NHÌN + CẤU TRÚC KỊCH BẢN LỜI THOẠI -->
+        <div class="pipeline-deepdive">
+          <div class="deepdive-panel">
+            <h3>1. Bộ 8 góc nhìn chuẩn để nạp Ingredients là gì?</h3>
+            <p>Khi nhân vật đi từ trái sang phải, quay lưng ngắm biển hay cười cận cảnh, AI chỉ giữ được đúng khuôn mặt &amp; trang phục nếu bạn có đủ <strong>8 góc tham chiếu (Turnaround Sheet)</strong>:</p>
+            <div class="eight-views-grid" aria-label="8 góc nhìn nhân vật và sản phẩm">
+              <div class="view-chip"><span>🧍</span><strong>1. Chính diện</strong><small>Front View</small></div>
+              <div class="view-chip"><span>🔙</span><strong>2. Sau lưng</strong><small>Back View</small></div>
+              <div class="view-chip"><span>⬅️</span><strong>3. Nghiêng trái</strong><small>Left 90°</small></div>
+              <div class="view-chip"><span>➡️</span><strong>4. Nghiêng phải</strong><small>Right 90°</small></div>
+              <div class="view-chip"><span>↙️</span><strong>5. Góc 3/4 trái</strong><small>3/4 Left</small></div>
+              <div class="view-chip"><span>↘️</span><strong>6. Góc 3/4 phải</strong><small>3/4 Right</small></div>
+              <div class="view-chip"><span>🔍</span><strong>7. Cận mặt/chi tiết</strong><small>Close-up</small></div>
+              <div class="view-chip"><span>🎥</span><strong>8. Toàn thân/Bối cảnh</strong><small>Full-body</small></div>
+            </div>
+          </div>
+
+          <div class="deepdive-panel">
+            <h3>2. Công thức viết Kịch bản kèm Lời thoại (cho mỗi Shot 8s)</h3>
+            <p>Mỗi clip trên Google Flow dài khoảng 8 giây — lời thoại chỉ nên dài <strong>15–22 chữ tiếng Việt</strong> (đọc tốc độ tự nhiên mất ~6 giây, chừa 2 giây thở chuyển cảnh):</p>
+            <div class="dialogue-formula-box">
+              <div class="dialogue-layer"><strong>🎥 Hình ảnh &amp; Góc máy:</strong><span>Nêu rõ chuyển động máy (<em>push-in, tracking, drone flycam</em>) và hành động chính của nhân vật/sản phẩm.</span></div>
+              <div class="dialogue-layer"><strong>🎙️ Lời thoại (Voiceover):</strong><span>1–2 câu ngắn gọn đắt giá (Hook ở Shot 1, USP ở Shot 2, Kêu gọi hành động CTA ở Shot 3).</span></div>
+              <div class="dialogue-layer"><strong>🔊 Âm thanh (Audio):</strong><span>Mô tả tiếng động tự nhiên (tiếng sóng biển, gõ phím, mở gói kẹo) + tông nhạc nền.</span></div>
+              <div class="dialogue-layer"><strong>📌 Nguyên liệu gắn kèm:</strong><span>Ghi chú rõ dùng ảnh góc số mấy trong Bộ 8 góc nhìn cho cảnh này.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 PROMPT NỀN TẢNG DÙNG CHUNG CHO CHẶNG 2 & CHẶNG 3 -->
+        <div class="pipeline-prompts-box">
+          <div class="step-prompt-item">
+            <div class="step-prompt-header">
+              <span class="step-badge step-0">Prompt Chặng 2 · Tạo Sheet Nhân vật 8 góc nhìn (Dán vào Gemini / Imagen)</span>
+              <button type="button" class="copy-btn" data-copy="p-pipe-8view">Sao chép</button>
+            </div>
+            <p id="p-pipe-8view" class="prompt-text">Create a clean 8-view character turnaround reference sheet on a pure solid white background, arranged in a neat 2x4 grid with consistent proportions, lighting, and outfit. Character: [MÔ TẢ NHÂN VẬT: ví dụ 27-year-old Vietnamese female designer, neat hair bun, beige blazer, white t-shirt, dark trousers]. Include exact 8 views: (1) front view, (2) back view, (3) left side profile, (4) right side profile, (5) 3/4 front-left view, (6) 3/4 front-right view, (7) close-up facial portrait, (8) full-body standing pose. Ultra sharp studio photography style, no text labels, no watermarks.</p>
+            <p class="copy-status" role="status"></p>
+          </div>
+
+          <div class="step-prompt-item">
+            <div class="step-prompt-header">
+              <span class="step-badge step-1">Prompt Chặng 3 · Tạo Kịch bản 3 Shot kèm Lời thoại (Dán vào Gemini kèm File Brief)</span>
+              <button type="button" class="copy-btn" data-copy="p-pipe-script">Sao chép</button>
+            </div>
+            <p id="p-pipe-script" class="prompt-text">Đóng vai Đạo diễn Video Quảng cáo. Đọc File Brief đính kèm và lập cho tôi bảng phân cảnh 3 Shot (mỗi Shot 8 giây, tổng 24 giây) để sản xuất trên Google Flow. Với mỗi Shot, xuất ra 4 mục rõ ràng: (1) Góc máy &amp; Cảnh quay (bằng tiếng Anh chuẩn Veo 3 để dán vào Google Flow), (2) Chọn ảnh góc nào từ bộ 8 góc nhìn để nạp vào Ingredients, (3) Lời thoại tiếng Việt ngắn 15–20 chữ đọc vừa khít 8 giây, (4) Âm thanh nền &amp; SFX.</p>
+            <p class="copy-status" role="status"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. DANH SÁCH 3 BÀI TẬP THỰC HÀNH ÁP DỤNG PIPELINE -->
     <section class="extra-section" aria-label="Danh sách bài tập Google Flow">
       <div class="shell">
         <div class="extra-practice-toolbar">
           <div>
-            <p class="pill pill-pink">3 Dự án thực hành</p>
-            <h2>Bài tập ứng dụng Google Flow</h2>
-            <p>Tải dữ liệu đầu vào về máy trước khi mở công cụ Google Flow. Học viên tự viết prompt theo Brief, sau đó mở khóa để đối chiếu prompt mẫu 3 Shot.</p>
+            <p class="pill pill-pink">Áp dụng Pipeline 5 chặng</p>
+            <h2>3 Bài tập thực hành Google Flow</h2>
+            <p>Tải Brief + Ảnh đầu vào, tự chạy theo Pipeline 5 chặng ở trên, sau đó mở khóa để đối chiếu Prompt tạo nhân vật 8 góc nhìn &amp; 3 Shot kèm lời thoại mẫu.</p>
           </div>
           <button type="button" class="master-unlock-btn" id="btn-master-unlock" title="Mở khóa toàn bộ prompt mẫu">
             <span aria-hidden="true">🔒</span>
@@ -95,8 +204,8 @@
               <div>
                 <div class="exercise-card-tags">
                   <span class="mode-tag">🪑 Quảng cáo sản phẩm</span>
-                  <span class="mode-tag tag-green">Frames &amp; Ingredients to Video</span>
-                  <span class="mode-tag tag-lavender">3 Shot · 24 giây</span>
+                  <span class="mode-tag tag-green">Nhân vật 8 góc + Ảnh ghế</span>
+                  <span class="mode-tag tag-lavender">3 Shot + Lời thoại</span>
                 </div>
                 <h3 class="exercise-card-title">Bài tập 1: Video quảng cáo Ghế Công Thái Học ErgoAir Pro</h3>
               </div>
@@ -104,27 +213,26 @@
 
             <div class="exercise-brief-grid">
               <div class="brief-text-blocks">
-                <p><strong>Tình huống.</strong> Bạn phụ trách truyền thông cho thương hiệu nội thất văn phòng ErgoAir. Công ty cần một video quảng cáo ngắn 24 giây (gồm 3 cảnh quay nối tiếp) để chạy giới thiệu mẫu ghế công thái học ErgoAir Pro cho dân văn phòng.</p>
-                <p><strong>Vấn đề.</strong> Nếu chỉ gõ lệnh chữ chung chung, AI rất dễ tự vẽ sai kiểu dáng chân ghế, lưới lưng hoặc đổi màu ghế giữa các cảnh quay.</p>
-                <p><strong>Mục tiêu.</strong> Nạp ảnh sản phẩm thật (<code>img-ghe-ergoair.png</code>) vào mục <strong>Frames / Ingredients</strong> của Google Flow để giữ nguyên mẫu ghế qua 3 cảnh: Toàn cảnh ban mai → Cận chất liệu lưới &amp; ngả lưng → Nhân viên làm việc thoải mái, rồi ghép trên <strong>Scenebuilder</strong>.</p>
+                <p><strong>Tình huống.</strong> Bạn phụ trách truyền thông cho thương hiệu nội thất văn phòng ErgoAir. Công ty cần video quảng cáo 24 giây có nhân vật <strong>Minh Anh</strong> (nữ designer 27 tuổi, áo blazer be) đồng hành giới thiệu mẫu ghế ErgoAir Pro cho dân văn phòng.</p>
+                <p><strong>Vấn đề.</strong> Nếu bỏ qua bước tạo nhân vật 8 góc nhìn và kịch bản lời thoại, AI sẽ đổi mặt Minh Anh ở Shot 3 và làm sai kiểu chân/lưới ghế giữa các cảnh quay.</p>
+                <p><strong>Mục tiêu.</strong> Áp dụng đủ Pipeline: (1) Tạo Sheet 8 góc nhìn cho Minh Anh, (2) Dùng ảnh ghế (<code>img-ghe-ergoair.png</code>) + ảnh nhân vật nạp vào <strong>Ingredients / Frames</strong> của Google Flow, (3) Xuất 3 Shot kèm lời thoại chuẩn nhịp rồi ghép trên <strong>Scenebuilder</strong>.</p>
               </div>
               <figure class="input-photo-card">
                 <img src="../assets/data/bai-tap-them/img-ghe-ergoair.png" alt="Ảnh sản phẩm mẫu Ghế Công Thái Học ErgoAir Pro đặt cạnh cửa sổ nắng sáng">
                 <figcaption class="input-photo-caption">
-                  <span>Ảnh đầu vào · img-ghe-ergoair.png</span>
+                  <span>Ảnh sản phẩm · img-ghe-ergoair.png</span>
                   <span>16:9</span>
                 </figcaption>
               </figure>
             </div>
 
-            <!-- DỮ LIỆU ĐẦU VÀO TẢI VỀ -->
             <div class="dataset-row">
               <div class="prompt-dataset-box word">
                 <div class="dataset-info">
                   <span class="dataset-icon">📄</span>
                   <div>
-                    <span class="dataset-name">Brief &amp; Bảng phân cảnh 3 Shot — Ghế ErgoAir Pro</span>
-                    <span class="dataset-desc">Thông số sản phẩm, USP, bảng phân cảnh góc máy &amp; checklist nghiệm thu</span>
+                    <span class="dataset-name">Brief, Quy chuẩn 8 góc nhìn &amp; Kịch bản lời thoại — ErgoAir Pro</span>
+                    <span class="dataset-desc">Hồ sơ nhân vật Minh Anh, USP sản phẩm, bảng phân cảnh 3 Shot kèm lời thoại</span>
                   </div>
                 </div>
                 <a href="../assets/data/bai-tap-them/data-ggflow-bt1-quang-cao-ghe-ergoair.docx" class="dataset-dl-btn word" download>
@@ -142,52 +250,60 @@
                   </div>
                 </div>
                 <a href="../assets/data/bai-tap-them/img-ghe-ergoair.png" class="dataset-dl-btn image-asset" download>
-                  <span>📥 Tải ảnh mẫu</span>
+                  <span>📥 Tải ảnh ghế</span>
                   <span class="dataset-format-tag">PNG</span>
                 </a>
               </div>
             </div>
 
-            <!-- Ổ KHÓA PROMPT MẪU -->
             <button type="button" class="prompt-lock-trigger" title="Bấm vào để mở khóa prompt mẫu">
               <span class="lock-shield-icon">🔒</span>
               <span class="lock-trigger-info">
-                <strong>Prompt mẫu 3 Shot đang khóa</strong>
-                <span>Bấm vào để nhập mật mã mở khóa và đối chiếu cách viết lệnh Google Flow</span>
+                <strong>Bộ Prompt Pipeline (8 góc nhìn + 3 Shot kèm Lời thoại) đang khóa</strong>
+                <span>Bấm vào để nhập mật mã mở khóa và đối chiếu toàn bộ chuỗi lệnh</span>
               </span>
             </button>
 
             <div class="prompt-box-inner" hidden>
               <div class="prompt-box-head">
-                <span class="prompt-unlocked-tag">🔓 Chuỗi 3 Prompt cho Google Flow (Veo + Scenebuilder)</span>
+                <span class="prompt-unlocked-tag">🔓 Chuỗi Prompt theo Pipeline: Nhân vật 8 góc nhìn → 3 Shot kèm Lời thoại</span>
                 <button type="button" class="relock-btn">🔒 Khóa lại</button>
               </div>
 
               <div class="step-prompt-item">
                 <div class="step-prompt-header">
-                  <span class="step-badge step-1">Shot 1 (0–8s) · Frames to Video (Dùng img-ghe-ergoair.png làm Start Frame)</span>
+                  <span class="step-badge step-0">Chặng 2 · Tạo Sheet 8 góc nhìn Nhân vật Minh Anh (Nạp Ingredients)</span>
+                  <button type="button" class="copy-btn" data-copy="p-flow-1-s0">Sao chép Bước 8 góc</button>
+                </div>
+                <p id="p-flow-1-s0" class="prompt-text">Create a clean 8-view character turnaround sheet on a pure solid white background in a neat 2x4 grid. Character: Minh Anh, a 27-year-old Vietnamese female designer with a neat hair bun, wearing a smart-casual beige blazer over a white t-shirt and dark tailored trousers. Include: (1) front view, (2) back view, (3) left profile, (4) right profile, (5) 3/4 front-left, (6) 3/4 front-right, (7) close-up smiling face, (8) full-body pose. Photorealistic studio lighting, consistent face and outfit across all 8 views, no text.</p>
+                <p class="step-prompt-note">Sau khi tạo xong bảng 8 góc nhìn, cắt riêng góc 3/4 phải và cận mặt để nạp chung với <code>img-ghe-ergoair.png</code> vào Ingredients.</p>
+              </div>
+
+              <div class="step-prompt-item">
+                <div class="step-prompt-header">
+                  <span class="step-badge step-1">Shot 1 (0–8s) · Frames to Video (Start Frame: img-ghe-ergoair.png)</span>
                   <button type="button" class="copy-btn" data-copy="p-flow-1-s1">Sao chép Shot 1</button>
                 </div>
                 <p id="p-flow-1-s1" class="prompt-text">Slow cinematic camera push-in and subtle 15-degree orbit around the modern charcoal-mesh ergonomic office chair from the start frame. Warm morning sunlight streams gently through the window, casting soft shadows on the minimalist floor. Realistic commercial photography style, 4k sharp focus on the chair silhouette. Gentle ambient piano music and peaceful morning room tone.</p>
-                <p class="step-prompt-note">Mẹo: Chọn chế độ <strong>Frames to Video</strong> và tải <code>img-ghe-ergoair.png</code> vào ô khung hình đầu để giữ chính xác mẫu ghế.</p>
+                <div class="dialogue-pill">🎙️ <strong>Lời thoại Shot 1 (Hook):</strong> “Ngồi làm việc 8 tiếng mỗi ngày mà vẫn nhẹ tênh? Bí quyết nằm ở chiếc ghế này.”</div>
               </div>
 
               <div class="step-prompt-item">
                 <div class="step-prompt-header">
-                  <span class="step-badge step-2">Shot 2 (8–16s) · Ingredients to Video (Nạp img-ghe-ergoair.png)</span>
+                  <span class="step-badge step-2">Shot 2 (8–16s) · Ingredients (Minh Anh góc nghiêng + img-ghe-ergoair.png)</span>
                   <button type="button" class="copy-btn" data-copy="p-flow-1-s2">Sao chép Shot 2</button>
                 </div>
-                <p id="p-flow-1-s2" class="prompt-text">Macro close-up tracking shot gliding smoothly along the breathable charcoal mesh backrest and curved lumbar support of the ergonomic chair. An office worker in smart-casual attire leans back smoothly as the chair reclines effortlessly. Warm natural rim lighting, shallow depth of field. Subtle soft hydraulic click and warm acoustic music.</p>
-                <p class="step-prompt-note">Mẹo: Chọn <strong>Ingredients to Video</strong> và gắn ảnh ghế vào mục Ingredient để quay cận cảnh chất liệu mà không bị đổi thiết kế.</p>
+                <p id="p-flow-1-s2" class="prompt-text">Macro close-up tracking shot gliding smoothly along the breathable charcoal mesh backrest and curved lumbar support of the ergonomic chair. Minh Anh from the ingredient reference leans back smoothly as the chair reclines effortlessly. Warm natural rim lighting, shallow depth of field. Subtle soft hydraulic click and warm acoustic music.</p>
+                <div class="dialogue-pill">🎙️ <strong>Lời thoại Shot 2 (USP):</strong> “Thiết kế lưới thoáng khí kết hợp đệm nâng đỡ cột sống giúp bạn ngả lưng êm ái suốt cả ngày dài.”</div>
               </div>
 
               <div class="step-prompt-item">
                 <div class="step-prompt-header">
-                  <span class="step-badge step-3">Shot 3 (16–24s) · Kết cảnh trên Scenebuilder</span>
+                  <span class="step-badge step-3">Shot 3 (16–24s) · Ingredients (Minh Anh góc 3/4 + img-ghe-ergoair.png)</span>
                   <button type="button" class="copy-btn" data-copy="p-flow-1-s3">Sao chép Shot 3</button>
                 </div>
-                <p id="p-flow-1-s3" class="prompt-text">Smooth slow pull-back shot showing a smiling young designer working comfortably on a laptop while seated in the charcoal-mesh ergonomic chair beside a wooden desk with a steaming coffee mug. Bright morning sunlight fills the clean modern studio. Soft keyboard typing sound blending into an uplifting commercial music ending.</p>
-                <p class="step-prompt-note">Mẹo: Kéo 3 clip theo thứ tự Shot 1 → Shot 2 → Shot 3 vào <strong>Scenebuilder</strong> để xuất video 24 giây hoàn chỉnh.</p>
+                <p id="p-flow-1-s3" class="prompt-text">Smooth slow pull-back shot showing Minh Anh smiling and working comfortably on a laptop while seated in the charcoal-mesh ergonomic chair beside a wooden desk with a steaming coffee mug. Bright morning sunlight fills the clean modern studio. Soft keyboard typing sound blending into an uplifting commercial music ending.</p>
+                <div class="dialogue-pill">🎙️ <strong>Lời thoại Shot 3 (CTA):</strong> “ErgoAir Pro — Nâng niu dáng ngồi, bứt phá hiệu suất mỗi ngày!”</div>
               </div>
 
               <p class="copy-status" role="status"></p>
@@ -200,8 +316,8 @@
               <div>
                 <div class="exercise-card-tags">
                   <span class="mode-tag tag-pink">🍬 Quảng cáo sản phẩm F&amp;B</span>
-                  <span class="mode-tag tag-green">Slow-motion &amp; Ingredients</span>
-                  <span class="mode-tag tag-lavender">3 Shot · 24 giây</span>
+                  <span class="mode-tag tag-green">Nhân vật 8 góc + Slow-motion</span>
+                  <span class="mode-tag tag-lavender">3 Shot + Lời thoại</span>
                 </div>
                 <h3 class="exercise-card-title">Bài tập 2: Video quảng cáo Kẹo Dừa &amp; Trái Cây Nhiệt Đới CocoJoy</h3>
               </div>
@@ -209,14 +325,14 @@
 
             <div class="exercise-brief-grid">
               <div class="brief-text-blocks">
-                <p><strong>Tình huống.</strong> Thương hiệu đặc sản CocoJoy chuẩn bị ra mắt dòng kẹo dẻo dừa sáp kết hợp trái cây nhiệt đới (xoài, chanh dây) cho nhân viên văn phòng và khách du lịch. Bạn cần dựng video quảng cáo bắt mắt, kích thích vị giác.</p>
-                <p><strong>Vấn đề.</strong> Quay đồ ăn/kẹo cần màu sắc tươi sáng, chuyển động chậm (slow-motion) mịn màng và bao bì/viên kẹo không bị biến dạng méo mó giữa các cảnh.</p>
-                <p><strong>Mục tiêu.</strong> Sử dụng ảnh studio hộp kẹo đầu vào (<code>img-keo-cocojoy.png</code>) kết hợp câu lệnh mô tả chuyển động quay chậm (120fps) và ánh sáng studio ấm để tạo 3 clip quảng cáo hấp dẫn trên Google Flow.</p>
+                <p><strong>Tình huống.</strong> Thương hiệu CocoJoy cần video quảng cáo 24 giây giới thiệu kẹo dẻo dừa sáp &amp; trái cây nhiệt đới, kết hợp cảnh quay cận ẩm thực (food commercial) và nhân vật <strong>Khánh Vy</strong> (24 tuổi, áo sơ mi trắng kem) trực tiếp thưởng thức sản phẩm.</p>
+                <p><strong>Vấn đề.</strong> Quay đồ ăn cần chuyển động slow-motion 120fps sắc nét không biến dạng viên kẹo, đồng thời khuôn mặt Khánh Vy khi cầm hộp kẹo ở Shot 3 phải ăn khớp tông màu tươi sáng của hộp sản phẩm.</p>
+                <p><strong>Mục tiêu.</strong> Tạo trước Sheet 8 góc nhìn cho Khánh Vy, kết hợp ảnh hộp kẹo (<code>img-keo-cocojoy.png</code>) và kịch bản 3 Shot có lời thoại kích thích vị giác trên Google Flow.</p>
               </div>
               <figure class="input-photo-card">
                 <img src="../assets/data/bai-tap-them/img-keo-cocojoy.png" alt="Ảnh studio hộp kẹo dừa và trái cây nhiệt đới CocoJoy">
                 <figcaption class="input-photo-caption">
-                  <span>Ảnh đầu vào · img-keo-cocojoy.png</span>
+                  <span>Ảnh sản phẩm · img-keo-cocojoy.png</span>
                   <span>16:9</span>
                 </figcaption>
               </figure>
@@ -227,8 +343,8 @@
                 <div class="dataset-info">
                   <span class="dataset-icon">📄</span>
                   <div>
-                    <span class="dataset-name">Brief &amp; Bảng phân cảnh 3 Shot — Kẹo CocoJoy</span>
-                    <span class="dataset-desc">Mô tả hương vị, bảng màu, yêu cầu slow-motion &amp; âm thanh kích thích vị giác</span>
+                    <span class="dataset-name">Brief, Quy chuẩn 8 góc nhìn &amp; Kịch bản lời thoại — Kẹo CocoJoy</span>
+                    <span class="dataset-desc">Hồ sơ nhân vật Khánh Vy, bảng phân cảnh slow-motion &amp; lời thoại 3 Shot</span>
                   </div>
                 </div>
                 <a href="../assets/data/bai-tap-them/data-ggflow-bt2-quang-cao-keo-cocojoy.docx" class="dataset-dl-btn word" download>
@@ -246,7 +362,7 @@
                   </div>
                 </div>
                 <a href="../assets/data/bai-tap-them/img-keo-cocojoy.png" class="dataset-dl-btn image-asset" download>
-                  <span>📥 Tải ảnh mẫu</span>
+                  <span>📥 Tải ảnh hộp kẹo</span>
                   <span class="dataset-format-tag">PNG</span>
                 </a>
               </div>
@@ -255,42 +371,51 @@
             <button type="button" class="prompt-lock-trigger" title="Bấm vào để mở khóa prompt mẫu">
               <span class="lock-shield-icon">🔒</span>
               <span class="lock-trigger-info">
-                <strong>Prompt mẫu 3 Shot đang khóa</strong>
-                <span>Bấm vào để nhập mật mã mở khóa và đối chiếu cách viết lệnh quảng cáo F&amp;B</span>
+                <strong>Bộ Prompt Pipeline (8 góc nhìn + 3 Shot kèm Lời thoại) đang khóa</strong>
+                <span>Bấm vào để nhập mật mã mở khóa và đối chiếu toàn bộ chuỗi lệnh</span>
               </span>
             </button>
 
             <div class="prompt-box-inner" hidden>
               <div class="prompt-box-head">
-                <span class="prompt-unlocked-tag">🔓 Chuỗi 3 Prompt quảng cáo Kẹo CocoJoy (Google Flow)</span>
+                <span class="prompt-unlocked-tag">🔓 Chuỗi Prompt theo Pipeline: Nhân vật 8 góc nhìn → 3 Shot kèm Lời thoại</span>
                 <button type="button" class="relock-btn">🔒 Khóa lại</button>
               </div>
 
               <div class="step-prompt-item">
                 <div class="step-prompt-header">
-                  <span class="step-badge step-1">Shot 1 (0–8s) · Hero Shot từ Start Frame</span>
+                  <span class="step-badge step-0">Chặng 2 · Tạo Sheet 8 góc nhìn Nhân vật Khánh Vy (Nạp Ingredients)</span>
+                  <button type="button" class="copy-btn" data-copy="p-flow-2-s0">Sao chép Bước 8 góc</button>
+                </div>
+                <p id="p-flow-2-s0" class="prompt-text">Create a clean 8-view character turnaround sheet on a pure solid white background in a neat 2x4 grid. Character: Khanh Vy, a cheerful 24-year-old Vietnamese young woman with shoulder-length straight hair, wearing a crisp cream-white linen shirt. Include: (1) front view, (2) back view, (3) left profile, (4) right profile, (5) 3/4 front-left, (6) 3/4 front-right, (7) close-up happy smiling portrait, (8) full-body pose. Bright commercial studio lighting, identical face and shirt across all 8 views, no text.</p>
+                <p class="step-prompt-note">Cắt góc chính diện và 3/4 trái từ bảng 8 góc nhìn để dùng cho Shot 3 cùng <code>img-keo-cocojoy.png</code>.</p>
+              </div>
+
+              <div class="step-prompt-item">
+                <div class="step-prompt-header">
+                  <span class="step-badge step-1">Shot 1 (0–8s) · Frames to Video (Start Frame: img-keo-cocojoy.png)</span>
                   <button type="button" class="copy-btn" data-copy="p-flow-2-s1">Sao chép Shot 1</button>
                 </div>
                 <p id="p-flow-2-s1" class="prompt-text">Smooth slow dolly-in camera movement across the warm cream marble table toward the open colorful CocoJoy candy box surrounded by fresh coconut slices and ripe mango pieces. Soft golden studio rim light shimmers gently on the candies. Appetizing food commercial style, cheerful acoustic pop music.</p>
-                <p class="step-prompt-note">Mẹo: Nạp <code>img-keo-cocojoy.png</code> làm Start Frame ở chế độ Frames to Video để bắt đầu mượt mà.</p>
+                <div class="dialogue-pill">🎙️ <strong>Lời thoại Shot 1 (Hook):</strong> “Đánh thức vị giác giữa giờ làm với hương vị nhiệt đới ngọt thanh từ CocoJoy!”</div>
               </div>
 
               <div class="step-prompt-item">
                 <div class="step-prompt-header">
-                  <span class="step-badge step-2">Shot 2 (8–16s) · Slow-motion 120fps cận cảnh</span>
+                  <span class="step-badge step-2">Shot 2 (8–16s) · Ingredients (img-keo-cocojoy.png · Slow-motion 120fps)</span>
                   <button type="button" class="copy-btn" data-copy="p-flow-2-s2">Sao chép Shot 2</button>
                 </div>
                 <p id="p-flow-2-s2" class="prompt-text">Ultra-smooth 120fps slow-motion macro food commercial shot: two pastel tropical fruit and coconut chewy candies drop gently onto fresh white coconut slices while golden mango juice droplets glisten in warm studio light. Crisp appetizing textures, shallow depth of field. Delicate water-droplet sound and upbeat chime.</p>
-                <p class="step-prompt-note">Mẹo: Dùng từ khóa <code>120fps slow-motion macro food commercial</code> để Veo diễn tả chuyển động rơi chậm và giọt nước sắc nét.</p>
+                <div class="dialogue-pill">🎙️ <strong>Lời thoại Shot 2 (USP):</strong> “Mềm dẻo vị dừa sáp hòa quyện xoài chín mọng — ngon trọn từng viên.”</div>
               </div>
 
               <div class="step-prompt-item">
                 <div class="step-prompt-header">
-                  <span class="step-badge step-3">Shot 3 (16–24s) · Trải nghiệm &amp; Kết cảnh</span>
+                  <span class="step-badge step-3">Shot 3 (16–24s) · Ingredients (Khánh Vy + img-keo-cocojoy.png)</span>
                   <button type="button" class="copy-btn" data-copy="p-flow-2-s3">Sao chép Shot 3</button>
                 </div>
-                <p id="p-flow-2-s3" class="prompt-text">Warm medium shot of a cheerful young office worker unwrapping and enjoying a pastel tropical candy at a sunlit desk, with the open CocoJoy box sharp in the foreground. Natural warm sunlight, clean modern lifestyle commercial look. Subtle wrapper crinkle sound and bright uplifting music finale.</p>
-                <p class="step-prompt-note">Mẹo: Gắn <code>img-keo-cocojoy.png</code> vào <strong>Ingredients</strong> để hộp kẹo ở tiền cảnh giữ đúng màu sắc và hình dáng.</p>
+                <p id="p-flow-2-s3" class="prompt-text">Warm medium shot of Khanh Vy from the ingredient sheet smiling while unwrapping and enjoying a pastel tropical candy at a sunlit desk, with the open CocoJoy box sharp in the foreground. Natural warm sunlight, clean modern lifestyle commercial look. Subtle wrapper crinkle sound and bright uplifting music finale.</p>
+                <div class="dialogue-pill">🎙️ <strong>Lời thoại Shot 3 (CTA):</strong> “Thử ngay CocoJoy hôm nay — Nạp năng lượng ngọt ngào tức thì!”</div>
               </div>
 
               <p class="copy-status" role="status"></p>
@@ -303,8 +428,8 @@
               <div>
                 <div class="exercise-card-tags">
                   <span class="mode-tag">✈️ Giới thiệu điểm đến du lịch</span>
-                  <span class="mode-tag tag-green">Text to Video + Scenebuilder</span>
-                  <span class="mode-tag tag-lavender">3 Shot · 24 giây</span>
+                  <span class="mode-tag tag-green">Travel Vlogger 8 góc + Text to Video</span>
+                  <span class="mode-tag tag-lavender">3 Shot + Lời thoại</span>
                 </div>
                 <h3 class="exercise-card-title">Bài tập 3: Video quảng bá Du lịch Đà Nẵng — Thành Phố Của Những Cây Cầu</h3>
               </div>
@@ -312,9 +437,9 @@
 
             <div class="exercise-brief-grid no-image">
               <div class="brief-text-blocks">
-                <p><strong>Tình huống.</strong> Bạn đang biên tập một video quảng bá du lịch ngắn (24 giây) giới thiệu vẻ đẹp thành phố biển Đà Nẵng qua 3 khoảnh khắc đặc trưng: Cầu Rồng bắc qua sông Hàn lúc hoàng hôn, bình minh trên bãi biển Mỹ Khê và không khí sôi động bên sông Hàn về đêm.</p>
-                <p><strong>Vấn đề.</strong> Khi không có sẵn ảnh flycam hay cảnh quay thực địa, bạn cần mô tả thật chuẩn thời điểm ánh sáng, góc máy (aerial drone, low-angle gliding) và âm thanh tự nhiên để AI tạo cảnh không bị giả hoặc rời rạc giữa các khung hình.</p>
-                <p><strong>Mục tiêu.</strong> Đọc kỹ bảng phân cảnh trong file Brief (<code>DOCX</code>), thực hành chế độ <strong>Text to Video</strong> trên Google Flow để tạo 3 clip phong cách <em>Cinematic Travel Film</em> rồi ghép nối liền mạch trong <strong>Scenebuilder</strong>.</p>
+                <p><strong>Tình huống.</strong> Bạn sản xuất Travel Reel 24 giây quảng bá Đà Nẵng với nhân vật dẫn chuyện là <strong>Hoàng Nam</strong> (Travel Vlogger 28 tuổi, áo linen xanh nhạt, đeo máy ảnh). Video đi qua 3 khoảnh khắc: Flycam Cầu Rồng hoàng hôn → Hoàng Nam dạo biển Mỹ Khê bình minh → Quán cà phê đêm bên sông Hàn.</p>
+                <p><strong>Vấn đề.</strong> Nếu không dựng trước Sheet 8 góc nhìn của Hoàng Nam (đặc biệt là góc sau lưng khi đi dọc biển và góc 3/4 quay mặt cười ở quán cà phê), Google Flow sẽ tạo hai người hoàn toàn khác nhau ở Shot 2 và Shot 3.</p>
+                <p><strong>Mục tiêu.</strong> Thực hành trọn vẹn Pipeline: tạo nhân vật Hoàng Nam 8 góc nhìn → ghép với cảnh quay Text to Video &amp; Ingredients to Video theo đúng kịch bản lời thoại trong file Brief (<code>DOCX</code>) → dựng nối trên <strong>Scenebuilder</strong>.</p>
               </div>
             </div>
 
@@ -323,8 +448,8 @@
                 <div class="dataset-info">
                   <span class="dataset-icon">📄</span>
                   <div>
-                    <span class="dataset-name">Brief &amp; Bảng phân cảnh 3 Shot — Du lịch Đà Nẵng</span>
-                    <span class="dataset-desc">Kịch bản 3 khung giờ (Hoàng hôn – Bình minh – Đêm), góc máy flycam &amp; âm thanh nền</span>
+                    <span class="dataset-name">Brief, Quy chuẩn 8 góc nhìn &amp; Kịch bản lời thoại — Du lịch Đà Nẵng</span>
+                    <span class="dataset-desc">Hồ sơ Vlogger Hoàng Nam, kịch bản 3 khung giờ (Hoàng hôn – Bình minh – Đêm) &amp; lời thoại</span>
                   </div>
                 </div>
                 <a href="../assets/data/bai-tap-them/data-ggflow-bt3-du-lich-da-nang.docx" class="dataset-dl-btn word" download>
@@ -337,42 +462,51 @@
             <button type="button" class="prompt-lock-trigger" title="Bấm vào để mở khóa prompt mẫu">
               <span class="lock-shield-icon">🔒</span>
               <span class="lock-trigger-info">
-                <strong>Prompt mẫu 3 Shot đang khóa</strong>
-                <span>Bấm vào để nhập mật mã mở khóa và đối chiếu cách viết lệnh du lịch trên Google Flow</span>
+                <strong>Bộ Prompt Pipeline (8 góc nhìn Vlogger + 3 Shot kèm Lời thoại) đang khóa</strong>
+                <span>Bấm vào để nhập mật mã mở khóa và đối chiếu toàn bộ chuỗi lệnh</span>
               </span>
             </button>
 
             <div class="prompt-box-inner" hidden>
               <div class="prompt-box-head">
-                <span class="prompt-unlocked-tag">🔓 Chuỗi 3 Prompt giới thiệu Đà Nẵng (Text to Video + Scenebuilder)</span>
+                <span class="prompt-unlocked-tag">🔓 Chuỗi Prompt theo Pipeline: Vlogger 8 góc nhìn → 3 Shot kèm Lời thoại</span>
                 <button type="button" class="relock-btn">🔒 Khóa lại</button>
               </div>
 
               <div class="step-prompt-item">
                 <div class="step-prompt-header">
-                  <span class="step-badge step-1">Shot 1 (0–8s) · Flycam Cầu Rồng sông Hàn lúc hoàng hôn</span>
+                  <span class="step-badge step-0">Chặng 2 · Tạo Sheet 8 góc nhìn Travel Vlogger Hoàng Nam</span>
+                  <button type="button" class="copy-btn" data-copy="p-flow-3-s0">Sao chép Bước 8 góc</button>
+                </div>
+                <p id="p-flow-3-s0" class="prompt-text">Create a clean 8-view character turnaround sheet on a pure solid white background in a neat 2x4 grid. Character: Hoang Nam, a 28-year-old Vietnamese male travel vlogger wearing a light blue linen short-sleeve shirt, beige chino shorts, and a vintage compact camera strapped across his chest. Include: (1) front view, (2) back view, (3) left profile, (4) right profile, (5) 3/4 front-left, (6) 3/4 front-right, (7) close-up friendly smile, (8) full-body walking pose. Natural outdoor lighting style, consistent identity across all 8 views, no text.</p>
+                <p class="step-prompt-note">Cắt góc sau lưng (Back view) cho Shot 2 đi bộ dọc biển và góc 3/4 trái cho Shot 3 ở quán cà phê.</p>
+              </div>
+
+              <div class="step-prompt-item">
+                <div class="step-prompt-header">
+                  <span class="step-badge step-1">Shot 1 (0–8s) · Text to Video (Flycam Cầu Rồng hoàng hôn)</span>
                   <button type="button" class="copy-btn" data-copy="p-flow-3-s1">Sao chép Shot 1</button>
                 </div>
                 <p id="p-flow-3-s1" class="prompt-text">Sweeping cinematic aerial drone shot gliding smoothly toward the iconic golden Dragon Bridge spanning across the Han River in Da Nang, Vietnam at sunset. Warm amber and purple sky reflects off the calm river surface as city skyline lights begin to glow. Natural realistic travel film, 4k clarity. Soft breeze and inspiring orchestral travel music rising gently.</p>
-                <p class="step-prompt-note">Mẹo: Mô tả rõ góc máy <code>Sweeping cinematic aerial drone shot</code> và thời điểm <code>at sunset</code> để khung hình có chiều sâu.</p>
+                <div class="dialogue-pill">🎙️ <strong>Lời thoại Shot 1 (Hook):</strong> “Nếu chỉ có 24 giờ cho một chuyến đi đáng nhớ, hãy đến Đà Nẵng — thành phố của những cây cầu.”</div>
               </div>
 
               <div class="step-prompt-item">
                 <div class="step-prompt-header">
-                  <span class="step-badge step-2">Shot 2 (8–16s) · Bình minh bãi biển Mỹ Khê</span>
+                  <span class="step-badge step-2">Shot 2 (8–16s) · Ingredients (Hoàng Nam góc sau lưng/nghiêng + Biển Mỹ Khê)</span>
                   <button type="button" class="copy-btn" data-copy="p-flow-3-s2">Sao chép Shot 2</button>
                 </div>
-                <p id="p-flow-3-s2" class="prompt-text">Low-angle smooth tracking shot gliding along My Khe beach in Da Nang at sunrise. Crystal-clear turquoise ocean waves roll gently onto golden sand while a few travelers walk peacefully along the shoreline under soft pink morning sunlight. Realistic cinematic travel documentary style. Authentic gentle ocean waves and soft melodic background music.</p>
-                <p class="step-prompt-note">Mẹo: Thêm mô tả âm thanh <code>Authentic gentle ocean waves</code> giúp Veo tạo tiếng sóng biển chân thực theo chuyển động sóng.</p>
+                <p id="p-flow-3-s2" class="prompt-text">Low-angle smooth tracking shot following Hoang Nam from the ingredient sheet walking peacefully from a 3/4 back-right angle along My Khe beach in Da Nang at sunrise. Crystal-clear turquoise ocean waves roll gently onto golden sand under soft pink morning sunlight. Realistic cinematic travel documentary style. Authentic gentle ocean waves and soft melodic background music.</p>
+                <div class="dialogue-pill">🎙️ <strong>Lời thoại Shot 2 (Trải nghiệm):</strong> “Đón bình minh trên bãi biển Mỹ Khê, nơi từng con sóng chạm nhẹ vào nhịp sống an yên.”</div>
               </div>
 
               <div class="step-prompt-item">
                 <div class="step-prompt-header">
-                  <span class="step-badge step-3">Shot 3 (16–24s) · Buổi tối thư giãn bên bờ sông Hàn</span>
+                  <span class="step-badge step-3">Shot 3 (16–24s) · Ingredients (Hoàng Nam góc 3/4 + Đêm sông Hàn)</span>
                   <button type="button" class="copy-btn" data-copy="p-flow-3-s3">Sao chép Shot 3</button>
                 </div>
-                <p id="p-flow-3-s3" class="prompt-text">Warm medium shot at a cozy riverside cafe overlooking the Han River in Da Nang at night. Two friends smile and raise glasses of iced coffee while admiring the brightly lit illuminated Dragon Bridge and city reflections in the background. Shallow depth of field, warm bokeh lights. Soft evening city ambiance and heartwarming music finale.</p>
-                <p class="step-prompt-note">Mẹo: Ghép cả 3 clip trong <strong>Scenebuilder</strong> để hoàn thành thước phim du lịch 24 giây chuyển cảnh mượt từ hoàng hôn đến đêm.</p>
+                <p id="p-flow-3-s3" class="prompt-text">Warm medium shot at a cozy riverside cafe overlooking the Han River in Da Nang at night. Hoang Nam from the ingredient sheet turns toward the camera with a warm smile and raises a glass of iced coffee, with the brightly lit illuminated Dragon Bridge and city reflections glowing behind him. Shallow depth of field, warm bokeh lights, soft evening ambiance and heartwarming music finale.</p>
+                <div class="dialogue-pill">🎙️ <strong>Lời thoại Shot 3 (CTA):</strong> “Và khi thành phố lên đèn, Đà Nẵng sẽ giữ chân bạn mãi. Hẹn gặp bạn tại Đà Nẵng!”</div>
               </div>
 
               <p class="copy-status" role="status"></p>
@@ -388,7 +522,7 @@
         <button class="lock-modal-close" type="button" id="lock-modal-close" aria-label="Đóng">×</button>
         <div class="lock-modal-icon" aria-hidden="true">🔐</div>
         <h2 class="lock-modal-title" id="lock-modal-title">Mở khóa prompt mẫu</h2>
-        <p class="lock-modal-desc">Nhập mật mã do giảng viên cung cấp để xem chuỗi 3 prompt mẫu cho Google Flow.</p>
+        <p class="lock-modal-desc">Nhập mật mã do giảng viên cung cấp để xem trọn bộ Pipeline 8 góc nhìn &amp; 3 Shot kèm lời thoại.</p>
         <form class="lock-modal-form" id="lock-modal-form">
           <input class="lock-modal-input" id="lock-modal-input" type="password" placeholder="Nhập mật mã..." aria-label="Mã mở khóa prompt mẫu" autocomplete="off" maxlength="10">
           <button class="lock-modal-submit" type="submit">Mở khóa ngay</button>
