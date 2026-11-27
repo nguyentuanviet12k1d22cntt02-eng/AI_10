@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mở rộng · Chương 2A · Tái tạo nội dung với NotebookLM — Lớp học AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Nunito:wght@700;800;900;1000&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/slide-deck.css">
+</head>
+<body data-course-lesson="ext-2a" data-lesson-series="extended">
+  <header class="topbar">
+    <a class="topbar-logo" href="../index.html" aria-label="Về trang chủ Lớp học AI"><span class="logo-mark" aria-hidden="true"><span class="book-icon"></span></span>Lớp học AI</a>
+    <div class="topbar-center">Mở rộng · Chương 2A · Tái tạo &amp; trực quan hóa với NotebookLM</div>
+    <a class="topbar-back" href="../index.html#mo-rong">← Mở rộng</a>
+  </header>
+
+  <main class="deck" id="deck" aria-label="Mở rộng Chương 2A">
+    <!-- SLIDE 1: COVER -->
+    <section class="slide slide-cover" data-slide="1" aria-label="Tái tạo và trực quan hóa tài liệu với NotebookLM">
+      <div class="slide-inner cover-inner">
+        <div class="cover-left">
+          <div class="cover-kicker">
+            <span class="pill pill-green">Mở rộng · Chương 2A</span>
+            <span class="cover-kicker-label">Gom gọn Bài 5 – Bài 10</span>
+          </div>
+          <h1 class="cover-title">Tái tạo nội dung<br><em>với NotebookLM</em></h1>
+          <p class="cover-desc">Nạp một bộ tài liệu chuẩn vào NotebookLM rồi chuyển hóa nhanh thành tóm tắt, sơ đồ tư duy, infographic, podcast âm thanh và video tổng quan.</p>
+          <div class="cover-facts">
+            <div class="fact-chip chip-blue"><span>3</span> Khung làm việc</div>
+            <div class="fact-chip chip-pink"><span>5</span> Định dạng đầu ra</div>
+            <div class="fact-chip chip-lavender"><span>2</span> Bài thực hành</div>
+          </div>
+        </div>
+        <div class="toc-card">
+          <div class="toc-card-head">
+            <span class="toc-icon icon-blue" aria-hidden="true"><span class="book-icon"></span></span>
+            <div><strong>Nội dung bài học</strong><p>5 slide</p></div>
+          </div>
+          <ul class="toc-list" role="list">
+            <li><button class="toc-link" type="button" data-go-to="2" data-content-art="brief"><span class="toc-num" aria-hidden="true">01</span>3 khung giao diện &amp; trích dẫn [1]</button></li>
+            <li><button class="toc-link" type="button" data-go-to="3" data-content-art="report"><span class="toc-num" aria-hidden="true">02</span>Chọn đúng 5 đầu ra Studio</button></li>
+            <li><button class="toc-link" type="button" data-go-to="4" data-content-art="format"><span class="toc-num" aria-hidden="true">03</span>4 câu lệnh tùy chỉnh tiếng Việt</button></li>
+            <li><button class="toc-link" type="button" data-go-to="5" data-content-art="practice"><span class="toc-num" aria-hidden="true">04</span>Thực hành 2 bài tập</button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: 3 KHUNG GIAO DIỆN & NGUYÊN TẮC NGUỒN -->
+    <section class="slide slide-concept" data-slide="2" aria-label="Ba khung làm việc của NotebookLM">
+      <div class="slide-inner">
+        <div class="slide-label label-blue">Phần 1 · Làm chủ công cụ</div>
+        <h2 class="slide-title" id="slide-title-2">Một quy trình chung cho mọi tính năng NotebookLM</h2>
+        <p class="slide-desc">Thay vì học rời rạc từng nút bấm, chỉ cần nắm đúng 3 khung làm việc và nguyên tắc đối chiếu trích dẫn số <code>[1] [2]</code>.</p>
+        <div class="feature-grid lesson-feature-grid">
+          <article class="feature-card fc-blue" data-content-art="context">
+            <h3>1. Khung Nguồn (Bên trái)</h3>
+            <p>Nạp cùng lúc nhiều file PDF, Word, Google Docs, trang web hoặc video YouTube. Tích chọn đúng nguồn muốn AI tập trung trả lời.</p>
+          </article>
+          <article class="feature-card fc-pink" data-content-art="task">
+            <h3>2. Khung Trò chuyện (Ở giữa)</h3>
+            <p>Hỏi – đáp, tóm tắt cấu trúc, so sánh giữa các tài liệu. Mọi câu trả lời đều gắn số trích dẫn <code>[1]</code>, <code>[2]</code> để bấm vào kiểm chứng ngay.</p>
+          </article>
+          <article class="feature-card fc-lavender" data-content-art="format">
+            <h3>3. Khung Studio (Bên phải)</h3>
+            <p>Biến bộ nguồn thành sản phẩm trực quan chỉ với một lệnh tùy chỉnh: Podcast âm thanh, Video tổng quan, Sơ đồ tư duy, Infographic.</p>
+          </article>
+          <article class="feature-card fc-green" data-content-art="report">
+            <h3>4. Rà soát chống hiểu nhầm</h3>
+            <p>Luôn kiểm tra ngôn ngữ đầu ra (chọn Tiếng Việt) và đối chiếu lại số liệu, tên chính sách trong các đoạn được Studio tóm tắt lại.</p>
+          </article>
+        </div>
+        <div class="evidence-grid" aria-label="Ảnh minh họa giao diện 3 cột và trích dẫn NotebookLM">
+          <figure class="canvas-walkthrough">
+            <a href="../assets/images/mo-rong-chuong-2/notebooklm-giao-dien-3-cot.png" target="_blank" rel="noopener" aria-label="Xem ảnh kích thước đầy đủ: Giao diện 3 cột của NotebookLM">
+              <img src="../assets/images/mo-rong-chuong-2/notebooklm-giao-dien-3-cot.png" width="1024" height="474" alt="Giao diện 3 cột của NotebookLM gồm Sources bên trái, khung hỏi đáp ở giữa và Studio bên phải.">
+            </a>
+            <figcaption>Ảnh 1 · Giao diện 3 cột trực quan: Nguồn (trái) – Hỏi đáp (giữa) – Studio (phải). Bấm để phóng to.</figcaption>
+          </figure>
+          <figure class="canvas-walkthrough">
+            <a href="../assets/images/mo-rong-chuong-2/notebooklm-tom-tat-trich-dan.png" target="_blank" rel="noopener" aria-label="Xem ảnh kích thước đầy đủ: Bản tóm tắt kèm số trích dẫn trong NotebookLM">
+              <img src="../assets/images/mo-rong-chuong-2/notebooklm-tom-tat-trich-dan.png" width="1465" height="816" alt="Kết quả tóm tắt bằng tiếng Việt trong NotebookLM có gắn số trích dẫn 1, 2, 3, 4 ở cuối từng ý.">
+            </a>
+            <figcaption>Ảnh 2 · Tóm tắt tài liệu kèm số trích dẫn [1] [2] để bấm kiểm chứng nguồn gốc. Bấm để phóng to.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: MA TRẬN 5 ĐẦU RA -->
+    <section class="slide slide-table" data-slide="3" aria-label="Ma trận năm định dạng đầu ra trong NotebookLM">
+      <div class="slide-inner">
+        <div class="slide-label label-pink">Phần 2 · Chọn đúng định dạng</div>
+        <h2 class="slide-title" id="slide-title-3">Cùng một tài liệu gốc, khi nào chọn đầu ra nào?</h2>
+        <p class="slide-desc">Tất cả đều bắt đầu từ cùng bước nạp Nguồn. Điểm khác biệt nằm ở mục đích sử dụng và người xem cuối cùng.</p>
+        <div class="big-table-wrap">
+          <table class="big-table">
+            <thead>
+              <tr>
+                <th>Định dạng đầu ra</th>
+                <th>Vị trí trên giao diện</th>
+                <th class="th-gem">Dùng hiệu quả nhất khi nào?</th>
+                <th>Lưu ý khi tinh chỉnh</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-label">Tóm tắt cấu trúc</td>
+                <td>Khung Trò chuyện (Chat)</td>
+                <td class="td-gem">Cần đọc nhanh nội dung cốt lõi của báo cáo/hợp đồng dài theo gạch đầu dòng rõ mục.</td>
+                <td>Khóa rõ tiêu đề, bullet ngắn và giữ nguyên trích dẫn <code>[1]</code> để đối chiếu.</td>
+              </tr>
+              <tr>
+                <td class="td-label">Sơ đồ tư duy (Mindmap)</td>
+                <td>Studio → Bản đồ tư duy</td>
+                <td class="td-gem">Cần nhìn toàn cảnh cấu trúc nhánh chính – nhánh phụ để ôn tập hoặc lập kế hoạch.</td>
+                <td>Yêu cầu dùng từ khóa ngắn gọn, không bê nguyên đoạn văn dài vào nhánh.</td>
+              </tr>
+              <tr>
+                <td class="td-label">Infographic</td>
+                <td>Studio → Bản đồ họa thông tin</td>
+                <td class="td-gem">Cần tóm gọn 1 trang trực quan gửi nhóm/phòng ban nắm các mốc và số liệu chính.</td>
+                <td>Chọn mức độ chi tiết (Tiêu chuẩn/Ngắn gọn) và kiểm lại chữ tiếng Việt trên ảnh xuất ra.</td>
+              </tr>
+              <tr>
+                <td class="td-label">Podcast âm thanh</td>
+                <td>Studio → Tổng quan bằng âm thanh</td>
+                <td class="td-gem">Nghe lại nội dung tài liệu dài theo kiểu 2 người dẫn trò chuyện khi đang di chuyển.</td>
+                <td>Bắt buộc chọn ngôn ngữ <strong>Tiếng Việt</strong> và ghi rõ điểm trọng tâm cần thảo luận.</td>
+              </tr>
+              <tr>
+                <td class="td-label">Video tổng quan</td>
+                <td>Studio → Tổng quan bằng video</td>
+                <td class="td-gem">Cần clip ngắn kèm slide minh họa và giọng thuyết minh để giới thiệu nhanh cho đồng nghiệp.</td>
+                <td>Chọn phong cách trình bày phù hợp công sở (Cổ điển/Bảng trắng) và rà lại số liệu thuyết minh.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="evidence-grid evidence-grid-3" aria-label="Ảnh minh họa các chế độ tạo đầu ra trong Studio">
+          <figure class="canvas-walkthrough">
+            <a href="../assets/images/mo-rong-chuong-2/notebooklm-studio-podcast.png" target="_blank" rel="noopener" aria-label="Xem ảnh đầy đủ: Tùy chỉnh Tổng quan bằng âm thanh">
+              <img src="../assets/images/mo-rong-chuong-2/notebooklm-studio-podcast.png" width="888" height="694" alt="Hộp thoại tùy chỉnh Tổng quan bằng âm thanh chọn ngôn ngữ Tiếng Việt và nhập hướng dẫn cho AI.">
+            </a>
+            <figcaption>Podcast âm thanh · Chọn Tiếng Việt &amp; nhập trọng tâm.</figcaption>
+          </figure>
+          <figure class="canvas-walkthrough">
+            <a href="../assets/images/mo-rong-chuong-2/notebooklm-studio-mindmap.png" target="_blank" rel="noopener" aria-label="Xem ảnh đầy đủ: Tùy chỉnh Bản đồ tư duy">
+              <img src="../assets/images/mo-rong-chuong-2/notebooklm-studio-mindmap.png" width="1122" height="615" alt="Hộp thoại Bản đồ tư duy trong NotebookLM Studio.">
+            </a>
+            <figcaption>Sơ đồ tư duy · Tùy chỉnh nhánh chính &amp; từ khóa.</figcaption>
+          </figure>
+          <figure class="canvas-walkthrough">
+            <a href="../assets/images/mo-rong-chuong-2/notebooklm-studio-infographic.png" target="_blank" rel="noopener" aria-label="Xem ảnh đầy đủ: Tùy chỉnh Bản đồ họa thông tin">
+              <img src="../assets/images/mo-rong-chuong-2/notebooklm-studio-infographic.png" width="886" height="628" alt="Hộp thoại Bản đồ họa thông tin chọn mức độ chi tiết và phong cách trực quan.">
+            </a>
+            <figcaption>Infographic · Chọn mức độ chi tiết &amp; phong cách.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: BỘ 4 PROMPT MẪU TIẾNG VIỆT -->
+    <section class="slide slide-concept" data-slide="4" aria-label="Bốn câu lệnh tùy chỉnh trong NotebookLM">
+      <div class="slide-inner">
+        <div class="slide-label label-lavender">Phần 3 · Câu lệnh tùy chỉnh</div>
+        <h2 class="slide-title" id="slide-title-4">Bốn mẫu câu lệnh cho NotebookLM bằng tiếng Việt</h2>
+        <p class="slide-desc">Dán vào ô hỏi đáp hoặc ô mô tả tùy chỉnh trong Studio trước khi bấm <strong>Tạo</strong>.</p>
+        <div class="practice-prompts">
+          <article class="prompt-card">
+            <div class="prompt-box-inner">
+              <div class="prompt-box-head">
+                <span>1. Tóm tắt cấu trúc (Khung Trò chuyện)</span>
+                <div class="prompt-head-actions">
+                  <button class="copy-btn" type="button" data-copy="p-ext-c2a-1">Sao chép</button>
+                </div>
+              </div>
+              <p class="prompt-text" id="p-ext-c2a-1">Dựa hoàn toàn vào các nguồn đã chọn, hãy tóm tắt ngắn gọn thành các mục lớn rõ ràng bằng danh sách gạch đầu dòng. Loại bỏ nội dung lặp, giữ nguyên toàn bộ số liệu, mốc thời gian và điều kiện bắt buộc kèm số trích dẫn để tôi đối chiếu.</p>
+              <p class="copy-status" role="status"></p>
+            </div>
+          </article>
+
+          <article class="prompt-card">
+            <div class="prompt-box-inner">
+              <div class="prompt-box-head">
+                <span>2. Sơ đồ tư duy từ khóa (Studio)</span>
+                <div class="prompt-head-actions">
+                  <button class="copy-btn" type="button" data-copy="p-ext-c2a-2">Sao chép</button>
+                </div>
+              </div>
+              <p class="prompt-text" id="p-ext-c2a-2">Tạo sơ đồ tư duy bằng tiếng Việt từ tài liệu nguồn. Xác định rõ chủ đề trung tâm, chia thành các nhánh chính và nhánh phụ logic. Mỗi nhánh chỉ dùng từ khóa ngắn gọn và làm nổi bật các số liệu, mốc quy định quan trọng.</p>
+              <p class="copy-status" role="status"></p>
+            </div>
+          </article>
+
+          <article class="prompt-card">
+            <div class="prompt-box-inner">
+              <div class="prompt-box-head">
+                <span>3. Podcast âm thanh 2 người dẫn (Studio)</span>
+                <div class="prompt-head-actions">
+                  <button class="copy-btn" type="button" data-copy="p-ext-c2a-3">Sao chép</button>
+                </div>
+              </div>
+              <p class="prompt-text" id="p-ext-c2a-3">Tạo bản tổng quan âm thanh bằng tiếng Việt dựa trên tài liệu nguồn. Trình bày như cuộc trao đổi tự nhiên giữa hai đồng nghiệp văn phòng: nêu bức tranh kết quả chính, chỉ rõ các điểm nghẽn hoặc quy định dễ nhầm và chốt 3 việc cần hành động.</p>
+              <p class="copy-status" role="status"></p>
+            </div>
+          </article>
+
+          <article class="prompt-card">
+            <div class="prompt-box-inner">
+              <div class="prompt-box-head">
+                <span>4. Infographic / Video tổng quan (Studio)</span>
+                <div class="prompt-head-actions">
+                  <button class="copy-btn" type="button" data-copy="p-ext-c2a-4">Sao chép</button>
+                </div>
+              </div>
+              <p class="prompt-text" id="p-ext-c2a-4">Tạo bản trực quan hóa bằng tiếng Việt dựa trên tài liệu đã nạp. Nhấn mạnh 3–4 chỉ số và kết luận cốt lõi nhất, bố cục rõ ràng, ngôn ngữ công sở dễ hiểu, giữ chính xác con số và kết thúc bằng phần tổng kết hành động ngắn.</p>
+              <p class="copy-status" role="status"></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: THỰC HÀNH 2 BÀI -->
+    <section class="slide slide-conclusion" data-slide="5" aria-label="Thực hành Chương 2A">
+      <div class="slide-inner conclusion-inner">
+        <div class="slide-label label-green">Thực hành</div>
+        <h2 class="slide-title" id="slide-title-5">Hai bài thực hành NotebookLM</h2>
+        <p class="slide-desc">Tải 2 tệp tài liệu công sở bên dưới và nạp vào NotebookLM để thực hành trọn bộ Chat trích dẫn, Mindmap, Infographic và Podcast.</p>
+        <div class="practice-box">
+          <div class="practice-box-head">
+            <h3>Bài tập thực hành</h3>
+            <button class="master-unlock-btn" id="btn-master-unlock" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+              <span class="lock-icon" aria-hidden="true">🔒</span>
+              <span class="unlock-btn-text">Mở khóa toàn bộ</span>
+            </button>
+          </div>
+          <div class="practice-prompts">
+            <article class="prompt-card" data-prompt-card aria-labelledby="mr-c2a-bt01-title">
+              <div class="prompt-scenario">
+                <h4 id="mr-c2a-bt01-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  MR-C2A-BT01 · Biến quy định nội bộ thành Tóm tắt &amp; Mindmap
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn mới nhận quy định chấm công, nghỉ phép và công tác phí năm 2026 và cần nắm nhanh để giải đáp cho nhân sự mới.</p>
+                <p><strong>Vấn đề.</strong> Đọc văn bản chữ dày dễ sót các mốc giới hạn (số lần đi muộn, hạn báo quên chấm công, ngày phép kết hôn, hạn mức khách sạn).</p>
+                <p><strong>Mục tiêu.</strong> Nạp tệp Word vào NotebookLM, xuất bản tóm tắt cấu trúc kèm trích dẫn <code>[1]</code> trong Chat, sau đó tạo thêm 1 Sơ đồ tư duy (hoặc Infographic) trong Studio.</p>
+              </div>
+              <div class="prompt-dataset-box word">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📄</span>
+                  <div>
+                    <span class="dataset-name">Quy định chấm công, nghỉ phép &amp; công tác phí</span>
+                    <span class="dataset-desc">Tài liệu nội quy gồm 3 nhóm quy định và nhiều mốc số liệu cần đối chiếu.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/mo-rong-chuong-2/data-mr-c2a-bt01-chinh-sach-cham-cong-va-nghi-phep.docx" class="dataset-dl-btn word" download aria-label="Tải tệp DOCX cho MR-C2A-BT01">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">DOCX</span>
+                </a>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-mr-c2a-bt01">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-mr-c2a-bt01">Dựa trên nguồn quy định đã nạp, hãy lập bảng tóm tắt nhanh gồm 3 cột: Nhóm quy định | Mốc số liệu &amp; giới hạn bắt buộc | Điều kiện áp dụng. Giữ nguyên số trích dẫn để tôi bấm kiểm tra. Sau đó sang mục Studio chọn Bản đồ tư duy và nhập yêu cầu: Tạo sơ đồ tư duy tiếng Việt theo 3 nhánh Chấm công, Nghỉ phép, OT &amp; Công tác phí, chỉ giữ từ khóa và con số chính.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="mr-c2a-bt02-title">
+              <div class="prompt-scenario">
+                <h4 id="mr-c2a-bt02-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  MR-C2A-BT02 · Chuyển Báo cáo Quý thành Podcast &amp; Video tổng quan
+                </h4>
+                <p><strong>Tình huống.</strong> Trước cuộc họp giao ban Quý 4, bạn muốn tóm gọn Báo cáo đào tạo Quý 3 thành bản nghe nhanh (Podcast) hoặc Video ngắn gửi nhóm quản lý.</p>
+                <p><strong>Vấn đề.</strong> Nếu để mặc định không tùy chỉnh, Podcast/Video có thể nói lan man hoặc lướt qua 3 điểm nghẽn quan trọng cần giải quyết.</p>
+                <p><strong>Mục tiêu.</strong> Nạp tệp Word vào NotebookLM Studio, chọn ngôn ngữ Tiếng Việt, tùy chỉnh lệnh tập trung vào con số đạt được, 3 điểm nghẽn và 3 đề xuất Quý 4.</p>
+              </div>
+              <div class="prompt-dataset-box word">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📄</span>
+                  <div>
+                    <span class="dataset-name">Báo cáo tổng kết đào tạo Quý 3/2026</span>
+                    <span class="dataset-desc">Gồm số liệu 14 lớp, 380 lượt học viên, 3 điểm nghẽn và 3 đề xuất cải tiến.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/mo-rong-chuong-2/data-mr-c2a-bt02-bao-cao-tong-ket-quy-dao-tao.docx" class="dataset-dl-btn word" download aria-label="Tải tệp DOCX cho MR-C2A-BT02">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">DOCX</span>
+                </a>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-mr-c2a-bt02">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-mr-c2a-bt02">Trong Studio, chọn Tổng quan bằng âm thanh (hoặc Tổng quan bằng video), đặt ngôn ngữ Tiếng Việt và nhập mô tả: Tóm tắt báo cáo Quý 3/2026 theo giọng trao đổi công sở dễ hiểu. Nhấn mạnh đúng số liệu 14 lớp, 380 lượt nhân sự, 91,5% tham gia và điểm hài lòng 4,6/5; phân tích 3 điểm nghẽn (lịch sáng thứ Hai, thiếu bài thực hành, khảo sát trễ) và kết bằng 3 giải pháp áp dụng ngay cho Quý 4.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="lesson-sources"><a href="../Giao_trinh/UNG-DUNG-AI-TRONG-VAN-PHONG-MO-RONG.pdf#page=12">Giáo trình Mở rộng PDF · Chương 2 (Trang 12–25)</a></p>
+        <nav class="lesson-links" aria-label="Chuyển bài">
+          <a class="topbar-back" href="mo-rong-chuong-1.html">← Chương 1</a>
+          <a class="topbar-back" href="mo-rong-chuong-2-trinh-bay.html">Chương 2B · Trình bày →</a>
+        </nav>
+      </div>
+    </section>
+
+    <dialog class="lock-modal" id="lock-modal" aria-labelledby="lock-modal-title">
+      <div class="lock-modal-card">
+        <button class="lock-modal-close" type="button" id="lock-modal-close" aria-label="Đóng">×</button>
+        <h2 class="lock-modal-title" id="lock-modal-title">Mở gợi ý câu lệnh</h2>
+        <p class="lock-modal-desc" id="lock-modal-desc">Nhập mã do giảng viên cung cấp.</p>
+        <form class="lock-modal-form" id="lock-modal-form">
+          <input class="lock-modal-input" id="lock-modal-input" type="password" aria-label="Mã mở gợi ý" aria-describedby="lock-modal-desc" autocomplete="off" maxlength="10">
+          <button class="lock-modal-submit" id="lock-modal-submit" type="submit">Mở gợi ý</button>
+        </form>
+        <p class="lock-modal-error" id="lock-modal-error" role="alert" hidden>Mã chưa đúng. Vui lòng thử lại.</p>
+      </div>
+    </dialog>
+  </main>
+
+  <nav class="slide-nav" aria-label="Điều hướng slide">
+    <button class="nav-btn" type="button" id="btn-prev" aria-label="Slide trước" disabled>←</button>
+    <div class="nav-center">
+      <div class="dot-track" id="dot-track" role="tablist" aria-label="Chọn slide"></div>
+      <span class="slide-counter"><span id="cur">1</span> / <span id="total">5</span></span>
+    </div>
+    <button class="nav-btn" type="button" id="btn-next" aria-label="Slide tiếp theo">→</button>
+  </nav>
+  <script src="../js/slide-deck.js" defer></script>
+</body>
+</html>

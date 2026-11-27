@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mở rộng · Chương 3 · Làm việc với công thức Excel cùng AI — Lớp học AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Nunito:wght@700;800;900;1000&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/slide-deck.css">
+</head>
+<body data-course-lesson="ext-3" data-lesson-series="extended">
+  <header class="topbar">
+    <a class="topbar-logo" href="../index.html" aria-label="Về trang chủ Lớp học AI"><span class="logo-mark" aria-hidden="true"><span class="book-icon"></span></span>Lớp học AI</a>
+    <div class="topbar-center">Mở rộng · Chương 3 · Làm việc với công thức Excel cùng AI</div>
+    <a class="topbar-back" href="../index.html#mo-rong">← Mở rộng</a>
+  </header>
+
+  <main class="deck" id="deck" aria-label="Mở rộng Chương 3">
+    <!-- SLIDE 1: COVER -->
+    <section class="slide slide-cover" data-slide="1" aria-label="Làm việc với công thức Excel cùng AI">
+      <div class="slide-inner cover-inner">
+        <div class="cover-left">
+          <div class="cover-kicker">
+            <span class="pill pill-green">Mở rộng · Chương 3</span>
+            <span class="cover-kicker-label">Gom gọn Bài 13 – Bài 15</span>
+          </div>
+          <h1 class="cover-title">Công thức Excel<br><em>cùng trợ lý AI</em></h1>
+          <p class="cover-desc">Gộp trọn 3 kỹ năng làm việc với công thức trong 1 bài thực chiến: viết hàm từ ảnh chụp bảng, kiểm chứng tay, giải thích hàm lồng nhau và sửa lỗi Excel.</p>
+          <div class="cover-facts">
+            <div class="fact-chip chip-blue"><span>4</span> Cảnh mô phỏng video</div>
+            <div class="fact-chip chip-pink"><span>3</span> Câu lệnh khung</div>
+            <div class="fact-chip chip-lavender"><span>3</span> Tệp Excel thật</div>
+          </div>
+        </div>
+        <div class="toc-card">
+          <div class="toc-card-head">
+            <span class="toc-icon icon-blue" aria-hidden="true"><span class="book-icon"></span></span>
+            <div><strong>Nội dung bài học</strong><p>5 slide</p></div>
+          </div>
+          <ul class="toc-list" role="list">
+            <li><button class="toc-link" type="button" data-go-to="2" data-content-art="brief"><span class="toc-num" aria-hidden="true">01</span>4 quy tắc trước khi hỏi AI</button></li>
+            <li><button class="toc-link" type="button" data-go-to="3" data-content-art="video"><span class="toc-num" aria-hidden="true">02</span>Mô phỏng 4 bước như video</button></li>
+            <li><button class="toc-link" type="button" data-go-to="4" data-content-art="format"><span class="toc-num" aria-hidden="true">03</span>3 câu lệnh khung dùng ngay</button></li>
+            <li><button class="toc-link" type="button" data-go-to="5" data-content-art="practice"><span class="toc-num" aria-hidden="true">04</span>Thực hành 3 tệp Excel (.xlsx)</button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: 4 QUY TẮC VÀNG -->
+    <section class="slide slide-concept" data-slide="2" aria-label="Bốn quy tắc chụp đúng hỏi trúng cho Excel">
+      <div class="slide-inner">
+        <div class="slide-label label-blue">Phần 1 · Quy tắc nền tảng</div>
+        <h2 class="slide-title" id="slide-title-2">Bốn quy tắc “chụp đúng – hỏi trúng” với Excel</h2>
+        <p class="slide-desc">AI không nhìn thấy file Excel trong máy bạn nếu bạn không đưa đủ tọa độ ô, quy tắc tính và cài đặt dấu phân cách.</p>
+        <div class="feature-grid lesson-feature-grid">
+          <article class="feature-card fc-blue" data-content-art="context">
+            <h3>1. Chụp rõ chữ cột &amp; số dòng</h3>
+            <p>Ảnh chụp màn hình bắt buộc phải thấy tiêu đề cột (<code>A, B, C... AG, AH</code>), số thứ tự dòng (<code>13, 14...</code>) và tên Sheet để AI viết đúng địa chỉ ô.</p>
+          </article>
+          <article class="feature-card fc-pink" data-content-art="task">
+            <h3>2. Nêu rõ quy tắc nghiệp vụ</h3>
+            <p>Không chỉ bảo “tính công”. Hãy ghi rõ: công thường gồm <code>X, CT, L, X+...</code>; công tăng ca quy ra ngày bằng tổng giờ chia <code>8</code>.</p>
+          </article>
+          <article class="feature-card fc-lavender" data-content-art="format">
+            <h3>3. Khóa dấu phẩy (,) hay chấm phẩy (;)</h3>
+            <p>Máy dùng chuẩn Việt Nam/Châu Âu yêu cầu dấu <code>;</code> trong hàm, máy chuẩn Mỹ dùng <code>,</code>. Hãy dặn AI dùng đúng dấu máy bạn đang bật.</p>
+          </article>
+          <article class="feature-card fc-green" data-content-art="report">
+            <h3>4. Kiểm chứng tay 1 dòng mẫu</h3>
+            <p>Sau khi AI trả công thức, yêu cầu AI cộng nhẩm thủ công cho nhân viên dòng đầu tiên (<code>NV001</code>) để chứng minh kết quả khớp 100%.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: PHÒNG DỰNG MÔ PHỎNG NHƯ VIDEO (4 CẢNH) -->
+    <section class="slide slide-concept" data-slide="3" aria-label="Mô phỏng tương tác bốn bước làm việc với công thức Excel">
+      <div class="slide-inner">
+        <div class="slide-label label-pink">Phần 2 · Trình mô phỏng 4 bước</div>
+        <h2 class="slide-title" id="slide-title-3">Xem quy trình công thức Excel qua 4 cảnh trực quan</h2>
+        <p class="slide-desc">Bấm <strong>▶ Phát tự động</strong> để xem lần lượt như video, hoặc bấm chọn từng cảnh quan sát trực tiếp bảng Excel cột, dòng và thanh công thức <code>fx</code>.</p>
+
+        <div class="studio-layout" data-excel-studio>
+          <div class="video-monitor">
+            <div class="video-header-bar">
+              <span class="video-header-title" data-video-title>● CẢNH 1 / 4 · VIẾT CÔNG THỨC TỪ ẢNH BẢNG</span>
+              <span class="video-timecode" data-video-tc>00:00:08 / 00:00:42</span>
+              <span class="video-res-tag">EXCEL + AI</span>
+            </div>
+
+            <div class="cut-stepper-bar cut-stepper-docked" role="tablist" aria-label="Các bước làm việc với công thức Excel">
+              <button type="button" class="cut-step-btn active" data-scene-tab="1" role="tab" aria-selected="true">
+                <span class="cut-num">1</span>
+                <span class="cut-title">Viết hàm</span>
+              </button>
+              <span class="cut-arrow" aria-hidden="true">➔</span>
+              <button type="button" class="cut-step-btn" data-scene-tab="2" role="tab" aria-selected="false">
+                <span class="cut-num">2</span>
+                <span class="cut-title">Kiểm chứng tay</span>
+              </button>
+              <span class="cut-arrow" aria-hidden="true">➔</span>
+              <button type="button" class="cut-step-btn" data-scene-tab="3" role="tab" aria-selected="false">
+                <span class="cut-num">3</span>
+                <span class="cut-title">Giải thích hàm</span>
+              </button>
+              <span class="cut-arrow" aria-hidden="true">➔</span>
+              <button type="button" class="cut-step-btn" data-scene-tab="4" role="tab" aria-selected="false">
+                <span class="cut-num">4</span>
+                <span class="cut-title">Sửa lỗi #NAME?</span>
+              </button>
+            </div>
+
+            <div class="video-stage">
+
+              <!-- SCENE 1 -->
+              <div class="cut-view-panel" data-scene-view="1" style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+                <div class="dialogue-msg msg-boss">
+                  <img src="../assets/images/avatar-boss.svg" alt="Người học" class="dialogue-avatar">
+                  <div class="dialogue-bubble">
+                    <div class="dialogue-speaker"><span>Người học</span><span class="speaker-role">Chụp bảng Excel rõ cột D:AG &amp; dòng 13–14</span></div>
+                    <p class="dialogue-text">“Lập công thức cho cột <code>AH:AK</code>, dữ liệu chấm công từ <code>D:AG</code>. Công thường gồm <code>X, CT, L, X+...</code>; công tăng ca tính theo ngày = tổng giờ chia 8.”</p>
+                    <div class="excel-sim" aria-label="Mô phỏng bảng Excel chấm công dòng 14">
+                      <div class="excel-topbar"><span>📗 BangChamCong.xlsx</span><span>Vùng dữ liệu D14:AG14</span></div>
+                      <div class="excel-formula-bar">
+                        <span class="excel-name-box">AJ14</span>
+                        <span class="excel-fx">fx</span>
+                        <span class="excel-fx-input">=COUNTIF(D14:AG14, "P")</span>
+                      </div>
+                      <div class="excel-grid-wrap">
+                        <table class="excel-grid">
+                          <thead>
+                            <tr>
+                              <th class="excel-row-hdr"></th>
+                              <th class="excel-col-hdr">B</th>
+                              <th class="excel-col-hdr">C</th>
+                              <th class="excel-col-hdr">D</th>
+                              <th class="excel-col-hdr">…</th>
+                              <th class="excel-col-hdr">AF</th>
+                              <th class="excel-col-hdr">AG</th>
+                              <th class="excel-col-hdr">AH</th>
+                              <th class="excel-col-hdr">AI</th>
+                              <th class="excel-col-hdr excel-col-active">AJ</th>
+                              <th class="excel-col-hdr">AK</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="excel-hdr-row">
+                              <td class="excel-row-hdr">13</td>
+                              <td>Mã NV</td>
+                              <td class="excel-cell-left">Họ và tên</td>
+                              <td>N1</td>
+                              <td>N2..N28</td>
+                              <td>N29</td>
+                              <td>N30</td>
+                              <td>Công thường</td>
+                              <td>Tăng ca</td>
+                              <td>Phép (P)</td>
+                              <td>Không phép</td>
+                            </tr>
+                            <tr>
+                              <td class="excel-row-hdr">14</td>
+                              <td>NV001</td>
+                              <td class="excel-cell-left">Nguyễn Hoàng Nam</td>
+                              <td class="excel-cell-range">X</td>
+                              <td class="excel-cell-range">22×X · 2×L · 2×X+2</td>
+                              <td class="excel-cell-range">P</td>
+                              <td class="excel-cell-range">K</td>
+                              <td>26</td>
+                              <td>0.5</td>
+                              <td class="excel-cell-active">1</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td class="excel-row-hdr">15</td>
+                              <td>NV002</td>
+                              <td class="excel-cell-left">Trần Thị Lan</td>
+                              <td>X</td>
+                              <td>…</td>
+                              <td>X</td>
+                              <td>X</td>
+                              <td>28</td>
+                              <td>0</td>
+                              <td>2</td>
+                              <td>0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="excel-sheet-tabs"><span class="excel-sheet-tab">BangChamCong</span><span>Thấy rõ chữ cột A..AK &amp; số dòng 13–15</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dialogue-msg msg-ai">
+                  <img src="../assets/images/avatar-ai.svg" alt="AI" class="dialogue-avatar">
+                  <div class="dialogue-bubble">
+                    <div class="dialogue-speaker"><span>Gemini</span><span class="speaker-role">Trả công thức đúng hàng 14</span></div>
+                    <p class="dialogue-text">• Ô <strong>AJ14 (Nghỉ phép):</strong> <code>=COUNTIF(D14:AG14, "P")</code><br>• Ô <strong>AK14 (Không phép):</strong> <code>=COUNTIF(D14:AG14, "K")</code><br>• Ô <strong>AH14 (Công thường):</strong> <code>=COUNTIF(D14:AG14, "X") + COUNTIF(D14:AG14, "CT") + COUNTIF(D14:AG14, "L") + COUNTIF(D14:AG14, "X+*")</code></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SCENE 2 -->
+              <div class="cut-view-panel" data-scene-view="2" style="display: none; flex-direction: column; gap: 10px; width: 100%;">
+                <div class="dialogue-msg msg-boss">
+                  <img src="../assets/images/avatar-boss.svg" alt="Người học" class="dialogue-avatar">
+                  <div class="dialogue-bubble">
+                    <div class="dialogue-speaker"><span>Người học</span><span class="speaker-role">Bước đối chiếu chéo</span></div>
+                    <p class="dialogue-text">“Kiểm tra lại kết quả cho cột <code>AH:AK</code> của dòng 14 (NV001) bằng phương pháp thủ công để kết luận công thức đã tính đúng chưa.”</p>
+                  </div>
+                </div>
+                <div class="dialogue-msg msg-ai">
+                  <img src="../assets/images/avatar-ai.svg" alt="AI" class="dialogue-avatar">
+                  <div class="dialogue-bubble">
+                    <div class="dialogue-speaker"><span>Gemini</span><span class="speaker-role">Đối chiếu tay dòng 14</span></div>
+                    <p class="dialogue-text">Đã đếm nhẩm từng ô trên dòng 14 của <strong>NV001 · Nguyễn Hoàng Nam</strong>:</p>
+                    <div class="excel-sim" aria-label="Bảng đối chiếu thủ công kết quả dòng 14">
+                      <div class="excel-topbar"><span>🧮 Kiểm chứng thủ công dòng 14</span><span>NV001</span></div>
+                      <div class="excel-grid-wrap">
+                        <table class="excel-grid">
+                          <thead>
+                            <tr>
+                              <th class="excel-row-hdr"></th>
+                              <th class="excel-col-hdr">Cột</th>
+                              <th class="excel-col-hdr">Ý nghĩa</th>
+                              <th class="excel-col-hdr">Đếm nhẩm từ D14:AG14</th>
+                              <th class="excel-col-hdr excel-col-active">Kết quả</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="excel-row-hdr">1</td>
+                              <td><strong>AH14</strong></td>
+                              <td class="excel-cell-left">Công thường</td>
+                              <td class="excel-cell-left">22 (X) + 0 (CT) + 2 (L) + 2 (X+2)</td>
+                              <td class="excel-cell-active">26 ✓</td>
+                            </tr>
+                            <tr>
+                              <td class="excel-row-hdr">2</td>
+                              <td><strong>AI14</strong></td>
+                              <td class="excel-cell-left">Công tăng ca</td>
+                              <td class="excel-cell-left">(2 giờ + 2 giờ) ÷ 8 giờ/ngày</td>
+                              <td class="excel-cell-active">0.5 ✓</td>
+                            </tr>
+                            <tr>
+                              <td class="excel-row-hdr">3</td>
+                              <td><strong>AJ14</strong></td>
+                              <td class="excel-cell-left">Nghỉ phép (P)</td>
+                              <td class="excel-cell-left">1 ô có ký hiệu P (cột AF)</td>
+                              <td class="excel-cell-active">1 ✓</td>
+                            </tr>
+                            <tr>
+                              <td class="excel-row-hdr">4</td>
+                              <td><strong>AK14</strong></td>
+                              <td class="excel-cell-left">Không phép (K)</td>
+                              <td class="excel-cell-left">1 ô có ký hiệu K (cột AG)</td>
+                              <td class="excel-cell-active">1 ✓</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SCENE 3 -->
+              <div class="cut-view-panel" data-scene-view="3" style="display: none; flex-direction: column; gap: 10px; width: 100%;">
+                <div class="dialogue-msg msg-boss">
+                  <img src="../assets/images/avatar-boss.svg" alt="Người học" class="dialogue-avatar">
+                  <div class="dialogue-bubble">
+                    <div class="dialogue-speaker"><span>Người học</span><span class="speaker-role">Copy hàm IF lồng từ ô H11</span></div>
+                    <p class="dialogue-text">“Giải thích công thức tính Thuế TNCN ở ô <code>H11</code>, nêu ví dụ số cụ thể và gợi ý cách viết gọn hơn.”</p>
+                    <div class="excel-sim" aria-label="Bảng Excel tính Thuế TNCN ô H11">
+                      <div class="excel-topbar"><span>📗 ThueTNCN.xlsx</span><span>Chọn ô H11</span></div>
+                      <div class="excel-formula-bar">
+                        <span class="excel-name-box">H11</span>
+                        <span class="excel-fx">fx</span>
+                        <span class="excel-fx-input">=IF(G11&lt;=0,0,IF(G11&lt;=10000000,G11*5%,IF(G11&lt;=30000000,G11*10%-500000,...)))</span>
+                      </div>
+                      <div class="excel-grid-wrap">
+                        <table class="excel-grid">
+                          <thead>
+                            <tr>
+                              <th class="excel-row-hdr"></th>
+                              <th class="excel-col-hdr">C</th>
+                              <th class="excel-col-hdr">D</th>
+                              <th class="excel-col-hdr">G</th>
+                              <th class="excel-col-hdr excel-col-active">H</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="excel-hdr-row">
+                              <td class="excel-row-hdr">10</td>
+                              <td class="excel-cell-left">Họ và tên</td>
+                              <td>Tổng thu nhập</td>
+                              <td>Thu nhập tính thuế</td>
+                              <td>Thuế TNCN</td>
+                            </tr>
+                            <tr>
+                              <td class="excel-row-hdr">11</td>
+                              <td class="excel-cell-left">Nguyễn Văn An</td>
+                              <td>18.000.000</td>
+                              <td class="excel-cell-range">7.000.000</td>
+                              <td class="excel-cell-active">350.000</td>
+                            </tr>
+                            <tr>
+                              <td class="excel-row-hdr">12</td>
+                              <td class="excel-cell-left">Trần Thu Hà</td>
+                              <td>28.000.000</td>
+                              <td>12.600.000</td>
+                              <td>760.000</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dialogue-msg msg-ai">
+                  <img src="../assets/images/avatar-ai.svg" alt="AI" class="dialogue-avatar">
+                  <div class="dialogue-bubble">
+                    <div class="dialogue-speaker"><span>Gemini</span><span class="speaker-role">Bóc tách 3 bậc đầu &amp; gợi ý IFS</span></div>
+                    <p class="dialogue-text">• Nếu <code>G11 &lt;= 0</code> → Thuế = <code>0</code><br>• Nếu <code>G11 &lt;= 10tr</code> → <code>G11 × 5%</code> (VD: 7tr × 5% = <strong>350.000</strong>)<br>• Nếu <code>G11 &lt;= 30tr</code> → <code>G11 × 10% - 500.000</code><br>👉 <em>Gợi ý viết gọn: dùng hàm <code>IFS(...)</code> hoặc bảng tra bậc thuế với <code>VLOOKUP(..., TRUE)</code> để không bị rối dấu ngoặc.</em></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SCENE 4 -->
+              <div class="cut-view-panel" data-scene-view="4" style="display: none; flex-direction: column; gap: 10px; width: 100%;">
+                <div class="dialogue-msg msg-boss">
+                  <img src="../assets/images/avatar-boss.svg" alt="Người học" class="dialogue-avatar">
+                  <div class="dialogue-bubble">
+                    <div class="dialogue-speaker"><span>Người học</span><span class="speaker-role">Bấm vào ô AH14 đang báo #NAME?</span></div>
+                    <p class="dialogue-text">“Kiểm tra và sửa lỗi ở ô <code>AH14</code> với lỗi công thức hiển thị: <code>#NAME?</code>.”</p>
+                    <div class="excel-sim" aria-label="Bảng Excel hiển thị lỗi #NAME? tại ô AH14">
+                      <div class="excel-topbar"><span>📗 BangChamCong.xlsx</span><span>Đang chọn ô lỗi AH14</span></div>
+                      <div class="excel-formula-bar">
+                        <span class="excel-name-box">AH14</span>
+                        <span class="excel-fx">fx</span>
+                        <span class="excel-fx-input excel-fx-err">=COUNTI($D14:$AG14, "X") + COUNTIF($D14:$AG14, "CT")</span>
+                      </div>
+                      <div class="excel-grid-wrap">
+                        <table class="excel-grid">
+                          <thead>
+                            <tr>
+                              <th class="excel-row-hdr"></th>
+                              <th class="excel-col-hdr">B</th>
+                              <th class="excel-col-hdr">C</th>
+                              <th class="excel-col-hdr">D..AG</th>
+                              <th class="excel-col-hdr" style="background:#fee2e2;color:#991b1b;">AH</th>
+                              <th class="excel-col-hdr">AI</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="excel-hdr-row">
+                              <td class="excel-row-hdr">13</td>
+                              <td>Mã NV</td>
+                              <td class="excel-cell-left">Họ và tên</td>
+                              <td>Ngày công</td>
+                              <td>Công thường</td>
+                              <td>Tăng ca</td>
+                            </tr>
+                            <tr>
+                              <td class="excel-row-hdr">14</td>
+                              <td>NV001</td>
+                              <td class="excel-cell-left">Nguyễn Hoàng Nam</td>
+                              <td>X, CT, L…</td>
+                              <td class="excel-cell-error">#NAME?</td>
+                              <td>0.5</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dialogue-msg msg-ai">
+                  <img src="../assets/images/avatar-ai.svg" alt="AI" class="dialogue-avatar">
+                  <div class="dialogue-bubble">
+                    <div class="dialogue-speaker"><span>Gemini</span><span class="speaker-role">Phát hiện gõ thiếu chữ F</span></div>
+                    <p class="dialogue-text"><strong>Nguyên nhân:</strong> Ở thanh công thức <code>fx</code> của ô <strong>AH14</strong>, bạn viết sai tên hàm <code>COUNTIF</code> thành <code>COUNTI</code> (thiếu chữ <strong>F</strong>).<br><strong>Sửa lại chuẩn:</strong> <code>=COUNTIF($D14:$AG14, "X") + COUNTIF($D14:$AG14, "CT") + …</code> → Ô <code>AH14</code> sẽ hết lỗi và ra ngay <strong>26</strong>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video-controls-bar">
+              <button type="button" class="video-play-btn" data-video-play aria-pressed="false">▶ Phát tự động</button>
+              <button type="button" class="video-step-btn" data-scene-prev aria-label="Cảnh trước">⏮</button>
+              <button type="button" class="video-step-btn" data-scene-next aria-label="Cảnh tiếp theo">⏭</button>
+              <div class="timeline-track-mini"><div class="timeline-fill" data-video-fill style="width: 25%;"></div></div>
+              <span class="video-timecode-bot" data-video-tc style="font-size: 11px; font-family: monospace;">00:00:08 / 00:00:42</span>
+            </div>
+          </div>
+
+          <!-- Cột phải: Bảng giải thích đồng bộ theo từng cảnh -->
+          <div class="director-panel">
+            <div class="director-card" data-director-scene="1">
+              <div class="director-head">
+                <span class="director-icon">📐</span>
+                <div>
+                  <span class="rule-tag" style="background: #dbeafe; color: #1e40af;">Cảnh 1 · Viết công thức</span>
+                  <h3 class="director-title">Mẹo để AI viết trúng ngay lần đầu</h3>
+                </div>
+              </div>
+              <ul class="director-list">
+                <li><strong>Chụp cả thanh chữ A, B, C &amp; số dòng:</strong> Nhờ vậy Gemini tự biết dữ liệu nhân viên đầu tiên bắt đầu ở <code>D14:AG14</code>.</li>
+                <li><strong>Liệt kê đủ ký hiệu đặc biệt:</strong> Như <code>X+2</code> (ngày công thường có tăng ca 2 giờ) để công thức không đếm sót.</li>
+              </ul>
+              <div class="director-action" style="margin-top: 12px;">
+                <button type="button" class="cut-jump-btn btn-primary" data-scene-jump="2">Sang Cảnh 2: Kiểm chứng tay ➔</button>
+              </div>
+            </div>
+
+            <div class="director-card" data-director-scene="2" style="display: none;">
+              <div class="director-head">
+                <span class="director-icon">🧮</span>
+                <div>
+                  <span class="rule-tag" style="background: #dcfce7; color: #166534;">Cảnh 2 · Kiểm chứng tay</span>
+                  <h3 class="director-title">Không bao giờ tin mù công thức dài</h3>
+                </div>
+              </div>
+              <ul class="director-list">
+                <li><strong>Kiểm tra trên 1 dòng mẫu:</strong> Bắt AI đếm thủ công từng ô của <code>NV001</code> rồi so với giá trị công thức vừa tính.</li>
+                <li><strong>Phát hiện sai sót tức thì:</strong> Nếu kết quả tay là 26 mà hàm ra 24, bạn biết ngay công thức đang thiếu điều kiện.</li>
+              </ul>
+              <div class="director-action" style="margin-top: 12px;">
+                <button type="button" class="cut-jump-btn btn-primary" data-scene-jump="3">Sang Cảnh 3: Giải thích hàm ➔</button>
+              </div>
+            </div>
+
+            <div class="director-card" data-director-scene="3" style="display: none;">
+              <div class="director-head">
+                <span class="director-icon">🔍</span>
+                <div>
+                  <span class="rule-tag" style="background: #fef3c7; color: #92400e;">Cảnh 3 · Giải thích &amp; Tối ưu</span>
+                  <h3 class="director-title">Đọc hiểu file của người khác bàn giao</h3>
+                </div>
+              </div>
+              <ul class="director-list">
+                <li><strong>Bóc từng tầng điều kiện:</strong> Khi gặp hàm <code>IF</code> lồng 5–6 lớp, yêu cầu AI vẽ bảng từng nhánh điều kiện và ví dụ số thật.</li>
+                <li><strong>Hỏi cách rút gọn:</strong> Nhờ AI chuyển sang hàm mới gọn hơn (<code>IFS</code> hoặc bảng tra <code>VLOOKUP</code>) và nhớ đối chiếu dấu <code>,</code> / <code>;</code>.</li>
+              </ul>
+              <div class="director-action" style="margin-top: 12px;">
+                <button type="button" class="cut-jump-btn btn-primary" data-scene-jump="4">Sang Cảnh 4: Sửa lỗi Excel ➔</button>
+              </div>
+            </div>
+
+            <div class="director-card" data-director-scene="4" style="display: none;">
+              <div class="director-head">
+                <span class="director-icon">🩺</span>
+                <div>
+                  <span class="rule-tag" style="background: #fee2e2; color: #991b1b;">Cảnh 4 · Bắt bệnh lỗi</span>
+                  <h3 class="director-title">Chụp đúng chỗ để AI soi ra lỗi ngay</h3>
+                </div>
+              </div>
+              <ul class="director-list">
+                <li><strong>Bấm vào ô lỗi trước khi chụp:</strong> Phải để lộ công thức gốc trên thanh <strong>Formula Bar</strong> cùng mã lỗi (<code>#NAME?</code>, <code>#VALUE!</code>, <code>#DIV/0!</code>).</li>
+                <li><strong>Kiểm tra dấu ngoặc &amp; chữ:</strong> Đa số lỗi đến từ gõ sai tên hàm (<code>COUNTI</code>), chia cho 0 hoặc ô số bị dính chữ.</li>
+              </ul>
+              <div class="director-action" style="margin-top: 12px;">
+                <button type="button" class="cut-jump-btn btn-primary" data-scene-jump="1">↺ Xem lại từ Cảnh 1</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: BỘ 3 CÂU LỆNH KHUNG -->
+    <section class="slide slide-concept" data-slide="4" aria-label="Ba câu lệnh khung làm việc với Excel">
+      <div class="slide-inner">
+        <div class="slide-label label-lavender">Phần 3 · Câu lệnh khung</div>
+        <h2 class="slide-title" id="slide-title-4">Ba mẫu câu lệnh dùng lại cho mọi bảng Excel</h2>
+        <p class="slide-desc">Đính kèm ảnh chụp rõ cột/dòng (hoặc dán công thức) cùng một trong ba mẫu dưới đây.</p>
+        <div class="practice-prompts">
+          <article class="prompt-card">
+            <div class="prompt-box-inner">
+              <div class="prompt-box-head">
+                <span>1. Viết công thức mới &amp; tự kiểm chứng</span>
+                <div class="prompt-head-actions">
+                  <button class="copy-btn" type="button" data-copy="p-ext-c3-1">Sao chép</button>
+                </div>
+              </div>
+              <p class="prompt-text" id="p-ext-c3-1">Dựa vào ảnh bảng Excel đính kèm, lập công thức tính cho cột [tên cột đích] từ vùng dữ liệu [vùng cột/dòng]. Quy tắc tính: [mô tả quy tắc]. Excel của tôi dùng dấu [phẩy , / chấm phẩy ;] để ngăn cách đối số. Sau khi đưa công thức, hãy kiểm tra thủ công từng bước cho dòng đầu tiên để xác nhận đúng.</p>
+              <p class="copy-status" role="status"></p>
+            </div>
+          </article>
+
+          <article class="prompt-card">
+            <div class="prompt-box-inner">
+              <div class="prompt-box-head">
+                <span>2. Bóc tách giải thích &amp; rút gọn công thức</span>
+                <div class="prompt-head-actions">
+                  <button class="copy-btn" type="button" data-copy="p-ext-c3-2">Sao chép</button>
+                </div>
+              </div>
+              <p class="prompt-text" id="p-ext-c3-2">Tôi cần hiểu công thức Excel sau: [dán công thức]. Đóng vai chuyên gia dữ liệu, hãy: (1) Bóc tách chức năng từng hàm nhỏ thành bảng dễ nhìn; (2) Nêu thứ tự tính toán; (3) Cho 1 ví dụ số giả định để tôi kiểm chứng; (4) Gợi ý cách viết ngắn gọn, dễ bảo trì hơn nếu có.</p>
+              <p class="copy-status" role="status"></p>
+            </div>
+          </article>
+
+          <article class="prompt-card">
+            <div class="prompt-box-inner">
+              <div class="prompt-box-head">
+                <span>3. Chẩn đoán &amp; sửa lỗi công thức Excel</span>
+                <div class="prompt-head-actions">
+                  <button class="copy-btn" type="button" data-copy="p-ext-c3-3">Sao chép</button>
+                </div>
+              </div>
+              <p class="prompt-text" id="p-ext-c3-3">Ô [tên ô] trong ảnh đính kèm đang báo lỗi [mã lỗi: #NAME? / #VALUE! / #DIV/0!]. Công thức gốc tại ô đó là: [dán công thức]. Hãy chỉ rõ nguyên nhân gây lỗi, giải thích ngắn gọn để lần sau không vấp và viết lại công thức đúng (dùng dấu [phẩy , / chấm phẩy ;]).</p>
+              <p class="copy-status" role="status"></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: THỰC HÀNH TRÊN TỆP XLSX THẬT -->
+    <section class="slide slide-conclusion" data-slide="5" aria-label="Thực hành Chương 3">
+      <div class="slide-inner conclusion-inner">
+        <div class="slide-label label-green">Thực hành</div>
+        <h2 class="slide-title" id="slide-title-5">Ba bài thực hành trên tệp Excel thật (.xlsx)</h2>
+        <p class="slide-desc">Tải tệp Excel về mở trên máy, chụp màn hình vùng bảng có chữ cột/số dòng hoặc copy công thức đưa vào Gemini để thực hành trọn bộ 3 kỹ năng.</p>
+        <div class="practice-box">
+          <div class="practice-box-head">
+            <h3>Bài tập thực hành</h3>
+            <button class="master-unlock-btn" id="btn-master-unlock" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+              <span class="lock-icon" aria-hidden="true">🔒</span>
+              <span class="unlock-btn-text">Mở khóa toàn bộ</span>
+            </button>
+          </div>
+          <div class="practice-prompts">
+            <article class="prompt-card" data-prompt-card aria-labelledby="mr-c3-bt01-title">
+              <div class="prompt-scenario">
+                <h4 id="mr-c3-bt01-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  MR-C3-BT01 · Lập công thức Bảng chấm công &amp; đối chiếu tay
+                </h4>
+                <p><strong>Tình huống.</strong> File Bảng chấm công tháng 10 có dữ liệu ngày công từ cột <code>D:AG</code> (dòng 14–18), trong đó có ngày làm bình thường (<code>X</code>), công tác (<code>CT</code>), lễ (<code>L</code>), tăng ca (<code>X+2</code>, <code>X+4</code>), phép (<code>P</code>) và không phép (<code>K</code>).</p>
+                <p><strong>Vấn đề.</strong> Các cột tổng hợp <code>AH:AK</code> đang để trống. Nếu tự mò công thức đếm cả chuỗi <code>X+...</code> rất dễ đếm sót.</p>
+                <p><strong>Mục tiêu.</strong> Chụp ảnh vùng bảng rõ chữ cột &amp; số dòng gửi Gemini viết công thức cho <code>AH14:AK14</code>, dán vào Excel rồi yêu cầu AI kiểm tra thủ công dòng 14 (<code>NV001</code>) để xác nhận khớp số.</p>
+              </div>
+              <div class="prompt-dataset-box">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📊</span>
+                  <div>
+                    <span class="dataset-name">Bảng chấm công tháng 10 (Cần lập hàm AH:AK)</span>
+                    <span class="dataset-desc">Dữ liệu 5 nhân viên với ký hiệu X, CT, L, X+2, X+4, P, K.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/mo-rong-chuong-3/data-mr-c3-bt01-bang-cham-cong-tho.xlsx" class="dataset-dl-btn" download aria-label="Tải tệp XLSX cho MR-C3-BT01">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">XLSX</span>
+                </a>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-mr-c3-bt01">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-mr-c3-bt01">Dựa vào ảnh bảng chấm công đính kèm (dòng nhân viên đầu tiên là hàng 14, ngày công từ D14:AG14), lập công thức Excel cho cột AH (Công thường gồm X, CT, L và các ô bắt đầu bằng X+), cột AI (Công tăng ca tính theo ngày = tổng giờ tăng ca sau dấu + chia 8), cột AJ (Nghỉ phép P) và cột AK (Không phép K). Sau đó kiểm tra thủ công từng ngày của NV001 (dòng 14) để chứng minh công thức tính đúng.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="mr-c3-bt02-title">
+              <div class="prompt-scenario">
+                <h4 id="mr-c3-bt02-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  MR-C3-BT02 · Giải thích &amp; tối ưu công thức Thuế TNCN
+                </h4>
+                <p><strong>Tình huống.</strong> File tính Thuế TNCN có sẵn công thức <code>IF</code> lồng nhiều tầng tại ô <code>H11</code>.</p>
+                <p><strong>Vấn đề.</strong> Nhìn vào chuỗi <code>IF</code> lồng 6 lớp kèm các hằng số trừ <code>500000</code>, <code>3500000</code>… rất khó kiểm tra xem kế toán cũ có viết đúng biểu thuế hay không.</p>
+                <p><strong>Mục tiêu.</strong> Copy công thức tại ô <code>H11</code> đưa vào Gemini bóc tách từng bậc thuế, tính nhẩm thử cho mức thu nhập tính thuế của <code>NV003</code> và đề xuất cách viết gọn hơn.</p>
+              </div>
+              <div class="prompt-dataset-box">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📊</span>
+                  <div>
+                    <span class="dataset-name">Bảng tính Thuế TNCN (Hàm IF lồng nhiều lớp)</span>
+                    <span class="dataset-desc">Sẵn dữ liệu 5 mức thu nhập và công thức tại cột H.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/mo-rong-chuong-3/data-mr-c3-bt02-tinh-thue-tncn-if-long.xlsx" class="dataset-dl-btn" download aria-label="Tải tệp XLSX cho MR-C3-BT02">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">XLSX</span>
+                </a>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-mr-c3-bt02">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-mr-c3-bt02">Tôi đang đọc lại công thức Excel tính thuế TNCN tại ô H11 trong file bàn giao: =IF(G11&lt;=0,0,IF(G11&lt;=10000000,G11*5%,IF(G11&lt;=30000000,G11*10%-500000,IF(G11&lt;=60000000,G11*20%-3500000,IF(G11&lt;=100000000,G11*30%-9500000,G11*35%-14500000))))). Hãy bóc tách từng bậc thành bảng, giải thích thứ tự xét điều kiện, tính thử với G13 = 25.200.000 và gợi ý 1 cách viết gọn dễ kiểm tra hơn.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="mr-c3-bt03-title">
+              <div class="prompt-scenario">
+                <h4 id="mr-c3-bt03-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  MR-C3-BT03 · Bắt bệnh &amp; sửa 3 lỗi Excel kinh điển
+                </h4>
+                <p><strong>Tình huống.</strong> File tổng hợp đang có 3 ô vàng ở cột <code>E</code> (<code>E6, E7, E8</code>) lần lượt báo <code>#NAME?</code>, <code>#DIV/0!</code> và <code>#VALUE!</code>.</p>
+                <p><strong>Vấn đề.</strong> Nếu chỉ gõ “Excel bị lỗi rồi”, AI không thể đoán đúng ô nào sai ở đâu.</p>
+                <p><strong>Mục tiêu.</strong> Mở file, bấm vào từng ô để lộ công thức trên thanh Formula Bar, chụp ảnh gửi Gemini tìm nguyên nhân từng lỗi và sửa cho cả 3 ô chạy ra số sạch.</p>
+              </div>
+              <div class="prompt-dataset-box">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📊</span>
+                  <div>
+                    <span class="dataset-name">Bảng dữ liệu cài sẵn 3 lỗi (#NAME?, #DIV/0!, #VALUE!)</span>
+                    <span class="dataset-desc">Mở Excel bấm vào E6, E7, E8 để xem lỗi và công thức gốc.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/mo-rong-chuong-3/data-mr-c3-bt03-bang-cong-thuc-co-loi.xlsx" class="dataset-dl-btn" download aria-label="Tải tệp XLSX cho MR-C3-BT03">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">XLSX</span>
+                </a>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-mr-c3-bt03">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-mr-c3-bt03">Trong bảng Excel đính kèm, cột E đang có 3 ô lỗi: E6 (=COUNTI(B6:D6,"X")) báo #NAME?, E7 (=B7/C7 với C7=0) báo #DIV/0!, E8 (=B8*C8 với C8="150000 đ") báo #VALUE!. Hãy chỉ rõ nguyên nhân gốc của từng lỗi, hướng dẫn cách xử lý dứt điểm cả dữ liệu lẫn công thức (bọc IFERROR cho phép chia nếu cần) để 3 ô ra kết quả đúng.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="lesson-sources"><a href="../Giao_trinh/UNG-DUNG-AI-TRONG-VAN-PHONG-MO-RONG.pdf#page=30">Giáo trình Mở rộng PDF · Chương 3 (Trang 30–36)</a></p>
+        <nav class="lesson-links" aria-label="Chuyển bài">
+          <a class="topbar-back" href="mo-rong-chuong-2-trinh-bay.html">← Chương 2B · Trình bày</a>
+          <a class="topbar-back" href="bai-tap-them.html">Bài tập thêm →</a>
+        </nav>
+      </div>
+    </section>
+
+    <dialog class="lock-modal" id="lock-modal" aria-labelledby="lock-modal-title">
+      <div class="lock-modal-card">
+        <button class="lock-modal-close" type="button" id="lock-modal-close" aria-label="Đóng">×</button>
+        <h2 class="lock-modal-title" id="lock-modal-title">Mở gợi ý câu lệnh</h2>
+        <p class="lock-modal-desc" id="lock-modal-desc">Nhập mã do giảng viên cung cấp.</p>
+        <form class="lock-modal-form" id="lock-modal-form">
+          <input class="lock-modal-input" id="lock-modal-input" type="password" aria-label="Mã mở gợi ý" aria-describedby="lock-modal-desc" autocomplete="off" maxlength="10">
+          <button class="lock-modal-submit" id="lock-modal-submit" type="submit">Mở gợi ý</button>
+        </form>
+        <p class="lock-modal-error" id="lock-modal-error" role="alert" hidden>Mã chưa đúng. Vui lòng thử lại.</p>
+      </div>
+    </dialog>
+  </main>
+
+  <nav class="slide-nav" aria-label="Điều hướng slide">
+    <button class="nav-btn" type="button" id="btn-prev" aria-label="Slide trước" disabled>←</button>
+    <div class="nav-center">
+      <div class="dot-track" id="dot-track" role="tablist" aria-label="Chọn slide"></div>
+      <span class="slide-counter"><span id="cur">1</span> / <span id="total">5</span></span>
+    </div>
+    <button class="nav-btn" type="button" id="btn-next" aria-label="Slide tiếp theo">→</button>
+  </nav>
+  <script src="../js/slide-deck.js" defer></script>
+  <script src="../js/lesson-ext-3.js" defer></script>
+</body>
+</html>

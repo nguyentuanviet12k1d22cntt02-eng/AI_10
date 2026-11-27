@@ -224,6 +224,9 @@ progress::-moz-progress-bar { border-radius: 99px; background: var(--green); }
 }
 .section-heading > p:last-child { margin-top: 10px; }
 .course-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 21px 24px; }
+.extended-courses { background: #fffaf4; border-top: 2.5px solid var(--ink); border-bottom: 2.5px solid var(--ink); }
+.extended-grid:has(> :only-child) { grid-template-columns: minmax(0, 760px); justify-content: center; }
+.extended-grid:has(> :nth-child(3):last-child) > :first-child { grid-column: 1 / -1; }
 .course-card {
   position: relative;
   display: grid;

@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mở rộng · Chương 1 · Khởi tạo &amp; chuẩn hóa văn bản — Lớp học AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Nunito:wght@700;800;900;1000&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/slide-deck.css">
+</head>
+<body data-course-lesson="ext-1" data-lesson-series="extended">
+  <header class="topbar">
+    <a class="topbar-logo" href="../index.html" aria-label="Về trang chủ Lớp học AI"><span class="logo-mark" aria-hidden="true"><span class="book-icon"></span></span>Lớp học AI</a>
+    <div class="topbar-center">Mở rộng · Chương 1 · Khởi tạo &amp; chuẩn hóa văn bản</div>
+    <a class="topbar-back" href="../index.html#mo-rong">← Mở rộng</a>
+  </header>
+
+  <main class="deck" id="deck" aria-label="Mở rộng Chương 1">
+    <!-- SLIDE 1: COVER -->
+    <section class="slide slide-cover" data-slide="1" aria-label="Khởi tạo và chuẩn hóa văn bản văn phòng">
+      <div class="slide-inner cover-inner">
+        <div class="cover-left">
+          <div class="cover-kicker">
+            <span class="pill pill-green">Mở rộng · Chương 1</span>
+            <span class="cover-kicker-label">Thực hành ứng dụng văn phòng</span>
+          </div>
+          <h1 class="cover-title">Khởi tạo &amp; chuẩn hóa<br><em>văn bản văn phòng</em></h1>
+          <p class="cover-desc">Gộp trọn 4 kỹ năng trong Chương 1 (văn bản hành chính, báo cáo, email giao tiếp và soát lỗi) thành một quy trình thực chiến, không lặp thao tác.</p>
+          <div class="cover-facts">
+            <div class="fact-chip chip-blue"><span>3</span> Nhóm văn bản</div>
+            <div class="fact-chip chip-pink"><span>4</span> Câu lệnh khung</div>
+            <div class="fact-chip chip-lavender"><span>3</span> Bài thực hành</div>
+          </div>
+        </div>
+        <div class="toc-card">
+          <div class="toc-card-head">
+            <span class="toc-icon icon-blue" aria-hidden="true"><span class="book-icon"></span></span>
+            <div><strong>Nội dung bài học</strong><p>6 slide</p></div>
+          </div>
+          <ul class="toc-list" role="list">
+            <li><button class="toc-link" type="button" data-go-to="2" data-content-art="brief"><span class="toc-num" aria-hidden="true">01</span>Ba nhóm văn bản &amp; rủi ro</button></li>
+            <li><button class="toc-link" type="button" data-go-to="3" data-content-art="task"><span class="toc-num" aria-hidden="true">02</span>Quy trình 3 bước làm việc</button></li>
+            <li><button class="toc-link" type="button" data-go-to="4" data-content-art="format"><span class="toc-num" aria-hidden="true">03</span>4 câu lệnh khung dùng ngay</button></li>
+            <li><button class="toc-link" type="button" data-go-to="5" data-content-art="report"><span class="toc-num" aria-hidden="true">04</span>Bộ lọc kiểm soát 2 tầng</button></li>
+            <li><button class="toc-link" type="button" data-go-to="6" data-content-art="practice"><span class="toc-num" aria-hidden="true">05</span>Thực hành 3 bài tập</button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: MA TRẬN 3 NHÓM VĂN BẢN -->
+    <section class="slide slide-table" data-slide="2" aria-label="Phân loại ba nhóm văn bản văn phòng">
+      <div class="slide-inner">
+        <div class="slide-label label-blue">Khối 1 · Phân loại văn bản</div>
+        <h2 class="slide-title" id="slide-title-2">Ba nhóm văn bản văn phòng khác nhau ở đâu?</h2>
+        <p class="slide-desc">Cùng là soạn chữ, nhưng cách khóa bố cục, giọng điệu và rủi ro cần chặn ở mỗi nhóm hoàn toàn khác nhau.</p>
+        <div class="big-table-wrap">
+          <table class="big-table">
+            <thead>
+              <tr>
+                <th>Nhóm văn bản</th>
+                <th>Đại diện công sở</th>
+                <th class="th-gem">Cách ra lệnh cho AI</th>
+                <th>Rủi ro nếu dùng nguyên bản AI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-label">1. Hành chính &amp; Pháp lý</td>
+                <td>Hợp đồng lao động, Quyết định, Thông báo chính thức</td>
+                <td class="td-gem">Khóa đủ điều khoản chuẩn; bắt buộc chừa <code>[Điền ...]</code> cho thông tin thiếu; ưu tiên tinh chỉnh trong Canvas hoặc xuất Word kiểm tra lại lề, font.</td>
+                <td>Tự bịa mã số thuế, địa chỉ, điều khoản luật cũ; dán từ chat sang Word bị dính ký tự định dạng thừa.</td>
+              </tr>
+              <tr>
+                <td class="td-label">2. Báo cáo nội bộ</td>
+                <td>Báo cáo ngày, báo cáo tuần, tổng hợp tiến độ</td>
+                <td class="td-gem">Chốt khung 4 phần: Tóm tắt – Kết quả có số liệu – Vướng mắc – Việc tiếp theo; giữ nguyên toàn bộ con số gốc.</td>
+                <td>Viết lan man kiểu kể chuyện; tự thêm nhận xét thổi phồng như <em>“hoàn thành xuất sắc”</em> dù dữ liệu không có.</td>
+              </tr>
+              <tr>
+                <td class="td-label">3. Thư từ &amp; Giao tiếp</td>
+                <td>Email gửi sếp, gửi khách hàng, nhắc việc đối tác</td>
+                <td class="td-gem">Khóa người nhận, giọng điệu, giới hạn độ dài (dưới 150 từ), 2 dòng Tiêu đề và 1 hành động cụ thể (CTA).</td>
+                <td>Dài dòng, mở đầu sáo rỗng kiểu dịch máy hoặc dùng giọng thiếu phù hợp với cấp trên/khách hàng.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: QUY TRÌNH 3 BƯỚC -->
+    <section class="slide slide-concept" data-slide="3" aria-label="Quy trình ba bước khởi tạo và chuẩn hóa văn bản">
+      <div class="slide-inner">
+        <div class="slide-label label-pink">Khối 2 · Quy trình chuẩn</div>
+        <h2 class="slide-title" id="slide-title-3">Khởi tạo nhanh – Xuất chuẩn – Hậu kiểm sạch</h2>
+        <p class="slide-desc">Dùng chung một quy trình chuẩn cho mọi loại văn bản thay vì lặp lại thao tác mở chat cho từng dạng bài.</p>
+        <ol class="lesson-steps">
+          <li>
+            <strong>1. Nạp phiếu thông tin thô</strong>
+            <p>Đưa gạch đầu dòng dữ kiện thật (ai, việc gì, số liệu, hạn chót) ngay từ đầu thay vì mô tả chung chung.</p>
+          </li>
+          <li>
+            <strong>2. Khóa chỗ thiếu bằng [Điền ...]</strong>
+            <p>Chỉ định rõ thông tin nào chưa có thì chừa ô trống có nhãn để tự điền sau, cấm AI tự đoán tên, CCCD hay ngày hiệu lực.</p>
+          </li>
+          <li>
+            <strong>3. Xuất đúng định dạng đích</strong>
+            <p>Gửi email thì lấy Tiêu đề + nội dung gọn. Cần văn bản dài thì chỉnh trực tiếp trong Canvas hoặc dọn sạch ký tự <code>**</code>, <code>#</code> trước khi dán sang Word.</p>
+          </li>
+          <li>
+            <strong>4. Chạy bộ lọc biên tập 2 tầng</strong>
+            <p>Rà lại chính tả, dấu câu, thể thức hành chính và đối chiếu tên riêng, số liệu với nguồn gốc trước khi phát hành.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: BỘ 4 CÂU LỆNH KHUNG -->
+    <section class="slide slide-concept" data-slide="4" aria-label="Bốn câu lệnh khung dùng ngay">
+      <div class="slide-inner">
+        <div class="slide-label label-lavender">Khối 3 · Câu lệnh khung</div>
+        <h2 class="slide-title" id="slide-title-4">Bốn mẫu câu lệnh dùng lại hằng ngày</h2>
+        <p class="slide-desc">Sao chép và thay phần trong ngoặc vuông. Mỗi mẫu đã cài sẵn rào chắn chống bịa số liệu và sai thể thức.</p>
+        <div class="practice-prompts">
+          <article class="prompt-card">
+            <div class="prompt-box-inner">
+              <div class="prompt-box-head">
+                <span>1. Văn bản hành chính / Hợp đồng</span>
+                <div class="prompt-head-actions">
+                  <button class="copy-btn" type="button" data-copy="p-ext-c1-f1">Sao chép</button>
+                </div>
+              </div>
+              <p class="prompt-text" id="p-ext-c1-f1">Đóng vai chuyên viên Hành chính – Nhân sự am hiểu văn bản hành chính Việt Nam. Soạn [loại văn bản] dựa trên dữ kiện sau: [dán dữ kiện]. Trình bày đúng bố cục chuẩn. Với thông tin còn thiếu, để trống dạng [Điền ...], tuyệt đối không tự bịa. Trình bày sạch để dễ sao chép sang Word.</p>
+              <p class="copy-status" role="status"></p>
+            </div>
+          </article>
+
+          <article class="prompt-card">
+            <div class="prompt-box-inner">
+              <div class="prompt-box-head">
+                <span>2. Báo cáo nhanh từ ghi chú thô</span>
+                <div class="prompt-head-actions">
+                  <button class="copy-btn" type="button" data-copy="p-ext-c1-f2">Sao chép</button>
+                </div>
+              </div>
+              <p class="prompt-text" id="p-ext-c1-f2">Đóng vai [vị trí của bạn]. Chuyển các ghi chú thô dưới đây thành Báo cáo công việc [ngày/tuần] gửi [người nhận]: [dán ghi chú]. Cấu trúc bắt buộc: 1. Tóm tắt 2 dòng | 2. Việc đã làm &amp; kết quả | 3. Vướng mắc | 4. Kế hoạch tiếp theo. Giọng khách quan, giữ nguyên toàn bộ số liệu gốc.</p>
+              <p class="copy-status" role="status"></p>
+            </div>
+          </article>
+
+          <article class="prompt-card">
+            <div class="prompt-box-inner">
+              <div class="prompt-box-head">
+                <span>3. Email giao tiếp gọn &amp; đúng trọng tâm</span>
+                <div class="prompt-head-actions">
+                  <button class="copy-btn" type="button" data-copy="p-ext-c1-f3">Sao chép</button>
+                </div>
+              </div>
+              <p class="prompt-text" id="p-ext-c1-f3">Viết email gửi [vai trò người nhận] về việc [mục đích], dựa trên thông tin: [dữ kiện]. Đề xuất 2 dòng Tiêu đề rõ ý. Nội dung tối đa 150 từ, vào thẳng vấn đề trong 2 câu đầu, giọng [lịch sự/chuyên nghiệp/khéo léo], kết thúc bằng lời đề nghị cụ thể. Không dùng câu chào rập khuôn.</p>
+              <p class="copy-status" role="status"></p>
+            </div>
+          </article>
+
+          <article class="prompt-card">
+            <div class="prompt-box-inner">
+              <div class="prompt-box-head">
+                <span>4. Bộ lọc kiểm tra lỗi &amp; chuẩn hóa</span>
+                <div class="prompt-head-actions">
+                  <button class="copy-btn" type="button" data-copy="p-ext-c1-f4">Sao chép</button>
+                </div>
+              </div>
+              <p class="prompt-text" id="p-ext-c1-f4">Đóng vai biên tập viên văn bản công sở. Rà soát văn bản dưới đây về: (1) Lỗi chính tả, dấu câu, đánh máy; (2) Từ ngữ lủng củng hoặc chưa chuẩn văn phong hành chính. Quy tắc: Giữ nguyên 100% tên riêng, số liệu, ngày tháng và ý gốc. Xuất gồm 2 phần: Bảng 3 cột (Cụm từ gốc | Bản đề xuất sửa | Lý do sửa) và Toàn bộ văn bản đã sửa sạch lỗi. Văn bản: [dán văn bản]</p>
+              <p class="copy-status" role="status"></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: BỘ LỌC HẬU KIỂM 2 TẦNG -->
+    <section class="slide slide-compare" data-slide="5" aria-label="Bộ lọc hậu kiểm hai tầng">
+      <div class="slide-inner">
+        <div class="slide-label label-green">Khối 4 · Bộ lọc hậu kiểm</div>
+        <h2 class="slide-title" id="slide-title-5">Kiểm soát hai tầng trước khi gửi sếp hoặc khách hàng</h2>
+        <p class="slide-desc">AI soát chính tả rất nhanh nhưng đôi khi sửa quá tay làm đổi tên riêng, số liệu hoặc mất giọng tự nhiên. Luôn rà theo hai tầng.</p>
+        <div class="lesson-examples">
+          <article class="vs-card">
+            <div class="vs-card-head"><strong>Tầng 1 · Rà hình thức &amp; thể thức</strong></div>
+            <ul class="vs-points">
+              <li><span><strong>Chính tả &amp; đánh máy:</strong> Bắt lỗi dấu hỏi/ngã, gõ dính chữ, sai chính tả vùng miền.</span></li>
+              <li><span><strong>Dấu câu &amp; khoảng trắng:</strong> Dọn khoảng trắng dư trước dấu phẩy, dấu chấm, dấu hai chấm.</span></li>
+              <li><span><strong>Thể thức hành chính:</strong> Kiểm viết hoa chức danh, tên cơ quan, tiêu đề và định dạng sạch khi dán sang Word.</span></li>
+            </ul>
+          </article>
+          <article class="vs-card">
+            <div class="vs-card-head"><strong>Tầng 2 · Rà dữ kiện &amp; giọng điệu</strong></div>
+            <ul class="vs-points">
+              <li><span><strong>Giữ nguyên dữ kiện cứng:</strong> Đối chiếu 100% tên riêng, số điện thoại, ngày giờ, số tiền với ghi chú gốc.</span></li>
+              <li><span><strong>Kiểm tra phần AI thêm bớt:</strong> Xóa các câu tâng bốc hoặc cam kết không có trong nguồn.</span></li>
+              <li><span><strong>Chốt giọng người nhận:</strong> Chuyển câu cộc lốc, mệnh lệnh gắt sang diễn đạt lịch sự, rõ trách nhiệm.</span></li>
+            </ul>
+          </article>
+        </div>
+        <div class="evidence-grid" aria-label="Dẫn chứng đầu ra văn bản văn phòng thực tế">
+          <figure class="canvas-walkthrough">
+            <a href="../assets/images/mo-rong-chuong-1/bao-cao-cong-viec-chuan-word.png" target="_blank" rel="noopener" aria-label="Xem ảnh kích thước đầy đủ: Báo cáo công việc chuẩn Word">
+              <img src="../assets/images/mo-rong-chuong-1/bao-cao-cong-viec-chuan-word.png" width="682" height="1017" alt="Mẫu báo cáo công việc hằng ngày do AI xuất theo bố cục Quốc hiệu, Tiêu ngữ để sao chép sang Word.">
+            </a>
+            <figcaption>Dẫn chứng 1 · Báo cáo chuẩn hành chính dễ dán sang Word (bấm ảnh để phóng to).</figcaption>
+          </figure>
+          <figure class="canvas-walkthrough">
+            <a href="../assets/images/mo-rong-chuong-1/email-bao-cao-chuan-doanh-nghiep.png" target="_blank" rel="noopener" aria-label="Xem ảnh kích thước đầy đủ: Email báo cáo gọn gửi trưởng phòng">
+              <img src="../assets/images/mo-rong-chuong-1/email-bao-cao-chuan-doanh-nghiep.png" width="941" height="1112" alt="Mẫu email báo cáo tuần gửi trưởng phòng có tiêu đề, lời chào và các mục ngắn gọn.">
+            </a>
+            <figcaption>Dẫn chứng 2 · Email báo cáo gọn có Tiêu đề và cấu trúc rõ mục (bấm ảnh để phóng to).</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: THỰC HÀNH 3 BÀI TẬP -->
+    <section class="slide slide-conclusion" data-slide="6" aria-label="Thực hành Chương 1">
+      <div class="slide-inner conclusion-inner">
+        <div class="slide-label label-green">Thực hành</div>
+        <h2 class="slide-title" id="slide-title-6">Ba bài thực hành Chương 1</h2>
+        <p class="slide-desc">Tải tệp Word đính kèm ở từng đề để đưa đúng dữ kiện thật vào AI. Mở khóa gợi ý câu lệnh bằng mã của giảng viên khi cần đối chiếu.</p>
+        <div class="practice-box">
+          <div class="practice-box-head">
+            <h3>Bài tập thực hành</h3>
+            <button class="master-unlock-btn" id="btn-master-unlock" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+              <span class="lock-icon" aria-hidden="true">🔒</span>
+              <span class="unlock-btn-text">Mở khóa toàn bộ</span>
+            </button>
+          </div>
+          <div class="practice-prompts">
+            <article class="prompt-card" data-prompt-card aria-labelledby="mr-c1-bt01-title">
+              <div class="prompt-scenario">
+                <h4 id="mr-c1-bt01-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  MR-C1-BT01 · Soạn hợp đồng đúng khung &amp; chống bịa
+                </h4>
+                <p><strong>Tình huống.</strong> Trưởng phòng Nhân sự gửi đoạn ghi chú vội để bạn soạn Hợp đồng lao động thời vụ 3 tháng cho nhân sự mới Lê Minh Tuấn.</p>
+                <p><strong>Vấn đề.</strong> Ghi chú thiếu Mã số thuế, người đại diện ký, số CCCD, ngày sinh, địa chỉ thường trú và ngày bắt đầu. Nếu hỏi chung chung, AI sẽ tự bịa thông tin giả cho đủ mẫu.</p>
+                <p><strong>Mục tiêu.</strong> Đính kèm hoặc dán nội dung tệp Word, buộc AI soạn đủ các điều khoản chuẩn và chừa đúng các ô <code>[Điền ...]</code> ở phần còn thiếu.</p>
+              </div>
+              <div class="prompt-dataset-box word">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📄</span>
+                  <div>
+                    <span class="dataset-name">Ghi chú hợp đồng lao động 3 tháng</span>
+                    <span class="dataset-desc">Gồm dữ kiện đã có và danh sách mục thiếu không được bịa.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/mo-rong-chuong-1/data-mr-c1-bt01-hop-dong-thoi-vu.docx" class="dataset-dl-btn word" download aria-label="Tải tệp DOCX cho MR-C1-BT01">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">DOCX</span>
+                </a>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-mr-c1-bt01">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-mr-c1-bt01">Đóng vai chuyên viên Hành chính – Nhân sự am hiểu Bộ luật Lao động Việt Nam. Dựa trên tệp ghi chú đính kèm, soạn Hợp đồng lao động xác định thời hạn 03 tháng cho Công ty TNHH Công Nghệ Minh An và anh Lê Minh Tuấn. Bắt buộc đầy đủ các điều khoản chuẩn và bảng chữ ký cuối trang. Với mọi thông tin còn thiếu (Mã số thuế, người đại diện, ngày sinh, CCCD, địa chỉ thường trú, ngày hiệu lực), chỉ ghi dạng [Điền ...], tuyệt đối không tự bịa. Trình bày sạch để sao chép sang Word.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="mr-c1-bt02-title">
+              <div class="prompt-scenario">
+                <h4 id="mr-c1-bt02-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  MR-C1-BT02 · Từ ghi chú thô thành Báo cáo &amp; Email gửi sếp
+                </h4>
+                <p><strong>Tình huống.</strong> Cuối tuần, bạn có một loạt ghi chú rời rạc (doanh số 165/200 triệu, 2 buổi demo, 1 sự cố giao trễ cho Công ty An Bình và vướng mắc bảng giá tháng 12).</p>
+                <p><strong>Vấn đề.</strong> Nếu gộp tất cả thành một đoạn dài, báo cáo sẽ rối và email gửi sếp sẽ quá dài. Bạn cần vừa có báo cáo chi tiết lưu nội bộ, vừa có email ngắn gọn gửi Trưởng phòng.</p>
+                <p><strong>Mục tiêu.</strong> Thực hành 2 lượt lệnh từ cùng tệp Word: Lượt 1 xuất Báo cáo tuần 4 mục; Lượt 2 rút gọn thành Email dưới 150 từ, giữ đúng số liệu và sự cố An Bình.</p>
+              </div>
+              <div class="prompt-dataset-box word">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📄</span>
+                  <div>
+                    <span class="dataset-name">Ghi chú công việc tuần 4 tháng 11</span>
+                    <span class="dataset-desc">Dữ kiện thô gồm số liệu đạt được, sự cố và vướng mắc.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/mo-rong-chuong-1/data-mr-c1-bt02-ghi-chu-cong-viec-tuan.docx" class="dataset-dl-btn word" download aria-label="Tải tệp DOCX cho MR-C1-BT02">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">DOCX</span>
+                </a>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-mr-c1-bt02">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-mr-c1-bt02">Đóng vai Chuyên viên Kinh doanh Trần Thu Hà. Đọc tệp ghi chú tuần đính kèm và thực hiện 2 đầu ra tách biệt: (1) Báo cáo công việc tuần 4/11 gửi nội bộ gồm 4 mục: Tóm tắt 2 dòng, Kết quả đã làm, Sự cố &amp; Vướng mắc, Kế hoạch tuần tới; (2) Email báo cáo nhanh gửi Trưởng phòng (anh Hoàng) dưới 150 từ, kèm 2 gợi ý Tiêu đề. Yêu cầu giữ nguyên 100% số liệu (42 khách, 11 hợp đồng, 165 triệu / 82,5%) và nêu rõ hướng xử lý đơn Công ty An Bình lúc 09h00 sáng thứ Hai.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+
+            <article class="prompt-card" data-prompt-card aria-labelledby="mr-c1-bt03-title">
+              <div class="prompt-scenario">
+                <h4 id="mr-c1-bt03-title">
+                  <img src="../assets/images/avatar-boss.svg" alt="" class="prompt-top-logo" aria-hidden="true">
+                  MR-C1-BT03 · Bắt bệnh &amp; chuẩn hóa Thông báo nghỉ lễ
+                </h4>
+                <p><strong>Tình huống.</strong> Bạn nhận được bản nháp Thông báo nghỉ Tết Dương lịch 2027 sắp gửi toàn công ty.</p>
+                <p><strong>Vấn đề.</strong> Văn bản đang dính nhiều lỗi chính tả (<em>nghĩ lể, Lưy ý, xẩy ra</em>), sai viết hoa hành chính, khoảng trắng trước dấu câu và có câu cuối giọng quá gắt.</p>
+                <p><strong>Mục tiêu.</strong> Dùng AI lập bảng 3 cột chỉ rõ từng lỗi và lý do sửa, sau đó xuất bản hoàn chỉnh — nhưng phải đối chiếu giữ nguyên 100% tên bảo vệ Nguyễn Văn Hùng, SĐT <code>0912.345.678</code> và các mốc ngày giờ.</p>
+              </div>
+              <div class="prompt-dataset-box word">
+                <div class="dataset-info">
+                  <span class="dataset-icon" aria-hidden="true">📄</span>
+                  <div>
+                    <span class="dataset-name">Bản nháp Thông báo nghỉ lễ có lỗi</span>
+                    <span class="dataset-desc">Văn bản mẫu cài sẵn lỗi chính tả, dấu câu, thể thức và giọng văn.</span>
+                  </div>
+                </div>
+                <a href="../assets/data/mo-rong-chuong-1/data-mr-c1-bt03-thong-bao-nghi-le-co-loi.docx" class="dataset-dl-btn word" download aria-label="Tải tệp DOCX cho MR-C1-BT03">
+                  <span>📥 Tải file dữ liệu</span>
+                  <span class="dataset-format-tag">DOCX</span>
+                </a>
+              </div>
+              <button class="prompt-lock-trigger" type="button" aria-haspopup="dialog" aria-controls="lock-modal">
+                <span class="lock-shield-icon" aria-hidden="true">🔒</span>
+                <span class="lock-trigger-info"><strong>Mở gợi ý câu lệnh</strong><small>Dùng mã do giảng viên cung cấp.</small></span>
+              </button>
+              <div class="prompt-box-inner" hidden>
+                <div class="prompt-box-head">
+                  <span>Gợi ý câu lệnh</span>
+                  <div class="prompt-head-actions">
+                    <button class="relock-btn" type="button">Khóa lại</button><button class="copy-btn" type="button" data-copy="p-mr-c1-bt03">Sao chép</button>
+                  </div>
+                </div>
+                <p class="prompt-text" id="p-mr-c1-bt03">Đóng vai biên tập viên văn bản hành chính. Rà soát toàn bộ bản nháp Thông báo nghỉ lễ trong tệp Word đính kèm về lỗi chính tả, đánh máy, viết hoa, khoảng trắng dấu câu và chỉnh lại câu nhắc nhở cuối cho lịch sự, chuyên nghiệp hơn. Quy tắc: Giữ nguyên 100% tên công ty, họ tên bảo vệ Nguyễn Văn Hùng, SĐT 0912.345.678 và các ngày giờ 01/01/2027 – 04/01/2027, 08h00. Xuất gồm 2 phần: (1) Bảng 3 cột: Cụm từ gốc | Bản sửa | Lý do sửa; (2) Toàn bộ thông báo hoàn chỉnh sẵn sàng phát hành.</p>
+                <p class="copy-status" role="status"></p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="lesson-sources"><a href="../Giao_trinh/UNG-DUNG-AI-TRONG-VAN-PHONG-MO-RONG.pdf#page=3">Giáo trình Mở rộng PDF · Chương 1 (Trang 3–11)</a></p>
+        <nav class="lesson-links" aria-label="Chuyển bài">
+          <a class="topbar-back" href="../index.html#mo-rong">← Về mục Mở rộng</a>
+          <a class="topbar-back" href="mo-rong-chuong-2-notebooklm.html">Chương 2A · NotebookLM →</a>
+        </nav>
+      </div>
+    </section>
+
+    <dialog class="lock-modal" id="lock-modal" aria-labelledby="lock-modal-title">
+      <div class="lock-modal-card">
+        <button class="lock-modal-close" type="button" id="lock-modal-close" aria-label="Đóng">×</button>
+        <h2 class="lock-modal-title" id="lock-modal-title">Mở gợi ý câu lệnh</h2>
+        <p class="lock-modal-desc" id="lock-modal-desc">Nhập mã do giảng viên cung cấp.</p>
+        <form class="lock-modal-form" id="lock-modal-form">
+          <input class="lock-modal-input" id="lock-modal-input" type="password" aria-label="Mã mở gợi ý" aria-describedby="lock-modal-desc" autocomplete="off" maxlength="10">
+          <button class="lock-modal-submit" id="lock-modal-submit" type="submit">Mở gợi ý</button>
+        </form>
+        <p class="lock-modal-error" id="lock-modal-error" role="alert" hidden>Mã chưa đúng. Vui lòng thử lại.</p>
+      </div>
+    </dialog>
+  </main>
+
+  <nav class="slide-nav" aria-label="Điều hướng slide">
+    <button class="nav-btn" type="button" id="btn-prev" aria-label="Slide trước" disabled>←</button>
+    <div class="nav-center">
+      <div class="dot-track" id="dot-track" role="tablist" aria-label="Chọn slide"></div>
+      <span class="slide-counter"><span id="cur">1</span> / <span id="total">6</span></span>
+    </div>
+    <button class="nav-btn" type="button" id="btn-next" aria-label="Slide tiếp theo">→</button>
+  </nav>
+  <script src="../js/slide-deck.js" defer></script>
+</body>
+</html>
